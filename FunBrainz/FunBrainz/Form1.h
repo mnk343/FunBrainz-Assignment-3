@@ -92,7 +92,7 @@ namespace FunBrainz {
 				 std::pair <std::string, long int> ques = GlobalFuncs::generateQuestion(4, 1);
 				 String ^ x = gcnew String(ques.first.c_str());
 				 MessageBox::Show(x); 
-				 Cricket ^ form = gcnew Cricket; 
+				 Cricket ^ form = gcnew Cricket(this, 1); 
 				 form->ShowDialog();
 			 }
 
