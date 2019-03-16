@@ -1,4 +1,5 @@
 #pragma once
+#include "GlobalFuncs.h"
 #include <stdio.h>  
 #include <utility> 
 #include<cmath>
@@ -68,6 +69,9 @@ namespace FunBrainz {
 		}
 #pragma endregion
 	private: System::Void Cricket_Load(System::Object^  sender, System::EventArgs^  e) {
+				 std::pair <std::string, long int> ques = GlobalFuncs::generateQuestion(4, 1);
+				 String ^ x = gcnew String(ques.first.c_str());
+				 MessageBox::Show(x); 
 			 }
 	};
 }
