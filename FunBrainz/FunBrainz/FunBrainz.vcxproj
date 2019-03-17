@@ -90,6 +90,8 @@
     <ClCompile Include="Cricket.cpp" />
     <ClCompile Include="FunBrainz.cpp" />
     <ClCompile Include="GlobalFuncs.cpp" />
+    <ClCompile Include="Image_Quiz.cpp" />
+    <ClCompile Include="Image_Quiz_Display.cpp" />
     <ClCompile Include="MyForm1.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
@@ -104,6 +106,12 @@
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="GlobalFuncs.h" />
+    <ClInclude Include="Image_Quiz.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="Image_Quiz_Display.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="MyForm1.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -120,6 +128,12 @@
     <EmbeddedResource Include="Form1.resX">
       <DependentUpon>Form1.h</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Image_Quiz.resx">
+      <DependentUpon>Image_Quiz.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Image_Quiz_Display.resx">
+      <DependentUpon>Image_Quiz_Display.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MyForm1.resx">
       <DependentUpon>MyForm1.h</DependentUpon>

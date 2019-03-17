@@ -2,6 +2,7 @@
 #include "Cricket.h"
 #include "GlobalFuncs.h"
 #include "MyForm1.h"
+#include "Image_Quiz.h"
 namespace FunBrainz {
 
 	using namespace System;
@@ -38,6 +39,7 @@ namespace FunBrainz {
 		}
 	private: System::Windows::Forms::Button^  button1;
 	private: System::Windows::Forms::Button^  btn_2048;
+	private: System::Windows::Forms::Button^  btn_Image_Quiz;
 	protected: 
 
 	private:
@@ -55,12 +57,13 @@ namespace FunBrainz {
 		{
 			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->btn_2048 = (gcnew System::Windows::Forms::Button());
+			this->btn_Image_Quiz = (gcnew System::Windows::Forms::Button());
 			this->SuspendLayout();
 			// 
 			// button1
 			// 
 			this->button1->Location = System::Drawing::Point(71, 82);
-			this->button1->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->button1->Margin = System::Windows::Forms::Padding(2);
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(56, 19);
 			this->button1->TabIndex = 0;
@@ -78,14 +81,25 @@ namespace FunBrainz {
 			this->btn_2048->UseVisualStyleBackColor = true;
 			this->btn_2048->Click += gcnew System::EventHandler(this, &Form1::btn_2048_Click);
 			// 
+			// btn_Image_Quiz
+			// 
+			this->btn_Image_Quiz->Location = System::Drawing::Point(62, 150);
+			this->btn_Image_Quiz->Name = L"btn_Image_Quiz";
+			this->btn_Image_Quiz->Size = System::Drawing::Size(75, 23);
+			this->btn_Image_Quiz->TabIndex = 2;
+			this->btn_Image_Quiz->Text = L"Image Quiz";
+			this->btn_Image_Quiz->UseVisualStyleBackColor = true;
+			this->btn_Image_Quiz->Click += gcnew System::EventHandler(this, &Form1::btn_Image_Quiz_Click);
+			// 
 			// Form1
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(212, 206);
+			this->Controls->Add(this->btn_Image_Quiz);
 			this->Controls->Add(this->btn_2048);
 			this->Controls->Add(this->button1);
-			this->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->Margin = System::Windows::Forms::Padding(2);
 			this->Name = L"Form1";
 			this->Text = L"Form1";
 			this->Load += gcnew System::EventHandler(this, &Form1::Form1_Load);
@@ -121,6 +135,11 @@ namespace FunBrainz {
 				 form->Begin();
 				 form->ShowDialog();
 			 }
-	};
+	private: System::Void btn_Image_Quiz_Click(System::Object^  sender, System::EventArgs^  e) {
+				 Form1::Hide();
+				 Image_Quiz ^ form = gcnew Image_Quiz;
+				 form->ShowDialog();
+			 }
+};
 }
 
