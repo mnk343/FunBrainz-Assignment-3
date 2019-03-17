@@ -1,6 +1,7 @@
 #pragma once
 #include "Cricket.h"
 #include "GlobalFuncs.h"
+#include "MyForm1.h"
 namespace FunBrainz {
 
 	using namespace System;
@@ -36,6 +37,7 @@ namespace FunBrainz {
 			}
 		}
 	private: System::Windows::Forms::Button^  button1;
+	private: System::Windows::Forms::Button^  btn_2048;
 	protected: 
 
 	private:
@@ -52,24 +54,38 @@ namespace FunBrainz {
 		void InitializeComponent(void)
 		{
 			this->button1 = (gcnew System::Windows::Forms::Button());
+			this->btn_2048 = (gcnew System::Windows::Forms::Button());
 			this->SuspendLayout();
 			// 
 			// button1
 			// 
-			this->button1->Location = System::Drawing::Point(95, 101);
+			this->button1->Location = System::Drawing::Point(71, 82);
+			this->button1->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(75, 23);
+			this->button1->Size = System::Drawing::Size(56, 19);
 			this->button1->TabIndex = 0;
 			this->button1->Text = L"button1";
 			this->button1->UseVisualStyleBackColor = true;
 			this->button1->Click += gcnew System::EventHandler(this, &Form1::button1_Click);
 			// 
+			// btn_2048
+			// 
+			this->btn_2048->Location = System::Drawing::Point(62, 120);
+			this->btn_2048->Name = L"btn_2048";
+			this->btn_2048->Size = System::Drawing::Size(75, 23);
+			this->btn_2048->TabIndex = 1;
+			this->btn_2048->Text = L"2048_game";
+			this->btn_2048->UseVisualStyleBackColor = true;
+			this->btn_2048->Click += gcnew System::EventHandler(this, &Form1::btn_2048_Click);
+			// 
 			// Form1
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
+			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(282, 253);
+			this->ClientSize = System::Drawing::Size(212, 206);
+			this->Controls->Add(this->btn_2048);
 			this->Controls->Add(this->button1);
+			this->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->Name = L"Form1";
 			this->Text = L"Form1";
 			this->Load += gcnew System::EventHandler(this, &Form1::Form1_Load);
@@ -98,6 +114,12 @@ namespace FunBrainz {
 
 	private: System::Void Form1_Load(System::Object^  sender, System::EventArgs^  e) {
 				 srand(time(0));
+			 }
+	private: System::Void btn_2048_Click(System::Object^  sender, System::EventArgs^  e) {
+				 Form1::Hide();
+				 MyForm1^ form = gcnew MyForm1;
+				 form->Begin();
+				 form->ShowDialog();
 			 }
 	};
 }
