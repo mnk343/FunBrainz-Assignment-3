@@ -24,7 +24,9 @@ namespace FunBrainz {
 		Cricket(void)
 		{
 			InitializeComponent();
+			player = gcnew array<System::String ^>(12);
 			stuID = 1;
+			scores = new int[12];
 			//
 			//TODO: Add the constructor code here
 			//
@@ -32,6 +34,8 @@ namespace FunBrainz {
 		Cricket(Form^ obj1, int student)
 		{
 			InitializeComponent();
+			player = gcnew array<System::String ^>(12);
+			scores = new int[12];
 			stuID = student;
 			caller = obj1;
 			
@@ -72,6 +76,7 @@ namespace FunBrainz {
 	private: System::Windows::Forms::Label^  rand3;
 	private: System::Windows::Forms::Label^  rand6;
 	private: System::Windows::Forms::Button^  StopButton;
+	private: System::Windows::Forms::Panel^  panel1;
 
 
 
@@ -114,24 +119,35 @@ namespace FunBrainz {
 			this->rand3 = (gcnew System::Windows::Forms::Label());
 			this->rand6 = (gcnew System::Windows::Forms::Label());
 			this->StopButton = (gcnew System::Windows::Forms::Button());
+			this->panel1 = (gcnew System::Windows::Forms::Panel());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->AnsNnumericUpDown))->BeginInit();
+			this->panel1->SuspendLayout();
 			this->SuspendLayout();
 			// 
 			// TargetLabel
 			// 
 			this->TargetLabel->AutoSize = true;
-			this->TargetLabel->Location = System::Drawing::Point(35, 34);
+			this->TargetLabel->BackColor = System::Drawing::Color::Transparent;
+			this->TargetLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->TargetLabel->ForeColor = System::Drawing::SystemColors::Control;
+			this->TargetLabel->Location = System::Drawing::Point(12, 9);
 			this->TargetLabel->Name = L"TargetLabel";
-			this->TargetLabel->Size = System::Drawing::Size(50, 17);
+			this->TargetLabel->Size = System::Drawing::Size(69, 25);
 			this->TargetLabel->TabIndex = 0;
 			this->TargetLabel->Text = L"Target";
+			this->TargetLabel->Visible = false;
 			// 
 			// ScoreLabel
 			// 
 			this->ScoreLabel->AutoSize = true;
-			this->ScoreLabel->Location = System::Drawing::Point(129, 34);
+			this->ScoreLabel->BackColor = System::Drawing::Color::Transparent;
+			this->ScoreLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->ScoreLabel->ForeColor = System::Drawing::Color::White;
+			this->ScoreLabel->Location = System::Drawing::Point(73, 6);
 			this->ScoreLabel->Name = L"ScoreLabel";
-			this->ScoreLabel->Size = System::Drawing::Size(45, 17);
+			this->ScoreLabel->Size = System::Drawing::Size(64, 25);
 			this->ScoreLabel->TabIndex = 1;
 			this->ScoreLabel->Text = L"Score";
 			// 
@@ -140,7 +156,7 @@ namespace FunBrainz {
 			this->QuestionLabel->AutoSize = true;
 			this->QuestionLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->QuestionLabel->Location = System::Drawing::Point(315, 120);
+			this->QuestionLabel->Location = System::Drawing::Point(360, 44);
 			this->QuestionLabel->Name = L"QuestionLabel";
 			this->QuestionLabel->Size = System::Drawing::Size(130, 32);
 			this->QuestionLabel->TabIndex = 3;
@@ -149,45 +165,68 @@ namespace FunBrainz {
 			// LevelLabel
 			// 
 			this->LevelLabel->AutoSize = true;
-			this->LevelLabel->Location = System::Drawing::Point(811, 34);
+			this->LevelLabel->BackColor = System::Drawing::Color::Transparent;
+			this->LevelLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->LevelLabel->ForeColor = System::Drawing::Color::White;
+			this->LevelLabel->Location = System::Drawing::Point(780, 26);
 			this->LevelLabel->Name = L"LevelLabel";
-			this->LevelLabel->Size = System::Drawing::Size(71, 17);
+			this->LevelLabel->Size = System::Drawing::Size(108, 25);
 			this->LevelLabel->TabIndex = 4;
 			this->LevelLabel->Text = L"Level - 01";
 			// 
 			// Batsman2ScoreLabel
 			// 
 			this->Batsman2ScoreLabel->AutoSize = true;
-			this->Batsman2ScoreLabel->Location = System::Drawing::Point(592, 34);
+			this->Batsman2ScoreLabel->BackColor = System::Drawing::Color::Transparent;
+			this->Batsman2ScoreLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->Batsman2ScoreLabel->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(16)), 
+				static_cast<System::Int32>(static_cast<System::Byte>(46)), static_cast<System::Int32>(static_cast<System::Byte>(83)));
+			this->Batsman2ScoreLabel->Location = System::Drawing::Point(565, 9);
 			this->Batsman2ScoreLabel->Name = L"Batsman2ScoreLabel";
-			this->Batsman2ScoreLabel->Size = System::Drawing::Size(71, 17);
+			this->Batsman2ScoreLabel->Size = System::Drawing::Size(79, 17);
 			this->Batsman2ScoreLabel->TabIndex = 5;
 			this->Batsman2ScoreLabel->Text = L"Batsman2";
 			// 
 			// Batsman1ScoreLabel
 			// 
 			this->Batsman1ScoreLabel->AutoSize = true;
-			this->Batsman1ScoreLabel->Location = System::Drawing::Point(472, 34);
+			this->Batsman1ScoreLabel->BackColor = System::Drawing::Color::Transparent;
+			this->Batsman1ScoreLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->Batsman1ScoreLabel->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(16)), 
+				static_cast<System::Int32>(static_cast<System::Byte>(46)), static_cast<System::Int32>(static_cast<System::Byte>(83)));
+			this->Batsman1ScoreLabel->Location = System::Drawing::Point(409, 9);
 			this->Batsman1ScoreLabel->Name = L"Batsman1ScoreLabel";
-			this->Batsman1ScoreLabel->Size = System::Drawing::Size(71, 17);
+			this->Batsman1ScoreLabel->Size = System::Drawing::Size(79, 17);
 			this->Batsman1ScoreLabel->TabIndex = 6;
 			this->Batsman1ScoreLabel->Text = L"Batsman1";
 			// 
 			// OversLeftLabel
 			// 
 			this->OversLeftLabel->AutoSize = true;
-			this->OversLeftLabel->Location = System::Drawing::Point(354, 34);
+			this->OversLeftLabel->BackColor = System::Drawing::Color::Transparent;
+			this->OversLeftLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->OversLeftLabel->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(49)), static_cast<System::Int32>(static_cast<System::Byte>(66)), 
+				static_cast<System::Int32>(static_cast<System::Byte>(0)));
+			this->OversLeftLabel->Location = System::Drawing::Point(747, 7);
 			this->OversLeftLabel->Name = L"OversLeftLabel";
-			this->OversLeftLabel->Size = System::Drawing::Size(74, 17);
+			this->OversLeftLabel->Size = System::Drawing::Size(102, 25);
 			this->OversLeftLabel->TabIndex = 7;
 			this->OversLeftLabel->Text = L"Overs Left";
 			// 
 			// RunsNeededLabel
 			// 
 			this->RunsNeededLabel->AutoSize = true;
-			this->RunsNeededLabel->Location = System::Drawing::Point(223, 34);
+			this->RunsNeededLabel->BackColor = System::Drawing::Color::Transparent;
+			this->RunsNeededLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->RunsNeededLabel->ForeColor = System::Drawing::Color::White;
+			this->RunsNeededLabel->Location = System::Drawing::Point(202, 7);
 			this->RunsNeededLabel->Name = L"RunsNeededLabel";
-			this->RunsNeededLabel->Size = System::Drawing::Size(91, 17);
+			this->RunsNeededLabel->Size = System::Drawing::Size(126, 25);
 			this->RunsNeededLabel->TabIndex = 8;
 			this->RunsNeededLabel->Text = L"RunsNeeded";
 			// 
@@ -195,7 +234,7 @@ namespace FunBrainz {
 			// 
 			this->SliderPanel->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"SliderPanel.BackgroundImage")));
 			this->SliderPanel->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->SliderPanel->Location = System::Drawing::Point(74, 378);
+			this->SliderPanel->Location = System::Drawing::Point(119, 302);
 			this->SliderPanel->Name = L"SliderPanel";
 			this->SliderPanel->Size = System::Drawing::Size(42, 44);
 			this->SliderPanel->TabIndex = 9;
@@ -215,7 +254,7 @@ namespace FunBrainz {
 			this->TimeLeftLabel->AutoSize = true;
 			this->TimeLeftLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 19.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->TimeLeftLabel->Location = System::Drawing::Point(521, 114);
+			this->TimeLeftLabel->Location = System::Drawing::Point(566, 38);
 			this->TimeLeftLabel->Name = L"TimeLeftLabel";
 			this->TimeLeftLabel->Size = System::Drawing::Size(53, 38);
 			this->TimeLeftLabel->TabIndex = 10;
@@ -223,7 +262,7 @@ namespace FunBrainz {
 			// 
 			// SubmitButton
 			// 
-			this->SubmitButton->Location = System::Drawing::Point(485, 199);
+			this->SubmitButton->Location = System::Drawing::Point(530, 123);
 			this->SubmitButton->Name = L"SubmitButton";
 			this->SubmitButton->Size = System::Drawing::Size(111, 33);
 			this->SubmitButton->TabIndex = 12;
@@ -233,7 +272,7 @@ namespace FunBrainz {
 			// 
 			// AnsNnumericUpDown
 			// 
-			this->AnsNnumericUpDown->Location = System::Drawing::Point(321, 200);
+			this->AnsNnumericUpDown->Location = System::Drawing::Point(366, 124);
 			this->AnsNnumericUpDown->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) {1000000000, 0, 0, 0});
 			this->AnsNnumericUpDown->Minimum = System::Decimal(gcnew cli::array< System::Int32 >(4) {1000000000, 0, 0, System::Int32::MinValue});
 			this->AnsNnumericUpDown->Name = L"AnsNnumericUpDown";
@@ -243,7 +282,7 @@ namespace FunBrainz {
 			// rand1
 			// 
 			this->rand1->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->rand1->Location = System::Drawing::Point(95, 341);
+			this->rand1->Location = System::Drawing::Point(140, 265);
 			this->rand1->Name = L"rand1";
 			this->rand1->Size = System::Drawing::Size(40, 17);
 			this->rand1->TabIndex = 14;
@@ -253,7 +292,7 @@ namespace FunBrainz {
 			// rand2
 			// 
 			this->rand2->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->rand2->Location = System::Drawing::Point(134, 341);
+			this->rand2->Location = System::Drawing::Point(179, 265);
 			this->rand2->Name = L"rand2";
 			this->rand2->Size = System::Drawing::Size(40, 17);
 			this->rand2->TabIndex = 15;
@@ -263,7 +302,7 @@ namespace FunBrainz {
 			// rand5
 			// 
 			this->rand5->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->rand5->Location = System::Drawing::Point(251, 341);
+			this->rand5->Location = System::Drawing::Point(296, 265);
 			this->rand5->Name = L"rand5";
 			this->rand5->Size = System::Drawing::Size(40, 17);
 			this->rand5->TabIndex = 16;
@@ -273,7 +312,7 @@ namespace FunBrainz {
 			// rand4
 			// 
 			this->rand4->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->rand4->Location = System::Drawing::Point(211, 341);
+			this->rand4->Location = System::Drawing::Point(256, 265);
 			this->rand4->Name = L"rand4";
 			this->rand4->Size = System::Drawing::Size(40, 17);
 			this->rand4->TabIndex = 17;
@@ -283,7 +322,7 @@ namespace FunBrainz {
 			// rand3
 			// 
 			this->rand3->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->rand3->Location = System::Drawing::Point(171, 341);
+			this->rand3->Location = System::Drawing::Point(216, 265);
 			this->rand3->Name = L"rand3";
 			this->rand3->Size = System::Drawing::Size(40, 17);
 			this->rand3->TabIndex = 18;
@@ -293,7 +332,7 @@ namespace FunBrainz {
 			// rand6
 			// 
 			this->rand6->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->rand6->Location = System::Drawing::Point(290, 341);
+			this->rand6->Location = System::Drawing::Point(335, 265);
 			this->rand6->Name = L"rand6";
 			this->rand6->Size = System::Drawing::Size(40, 17);
 			this->rand6->TabIndex = 19;
@@ -302,7 +341,7 @@ namespace FunBrainz {
 			// 
 			// StopButton
 			// 
-			this->StopButton->Location = System::Drawing::Point(485, 367);
+			this->StopButton->Location = System::Drawing::Point(530, 291);
 			this->StopButton->Name = L"StopButton";
 			this->StopButton->Size = System::Drawing::Size(111, 37);
 			this->StopButton->TabIndex = 20;
@@ -310,11 +349,29 @@ namespace FunBrainz {
 			this->StopButton->UseVisualStyleBackColor = true;
 			this->StopButton->Click += gcnew System::EventHandler(this, &Cricket::StopButton_Click);
 			// 
+			// panel1
+			// 
+			this->panel1->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"panel1.BackgroundImage")));
+			this->panel1->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Zoom;
+			this->panel1->Controls->Add(this->Batsman2ScoreLabel);
+			this->panel1->Controls->Add(this->ScoreLabel);
+			this->panel1->Controls->Add(this->OversLeftLabel);
+			this->panel1->Controls->Add(this->RunsNeededLabel);
+			this->panel1->Controls->Add(this->Batsman1ScoreLabel);
+			this->panel1->Location = System::Drawing::Point(1, 435);
+			this->panel1->Name = L"panel1";
+			this->panel1->Size = System::Drawing::Size(926, 42);
+			this->panel1->TabIndex = 21;
+			// 
 			// Cricket
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(925, 513);
+			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"$this.BackgroundImage")));
+			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->ClientSize = System::Drawing::Size(912, 476);
+			this->Controls->Add(this->TargetLabel);
+			this->Controls->Add(this->panel1);
 			this->Controls->Add(this->StopButton);
 			this->Controls->Add(this->rand6);
 			this->Controls->Add(this->rand3);
@@ -326,18 +383,15 @@ namespace FunBrainz {
 			this->Controls->Add(this->SubmitButton);
 			this->Controls->Add(this->TimeLeftLabel);
 			this->Controls->Add(this->SliderPanel);
-			this->Controls->Add(this->RunsNeededLabel);
-			this->Controls->Add(this->OversLeftLabel);
-			this->Controls->Add(this->Batsman1ScoreLabel);
-			this->Controls->Add(this->Batsman2ScoreLabel);
 			this->Controls->Add(this->LevelLabel);
 			this->Controls->Add(this->QuestionLabel);
-			this->Controls->Add(this->ScoreLabel);
-			this->Controls->Add(this->TargetLabel);
+			this->DoubleBuffered = true;
 			this->Name = L"Cricket";
 			this->Text = L"Cricket";
 			this->Load += gcnew System::EventHandler(this, &Cricket::Cricket_Load);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->AnsNnumericUpDown))->EndInit();
+			this->panel1->ResumeLayout(false);
+			this->panel1->PerformLayout();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -360,8 +414,10 @@ namespace FunBrainz {
 		int oversleft;
 		int ballsleft;
 		int wicketslost;
+		int bat1;
 		String ^ batsman1;
 		int batsman1skill;
+		int bat2;
 		String ^ batsman2;
 		int batsman2skill;
 		int batsman1score;
@@ -370,6 +426,9 @@ namespace FunBrainz {
 		int answer;
 		int interval;
 		int skill;
+
+		array<System::String ^>^ player;
+		int * scores;
 
 	private: System::Void Cricket_Load(System::Object^  sender, System::EventArgs^  e) {
 				 try {
@@ -399,6 +458,16 @@ namespace FunBrainz {
 					 con->Open();
 					 timesplayed =  (int) command->ExecuteScalar();
 					 con->Close();
+
+					 for(int i = 1;i<=11;i++)
+					 {
+						 Sql = "Select [Name] from IndiaICCTeam where [PlayerPosition] = " + i + ";";
+						command = gcnew OleDb::OleDbCommand(Sql, con);
+						con->Open();
+						player[i] =  command->ExecuteScalar()->ToString();
+						con->Close();
+						scores[i]=0;
+					 }
 				 }
 				 catch (Exception ^ ex) {
 					 MessageBox::Show(ex->Message);
@@ -419,10 +488,12 @@ namespace FunBrainz {
 				 score = 0;
 				 ballsleft = 0;
 				 wicketslost = 0;
+				 bat1 = 1;
 				 batsman1score = 0;
 				 batsman1 = "Rohit Sharma";
 				 batsman1skill = 85;
 				 batsman2skill = 75;
+				 bat2 = 2;
 				 batsman2 = "Shikhar Dhawan";
 				 batsman2score = 0;
 				 oversleft = level;
@@ -453,8 +524,9 @@ namespace FunBrainz {
 
 			 private: Void setLabels()
 			{
+				
 				TargetLabel->Text = "Target " + target;
-				 ScoreLabel->Text = "Score " + score;
+				 ScoreLabel->Text = "" + score + "-" + wicketslost;
 				 RunsNeededLabel->Text = "Runs Needed " + runsneeded;
 				 OversLeftLabel->Text = "Overs Left " + oversleft + "." + ballsleft;
 				 Batsman1ScoreLabel->Text = batsman1 + " " + batsman1score;
@@ -607,13 +679,9 @@ private: System::Void StopButton_Click(System::Object^  sender, System::EventArg
 					 OleDb::OleDbConnection ^ con = gcnew OleDb::OleDbConnection();
 					 con->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=FunBrainzForKids.accdb;";
 					 int temp = wicketslost+2;
-					 String ^ Sql = "Select [Name] from IndiaICCTeam where [PlayerPosition] = " + temp + ";";
+					 name =  player[temp];
+					 String ^Sql = "Select [BattingSkill] from IndiaICCTeam where [PlayerPosition] = " + temp + ";";
 					 OleDb::OleDbCommand ^ command = gcnew OleDb::OleDbCommand(Sql, con);
-					 con->Open();
-					 name =  command->ExecuteScalar()->ToString();
-					 con->Close();
-					 Sql = "Select [BattingSkill] from IndiaICCTeam where [PlayerPosition] = " + temp + ";";
-					 command = gcnew OleDb::OleDbCommand(Sql, con);
 					 con->Open();
 					 skill = (int) command->ExecuteScalar();
 					 con->Close();
@@ -624,12 +692,14 @@ private: System::Void StopButton_Click(System::Object^  sender, System::EventArg
 				 if(currbatsman==0)
 				 {
 					 batsman1score = 0;
+					 bat1 = wicketslost+2;
 					 batsman1 = name;
 					 batsman1skill = skill;
 				 }
 				 else
 				 {
 					 batsman2score = 0;
+					 bat2 = wicketslost+2;
 					 batsman2 = name;
 					 batsman2skill = skill;
 				 }
@@ -641,10 +711,12 @@ private: System::Void StopButton_Click(System::Object^  sender, System::EventArg
 				 score += runs;
 				 if(currbatsman==0)
 				 {
+					 scores[bat1]+=runs;
 					 batsman1score+=runs;
 				 }
 				 else
 				 {
+					 scores[bat2]+=runs;
 					 batsman2score+=runs;
 				 }
 				 if(runsneeded<=0)
