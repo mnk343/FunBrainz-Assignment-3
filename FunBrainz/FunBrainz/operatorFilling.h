@@ -252,16 +252,15 @@ namespace FunBrainz {
 		}
 #pragma endregion
 	
-int num1,num2 , num3  ;
+int num1,num2 , num3  ,level;
 
-private: System::Void operatorFilling_Load(System::Object^  sender, System::EventArgs^  e) {
-				
+private : System::Void GenerateQuestion (int level)
+{
+
 				 array<System::String ^>^ s = gcnew array<System::String ^>  { "+" , "-" , "*" , "/" } ;
-
 
 				 long int ans;
 
-				 int level = 1;
 
 				 int range ;
 				 double temp=2;
@@ -350,6 +349,14 @@ private: System::Void operatorFilling_Load(System::Object^  sender, System::Even
 
 				 number3 -> Text = System::Convert::ToString(num3);
 				 answer -> Text = System::Convert::ToString(ans);
+		  
+}
+
+private: System::Void operatorFilling_Load(System::Object^  sender, System::EventArgs^  e) {
+			
+			 level=1;
+			 
+			 GenerateQuestion(level);
 
 
 			 }
@@ -384,17 +391,17 @@ private: System::Void submit_Click(System::Object^  sender, System::EventArgs^  
 				ans += num1;
 			}
 
-			else if ( inputOp2->Text =="-")
+			else if ( inputOp1->Text =="-")
 			{
 				ans = num1 - ans;
 			}
 
-			else if ( inputOp2->Text == "*")
+			else if ( inputOp1->Text == "*")
 			{
 				ans *= num1 ;
 			}
 
-			else if ( inputOp2->Text == "/")
+			else if ( inputOp1->Text == "/")
 			{
 				if (ans == 0)
 				{
@@ -407,6 +414,7 @@ private: System::Void submit_Click(System::Object^  sender, System::EventArgs^  
 			if ( System::Convert::ToString(ans) == answer->Text )
 			{
 				MessageBox::Show("Correct");
+				GenerateQuestion(level);
 			}
 
 			else
@@ -415,10 +423,16 @@ private: System::Void submit_Click(System::Object^  sender, System::EventArgs^  
 				MessageBox::Show("Wrong");			
 			}
 
-			//MessageBox::Show(System::Convert::ToString(ans));
+			inputOp1->Text = "";
+			inputOp2->Text = "";
 
 
-
+			/*
+			MessageBox::Show(System::Convert::ToString(ans));
+			MessageBox::Show(System::Convert::ToString(num1));
+			MessageBox::Show(System::Convert::ToString(num2));
+			MessageBox::Show(System::Convert::ToString(num3));
+			*/
 		 }
 };
 }
