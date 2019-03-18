@@ -1,6 +1,7 @@
 #pragma once
 #include "Cricket.h"
 #include "GlobalFuncs.h"
+#include "operatorFilling.h"
 namespace FunBrainz {
 
 	using namespace System;
@@ -92,7 +93,7 @@ namespace FunBrainz {
 				 std::pair <std::string, long int> ques = GlobalFuncs::generateQuestion(4, 1);
 				 String ^ x = gcnew String(ques.first.c_str());
 				 MessageBox::Show(x); 
-				 Cricket ^ form = gcnew Cricket; 
+				 operatorFilling ^ form = gcnew operatorFilling; 
 				 form->ShowDialog();
 			 }
 

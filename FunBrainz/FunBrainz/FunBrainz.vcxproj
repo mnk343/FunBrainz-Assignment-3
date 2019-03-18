@@ -90,6 +90,7 @@
     <ClCompile Include="Cricket.cpp" />
     <ClCompile Include="FunBrainz.cpp" />
     <ClCompile Include="GlobalFuncs.cpp" />
+    <ClCompile Include="operatorFilling.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
@@ -103,6 +104,9 @@
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="GlobalFuncs.h" />
+    <ClInclude Include="operatorFilling.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="resource.h" />
     <ClInclude Include="stdafx.h" />
   </ItemGroup>
@@ -116,6 +120,9 @@
     <EmbeddedResource Include="Form1.resX">
       <DependentUpon>Form1.h</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="operatorFilling.resx">
+      <DependentUpon>operatorFilling.h</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
