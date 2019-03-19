@@ -82,40 +82,42 @@ namespace FunBrainz {
 			this->Controls->Add(this->btn_Animal);
 			this->Name = L"Image_Quiz";
 			this->Text = L"Image_Quiz";
+			this->Load += gcnew System::EventHandler(this, &Image_Quiz::Image_Quiz_Load_1);
 			this->ResumeLayout(false);
 
 		}
 #pragma endregion
-		//void read_directory(std::string& name)
-		//{
-		//	std::string pattern(name);
-		//	pattern.append("\\*");
-		//	WIN32_FIND_DATA data;
-		//	HANDLE hFind;
-		//	LPCWSTR var = LPCWSTR(pattern.c_str());
-		//	String ^str3 = gcnew String(pattern.c_str());
-		//	MessageBox::Show(str3);
+		/*void read_directory(std::string& name)
+		{
+			std::string pattern(name);
+			pattern.append("\\*");
+			WIN32_FIND_DATA data;
+			HANDLE hFind;
+			LPCWSTR var = LPCWSTR(pattern.c_str());
+			String ^str3 = gcnew String(pattern.c_str());
+			MessageBox::Show(str3);
 
 
-		//	if ((hFind = FindFirstFile(var, &data)) != INVALID_HANDLE_VALUE) {
-		//		do {
-		//			wstring ws(data.cFileName);
-		//			string str(ws.begin(), ws.end());
-		//			String ^str2 = gcnew String(str.c_str());
-		//			MessageBox::Show(str2);
+			if ((hFind = FindFirstFile(var, &data)) != INVALID_HANDLE_VALUE) {
+				do {
+					wstring ws(data.cFileName);
+					string str(ws.begin(), ws.end());
+					String ^str2 = gcnew String(str.c_str());
+					MessageBox::Show(str2);
 
-		//		} while (FindNextFile(hFind, &data) != 0);
-		//		FindClose(hFind);
-		//	}
-		//}
+				} while (FindNextFile(hFind, &data) != 0);
+				FindClose(hFind);
+			}
+		}*/
 	private: System::Void btn_Animal_Click(System::Object^  sender, System::EventArgs^  e) {
 				 Image_Quiz::Hide();
 				 Image_Quiz_Display ^ form = gcnew Image_Quiz_Display;
 				 form->ShowDialog();
 	}
-	private: System::Void Image_Quiz_Load(System::Object^  sender, System::EventArgs^  e) {
-
-	}
+	private: System::Void Image_Quiz_Load_1(System::Object^  sender, System::EventArgs^  e) {
+				 /*String ^ str = "C:\\Users\\Aryan Agrawal\\Desktop\\ChildEudcation\\FunBrainz-Assignment-3\\FunBrainz\\FunBrainz\\media";
+				 read_directory()*/
+			 }
 	};
 
 	
