@@ -56,6 +56,12 @@ namespace FunBrainz {
 	private: System::Windows::Forms::TextBox^  inputOp1;
 	private: System::Windows::Forms::TextBox^  inputOp2;
 	private: System::Windows::Forms::Button^  submit;
+	private: System::Windows::Forms::Label^  lblLevel;
+	private: System::Windows::Forms::Timer^  ClockTimer;
+	private: System::Windows::Forms::Label^  clock;
+	private: System::Windows::Forms::Label^  lblTriesLeft;
+	private: System::Windows::Forms::Label^  lblScore;
+	private: System::ComponentModel::IContainer^  components;
 
 
 	protected: 
@@ -72,7 +78,7 @@ namespace FunBrainz {
 		/// <summary>
 		/// Required designer variable.
 		/// </summary>
-		System::ComponentModel::Container ^components;
+
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
@@ -81,6 +87,7 @@ namespace FunBrainz {
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			this->components = (gcnew System::ComponentModel::Container());
 			this->number1 = (gcnew System::Windows::Forms::Label());
 			this->oper1 = (gcnew System::Windows::Forms::Label());
 			this->number2 = (gcnew System::Windows::Forms::Label());
@@ -93,6 +100,11 @@ namespace FunBrainz {
 			this->inputOp1 = (gcnew System::Windows::Forms::TextBox());
 			this->inputOp2 = (gcnew System::Windows::Forms::TextBox());
 			this->submit = (gcnew System::Windows::Forms::Button());
+			this->lblLevel = (gcnew System::Windows::Forms::Label());
+			this->ClockTimer = (gcnew System::Windows::Forms::Timer(this->components));
+			this->clock = (gcnew System::Windows::Forms::Label());
+			this->lblTriesLeft = (gcnew System::Windows::Forms::Label());
+			this->lblScore = (gcnew System::Windows::Forms::Label());
 			this->SuspendLayout();
 			// 
 			// number1
@@ -226,11 +238,64 @@ namespace FunBrainz {
 			this->submit->UseVisualStyleBackColor = true;
 			this->submit->Click += gcnew System::EventHandler(this, &operatorFilling::submit_Click);
 			// 
+			// lblLevel
+			// 
+			this->lblLevel->AutoSize = true;
+			this->lblLevel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->lblLevel->Location = System::Drawing::Point(396, 13);
+			this->lblLevel->Name = L"lblLevel";
+			this->lblLevel->Size = System::Drawing::Size(57, 25);
+			this->lblLevel->TabIndex = 12;
+			this->lblLevel->Text = L"level";
+			// 
+			// ClockTimer
+			// 
+			this->ClockTimer->Interval = 1000;
+			this->ClockTimer->Tick += gcnew System::EventHandler(this, &operatorFilling::ClockTimer_Tick);
+			// 
+			// clock
+			// 
+			this->clock->AutoSize = true;
+			this->clock->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->clock->Location = System::Drawing::Point(31, 13);
+			this->clock->Name = L"clock";
+			this->clock->Size = System::Drawing::Size(62, 25);
+			this->clock->TabIndex = 13;
+			this->clock->Text = L"clock";
+			// 
+			// lblTriesLeft
+			// 
+			this->lblTriesLeft->AutoSize = true;
+			this->lblTriesLeft->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->lblTriesLeft->Location = System::Drawing::Point(183, 189);
+			this->lblTriesLeft->Name = L"lblTriesLeft";
+			this->lblTriesLeft->Size = System::Drawing::Size(102, 25);
+			this->lblTriesLeft->TabIndex = 14;
+			this->lblTriesLeft->Text = L"Tries Left";
+			// 
+			// lblScore
+			// 
+			this->lblScore->AutoSize = true;
+			this->lblScore->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->lblScore->Location = System::Drawing::Point(31, 189);
+			this->lblScore->Name = L"lblScore";
+			this->lblScore->Size = System::Drawing::Size(65, 25);
+			this->lblScore->TabIndex = 15;
+			this->lblScore->Text = L"score";
+			// 
 			// operatorFilling
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(527, 251);
+			this->Controls->Add(this->lblScore);
+			this->Controls->Add(this->lblTriesLeft);
+			this->Controls->Add(this->clock);
+			this->Controls->Add(this->lblLevel);
 			this->Controls->Add(this->submit);
 			this->Controls->Add(this->inputOp2);
 			this->Controls->Add(this->inputOp1);
@@ -252,7 +317,7 @@ namespace FunBrainz {
 		}
 #pragma endregion
 	
-int num1,num2 , num3  ,level;
+int num1,num2 , num3  ,level , ctrQ , counter , score , triesLeft;
 
 private : System::Void GenerateQuestion (int level)
 {
@@ -355,7 +420,18 @@ private : System::Void GenerateQuestion (int level)
 private: System::Void operatorFilling_Load(System::Object^  sender, System::EventArgs^  e) {
 			
 			 level=1;
-			 
+			 ctrQ=0;
+			 triesLeft = 3;
+			 lblTriesLeft->Text = System::Convert::ToString(triesLeft);
+
+			 counter=30;
+			 score = 0;
+
+			 lblScore -> Text = System :: Convert :: ToString(score);
+			 clock->Text = System::Convert::ToString(counter);
+			 ClockTimer->Start();
+
+			 lblLevel->Text = System::Convert::ToString(level);
 			 GenerateQuestion(level);
 
 
@@ -413,14 +489,43 @@ private: System::Void submit_Click(System::Object^  sender, System::EventArgs^  
 			
 			if ( System::Convert::ToString(ans) == answer->Text )
 			{
+			    score += 10 + (3 * counter) ;
+				lblScore ->Text = (System::Convert::ToString(score));
+				
+				counter=31;
 				MessageBox::Show("Correct");
+
+				ctrQ++;
+				if(ctrQ % 5 == 0 )
+				{
+					level++;
+			     	lblLevel->Text = System::Convert::ToString(level);
+					
+					if(level == 6 )
+					{
+						goto success ;
+					}
+				}
+				
 				GenerateQuestion(level);
+
 			}
 
 			else
 			{
 				l1:
-				MessageBox::Show("Wrong");			
+				score += 0; 
+				lblScore ->Text = (System::Convert::ToString(score));
+
+				MessageBox::Show("Wrong");
+				triesLeft --;
+			    lblTriesLeft->Text = System::Convert::ToString(triesLeft);
+
+				if(triesLeft == 0 )
+				{
+					goto failure;
+				}
+
 			}
 
 			inputOp1->Text = "";
@@ -433,6 +538,26 @@ private: System::Void submit_Click(System::Object^  sender, System::EventArgs^  
 			MessageBox::Show(System::Convert::ToString(num2));
 			MessageBox::Show(System::Convert::ToString(num3));
 			*/
+		 
+			if(level == 6)
+			{
+				success :
+				MessageBox::Show("Game complete");
+
+			}
+
+			if(triesLeft == 0)
+			{
+				failure:
+				MessageBox::Show("You Lost");
+			}
+		 
+		 
+		 }
+private: System::Void ClockTimer_Tick(System::Object^  sender, System::EventArgs^  e) {
+
+			 counter--;
+			 clock->Text = System::Convert::ToString(counter);
 		 }
 };
 }
