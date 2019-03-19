@@ -101,6 +101,7 @@ namespace FunBrainz {
 			this->Controls->Add(this->button1);
 			this->Margin = System::Windows::Forms::Padding(2);
 			this->Name = L"Form1";
+			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"Form1";
 			this->Load += gcnew System::EventHandler(this, &Form1::Form1_Load);
 			this->ResumeLayout(false);

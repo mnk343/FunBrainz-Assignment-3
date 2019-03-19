@@ -423,9 +423,12 @@ namespace FunBrainz {
 			this->Controls->Add(this->btn32);
 			this->Controls->Add(this->btn33);
 			this->Controls->Add(this->btn11);
+			this->KeyPreview = true;
 			this->Margin = System::Windows::Forms::Padding(2);
 			this->Name = L"MyForm1";
+			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"MyForm1";
+			this->KeyUp += gcnew System::Windows::Forms::KeyEventHandler(this, &MyForm1::KeyUp_form);
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -1024,5 +1027,30 @@ namespace FunBrainz {
 				 Begin();
 	}
 
+
+
+private: System::Void KeyUp_form(System::Object^  sender, System::Windows::Forms::KeyEventArgs^  e) {
+			 if (e->KeyValue == 37)
+			 {
+				 Move_Left();
+				 is_2048_found();
+			 }
+			 else if (e->KeyValue == 38)
+			 {
+				 Move_Up();
+				 is_2048_found();
+			 }
+			 else if (e->KeyValue == 39)
+			 {
+				 Move_Right();
+				 is_2048_found();
+			 }
+			 else if (e->KeyValue == 40)
+			 {
+				 Move_Down();
+				 is_2048_found();
+			 }
+
+		 }
 };
 }

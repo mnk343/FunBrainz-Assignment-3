@@ -1,6 +1,7 @@
 #pragma once
 #include<vector>
 #include<ctime>
+#include "HintForm.h"
 namespace FunBrainz {
 
 	using namespace System;
@@ -38,6 +39,7 @@ namespace FunBrainz {
 	private: System::Windows::Forms::PictureBox^  PB_Quiz_Image;
 	private: System::Windows::Forms::Button^  btnNext;
 	private: System::Windows::Forms::Label^  label1;
+	private: System::Windows::Forms::Button^  btn_submit;
 	protected:
 
 	private:
@@ -53,30 +55,31 @@ namespace FunBrainz {
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(Image_Quiz_Display::typeid));
 			this->PB_Quiz_Image = (gcnew System::Windows::Forms::PictureBox());
 			this->btnNext = (gcnew System::Windows::Forms::Button());
 			this->label1 = (gcnew System::Windows::Forms::Label());
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->PB_Quiz_Image))->BeginInit();
+			this->btn_submit = (gcnew System::Windows::Forms::Button());
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->PB_Quiz_Image))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// PB_Quiz_Image
 			// 
-			this->PB_Quiz_Image->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"PB_Quiz_Image.Image")));
-			this->PB_Quiz_Image->Location = System::Drawing::Point(347, 12);
+			this->PB_Quiz_Image->Location = System::Drawing::Point(260, 10);
+			this->PB_Quiz_Image->Margin = System::Windows::Forms::Padding(2);
 			this->PB_Quiz_Image->Name = L"PB_Quiz_Image";
-			this->PB_Quiz_Image->Size = System::Drawing::Size(316, 231);
+			this->PB_Quiz_Image->Size = System::Drawing::Size(237, 188);
 			this->PB_Quiz_Image->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
 			this->PB_Quiz_Image->TabIndex = 0;
 			this->PB_Quiz_Image->TabStop = false;
 			// 
 			// btnNext
 			// 
-			this->btnNext->BackColor = System::Drawing::SystemColors::ControlDarkDark;
+			this->btnNext->BackColor = System::Drawing::SystemColors::ButtonHighlight;
 			this->btnNext->ForeColor = System::Drawing::SystemColors::ControlDark;
-			this->btnNext->Location = System::Drawing::Point(806, 82);
+			this->btnNext->Location = System::Drawing::Point(601, 26);
+			this->btnNext->Margin = System::Windows::Forms::Padding(2);
 			this->btnNext->Name = L"btnNext";
-			this->btnNext->Size = System::Drawing::Size(105, 89);
+			this->btnNext->Size = System::Drawing::Size(79, 72);
 			this->btnNext->TabIndex = 1;
 			this->btnNext->Text = L"NEXT";
 			this->btnNext->UseVisualStyleBackColor = false;
@@ -85,36 +88,62 @@ namespace FunBrainz {
 			// label1
 			// 
 			this->label1->AutoSize = true;
-			this->label1->Location = System::Drawing::Point(37, 12);
+			this->label1->Location = System::Drawing::Point(28, 10);
+			this->label1->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(50, 17);
+			this->label1->Size = System::Drawing::Size(38, 13);
 			this->label1->TabIndex = 2;
 			this->label1->Text = L"Animal";
 			// 
+			// btn_submit
+			// 
+			this->btn_submit->BackColor = System::Drawing::SystemColors::ButtonHighlight;
+			this->btn_submit->ForeColor = System::Drawing::SystemColors::ControlDark;
+			this->btn_submit->Location = System::Drawing::Point(601, 126);
+			this->btn_submit->Margin = System::Windows::Forms::Padding(2);
+			this->btn_submit->Name = L"btn_submit";
+			this->btn_submit->Size = System::Drawing::Size(79, 72);
+			this->btn_submit->TabIndex = 3;
+			this->btn_submit->Text = L"SUBMIT";
+			this->btn_submit->UseVisualStyleBackColor = false;
+			this->btn_submit->Click += gcnew System::EventHandler(this, &Image_Quiz_Display::btn_submit_Click);
+			// 
 			// Image_Quiz_Display
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
+			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(1006, 721);
+			this->ClientSize = System::Drawing::Size(754, 586);
+			this->Controls->Add(this->btn_submit);
 			this->Controls->Add(this->label1);
 			this->Controls->Add(this->btnNext);
 			this->Controls->Add(this->PB_Quiz_Image);
+			this->KeyPreview = true;
+			this->Margin = System::Windows::Forms::Padding(2);
 			this->Name = L"Image_Quiz_Display";
+			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"Image_Quiz_Display";
 			this->Load += gcnew System::EventHandler(this, &Image_Quiz_Display::Image_Quiz_Display_Load);
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->PB_Quiz_Image))->EndInit();
+			this->KeyPress += gcnew System::Windows::Forms::KeyPressEventHandler(this, &Image_Quiz_Display::ImageQuiz_KeyPress);
+			this->KeyUp += gcnew System::Windows::Forms::KeyEventHandler(this, &Image_Quiz_Display::ImageQuiz_KeyUp);
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->PB_Quiz_Image))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
 		}
 #pragma endregion
 	
-		static array<String^>^ image_file_name = gcnew array<String^>(1000);
-		static array<String^>^ image_name = gcnew array<String^>(1000);
-		static array<bool>^ visited_image = gcnew array<bool>(1000);
+		static array<String^>^ image_file_name = gcnew array<String^>(1000); //for file name
+		static array<String^>^ image_name = gcnew array<String^>(1000); //for image name
+		static array<bool>^ visited_image = gcnew array<bool>(1000); //boolean array to check if the image is already displayed
+		static array<int>^ index_ans = gcnew array<int>(14); // for storing the index of the pressed char button 
+		
 		static int counter_image = 0;
 		static int length_of_answer = 0;
+		static int index_to_be_filled = 0;
 	public:
+
+		
+
 		void button_creator(int x,int y,String^ s){
 			Button^ var = gcnew Button();
 			//var->BackColor = System::Drawing::SystemColors::ControlDarkDar/*k;
@@ -140,6 +169,7 @@ namespace FunBrainz {
 			hint->Text = "HINT";
 			hint->UseVisualStyleBackColor = false;
 			this->Controls->Add(hint);
+			hint->Click += gcnew System::EventHandler(this, &Image_Quiz_Display::btnHint_Click);
 			x = x + 75;
 
 			clear->Location = System::Drawing::Point(x, y);
@@ -149,6 +179,7 @@ namespace FunBrainz {
 			clear->Text = "clear";
 			clear->UseVisualStyleBackColor = false;
 			this->Controls->Add(clear);
+			clear->Click += gcnew System::EventHandler(this, &Image_Quiz_Display::btnClear_Click);
 			x = x + 75;
 
 			back->Location = System::Drawing::Point(x, y);
@@ -158,6 +189,64 @@ namespace FunBrainz {
 			back->Text = "back";
 			back->UseVisualStyleBackColor = false;
 			this->Controls->Add(back);
+			back->Click += gcnew System::EventHandler(this, &Image_Quiz_Display::btnBack_Click);
+		}
+
+		private: System::Void btnHint_Click(System::Object^  sender, System::EventArgs^  e){
+					 HintForm^ form = gcnew HintForm;
+					 form->ShowDialog();
+		}
+		
+		//HINT functions
+
+		 void Random_letter()
+		{
+			 Control^ btn_clear = this->Controls[L"clear"];
+			 ((Button^)btn_clear)->PerformClick();
+
+			 int randomindex = rand() % length_of_answer;
+			 String^ actual_ans = PB_Quiz_Image->Name->ToUpper();
+			 actual_ans= actual_ans->Replace(" ","");
+			 Char^ dum = actual_ans[randomindex];
+			 String^ access_char = System::Convert::ToString(dum);
+			 for(int i=0;i<14;i++)
+			 {
+				 Control^ curr_btn = this->Controls[System::Convert::ToString(100+i)];
+				 if(curr_btn->Text == access_char)
+				 {
+					 ((Button^)curr_btn)->PerformClick();
+					 break;
+				 }
+			 }
+		}
+
+
+		private: System::Void btnClear_Click(System::Object^  sender, System::EventArgs^  e){
+			for (int i=0;i<index_to_be_filled;i++)
+			{
+				Control^ btn_to_remove = this->Controls[System::Convert::ToString(i)];
+				btn_to_remove->Text="";
+			}
+
+			for (int i=0;i<index_to_be_filled;i++)
+			{
+				Control^ btn_to_enable = this->Controls[System::Convert::ToString(index_ans[i])];
+				btn_to_enable->Enabled=true;
+			}
+			index_to_be_filled=0;
+		}
+
+		private: System::Void btnBack_Click(System::Object^  sender, System::EventArgs^  e){
+			if (index_to_be_filled==0)
+			{
+				MessageBox::Show("can't back");
+				return;
+			}
+			Control^ btn_to_remove = this->Controls[System::Convert::ToString(--index_to_be_filled)];
+			btn_to_remove->Text="";
+
+			Control^ btn_to_enable = this->Controls[System::Convert::ToString(index_ans[index_to_be_filled])];
+			btn_to_enable->Enabled=true;
 		}
 
 		void button_creator3(int x, int y,Char^ s,int i)
@@ -179,12 +268,22 @@ namespace FunBrainz {
 		}
 
 		private: System::Void btnChar_Click(System::Object^  sender, System::EventArgs^  e){
+			if (index_to_be_filled == length_of_answer)
+			{
+				MessageBox::Show("Can't Filled further");
+				return;
+			}
 			Button^ btn = ((Button^)sender);
-			Control^ random = this->Controls[L"0"];
+			index_ans[index_to_be_filled]= System::Int64::Parse(btn->Name);
+			Control^ random = this->Controls[System::Convert::ToString(index_to_be_filled++)];
+			btn->Enabled = false;
 			random->Text = btn->Text;
 		}
 
 		void refresh_image(){
+			index_to_be_filled=0;
+			length_of_answer=0;
+
 			Image ^image1;
 			int random_index;
 			int flag = 0;
@@ -206,10 +305,9 @@ namespace FunBrainz {
 				}
 			}
 			String ^ str = "media\\" + image_file_name[random_index];
-			//String ^ str = "C:\\Users\\Vakul Gupta\\Desktop\\Software-3\\Child-Education\\FunBrainz\\FunBrainz\\media\\" + image_file_name[random_index];
 			image1 = gcnew Bitmap(str);
 			PB_Quiz_Image->Image = image1;
-			//PB_Quiz_Image->Name = image_name[random_index];
+			PB_Quiz_Image->Name = image_name[random_index];
 			
 			String^ dummy = image_name[random_index];
 			int x = (0.5)*(768 - (dummy->Length)*(45) - (5)*(dummy->Length-1));
@@ -339,5 +437,58 @@ namespace FunBrainz {
 
 				 refresh_image();
 	}
+private: System::Void btn_submit_Click(System::Object^  sender, System::EventArgs^  e) {
+			 String^ actual_ans = PB_Quiz_Image->Name->ToUpper();
+			 actual_ans= actual_ans->Replace(" ","");
+			 if (index_to_be_filled!=length_of_answer)
+			 {
+				 MessageBox::Show("You can't submit");
+				 return;
+			 }			 
+			// MessageBox::Show(actual_ans->ToUpper());
+			 String^ submitted_string = "";
+			 for(int i=0;i<index_to_be_filled;i++)
+			 {
+				 Control^ btn_access = this->Controls[System::Convert::ToString(i)];
+				 submitted_string+= btn_access->Text;
+			 }
+			 //MessageBox::Show(submitted_string);
+
+			 if (submitted_string == actual_ans)
+			 {
+				 MessageBox::Show("Correct Answer!!");
+				 btnNext->PerformClick();
+			 }
+			 else
+			 {
+				  MessageBox::Show("Incorrect Answer!!");
+				  Control^ btn_clear = this->Controls[L"clear"];
+				  ((Button^)btn_clear)->PerformClick();
+			 }
+		 }
+private: System::Void ImageQuiz_KeyPress(System::Object^  sender, System::Windows::Forms::KeyPressEventArgs^  e) {
+			// MessageBox::Show(System::Convert::ToString(e->KeyChar));
+			 for (int i=0;i<14;i++)
+			 {
+				 Control^ curr_btn = this->Controls[System::Convert::ToString(100+i)];
+				 if(curr_btn->Enabled == false)
+				 {
+					continue;
+				 }
+				 if (((Button^)curr_btn)->Text == (System::Convert::ToString(e->KeyChar)->ToUpper()))
+				 {
+					((Button^)curr_btn)->PerformClick();
+					return;
+				 }
+			 }
+		 }
+private: System::Void ImageQuiz_KeyUp(System::Object^  sender, System::Windows::Forms::KeyEventArgs^  e) {
+			 //MessageBox::Show(System::Convert::ToString(e->KeyValue));
+			 if (e->KeyValue == 8)
+			 {
+				 Control^ btn_back = this->Controls[L"back"];
+				 ((Button^)btn_back)->PerformClick();
+			 }
+		 }
 };
 }
