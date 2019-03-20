@@ -3,6 +3,8 @@
 #include "GlobalFuncs.h"
 #include "MyForm1.h"
 #include "Image_Quiz.h"
+#include "Pipeline_Game.h"
+
 namespace FunBrainz {
 
 	using namespace System;
@@ -40,6 +42,7 @@ namespace FunBrainz {
 	private: System::Windows::Forms::Button^  button1;
 	private: System::Windows::Forms::Button^  btn_2048;
 	private: System::Windows::Forms::Button^  btn_Image_Quiz;
+	private: System::Windows::Forms::Button^  btn_pipeline;
 	protected: 
 
 	private:
@@ -58,14 +61,15 @@ namespace FunBrainz {
 			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->btn_2048 = (gcnew System::Windows::Forms::Button());
 			this->btn_Image_Quiz = (gcnew System::Windows::Forms::Button());
+			this->btn_pipeline = (gcnew System::Windows::Forms::Button());
 			this->SuspendLayout();
 			// 
 			// button1
 			// 
-			this->button1->Location = System::Drawing::Point(71, 82);
-			this->button1->Margin = System::Windows::Forms::Padding(2);
+			this->button1->Location = System::Drawing::Point(95, 101);
+			this->button1->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(56, 19);
+			this->button1->Size = System::Drawing::Size(75, 23);
 			this->button1->TabIndex = 0;
 			this->button1->Text = L"button1";
 			this->button1->UseVisualStyleBackColor = true;
@@ -73,9 +77,10 @@ namespace FunBrainz {
 			// 
 			// btn_2048
 			// 
-			this->btn_2048->Location = System::Drawing::Point(62, 120);
+			this->btn_2048->Location = System::Drawing::Point(83, 148);
+			this->btn_2048->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->btn_2048->Name = L"btn_2048";
-			this->btn_2048->Size = System::Drawing::Size(75, 23);
+			this->btn_2048->Size = System::Drawing::Size(100, 28);
 			this->btn_2048->TabIndex = 1;
 			this->btn_2048->Text = L"2048_game";
 			this->btn_2048->UseVisualStyleBackColor = true;
@@ -83,23 +88,35 @@ namespace FunBrainz {
 			// 
 			// btn_Image_Quiz
 			// 
-			this->btn_Image_Quiz->Location = System::Drawing::Point(62, 150);
+			this->btn_Image_Quiz->Location = System::Drawing::Point(83, 185);
+			this->btn_Image_Quiz->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->btn_Image_Quiz->Name = L"btn_Image_Quiz";
-			this->btn_Image_Quiz->Size = System::Drawing::Size(75, 23);
+			this->btn_Image_Quiz->Size = System::Drawing::Size(100, 28);
 			this->btn_Image_Quiz->TabIndex = 2;
 			this->btn_Image_Quiz->Text = L"Image Quiz";
 			this->btn_Image_Quiz->UseVisualStyleBackColor = true;
 			this->btn_Image_Quiz->Click += gcnew System::EventHandler(this, &Form1::btn_Image_Quiz_Click);
 			// 
+			// btn_pipeline
+			// 
+			this->btn_pipeline->Location = System::Drawing::Point(95, 37);
+			this->btn_pipeline->Name = L"btn_pipeline";
+			this->btn_pipeline->Size = System::Drawing::Size(75, 23);
+			this->btn_pipeline->TabIndex = 3;
+			this->btn_pipeline->Text = L"Pipeline";
+			this->btn_pipeline->UseVisualStyleBackColor = true;
+			this->btn_pipeline->Click += gcnew System::EventHandler(this, &Form1::btn_pipeline_Click);
+			// 
 			// Form1
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
+			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(212, 206);
+			this->ClientSize = System::Drawing::Size(283, 254);
+			this->Controls->Add(this->btn_pipeline);
 			this->Controls->Add(this->btn_Image_Quiz);
 			this->Controls->Add(this->btn_2048);
 			this->Controls->Add(this->button1);
-			this->Margin = System::Windows::Forms::Padding(2);
+			this->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->Name = L"Form1";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"Form1";
@@ -141,6 +158,11 @@ namespace FunBrainz {
 				 Image_Quiz ^ form = gcnew Image_Quiz;
 				 form->ShowDialog();
 			 }
+private: System::Void btn_pipeline_Click(System::Object^  sender, System::EventArgs^  e) {
+			 Form1::Hide();
+			 Pipeline_Game ^ form = gcnew Pipeline_Game;
+			 form->ShowDialog();
+		 }
 };
 }
 

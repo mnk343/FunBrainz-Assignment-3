@@ -1,7 +1,9 @@
 #pragma once
+#include "Hint_user_control.h"
 #include<vector>
 #include<ctime>
-#include "HintForm.h"
+#include "Hint_User_Control.h"
+
 namespace FunBrainz {
 
 	using namespace System;
@@ -40,6 +42,7 @@ namespace FunBrainz {
 	private: System::Windows::Forms::Button^  btnNext;
 	private: System::Windows::Forms::Label^  label1;
 	private: System::Windows::Forms::Button^  btn_submit;
+	private: System::Windows::Forms::Panel^  panel1;
 	protected:
 
 	private:
@@ -59,15 +62,16 @@ namespace FunBrainz {
 			this->btnNext = (gcnew System::Windows::Forms::Button());
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->btn_submit = (gcnew System::Windows::Forms::Button());
+			this->panel1 = (gcnew System::Windows::Forms::Panel());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->PB_Quiz_Image))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// PB_Quiz_Image
 			// 
-			this->PB_Quiz_Image->Location = System::Drawing::Point(260, 10);
-			this->PB_Quiz_Image->Margin = System::Windows::Forms::Padding(2);
+			this->PB_Quiz_Image->Location = System::Drawing::Point(347, 12);
+			this->PB_Quiz_Image->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->PB_Quiz_Image->Name = L"PB_Quiz_Image";
-			this->PB_Quiz_Image->Size = System::Drawing::Size(237, 188);
+			this->PB_Quiz_Image->Size = System::Drawing::Size(316, 231);
 			this->PB_Quiz_Image->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
 			this->PB_Quiz_Image->TabIndex = 0;
 			this->PB_Quiz_Image->TabStop = false;
@@ -76,10 +80,10 @@ namespace FunBrainz {
 			// 
 			this->btnNext->BackColor = System::Drawing::SystemColors::ButtonHighlight;
 			this->btnNext->ForeColor = System::Drawing::SystemColors::ControlDark;
-			this->btnNext->Location = System::Drawing::Point(601, 26);
-			this->btnNext->Margin = System::Windows::Forms::Padding(2);
+			this->btnNext->Location = System::Drawing::Point(801, 32);
+			this->btnNext->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->btnNext->Name = L"btnNext";
-			this->btnNext->Size = System::Drawing::Size(79, 72);
+			this->btnNext->Size = System::Drawing::Size(105, 89);
 			this->btnNext->TabIndex = 1;
 			this->btnNext->Text = L"NEXT";
 			this->btnNext->UseVisualStyleBackColor = false;
@@ -88,10 +92,9 @@ namespace FunBrainz {
 			// label1
 			// 
 			this->label1->AutoSize = true;
-			this->label1->Location = System::Drawing::Point(28, 10);
-			this->label1->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label1->Location = System::Drawing::Point(37, 12);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(38, 13);
+			this->label1->Size = System::Drawing::Size(50, 17);
 			this->label1->TabIndex = 2;
 			this->label1->Text = L"Animal";
 			// 
@@ -99,26 +102,36 @@ namespace FunBrainz {
 			// 
 			this->btn_submit->BackColor = System::Drawing::SystemColors::ButtonHighlight;
 			this->btn_submit->ForeColor = System::Drawing::SystemColors::ControlDark;
-			this->btn_submit->Location = System::Drawing::Point(601, 126);
-			this->btn_submit->Margin = System::Windows::Forms::Padding(2);
+			this->btn_submit->Location = System::Drawing::Point(801, 155);
+			this->btn_submit->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->btn_submit->Name = L"btn_submit";
-			this->btn_submit->Size = System::Drawing::Size(79, 72);
+			this->btn_submit->Size = System::Drawing::Size(105, 89);
 			this->btn_submit->TabIndex = 3;
 			this->btn_submit->Text = L"SUBMIT";
 			this->btn_submit->UseVisualStyleBackColor = false;
 			this->btn_submit->Click += gcnew System::EventHandler(this, &Image_Quiz_Display::btn_submit_Click);
 			// 
+			// panel1
+			// 
+			this->panel1->BackColor = System::Drawing::Color::White;
+			this->panel1->Location = System::Drawing::Point(368, 189);
+			this->panel1->Name = L"panel1";
+			this->panel1->Size = System::Drawing::Size(387, 287);
+			this->panel1->TabIndex = 4;
+			this->panel1->Visible = false;
+			// 
 			// Image_Quiz_Display
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
+			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(754, 586);
+			this->ClientSize = System::Drawing::Size(1005, 721);
+			this->Controls->Add(this->panel1);
 			this->Controls->Add(this->btn_submit);
 			this->Controls->Add(this->label1);
 			this->Controls->Add(this->btnNext);
 			this->Controls->Add(this->PB_Quiz_Image);
 			this->KeyPreview = true;
-			this->Margin = System::Windows::Forms::Padding(2);
+			this->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->Name = L"Image_Quiz_Display";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"Image_Quiz_Display";
@@ -191,10 +204,18 @@ namespace FunBrainz {
 			this->Controls->Add(back);
 			back->Click += gcnew System::EventHandler(this, &Image_Quiz_Display::btnBack_Click);
 		}
-
+		// ********** HINT USER CONTROL *******
 		private: System::Void btnHint_Click(System::Object^  sender, System::EventArgs^  e){
-					 HintForm^ form = gcnew HintForm;
-					 form->ShowDialog();
+					 //HintForm^ form = gcnew HintForm;
+					 //form->ShowDialog();
+   					 Hint_User_Control^ hint_control = gcnew Hint_User_Control;
+   					 // hint_control->Location = System::Drawing::Point(384, 512);
+   					 panel1->Controls->Add(hint_control);
+					 panel1->Visible=true;
+					 this->Opacity=0.8;
+					 
+					 // hint_control->Visible=true;
+
 		}
 		
 		//HINT functions

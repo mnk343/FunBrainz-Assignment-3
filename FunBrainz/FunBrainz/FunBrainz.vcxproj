@@ -91,10 +91,11 @@
     <ClCompile Include="FunBrainz.cpp" />
     <ClCompile Include="GlobalFuncs.cpp" />
     <ClCompile Include="HintForm.cpp" />
-    <ClCompile Include="Hint_user_control.cpp" />
+    <ClCompile Include="Hint_User_Control.cpp" />
     <ClCompile Include="Image_Quiz.cpp" />
     <ClCompile Include="Image_Quiz_Display.cpp" />
     <ClCompile Include="MyForm1.cpp" />
+    <ClCompile Include="Pipeline_Game.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
@@ -111,7 +112,7 @@
     <ClInclude Include="HintForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
-    <ClInclude Include="Hint_user_control.h">
+    <ClInclude Include="Hint_User_Control.h">
       <FileType>CppControl</FileType>
     </ClInclude>
     <ClInclude Include="Image_Quiz.h">
@@ -121,6 +122,9 @@
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="MyForm1.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="Pipeline_Game.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="resource.h" />
@@ -140,8 +144,8 @@
     <EmbeddedResource Include="HintForm.resx">
       <DependentUpon>HintForm.h</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Hint_user_control.resx">
-      <DependentUpon>Hint_user_control.h</DependentUpon>
+    <EmbeddedResource Include="Hint_User_Control.resx">
+      <DependentUpon>Hint_User_Control.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Image_Quiz.resx">
       <DependentUpon>Image_Quiz.h</DependentUpon>
@@ -151,6 +155,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MyForm1.resx">
       <DependentUpon>MyForm1.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pipeline_Game.resx">
+      <DependentUpon>Pipeline_Game.h</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

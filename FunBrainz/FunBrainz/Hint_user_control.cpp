@@ -1,2 +1,2 @@
 #include "StdAfx.h"
-#include "Hint_user_control.h"
+#include "Hint_User_Control.h"

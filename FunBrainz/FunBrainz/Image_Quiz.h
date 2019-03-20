@@ -4,9 +4,9 @@
 #include <fstream>
 #include <vector>
 #include <string>
-#include <Windows.h>
 #include <algorithm>
 #include <iterator>
+
 
 using namespace std;
 

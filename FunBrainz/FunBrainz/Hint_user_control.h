@@ -11,12 +11,12 @@ using namespace System::Drawing;
 namespace FunBrainz {
 
 	/// <summary>
-	/// Summary for Hint_user_control
+	/// Summary for Hint_User_Control
 	/// </summary>
-	public ref class Hint_user_control : public System::Windows::Forms::UserControl
+	public ref class Hint_User_Control : public System::Windows::Forms::UserControl
 	{
 	public:
-		Hint_user_control(void)
+		Hint_User_Control(void)
 		{
 			InitializeComponent();
 			//
@@ -28,7 +28,7 @@ namespace FunBrainz {
 		/// <summary>
 		/// Clean up any resources being used.
 		/// </summary>
-		~Hint_user_control()
+		~Hint_User_Control()
 		{
 			if (components)
 			{
@@ -40,6 +40,8 @@ namespace FunBrainz {
 	private: System::Windows::Forms::Button^  btn_extra;
 	private: System::Windows::Forms::Button^  btn_selected;
 	private: System::Windows::Forms::Button^  btn_random;
+
+	protected: 
 
 	private:
 		/// <summary>
@@ -62,66 +64,61 @@ namespace FunBrainz {
 			// 
 			// btn_solve
 			// 
-			this->btn_solve->Location = System::Drawing::Point(30, 201);
+			this->btn_solve->Location = System::Drawing::Point(22, 244);
+			this->btn_solve->Margin = System::Windows::Forms::Padding(4);
 			this->btn_solve->Name = L"btn_solve";
-			this->btn_solve->Size = System::Drawing::Size(218, 45);
+			this->btn_solve->Size = System::Drawing::Size(291, 55);
 			this->btn_solve->TabIndex = 7;
 			this->btn_solve->Text = L"Solve";
 			this->btn_solve->UseVisualStyleBackColor = true;
-			this->btn_solve->Click += gcnew System::EventHandler(this, &Hint_user_control::btn_solve_Click);
 			// 
 			// btn_extra
 			// 
-			this->btn_extra->Location = System::Drawing::Point(30, 150);
+			this->btn_extra->Location = System::Drawing::Point(22, 182);
+			this->btn_extra->Margin = System::Windows::Forms::Padding(4);
 			this->btn_extra->Name = L"btn_extra";
-			this->btn_extra->Size = System::Drawing::Size(218, 45);
+			this->btn_extra->Size = System::Drawing::Size(291, 55);
 			this->btn_extra->TabIndex = 6;
 			this->btn_extra->Text = L"Remove Extra Letter";
 			this->btn_extra->UseVisualStyleBackColor = true;
-			this->btn_extra->Click += gcnew System::EventHandler(this, &Hint_user_control::btn_extra_Click);
 			// 
 			// btn_selected
 			// 
-			this->btn_selected->Location = System::Drawing::Point(30, 99);
+			this->btn_selected->Location = System::Drawing::Point(22, 119);
+			this->btn_selected->Margin = System::Windows::Forms::Padding(4);
 			this->btn_selected->Name = L"btn_selected";
-			this->btn_selected->Size = System::Drawing::Size(218, 45);
+			this->btn_selected->Size = System::Drawing::Size(291, 55);
 			this->btn_selected->TabIndex = 5;
 			this->btn_selected->Text = L"Selected Letter";
 			this->btn_selected->UseVisualStyleBackColor = true;
-			this->btn_selected->Click += gcnew System::EventHandler(this, &Hint_user_control::btn_selected_Click);
 			// 
 			// btn_random
 			// 
-			this->btn_random->Location = System::Drawing::Point(30, 48);
+			this->btn_random->Location = System::Drawing::Point(22, 56);
+			this->btn_random->Margin = System::Windows::Forms::Padding(4);
 			this->btn_random->Name = L"btn_random";
-			this->btn_random->Size = System::Drawing::Size(218, 45);
+			this->btn_random->Size = System::Drawing::Size(291, 55);
 			this->btn_random->TabIndex = 4;
 			this->btn_random->Text = L"Random Letter";
 			this->btn_random->UseVisualStyleBackColor = true;
-			this->btn_random->Click += gcnew System::EventHandler(this, &Hint_user_control::btn_random_Click);
+			this->btn_random->Click += gcnew System::EventHandler(this, &Hint_User_Control::btn_random_Click);
 			// 
-			// Hint_user_control
+			// Hint_User_Control
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
+			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->Controls->Add(this->btn_solve);
 			this->Controls->Add(this->btn_extra);
 			this->Controls->Add(this->btn_selected);
 			this->Controls->Add(this->btn_random);
-			this->Name = L"Hint_user_control";
-			this->Size = System::Drawing::Size(278, 294);
+			this->Name = L"Hint_User_Control";
+			this->Size = System::Drawing::Size(359, 342);
 			this->ResumeLayout(false);
 
 		}
 #pragma endregion
 	private: System::Void btn_random_Click(System::Object^  sender, System::EventArgs^  e) {
-
+				 
 			 }
-	private: System::Void btn_extra_Click(System::Object^  sender, System::EventArgs^  e) {
-			 }
-	private: System::Void btn_selected_Click(System::Object^  sender, System::EventArgs^  e) {
-			 }
-	private: System::Void btn_solve_Click(System::Object^  sender, System::EventArgs^  e) {
-			 }
-	};
+};
 }
