@@ -77,6 +77,8 @@ namespace FunBrainz {
 	private: System::Windows::Forms::Label^  rand6;
 	private: System::Windows::Forms::Button^  StopButton;
 	private: System::Windows::Forms::Panel^  panel1;
+	private: AxWMPLib::AxWindowsMediaPlayer^  axWindowsMediaPlayer;
+	private: System::Windows::Forms::Timer^  always;
 
 
 
@@ -120,8 +122,11 @@ namespace FunBrainz {
 			this->rand6 = (gcnew System::Windows::Forms::Label());
 			this->StopButton = (gcnew System::Windows::Forms::Button());
 			this->panel1 = (gcnew System::Windows::Forms::Panel());
+			this->axWindowsMediaPlayer = (gcnew AxWMPLib::AxWindowsMediaPlayer());
+			this->always = (gcnew System::Windows::Forms::Timer(this->components));
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->AnsNnumericUpDown))->BeginInit();
 			this->panel1->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->axWindowsMediaPlayer))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// TargetLabel
@@ -131,9 +136,10 @@ namespace FunBrainz {
 			this->TargetLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->TargetLabel->ForeColor = System::Drawing::SystemColors::Control;
-			this->TargetLabel->Location = System::Drawing::Point(12, 9);
+			this->TargetLabel->Location = System::Drawing::Point(9, 7);
+			this->TargetLabel->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->TargetLabel->Name = L"TargetLabel";
-			this->TargetLabel->Size = System::Drawing::Size(69, 25);
+			this->TargetLabel->Size = System::Drawing::Size(55, 20);
 			this->TargetLabel->TabIndex = 0;
 			this->TargetLabel->Text = L"Target";
 			this->TargetLabel->Visible = false;
@@ -145,9 +151,10 @@ namespace FunBrainz {
 			this->ScoreLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->ScoreLabel->ForeColor = System::Drawing::Color::White;
-			this->ScoreLabel->Location = System::Drawing::Point(73, 6);
+			this->ScoreLabel->Location = System::Drawing::Point(55, 5);
+			this->ScoreLabel->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->ScoreLabel->Name = L"ScoreLabel";
-			this->ScoreLabel->Size = System::Drawing::Size(64, 25);
+			this->ScoreLabel->Size = System::Drawing::Size(51, 20);
 			this->ScoreLabel->TabIndex = 1;
 			this->ScoreLabel->Text = L"Score";
 			// 
@@ -157,9 +164,10 @@ namespace FunBrainz {
 			this->QuestionLabel->BackColor = System::Drawing::Color::LemonChiffon;
 			this->QuestionLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 19.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->QuestionLabel->Location = System::Drawing::Point(376, 26);
+			this->QuestionLabel->Location = System::Drawing::Point(282, 21);
+			this->QuestionLabel->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->QuestionLabel->Name = L"QuestionLabel";
-			this->QuestionLabel->Size = System::Drawing::Size(148, 38);
+			this->QuestionLabel->Size = System::Drawing::Size(123, 31);
 			this->QuestionLabel->TabIndex = 3;
 			this->QuestionLabel->Text = L"Question";
 			// 
@@ -170,9 +178,10 @@ namespace FunBrainz {
 			this->LevelLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->LevelLabel->ForeColor = System::Drawing::Color::White;
-			this->LevelLabel->Location = System::Drawing::Point(780, 26);
+			this->LevelLabel->Location = System::Drawing::Point(585, 21);
+			this->LevelLabel->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->LevelLabel->Name = L"LevelLabel";
-			this->LevelLabel->Size = System::Drawing::Size(108, 25);
+			this->LevelLabel->Size = System::Drawing::Size(87, 20);
 			this->LevelLabel->TabIndex = 4;
 			this->LevelLabel->Text = L"Level - 01";
 			// 
@@ -184,9 +193,10 @@ namespace FunBrainz {
 				static_cast<System::Byte>(0)));
 			this->Batsman2ScoreLabel->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(16)), 
 				static_cast<System::Int32>(static_cast<System::Byte>(46)), static_cast<System::Int32>(static_cast<System::Byte>(83)));
-			this->Batsman2ScoreLabel->Location = System::Drawing::Point(565, 9);
+			this->Batsman2ScoreLabel->Location = System::Drawing::Point(424, 7);
+			this->Batsman2ScoreLabel->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->Batsman2ScoreLabel->Name = L"Batsman2ScoreLabel";
-			this->Batsman2ScoreLabel->Size = System::Drawing::Size(79, 17);
+			this->Batsman2ScoreLabel->Size = System::Drawing::Size(62, 13);
 			this->Batsman2ScoreLabel->TabIndex = 5;
 			this->Batsman2ScoreLabel->Text = L"Batsman2";
 			// 
@@ -198,9 +208,10 @@ namespace FunBrainz {
 				static_cast<System::Byte>(0)));
 			this->Batsman1ScoreLabel->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(16)), 
 				static_cast<System::Int32>(static_cast<System::Byte>(46)), static_cast<System::Int32>(static_cast<System::Byte>(83)));
-			this->Batsman1ScoreLabel->Location = System::Drawing::Point(409, 9);
+			this->Batsman1ScoreLabel->Location = System::Drawing::Point(307, 7);
+			this->Batsman1ScoreLabel->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->Batsman1ScoreLabel->Name = L"Batsman1ScoreLabel";
-			this->Batsman1ScoreLabel->Size = System::Drawing::Size(79, 17);
+			this->Batsman1ScoreLabel->Size = System::Drawing::Size(62, 13);
 			this->Batsman1ScoreLabel->TabIndex = 6;
 			this->Batsman1ScoreLabel->Text = L"Batsman1";
 			// 
@@ -212,9 +223,10 @@ namespace FunBrainz {
 				static_cast<System::Byte>(0)));
 			this->OversLeftLabel->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(49)), static_cast<System::Int32>(static_cast<System::Byte>(66)), 
 				static_cast<System::Int32>(static_cast<System::Byte>(0)));
-			this->OversLeftLabel->Location = System::Drawing::Point(747, 7);
+			this->OversLeftLabel->Location = System::Drawing::Point(560, 6);
+			this->OversLeftLabel->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->OversLeftLabel->Name = L"OversLeftLabel";
-			this->OversLeftLabel->Size = System::Drawing::Size(102, 25);
+			this->OversLeftLabel->Size = System::Drawing::Size(82, 20);
 			this->OversLeftLabel->TabIndex = 7;
 			this->OversLeftLabel->Text = L"Overs Left";
 			// 
@@ -225,9 +237,10 @@ namespace FunBrainz {
 			this->RunsNeededLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->RunsNeededLabel->ForeColor = System::Drawing::Color::White;
-			this->RunsNeededLabel->Location = System::Drawing::Point(202, 7);
+			this->RunsNeededLabel->Location = System::Drawing::Point(152, 6);
+			this->RunsNeededLabel->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->RunsNeededLabel->Name = L"RunsNeededLabel";
-			this->RunsNeededLabel->Size = System::Drawing::Size(126, 25);
+			this->RunsNeededLabel->Size = System::Drawing::Size(103, 20);
 			this->RunsNeededLabel->TabIndex = 8;
 			this->RunsNeededLabel->Text = L"RunsNeeded";
 			// 
@@ -236,9 +249,10 @@ namespace FunBrainz {
 			this->SliderPanel->BackColor = System::Drawing::Color::Transparent;
 			this->SliderPanel->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"SliderPanel.BackgroundImage")));
 			this->SliderPanel->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->SliderPanel->Location = System::Drawing::Point(206, 290);
+			this->SliderPanel->Location = System::Drawing::Point(154, 236);
+			this->SliderPanel->Margin = System::Windows::Forms::Padding(2);
 			this->SliderPanel->Name = L"SliderPanel";
-			this->SliderPanel->Size = System::Drawing::Size(42, 44);
+			this->SliderPanel->Size = System::Drawing::Size(32, 36);
 			this->SliderPanel->TabIndex = 9;
 			// 
 			// SliderTimer
@@ -257,9 +271,10 @@ namespace FunBrainz {
 			this->TimeLeftLabel->BackColor = System::Drawing::Color::LemonChiffon;
 			this->TimeLeftLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 19.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->TimeLeftLabel->Location = System::Drawing::Point(562, 27);
+			this->TimeLeftLabel->Location = System::Drawing::Point(422, 22);
+			this->TimeLeftLabel->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->TimeLeftLabel->Name = L"TimeLeftLabel";
-			this->TimeLeftLabel->Size = System::Drawing::Size(53, 38);
+			this->TimeLeftLabel->Size = System::Drawing::Size(44, 31);
 			this->TimeLeftLabel->TabIndex = 10;
 			this->TimeLeftLabel->Text = L"30";
 			// 
@@ -269,9 +284,10 @@ namespace FunBrainz {
 			this->SubmitButton->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
 			this->SubmitButton->Font = (gcnew System::Drawing::Font(L"Lucida Fax", 10.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->SubmitButton->Location = System::Drawing::Point(514, 118);
+			this->SubmitButton->Location = System::Drawing::Point(386, 96);
+			this->SubmitButton->Margin = System::Windows::Forms::Padding(2);
 			this->SubmitButton->Name = L"SubmitButton";
-			this->SubmitButton->Size = System::Drawing::Size(111, 33);
+			this->SubmitButton->Size = System::Drawing::Size(83, 27);
 			this->SubmitButton->TabIndex = 12;
 			this->SubmitButton->Text = L"Submit";
 			this->SubmitButton->UseVisualStyleBackColor = false;
@@ -282,11 +298,12 @@ namespace FunBrainz {
 			this->AnsNnumericUpDown->BackColor = System::Drawing::Color::LemonChiffon;
 			this->AnsNnumericUpDown->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular, 
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->AnsNnumericUpDown->Location = System::Drawing::Point(296, 123);
+			this->AnsNnumericUpDown->Location = System::Drawing::Point(222, 100);
+			this->AnsNnumericUpDown->Margin = System::Windows::Forms::Padding(2);
 			this->AnsNnumericUpDown->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) {1000000000, 0, 0, 0});
 			this->AnsNnumericUpDown->Minimum = System::Decimal(gcnew cli::array< System::Int32 >(4) {1000000000, 0, 0, System::Int32::MinValue});
 			this->AnsNnumericUpDown->Name = L"AnsNnumericUpDown";
-			this->AnsNnumericUpDown->Size = System::Drawing::Size(104, 27);
+			this->AnsNnumericUpDown->Size = System::Drawing::Size(78, 23);
 			this->AnsNnumericUpDown->TabIndex = 13;
 			this->AnsNnumericUpDown->KeyPress += gcnew System::Windows::Forms::KeyPressEventHandler(this, &Cricket::AnsNnumericUpDown_KeyPress);
 			// 
@@ -296,11 +313,12 @@ namespace FunBrainz {
 			this->rand1->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->rand1->Font = (gcnew System::Drawing::Font(L"Palatino Linotype", 12, static_cast<System::Drawing::FontStyle>((System::Drawing::FontStyle::Bold | System::Drawing::FontStyle::Italic)), 
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->rand1->Location = System::Drawing::Point(225, 246);
-			this->rand1->MaximumSize = System::Drawing::Size(80, 28);
-			this->rand1->MinimumSize = System::Drawing::Size(80, 28);
+			this->rand1->Location = System::Drawing::Point(169, 200);
+			this->rand1->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->rand1->MaximumSize = System::Drawing::Size(60, 23);
+			this->rand1->MinimumSize = System::Drawing::Size(60, 23);
 			this->rand1->Name = L"rand1";
-			this->rand1->Size = System::Drawing::Size(80, 28);
+			this->rand1->Size = System::Drawing::Size(60, 23);
 			this->rand1->TabIndex = 14;
 			this->rand1->Text = L"Bold";
 			this->rand1->Click += gcnew System::EventHandler(this, &Cricket::rand1_Click);
@@ -311,11 +329,12 @@ namespace FunBrainz {
 			this->rand2->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->rand2->Font = (gcnew System::Drawing::Font(L"Palatino Linotype", 12, static_cast<System::Drawing::FontStyle>((System::Drawing::FontStyle::Bold | System::Drawing::FontStyle::Italic)), 
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->rand2->Location = System::Drawing::Point(304, 246);
-			this->rand2->MaximumSize = System::Drawing::Size(80, 28);
-			this->rand2->MinimumSize = System::Drawing::Size(80, 28);
+			this->rand2->Location = System::Drawing::Point(228, 200);
+			this->rand2->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->rand2->MaximumSize = System::Drawing::Size(60, 23);
+			this->rand2->MinimumSize = System::Drawing::Size(60, 23);
 			this->rand2->Name = L"rand2";
-			this->rand2->Size = System::Drawing::Size(80, 28);
+			this->rand2->Size = System::Drawing::Size(60, 23);
 			this->rand2->TabIndex = 15;
 			this->rand2->Text = L"Bold";
 			this->rand2->Click += gcnew System::EventHandler(this, &Cricket::rand2_Click);
@@ -326,11 +345,12 @@ namespace FunBrainz {
 			this->rand5->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->rand5->Font = (gcnew System::Drawing::Font(L"Palatino Linotype", 12, static_cast<System::Drawing::FontStyle>((System::Drawing::FontStyle::Bold | System::Drawing::FontStyle::Italic)), 
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->rand5->Location = System::Drawing::Point(542, 246);
-			this->rand5->MaximumSize = System::Drawing::Size(80, 28);
-			this->rand5->MinimumSize = System::Drawing::Size(80, 28);
+			this->rand5->Location = System::Drawing::Point(406, 200);
+			this->rand5->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->rand5->MaximumSize = System::Drawing::Size(60, 23);
+			this->rand5->MinimumSize = System::Drawing::Size(60, 23);
 			this->rand5->Name = L"rand5";
-			this->rand5->Size = System::Drawing::Size(80, 28);
+			this->rand5->Size = System::Drawing::Size(60, 23);
 			this->rand5->TabIndex = 16;
 			this->rand5->Text = L"Bold";
 			this->rand5->Click += gcnew System::EventHandler(this, &Cricket::rand5_Click);
@@ -341,11 +361,12 @@ namespace FunBrainz {
 			this->rand4->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->rand4->Font = (gcnew System::Drawing::Font(L"Palatino Linotype", 12, static_cast<System::Drawing::FontStyle>((System::Drawing::FontStyle::Bold | System::Drawing::FontStyle::Italic)), 
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->rand4->Location = System::Drawing::Point(463, 246);
-			this->rand4->MaximumSize = System::Drawing::Size(80, 28);
-			this->rand4->MinimumSize = System::Drawing::Size(80, 28);
+			this->rand4->Location = System::Drawing::Point(347, 200);
+			this->rand4->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->rand4->MaximumSize = System::Drawing::Size(60, 23);
+			this->rand4->MinimumSize = System::Drawing::Size(60, 23);
 			this->rand4->Name = L"rand4";
-			this->rand4->Size = System::Drawing::Size(80, 28);
+			this->rand4->Size = System::Drawing::Size(60, 23);
 			this->rand4->TabIndex = 17;
 			this->rand4->Text = L"Bold";
 			this->rand4->Click += gcnew System::EventHandler(this, &Cricket::rand4_Click);
@@ -356,11 +377,12 @@ namespace FunBrainz {
 			this->rand3->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->rand3->Font = (gcnew System::Drawing::Font(L"Palatino Linotype", 12, static_cast<System::Drawing::FontStyle>((System::Drawing::FontStyle::Bold | System::Drawing::FontStyle::Italic)), 
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->rand3->Location = System::Drawing::Point(383, 246);
-			this->rand3->MaximumSize = System::Drawing::Size(80, 28);
-			this->rand3->MinimumSize = System::Drawing::Size(80, 28);
+			this->rand3->Location = System::Drawing::Point(287, 200);
+			this->rand3->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->rand3->MaximumSize = System::Drawing::Size(60, 23);
+			this->rand3->MinimumSize = System::Drawing::Size(60, 23);
 			this->rand3->Name = L"rand3";
-			this->rand3->Size = System::Drawing::Size(80, 28);
+			this->rand3->Size = System::Drawing::Size(60, 23);
 			this->rand3->TabIndex = 18;
 			this->rand3->Text = L"Bold";
 			this->rand3->Click += gcnew System::EventHandler(this, &Cricket::rand3_Click);
@@ -371,11 +393,12 @@ namespace FunBrainz {
 			this->rand6->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->rand6->Font = (gcnew System::Drawing::Font(L"Palatino Linotype", 12, static_cast<System::Drawing::FontStyle>((System::Drawing::FontStyle::Bold | System::Drawing::FontStyle::Italic)), 
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->rand6->Location = System::Drawing::Point(621, 246);
-			this->rand6->MaximumSize = System::Drawing::Size(80, 28);
-			this->rand6->MinimumSize = System::Drawing::Size(80, 28);
+			this->rand6->Location = System::Drawing::Point(466, 200);
+			this->rand6->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->rand6->MaximumSize = System::Drawing::Size(60, 23);
+			this->rand6->MinimumSize = System::Drawing::Size(60, 23);
 			this->rand6->Name = L"rand6";
-			this->rand6->Size = System::Drawing::Size(80, 28);
+			this->rand6->Size = System::Drawing::Size(60, 23);
 			this->rand6->TabIndex = 19;
 			this->rand6->Text = L"Bold";
 			this->rand6->Click += gcnew System::EventHandler(this, &Cricket::rand6_Click);
@@ -386,9 +409,10 @@ namespace FunBrainz {
 			this->StopButton->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
 			this->StopButton->Font = (gcnew System::Drawing::Font(L"Lucida Fax", 10.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->StopButton->Location = System::Drawing::Point(402, 344);
+			this->StopButton->Location = System::Drawing::Point(302, 280);
+			this->StopButton->Margin = System::Windows::Forms::Padding(2);
 			this->StopButton->Name = L"StopButton";
-			this->StopButton->Size = System::Drawing::Size(111, 29);
+			this->StopButton->Size = System::Drawing::Size(83, 24);
 			this->StopButton->TabIndex = 20;
 			this->StopButton->Text = L"Stop";
 			this->StopButton->UseVisualStyleBackColor = false;
@@ -403,19 +427,35 @@ namespace FunBrainz {
 			this->panel1->Controls->Add(this->OversLeftLabel);
 			this->panel1->Controls->Add(this->RunsNeededLabel);
 			this->panel1->Controls->Add(this->Batsman1ScoreLabel);
-			this->panel1->Location = System::Drawing::Point(1, 435);
+			this->panel1->Location = System::Drawing::Point(1, 353);
+			this->panel1->Margin = System::Windows::Forms::Padding(2);
 			this->panel1->Name = L"panel1";
-			this->panel1->Size = System::Drawing::Size(926, 42);
+			this->panel1->Size = System::Drawing::Size(694, 34);
 			this->panel1->TabIndex = 21;
+			// 
+			// axWindowsMediaPlayer
+			// 
+			this->axWindowsMediaPlayer->Enabled = true;
+			this->axWindowsMediaPlayer->Location = System::Drawing::Point(0, 0);
+			this->axWindowsMediaPlayer->Name = L"axWindowsMediaPlayer";
+			this->axWindowsMediaPlayer->OcxState = (cli::safe_cast<System::Windows::Forms::AxHost::State^  >(resources->GetObject(L"axWindowsMediaPlayer.OcxState")));
+			this->axWindowsMediaPlayer->Size = System::Drawing::Size(684, 358);
+			this->axWindowsMediaPlayer->TabIndex = 22;
+			// 
+			// always
+			// 
+			this->always->Enabled = true;
+			this->always->Interval = 1000;
+			this->always->Tick += gcnew System::EventHandler(this, &Cricket::always_Tick);
 			// 
 			// Cricket
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
+			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::Color::LemonChiffon;
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"$this.BackgroundImage")));
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->ClientSize = System::Drawing::Size(912, 476);
+			this->ClientSize = System::Drawing::Size(684, 387);
 			this->Controls->Add(this->TargetLabel);
 			this->Controls->Add(this->panel1);
 			this->Controls->Add(this->StopButton);
@@ -431,13 +471,16 @@ namespace FunBrainz {
 			this->Controls->Add(this->SliderPanel);
 			this->Controls->Add(this->LevelLabel);
 			this->Controls->Add(this->QuestionLabel);
+			this->Controls->Add(this->axWindowsMediaPlayer);
 			this->DoubleBuffered = true;
+			this->Margin = System::Windows::Forms::Padding(2);
 			this->Name = L"Cricket";
 			this->Text = L"Cricket";
 			this->Load += gcnew System::EventHandler(this, &Cricket::Cricket_Load);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->AnsNnumericUpDown))->EndInit();
 			this->panel1->ResumeLayout(false);
 			this->panel1->PerformLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->axWindowsMediaPlayer))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -451,9 +494,9 @@ namespace FunBrainz {
 		int stuID;
 		int xloc;
 		int sliderFlag;
-
+		String ^ output ;
 		int timeleft;
-		
+		String ^ videoplay;
 		int target;
 		int score;
 		int runsneeded;
@@ -472,11 +515,14 @@ namespace FunBrainz {
 		int answer;
 		int interval;
 		int skill;
+		int videosupp;
 
 		array<System::String ^>^ player;
 		int * scores;
 
 	private: System::Void Cricket_Load(System::Object^  sender, System::EventArgs^  e) {
+				 axWindowsMediaPlayer->Visible = false;
+				 videosupp=100;
 				 try {
 					 OleDb::OleDbConnection ^ con = gcnew OleDb::OleDbConnection();
 					 con->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=FunBrainzForKids.accdb;";
@@ -690,8 +736,6 @@ private: System::Void StopButton_Click(System::Object^  sender, System::EventArg
 
 			 int value = (xloc) / 60 ;
 			 
-			 String ^ output ;
-			 
 			 if (value < 1)
 				 output = rand1->Text;
 			 
@@ -710,7 +754,90 @@ private: System::Void StopButton_Click(System::Object^  sender, System::EventArg
 			 else 
 				 output = rand6->Text;
 
-			 MessageBox::Show("You got " + output);
+			 videoplay = "CricketVideos/" + output + ".mp4";
+			 axWindowsMediaPlayer->BringToFront();
+			 axWindowsMediaPlayer->Visible = true;
+			 axWindowsMediaPlayer->URL = videoplay;
+			 axWindowsMediaPlayer->Ctlcontrols->play();
+			 videosupp = 6;
+			 always->Start();
+		 }
+		 private: Void EndGame()
+		{
+			try {
+				OleDb::OleDbConnection ^ con = gcnew OleDb::OleDbConnection();
+				con->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=FunBrainzForKids.accdb;";
+				String ^ Sql = "Update Cricket Set [TimesPlayed] = " + timesplayed+ " where [StudentId] = " + stuID + ";";
+				OleDb::OleDbCommand ^ command = gcnew OleDb::OleDbCommand(Sql, con);
+				con->Open();
+				command->ExecuteNonQuery();
+				con->Close();
+
+				Sql = "Update Cricket Set [CorrectAnswers] = " + correct+ " where [StudentId] = " + stuID + ";";
+				command = gcnew OleDb::OleDbCommand(Sql, con);
+				con->Open();
+				command->ExecuteNonQuery();
+				con->Close();
+
+				Sql = "Update Cricket Set [IncorrectAnswers] = " + incorrect+ " where [StudentId] = " + stuID + ";";
+				command = gcnew OleDb::OleDbCommand(Sql, con);
+				con->Open();
+				command->ExecuteNonQuery();
+				con->Close();
+			}
+			 catch (Exception ^ ex) {
+				MessageBox::Show(ex->Message);
+			}
+
+			if(runsneeded<=0)
+			{
+				 int y = 10-wicketslost;
+				 MessageBox::Show("You won by "+y+ " wickets!!");
+				 level++;
+				 if(level>10)
+					 level=10;
+				 try {
+					OleDb::OleDbConnection ^ con = gcnew OleDb::OleDbConnection();
+					con->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=FunBrainzForKids.accdb;";
+					String ^ Sql = "Update Cricket Set [Level] = " + level+ " where [StudentId] = " + stuID + ";";
+					OleDb::OleDbCommand ^ command = gcnew OleDb::OleDbCommand(Sql, con);
+					con->Open();
+					command->ExecuteNonQuery();
+					con->Close();
+				 }
+				 catch (Exception ^ ex) {
+					MessageBox::Show(ex->Message);
+				 }
+			}
+			else
+			{
+				if(runsneeded==1)
+				{
+					 MessageBox::Show("The match was a tie!");
+				 }
+				 else
+				 {
+					MessageBox::Show("You lost by "+runsneeded+ " runs!!");
+				 }
+			}
+			this->Hide();
+			caller->Show();
+			return;
+		}
+private: System::Void AnsNnumericUpDown_KeyPress(System::Object^  sender, System::Windows::Forms::KeyPressEventArgs^  e) {
+			 if(e->KeyChar == (char)13)
+			 {
+				 int ans = (int) AnsNnumericUpDown->Value;
+				 evalAnswer(ans);
+			 }
+		 }
+private: System::Void always_Tick(System::Object^  sender, System::EventArgs^  e) {
+			 videosupp--;
+			 if(videosupp==0)
+			 {
+				 axWindowsMediaPlayer->SendToBack();
+				axWindowsMediaPlayer->Visible = false;
+			 //MessageBox::Show("You got " + output);
 			 if(output== "Caught"||output=="Bold")
 			 {
 				 wicketslost++;
@@ -791,74 +918,6 @@ private: System::Void StopButton_Click(System::Object^  sender, System::EventArg
 				 oversleft--;
 			 }
 			 nextQuestion();
-		 }
-		 private: Void EndGame()
-		{
-			try {
-				OleDb::OleDbConnection ^ con = gcnew OleDb::OleDbConnection();
-				con->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=FunBrainzForKids.accdb;";
-				String ^ Sql = "Update Cricket Set [TimesPlayed] = " + timesplayed+ " where [StudentId] = " + stuID + ";";
-				OleDb::OleDbCommand ^ command = gcnew OleDb::OleDbCommand(Sql, con);
-				con->Open();
-				command->ExecuteNonQuery();
-				con->Close();
-
-				Sql = "Update Cricket Set [CorrectAnswers] = " + correct+ " where [StudentId] = " + stuID + ";";
-				command = gcnew OleDb::OleDbCommand(Sql, con);
-				con->Open();
-				command->ExecuteNonQuery();
-				con->Close();
-
-				Sql = "Update Cricket Set [IncorrectAnswers] = " + incorrect+ " where [StudentId] = " + stuID + ";";
-				command = gcnew OleDb::OleDbCommand(Sql, con);
-				con->Open();
-				command->ExecuteNonQuery();
-				con->Close();
-			}
-			 catch (Exception ^ ex) {
-				MessageBox::Show(ex->Message);
-			}
-
-			if(runsneeded<=0)
-			{
-				 int y = 10-wicketslost;
-				 MessageBox::Show("You won by "+y+ " wickets!!");
-				 level++;
-				 if(level>10)
-					 level=10;
-				 try {
-					OleDb::OleDbConnection ^ con = gcnew OleDb::OleDbConnection();
-					con->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=FunBrainzForKids.accdb;";
-					String ^ Sql = "Update Cricket Set [Level] = " + level+ " where [StudentId] = " + stuID + ";";
-					OleDb::OleDbCommand ^ command = gcnew OleDb::OleDbCommand(Sql, con);
-					con->Open();
-					command->ExecuteNonQuery();
-					con->Close();
-				 }
-				 catch (Exception ^ ex) {
-					MessageBox::Show(ex->Message);
-				 }
-			}
-			else
-			{
-				if(runsneeded==1)
-				{
-					 MessageBox::Show("The match was a tie!");
-				 }
-				 else
-				 {
-					MessageBox::Show("You lost by "+runsneeded+ " runs!!");
-				 }
-			}
-			this->Hide();
-			caller->Show();
-			return;
-		}
-private: System::Void AnsNnumericUpDown_KeyPress(System::Object^  sender, System::Windows::Forms::KeyPressEventArgs^  e) {
-			 if(e->KeyChar == (char)13)
-			 {
-				 int ans = (int) AnsNnumericUpDown->Value;
-				 evalAnswer(ans);
 			 }
 		 }
 };
