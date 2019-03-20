@@ -154,11 +154,12 @@ namespace FunBrainz {
 			// QuestionLabel
 			// 
 			this->QuestionLabel->AutoSize = true;
-			this->QuestionLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+			this->QuestionLabel->BackColor = System::Drawing::Color::LemonChiffon;
+			this->QuestionLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 19.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->QuestionLabel->Location = System::Drawing::Point(360, 44);
+			this->QuestionLabel->Location = System::Drawing::Point(376, 26);
 			this->QuestionLabel->Name = L"QuestionLabel";
-			this->QuestionLabel->Size = System::Drawing::Size(130, 32);
+			this->QuestionLabel->Size = System::Drawing::Size(148, 38);
 			this->QuestionLabel->TabIndex = 3;
 			this->QuestionLabel->Text = L"Question";
 			// 
@@ -232,9 +233,10 @@ namespace FunBrainz {
 			// 
 			// SliderPanel
 			// 
+			this->SliderPanel->BackColor = System::Drawing::Color::Transparent;
 			this->SliderPanel->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"SliderPanel.BackgroundImage")));
 			this->SliderPanel->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->SliderPanel->Location = System::Drawing::Point(119, 302);
+			this->SliderPanel->Location = System::Drawing::Point(206, 290);
 			this->SliderPanel->Name = L"SliderPanel";
 			this->SliderPanel->Size = System::Drawing::Size(42, 44);
 			this->SliderPanel->TabIndex = 9;
@@ -252,9 +254,10 @@ namespace FunBrainz {
 			// TimeLeftLabel
 			// 
 			this->TimeLeftLabel->AutoSize = true;
+			this->TimeLeftLabel->BackColor = System::Drawing::Color::LemonChiffon;
 			this->TimeLeftLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 19.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->TimeLeftLabel->Location = System::Drawing::Point(566, 38);
+			this->TimeLeftLabel->Location = System::Drawing::Point(562, 27);
 			this->TimeLeftLabel->Name = L"TimeLeftLabel";
 			this->TimeLeftLabel->Size = System::Drawing::Size(53, 38);
 			this->TimeLeftLabel->TabIndex = 10;
@@ -262,91 +265,133 @@ namespace FunBrainz {
 			// 
 			// SubmitButton
 			// 
-			this->SubmitButton->Location = System::Drawing::Point(530, 123);
+			this->SubmitButton->BackColor = System::Drawing::Color::LemonChiffon;
+			this->SubmitButton->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+			this->SubmitButton->Font = (gcnew System::Drawing::Font(L"Lucida Fax", 10.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->SubmitButton->Location = System::Drawing::Point(514, 118);
 			this->SubmitButton->Name = L"SubmitButton";
 			this->SubmitButton->Size = System::Drawing::Size(111, 33);
 			this->SubmitButton->TabIndex = 12;
 			this->SubmitButton->Text = L"Submit";
-			this->SubmitButton->UseVisualStyleBackColor = true;
+			this->SubmitButton->UseVisualStyleBackColor = false;
 			this->SubmitButton->Click += gcnew System::EventHandler(this, &Cricket::SubmitButton_Click);
 			// 
 			// AnsNnumericUpDown
 			// 
-			this->AnsNnumericUpDown->Location = System::Drawing::Point(366, 124);
+			this->AnsNnumericUpDown->BackColor = System::Drawing::Color::LemonChiffon;
+			this->AnsNnumericUpDown->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular, 
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->AnsNnumericUpDown->Location = System::Drawing::Point(296, 123);
 			this->AnsNnumericUpDown->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) {1000000000, 0, 0, 0});
 			this->AnsNnumericUpDown->Minimum = System::Decimal(gcnew cli::array< System::Int32 >(4) {1000000000, 0, 0, System::Int32::MinValue});
 			this->AnsNnumericUpDown->Name = L"AnsNnumericUpDown";
-			this->AnsNnumericUpDown->Size = System::Drawing::Size(120, 22);
+			this->AnsNnumericUpDown->Size = System::Drawing::Size(104, 27);
 			this->AnsNnumericUpDown->TabIndex = 13;
+			this->AnsNnumericUpDown->KeyPress += gcnew System::Windows::Forms::KeyPressEventHandler(this, &Cricket::AnsNnumericUpDown_KeyPress);
 			// 
 			// rand1
 			// 
+			this->rand1->BackColor = System::Drawing::Color::LemonChiffon;
 			this->rand1->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->rand1->Location = System::Drawing::Point(140, 265);
+			this->rand1->Font = (gcnew System::Drawing::Font(L"Palatino Linotype", 12, static_cast<System::Drawing::FontStyle>((System::Drawing::FontStyle::Bold | System::Drawing::FontStyle::Italic)), 
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->rand1->Location = System::Drawing::Point(225, 246);
+			this->rand1->MaximumSize = System::Drawing::Size(80, 28);
+			this->rand1->MinimumSize = System::Drawing::Size(80, 28);
 			this->rand1->Name = L"rand1";
-			this->rand1->Size = System::Drawing::Size(40, 17);
+			this->rand1->Size = System::Drawing::Size(80, 28);
 			this->rand1->TabIndex = 14;
-			this->rand1->Text = L"label1";
+			this->rand1->Text = L"Bold";
 			this->rand1->Click += gcnew System::EventHandler(this, &Cricket::rand1_Click);
 			// 
 			// rand2
 			// 
+			this->rand2->BackColor = System::Drawing::Color::LemonChiffon;
 			this->rand2->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->rand2->Location = System::Drawing::Point(179, 265);
+			this->rand2->Font = (gcnew System::Drawing::Font(L"Palatino Linotype", 12, static_cast<System::Drawing::FontStyle>((System::Drawing::FontStyle::Bold | System::Drawing::FontStyle::Italic)), 
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->rand2->Location = System::Drawing::Point(304, 246);
+			this->rand2->MaximumSize = System::Drawing::Size(80, 28);
+			this->rand2->MinimumSize = System::Drawing::Size(80, 28);
 			this->rand2->Name = L"rand2";
-			this->rand2->Size = System::Drawing::Size(40, 17);
+			this->rand2->Size = System::Drawing::Size(80, 28);
 			this->rand2->TabIndex = 15;
-			this->rand2->Text = L"label1";
+			this->rand2->Text = L"Bold";
 			this->rand2->Click += gcnew System::EventHandler(this, &Cricket::rand2_Click);
 			// 
 			// rand5
 			// 
+			this->rand5->BackColor = System::Drawing::Color::LemonChiffon;
 			this->rand5->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->rand5->Location = System::Drawing::Point(296, 265);
+			this->rand5->Font = (gcnew System::Drawing::Font(L"Palatino Linotype", 12, static_cast<System::Drawing::FontStyle>((System::Drawing::FontStyle::Bold | System::Drawing::FontStyle::Italic)), 
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->rand5->Location = System::Drawing::Point(542, 246);
+			this->rand5->MaximumSize = System::Drawing::Size(80, 28);
+			this->rand5->MinimumSize = System::Drawing::Size(80, 28);
 			this->rand5->Name = L"rand5";
-			this->rand5->Size = System::Drawing::Size(40, 17);
+			this->rand5->Size = System::Drawing::Size(80, 28);
 			this->rand5->TabIndex = 16;
-			this->rand5->Text = L"label1";
+			this->rand5->Text = L"Bold";
 			this->rand5->Click += gcnew System::EventHandler(this, &Cricket::rand5_Click);
 			// 
 			// rand4
 			// 
+			this->rand4->BackColor = System::Drawing::Color::LemonChiffon;
 			this->rand4->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->rand4->Location = System::Drawing::Point(256, 265);
+			this->rand4->Font = (gcnew System::Drawing::Font(L"Palatino Linotype", 12, static_cast<System::Drawing::FontStyle>((System::Drawing::FontStyle::Bold | System::Drawing::FontStyle::Italic)), 
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->rand4->Location = System::Drawing::Point(463, 246);
+			this->rand4->MaximumSize = System::Drawing::Size(80, 28);
+			this->rand4->MinimumSize = System::Drawing::Size(80, 28);
 			this->rand4->Name = L"rand4";
-			this->rand4->Size = System::Drawing::Size(40, 17);
+			this->rand4->Size = System::Drawing::Size(80, 28);
 			this->rand4->TabIndex = 17;
-			this->rand4->Text = L"label1";
+			this->rand4->Text = L"Bold";
 			this->rand4->Click += gcnew System::EventHandler(this, &Cricket::rand4_Click);
 			// 
 			// rand3
 			// 
+			this->rand3->BackColor = System::Drawing::Color::LemonChiffon;
 			this->rand3->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->rand3->Location = System::Drawing::Point(216, 265);
+			this->rand3->Font = (gcnew System::Drawing::Font(L"Palatino Linotype", 12, static_cast<System::Drawing::FontStyle>((System::Drawing::FontStyle::Bold | System::Drawing::FontStyle::Italic)), 
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->rand3->Location = System::Drawing::Point(383, 246);
+			this->rand3->MaximumSize = System::Drawing::Size(80, 28);
+			this->rand3->MinimumSize = System::Drawing::Size(80, 28);
 			this->rand3->Name = L"rand3";
-			this->rand3->Size = System::Drawing::Size(40, 17);
+			this->rand3->Size = System::Drawing::Size(80, 28);
 			this->rand3->TabIndex = 18;
-			this->rand3->Text = L"label1";
+			this->rand3->Text = L"Bold";
 			this->rand3->Click += gcnew System::EventHandler(this, &Cricket::rand3_Click);
 			// 
 			// rand6
 			// 
+			this->rand6->BackColor = System::Drawing::Color::LemonChiffon;
 			this->rand6->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->rand6->Location = System::Drawing::Point(335, 265);
+			this->rand6->Font = (gcnew System::Drawing::Font(L"Palatino Linotype", 12, static_cast<System::Drawing::FontStyle>((System::Drawing::FontStyle::Bold | System::Drawing::FontStyle::Italic)), 
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->rand6->Location = System::Drawing::Point(621, 246);
+			this->rand6->MaximumSize = System::Drawing::Size(80, 28);
+			this->rand6->MinimumSize = System::Drawing::Size(80, 28);
 			this->rand6->Name = L"rand6";
-			this->rand6->Size = System::Drawing::Size(40, 17);
+			this->rand6->Size = System::Drawing::Size(80, 28);
 			this->rand6->TabIndex = 19;
-			this->rand6->Text = L"label1";
+			this->rand6->Text = L"Bold";
 			this->rand6->Click += gcnew System::EventHandler(this, &Cricket::rand6_Click);
 			// 
 			// StopButton
 			// 
-			this->StopButton->Location = System::Drawing::Point(530, 291);
+			this->StopButton->BackColor = System::Drawing::Color::LemonChiffon;
+			this->StopButton->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+			this->StopButton->Font = (gcnew System::Drawing::Font(L"Lucida Fax", 10.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->StopButton->Location = System::Drawing::Point(402, 344);
 			this->StopButton->Name = L"StopButton";
-			this->StopButton->Size = System::Drawing::Size(111, 37);
+			this->StopButton->Size = System::Drawing::Size(111, 29);
 			this->StopButton->TabIndex = 20;
 			this->StopButton->Text = L"Stop";
-			this->StopButton->UseVisualStyleBackColor = true;
+			this->StopButton->UseVisualStyleBackColor = false;
 			this->StopButton->Click += gcnew System::EventHandler(this, &Cricket::StopButton_Click);
 			// 
 			// panel1
@@ -367,6 +412,7 @@ namespace FunBrainz {
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
+			this->BackColor = System::Drawing::Color::LemonChiffon;
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"$this.BackgroundImage")));
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->ClientSize = System::Drawing::Size(912, 476);
@@ -541,16 +587,16 @@ namespace FunBrainz {
 private: System::Void SliderTimer_Tick(System::Object^  sender, System::EventArgs^  e) {
 			 if (sliderFlag ==0)
 			 {
-				 xloc+=3;
-				 SliderPanel->Left+=3;
+				 xloc+=6;
+				 SliderPanel->Left+=6;
 			 }
 			 else
 			 {
-				 xloc-=3;
-				 SliderPanel->Left-=3;
+				 xloc-=6;
+				 SliderPanel->Left-=6;
 			 }
 
-			 if (xloc == 0 || xloc == 180)
+			 if (xloc == 0 || xloc == 360)
 			 {
 				 sliderFlag++;
 				 sliderFlag %= 2;
@@ -565,7 +611,7 @@ private: System::Void SliderTimer_Tick(System::Object^  sender, System::EventArg
 			 {
 				 correct++;
 				 QuestionTimer->Stop();
-				 array<System::String ^>^ arr = gcnew array<System::String ^>  { "Lbw", "6", "2", "2", "4","4", "Bold", "Lbw", "0", "1", "2", "Bold", "0", "2", "1", "4", "Bold", "Lbw", "0" ,"0" };
+				 array<System::String ^>^ arr = gcnew array<System::String ^>  { "Caught", "6", "2", "2", "4","4", "Bold", "Caught", "0", "1", "2", "Bold", "0", "2", "1", "4", "Bold", "Caught", "0" ,"0" };
 				 rand1->Width = 30;
 				 rand2->Width = 30;
 				 rand3->Width = 30;
@@ -642,7 +688,7 @@ private: System::Void rand6_Click(System::Object^  sender, System::EventArgs^  e
 private: System::Void StopButton_Click(System::Object^  sender, System::EventArgs^  e) {
 			 SliderTimer->Stop();
 
-			 int value = (xloc) / 30 ;
+			 int value = (xloc) / 60 ;
 			 
 			 String ^ output ;
 			 
@@ -665,7 +711,7 @@ private: System::Void StopButton_Click(System::Object^  sender, System::EventArg
 				 output = rand6->Text;
 
 			 MessageBox::Show("You got " + output);
-			 if(output== "Lbw"||output=="Bold")
+			 if(output== "Caught"||output=="Bold")
 			 {
 				 wicketslost++;
 				 if(wicketslost==10)
@@ -778,6 +824,8 @@ private: System::Void StopButton_Click(System::Object^  sender, System::EventArg
 				 int y = 10-wicketslost;
 				 MessageBox::Show("You won by "+y+ " wickets!!");
 				 level++;
+				 if(level>10)
+					 level=10;
 				 try {
 					OleDb::OleDbConnection ^ con = gcnew OleDb::OleDbConnection();
 					con->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=FunBrainzForKids.accdb;";
@@ -806,5 +854,12 @@ private: System::Void StopButton_Click(System::Object^  sender, System::EventArg
 			caller->Show();
 			return;
 		}
+private: System::Void AnsNnumericUpDown_KeyPress(System::Object^  sender, System::Windows::Forms::KeyPressEventArgs^  e) {
+			 if(e->KeyChar == (char)13)
+			 {
+				 int ans = (int) AnsNnumericUpDown->Value;
+				 evalAnswer(ans);
+			 }
+		 }
 };
 }
