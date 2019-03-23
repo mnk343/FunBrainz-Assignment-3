@@ -30,6 +30,11 @@ namespace FunBrainz {
 			//TODO: Add the constructor code here
 			//
 		}
+		MyForm1(Form^ obj1)
+		{
+			InitializeComponent();
+			caller=obj1;
+		}
 
 	protected:
 		/// <summary>
@@ -446,7 +451,7 @@ namespace FunBrainz {
 
 		}
 #pragma endregion
-
+	Form^ caller;
 	public:
 		int convert_string_to_int(String^ s){
 			int n = s->Length;
@@ -1067,9 +1072,8 @@ private: System::Void KeyUp_form(System::Object^  sender, System::Windows::Forms
 private: System::Void MyForm1_Load(System::Object^  sender, System::EventArgs^  e) {
 		 }
 private: System::Void btn_Back_To_Main_From_2048_Game_Click(System::Object^  sender, System::EventArgs^  e) {
-			 /*MyForm1::Hide();
-			 Form1 ^ form = gcnew Form1;
-			 form->ShowDialog();*/
+			this->Hide();
+			caller->Show();
 		 }
 };
 }

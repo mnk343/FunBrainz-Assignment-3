@@ -51,6 +51,11 @@ namespace FunBrainz {
 			//TODO: Add the constructor code here
 			//
 		}
+		Pipeline_Game(Form^ obj1)
+		{
+			InitializeComponent();
+			caller = obj1;
+		}
 
 	protected:
 		/// <summary>
@@ -151,9 +156,11 @@ namespace FunBrainz {
 			// 
 			// PB_11
 			// 
-			this->PB_11->Location = System::Drawing::Point(121, 33);
+			this->PB_11->Cursor = System::Windows::Forms::Cursors::WaitCursor;
+			this->PB_11->Location = System::Drawing::Point(91, 27);
+			this->PB_11->Margin = System::Windows::Forms::Padding(2);
 			this->PB_11->Name = L"PB_11";
-			this->PB_11->Size = System::Drawing::Size(90, 90);
+			this->PB_11->Size = System::Drawing::Size(68, 73);
 			this->PB_11->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
 			this->PB_11->TabIndex = 0;
 			this->PB_11->TabStop = false;
@@ -162,9 +169,10 @@ namespace FunBrainz {
 			// 
 			// PB_33
 			// 
-			this->PB_33->Location = System::Drawing::Point(301, 213);
+			this->PB_33->Location = System::Drawing::Point(226, 173);
+			this->PB_33->Margin = System::Windows::Forms::Padding(2);
 			this->PB_33->Name = L"PB_33";
-			this->PB_33->Size = System::Drawing::Size(90, 90);
+			this->PB_33->Size = System::Drawing::Size(68, 73);
 			this->PB_33->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
 			this->PB_33->TabIndex = 1;
 			this->PB_33->TabStop = false;
@@ -172,9 +180,10 @@ namespace FunBrainz {
 			// 
 			// PB_32
 			// 
-			this->PB_32->Location = System::Drawing::Point(211, 213);
+			this->PB_32->Location = System::Drawing::Point(158, 173);
+			this->PB_32->Margin = System::Windows::Forms::Padding(2);
 			this->PB_32->Name = L"PB_32";
-			this->PB_32->Size = System::Drawing::Size(90, 90);
+			this->PB_32->Size = System::Drawing::Size(68, 73);
 			this->PB_32->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
 			this->PB_32->TabIndex = 2;
 			this->PB_32->TabStop = false;
@@ -182,9 +191,10 @@ namespace FunBrainz {
 			// 
 			// PB_31
 			// 
-			this->PB_31->Location = System::Drawing::Point(121, 213);
+			this->PB_31->Location = System::Drawing::Point(91, 173);
+			this->PB_31->Margin = System::Windows::Forms::Padding(2);
 			this->PB_31->Name = L"PB_31";
-			this->PB_31->Size = System::Drawing::Size(90, 90);
+			this->PB_31->Size = System::Drawing::Size(68, 73);
 			this->PB_31->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
 			this->PB_31->TabIndex = 3;
 			this->PB_31->TabStop = false;
@@ -192,9 +202,10 @@ namespace FunBrainz {
 			// 
 			// PB_24
 			// 
-			this->PB_24->Location = System::Drawing::Point(391, 123);
+			this->PB_24->Location = System::Drawing::Point(293, 100);
+			this->PB_24->Margin = System::Windows::Forms::Padding(2);
 			this->PB_24->Name = L"PB_24";
-			this->PB_24->Size = System::Drawing::Size(90, 90);
+			this->PB_24->Size = System::Drawing::Size(68, 73);
 			this->PB_24->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
 			this->PB_24->TabIndex = 4;
 			this->PB_24->TabStop = false;
@@ -202,9 +213,10 @@ namespace FunBrainz {
 			// 
 			// PB_23
 			// 
-			this->PB_23->Location = System::Drawing::Point(301, 123);
+			this->PB_23->Location = System::Drawing::Point(226, 100);
+			this->PB_23->Margin = System::Windows::Forms::Padding(2);
 			this->PB_23->Name = L"PB_23";
-			this->PB_23->Size = System::Drawing::Size(90, 90);
+			this->PB_23->Size = System::Drawing::Size(68, 73);
 			this->PB_23->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
 			this->PB_23->TabIndex = 5;
 			this->PB_23->TabStop = false;
@@ -212,9 +224,10 @@ namespace FunBrainz {
 			// 
 			// PB_22
 			// 
-			this->PB_22->Location = System::Drawing::Point(211, 123);
+			this->PB_22->Location = System::Drawing::Point(158, 100);
+			this->PB_22->Margin = System::Windows::Forms::Padding(2);
 			this->PB_22->Name = L"PB_22";
-			this->PB_22->Size = System::Drawing::Size(90, 90);
+			this->PB_22->Size = System::Drawing::Size(68, 73);
 			this->PB_22->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
 			this->PB_22->TabIndex = 6;
 			this->PB_22->TabStop = false;
@@ -222,9 +235,10 @@ namespace FunBrainz {
 			// 
 			// PB_21
 			// 
-			this->PB_21->Location = System::Drawing::Point(121, 123);
+			this->PB_21->Location = System::Drawing::Point(91, 100);
+			this->PB_21->Margin = System::Windows::Forms::Padding(2);
 			this->PB_21->Name = L"PB_21";
-			this->PB_21->Size = System::Drawing::Size(90, 90);
+			this->PB_21->Size = System::Drawing::Size(68, 73);
 			this->PB_21->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
 			this->PB_21->TabIndex = 7;
 			this->PB_21->TabStop = false;
@@ -232,9 +246,10 @@ namespace FunBrainz {
 			// 
 			// PB_14
 			// 
-			this->PB_14->Location = System::Drawing::Point(391, 33);
+			this->PB_14->Location = System::Drawing::Point(293, 27);
+			this->PB_14->Margin = System::Windows::Forms::Padding(2);
 			this->PB_14->Name = L"PB_14";
-			this->PB_14->Size = System::Drawing::Size(90, 90);
+			this->PB_14->Size = System::Drawing::Size(68, 73);
 			this->PB_14->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
 			this->PB_14->TabIndex = 8;
 			this->PB_14->TabStop = false;
@@ -242,9 +257,10 @@ namespace FunBrainz {
 			// 
 			// PB_13
 			// 
-			this->PB_13->Location = System::Drawing::Point(301, 33);
+			this->PB_13->Location = System::Drawing::Point(226, 27);
+			this->PB_13->Margin = System::Windows::Forms::Padding(2);
 			this->PB_13->Name = L"PB_13";
-			this->PB_13->Size = System::Drawing::Size(90, 90);
+			this->PB_13->Size = System::Drawing::Size(68, 73);
 			this->PB_13->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
 			this->PB_13->TabIndex = 9;
 			this->PB_13->TabStop = false;
@@ -252,9 +268,10 @@ namespace FunBrainz {
 			// 
 			// PB_12
 			// 
-			this->PB_12->Location = System::Drawing::Point(211, 33);
+			this->PB_12->Location = System::Drawing::Point(158, 27);
+			this->PB_12->Margin = System::Windows::Forms::Padding(2);
 			this->PB_12->Name = L"PB_12";
-			this->PB_12->Size = System::Drawing::Size(90, 90);
+			this->PB_12->Size = System::Drawing::Size(68, 73);
 			this->PB_12->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
 			this->PB_12->TabIndex = 10;
 			this->PB_12->TabStop = false;
@@ -262,9 +279,10 @@ namespace FunBrainz {
 			// 
 			// PB_34
 			// 
-			this->PB_34->Location = System::Drawing::Point(391, 213);
+			this->PB_34->Location = System::Drawing::Point(293, 173);
+			this->PB_34->Margin = System::Windows::Forms::Padding(2);
 			this->PB_34->Name = L"PB_34";
-			this->PB_34->Size = System::Drawing::Size(90, 90);
+			this->PB_34->Size = System::Drawing::Size(68, 73);
 			this->PB_34->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
 			this->PB_34->TabIndex = 11;
 			this->PB_34->TabStop = false;
@@ -272,9 +290,10 @@ namespace FunBrainz {
 			// 
 			// PB_44
 			// 
-			this->PB_44->Location = System::Drawing::Point(391, 303);
+			this->PB_44->Location = System::Drawing::Point(293, 246);
+			this->PB_44->Margin = System::Windows::Forms::Padding(2);
 			this->PB_44->Name = L"PB_44";
-			this->PB_44->Size = System::Drawing::Size(90, 90);
+			this->PB_44->Size = System::Drawing::Size(68, 73);
 			this->PB_44->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
 			this->PB_44->TabIndex = 12;
 			this->PB_44->TabStop = false;
@@ -282,9 +301,10 @@ namespace FunBrainz {
 			// 
 			// PB_43
 			// 
-			this->PB_43->Location = System::Drawing::Point(301, 303);
+			this->PB_43->Location = System::Drawing::Point(226, 246);
+			this->PB_43->Margin = System::Windows::Forms::Padding(2);
 			this->PB_43->Name = L"PB_43";
-			this->PB_43->Size = System::Drawing::Size(90, 90);
+			this->PB_43->Size = System::Drawing::Size(68, 73);
 			this->PB_43->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
 			this->PB_43->TabIndex = 13;
 			this->PB_43->TabStop = false;
@@ -292,9 +312,10 @@ namespace FunBrainz {
 			// 
 			// PB_42
 			// 
-			this->PB_42->Location = System::Drawing::Point(211, 303);
+			this->PB_42->Location = System::Drawing::Point(158, 246);
+			this->PB_42->Margin = System::Windows::Forms::Padding(2);
 			this->PB_42->Name = L"PB_42";
-			this->PB_42->Size = System::Drawing::Size(90, 90);
+			this->PB_42->Size = System::Drawing::Size(68, 73);
 			this->PB_42->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
 			this->PB_42->TabIndex = 14;
 			this->PB_42->TabStop = false;
@@ -302,9 +323,10 @@ namespace FunBrainz {
 			// 
 			// PB_41
 			// 
-			this->PB_41->Location = System::Drawing::Point(121, 303);
+			this->PB_41->Location = System::Drawing::Point(91, 246);
+			this->PB_41->Margin = System::Windows::Forms::Padding(2);
 			this->PB_41->Name = L"PB_41";
-			this->PB_41->Size = System::Drawing::Size(90, 90);
+			this->PB_41->Size = System::Drawing::Size(68, 73);
 			this->PB_41->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
 			this->PB_41->TabIndex = 15;
 			this->PB_41->TabStop = false;
@@ -312,18 +334,20 @@ namespace FunBrainz {
 			// 
 			// btn_Back_To_Main_From_Pipeline_Game
 			// 
-			this->btn_Back_To_Main_From_Pipeline_Game->Location = System::Drawing::Point(669, 79);
+			this->btn_Back_To_Main_From_Pipeline_Game->Location = System::Drawing::Point(502, 64);
+			this->btn_Back_To_Main_From_Pipeline_Game->Margin = System::Windows::Forms::Padding(2);
 			this->btn_Back_To_Main_From_Pipeline_Game->Name = L"btn_Back_To_Main_From_Pipeline_Game";
-			this->btn_Back_To_Main_From_Pipeline_Game->Size = System::Drawing::Size(75, 23);
+			this->btn_Back_To_Main_From_Pipeline_Game->Size = System::Drawing::Size(56, 19);
 			this->btn_Back_To_Main_From_Pipeline_Game->TabIndex = 16;
 			this->btn_Back_To_Main_From_Pipeline_Game->Text = L"BACK";
 			this->btn_Back_To_Main_From_Pipeline_Game->UseVisualStyleBackColor = true;
+			this->btn_Back_To_Main_From_Pipeline_Game->Click += gcnew System::EventHandler(this, &Pipeline_Game::btn_Back_To_Main_From_Pipeline_Game_Click);
 			// 
 			// Pipeline_Game
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
+			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(847, 482);
+			this->ClientSize = System::Drawing::Size(635, 392);
 			this->Controls->Add(this->btn_Back_To_Main_From_Pipeline_Game);
 			this->Controls->Add(this->PB_41);
 			this->Controls->Add(this->PB_42);
@@ -341,6 +365,7 @@ namespace FunBrainz {
 			this->Controls->Add(this->PB_32);
 			this->Controls->Add(this->PB_33);
 			this->Controls->Add(this->PB_11);
+			this->Margin = System::Windows::Forms::Padding(2);
 			this->Name = L"Pipeline_Game";
 			this->Text = L"Pipeline_Game";
 			this->Load += gcnew System::EventHandler(this, &Pipeline_Game::Pipeline_Game_Load);
@@ -365,6 +390,7 @@ namespace FunBrainz {
 		}
 #pragma endregion
 	public:
+		Form^ caller;
 		static int **visited;
 		static int count_2=0;
 		static vector<int> *v;
@@ -794,5 +820,9 @@ namespace FunBrainz {
 				 //MessageBox::Show(System::Convert::ToString(var2[var2->Length()-2]));
 				 encoding_of_image_loaded[System::Int64::Parse(System::Convert::ToString(var2[var2->Length-2]))-1][System::Int64::Parse(System::Convert::ToString(var2[var2->Length-1]))-1]=(encoding_of_image_loaded[System::Int64::Parse(System::Convert::ToString(var2[var2->Length-2]))-1][System::Int64::Parse(System::Convert::ToString(var2[var2->Length-1]))-1]+1)%4;
 			 }
+private: System::Void btn_Back_To_Main_From_Pipeline_Game_Click(System::Object^  sender, System::EventArgs^  e) {
+			 this->Hide();
+			 caller->Show();
+		 }
 };
 }

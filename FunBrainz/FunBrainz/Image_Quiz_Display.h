@@ -1,7 +1,7 @@
 #pragma once
 #include<vector>
 #include<ctime>
-
+using namespace System::Diagnostics;
 namespace FunBrainz {
 
 	using namespace System;
@@ -17,12 +17,20 @@ namespace FunBrainz {
 	public ref class Image_Quiz_Display : public System::Windows::Forms::Form
 	{
 	public:
+		static String^ label_name = "Animal" ;
 		Image_Quiz_Display(void)
 		{
 			InitializeComponent();
 			//
 			//TODO: Add the constructor code here
 			//
+		}
+		Image_Quiz_Display(Form^ obj1,String^ nameoflabel)
+		{
+			label_name = nameoflabel;
+			InitializeComponent();			
+			caller =obj1;
+			
 		}
 
 	protected:
@@ -77,10 +85,10 @@ namespace FunBrainz {
 			// 
 			// PB_Quiz_Image
 			// 
-			this->PB_Quiz_Image->Location = System::Drawing::Point(347, 12);
-			this->PB_Quiz_Image->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->PB_Quiz_Image->Location = System::Drawing::Point(260, 10);
+			this->PB_Quiz_Image->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->PB_Quiz_Image->Name = L"PB_Quiz_Image";
-			this->PB_Quiz_Image->Size = System::Drawing::Size(316, 231);
+			this->PB_Quiz_Image->Size = System::Drawing::Size(237, 188);
 			this->PB_Quiz_Image->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
 			this->PB_Quiz_Image->TabIndex = 0;
 			this->PB_Quiz_Image->TabStop = false;
@@ -89,10 +97,10 @@ namespace FunBrainz {
 			// 
 			this->btnNext->BackColor = System::Drawing::SystemColors::ButtonHighlight;
 			this->btnNext->ForeColor = System::Drawing::SystemColors::ControlDark;
-			this->btnNext->Location = System::Drawing::Point(801, 32);
-			this->btnNext->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->btnNext->Location = System::Drawing::Point(601, 26);
+			this->btnNext->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->btnNext->Name = L"btnNext";
-			this->btnNext->Size = System::Drawing::Size(105, 89);
+			this->btnNext->Size = System::Drawing::Size(79, 72);
 			this->btnNext->TabIndex = 1;
 			this->btnNext->Text = L"NEXT";
 			this->btnNext->UseVisualStyleBackColor = false;
@@ -101,9 +109,13 @@ namespace FunBrainz {
 			// label1
 			// 
 			this->label1->AutoSize = true;
-			this->label1->Location = System::Drawing::Point(37, 12);
+			this->label1->BackColor = System::Drawing::SystemColors::ControlLightLight;
+			this->label1->Font = (gcnew System::Drawing::Font(L"Lucida Handwriting", 20.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->label1->Location = System::Drawing::Point(11, 10);
+			this->label1->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(50, 17);
+			this->label1->Size = System::Drawing::Size(137, 36);
 			this->label1->TabIndex = 2;
 			this->label1->Text = L"Animal";
 			// 
@@ -111,10 +123,10 @@ namespace FunBrainz {
 			// 
 			this->btn_submit->BackColor = System::Drawing::SystemColors::ButtonHighlight;
 			this->btn_submit->ForeColor = System::Drawing::SystemColors::ControlDark;
-			this->btn_submit->Location = System::Drawing::Point(801, 155);
-			this->btn_submit->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->btn_submit->Location = System::Drawing::Point(601, 126);
+			this->btn_submit->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->btn_submit->Name = L"btn_submit";
-			this->btn_submit->Size = System::Drawing::Size(105, 89);
+			this->btn_submit->Size = System::Drawing::Size(79, 72);
 			this->btn_submit->TabIndex = 3;
 			this->btn_submit->Text = L"SUBMIT";
 			this->btn_submit->UseVisualStyleBackColor = false;
@@ -127,19 +139,18 @@ namespace FunBrainz {
 			this->panel1->Controls->Add(this->btn_extra);
 			this->panel1->Controls->Add(this->btn_selected);
 			this->panel1->Controls->Add(this->btn_random);
-			this->panel1->Location = System::Drawing::Point(331, 169);
-			this->panel1->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->panel1->Location = System::Drawing::Point(248, 137);
+			this->panel1->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->panel1->Name = L"panel1";
-			this->panel1->Size = System::Drawing::Size(387, 287);
+			this->panel1->Size = System::Drawing::Size(290, 233);
 			this->panel1->TabIndex = 4;
 			this->panel1->Visible = false;
 			// 
 			// btn_solve
 			// 
-			this->btn_solve->Location = System::Drawing::Point(48, 209);
-			this->btn_solve->Margin = System::Windows::Forms::Padding(4);
+			this->btn_solve->Location = System::Drawing::Point(36, 170);
 			this->btn_solve->Name = L"btn_solve";
-			this->btn_solve->Size = System::Drawing::Size(291, 55);
+			this->btn_solve->Size = System::Drawing::Size(218, 45);
 			this->btn_solve->TabIndex = 11;
 			this->btn_solve->Text = L"Solve";
 			this->btn_solve->UseVisualStyleBackColor = true;
@@ -147,10 +158,9 @@ namespace FunBrainz {
 			// 
 			// btn_extra
 			// 
-			this->btn_extra->Location = System::Drawing::Point(48, 148);
-			this->btn_extra->Margin = System::Windows::Forms::Padding(4);
+			this->btn_extra->Location = System::Drawing::Point(36, 120);
 			this->btn_extra->Name = L"btn_extra";
-			this->btn_extra->Size = System::Drawing::Size(291, 55);
+			this->btn_extra->Size = System::Drawing::Size(218, 45);
 			this->btn_extra->TabIndex = 10;
 			this->btn_extra->Text = L"Remove Extra Letter";
 			this->btn_extra->UseVisualStyleBackColor = true;
@@ -158,10 +168,9 @@ namespace FunBrainz {
 			// 
 			// btn_selected
 			// 
-			this->btn_selected->Location = System::Drawing::Point(48, 85);
-			this->btn_selected->Margin = System::Windows::Forms::Padding(4);
+			this->btn_selected->Location = System::Drawing::Point(36, 69);
 			this->btn_selected->Name = L"btn_selected";
-			this->btn_selected->Size = System::Drawing::Size(291, 55);
+			this->btn_selected->Size = System::Drawing::Size(218, 45);
 			this->btn_selected->TabIndex = 9;
 			this->btn_selected->Text = L"Selected Letter";
 			this->btn_selected->UseVisualStyleBackColor = true;
@@ -169,10 +178,9 @@ namespace FunBrainz {
 			// 
 			// btn_random
 			// 
-			this->btn_random->Location = System::Drawing::Point(48, 22);
-			this->btn_random->Margin = System::Windows::Forms::Padding(4);
+			this->btn_random->Location = System::Drawing::Point(36, 18);
 			this->btn_random->Name = L"btn_random";
-			this->btn_random->Size = System::Drawing::Size(291, 55);
+			this->btn_random->Size = System::Drawing::Size(218, 45);
 			this->btn_random->TabIndex = 8;
 			this->btn_random->Text = L"Random Letter";
 			this->btn_random->UseVisualStyleBackColor = true;
@@ -181,18 +189,19 @@ namespace FunBrainz {
 			// lbl_Selected_letter
 			// 
 			this->lbl_Selected_letter->AutoSize = true;
-			this->lbl_Selected_letter->Location = System::Drawing::Point(463, 257);
+			this->lbl_Selected_letter->Location = System::Drawing::Point(347, 209);
+			this->lbl_Selected_letter->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->lbl_Selected_letter->Name = L"lbl_Selected_letter";
-			this->lbl_Selected_letter->Size = System::Drawing::Size(120, 17);
+			this->lbl_Selected_letter->Size = System::Drawing::Size(90, 13);
 			this->lbl_Selected_letter->TabIndex = 5;
 			this->lbl_Selected_letter->Text = L"Choose one letter";
 			this->lbl_Selected_letter->Visible = false;
 			// 
 			// Image_Quiz_Display
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
+			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(1005, 721);
+			this->ClientSize = System::Drawing::Size(754, 586);
 			this->Controls->Add(this->lbl_Selected_letter);
 			this->Controls->Add(this->panel1);
 			this->Controls->Add(this->btn_submit);
@@ -200,10 +209,10 @@ namespace FunBrainz {
 			this->Controls->Add(this->btnNext);
 			this->Controls->Add(this->PB_Quiz_Image);
 			this->KeyPreview = true;
-			this->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->Name = L"Image_Quiz_Display";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
-			this->Text = L"Image_Quiz_Display";
+			this->Text = L"Image Quiz";
 			this->Load += gcnew System::EventHandler(this, &Image_Quiz_Display::Image_Quiz_Display_Load);
 			this->KeyPress += gcnew System::Windows::Forms::KeyPressEventHandler(this, &Image_Quiz_Display::ImageQuiz_KeyPress);
 			this->KeyUp += gcnew System::Windows::Forms::KeyEventHandler(this, &Image_Quiz_Display::ImageQuiz_KeyUp);
@@ -214,7 +223,7 @@ namespace FunBrainz {
 
 		}
 #pragma endregion
-
+		Form^ caller;
 		static array<String^>^ image_file_name = gcnew array<String^>(1000); //for file name
 		static array<String^>^ image_name = gcnew array<String^>(1000); //for image name
 		static array<bool>^ visited_image = gcnew array<bool>(1000); //boolean array to check if the image is already displayed
@@ -270,7 +279,7 @@ namespace FunBrainz {
 					  ((Button^)var)->Enabled=false;
 				  }
 
-				 ((Button^)btn_clear)->PerformClick();
+				 
 				 String^ actual_ans = PB_Quiz_Image->Name->ToUpper();
 				 actual_ans= actual_ans->Replace(" ","");
 				 Char^ dum = actual_ans[randomindex];
@@ -296,6 +305,7 @@ namespace FunBrainz {
 						 break;
 					 }
 				 }
+				 ((Button^)btn_clear)->PerformClick();
 			 }
 
 
@@ -591,6 +601,8 @@ namespace FunBrainz {
 				 }
 				 if (flag == 0){
 					 //to do
+					 this->Hide();
+					 caller->Show();
 					 return;
 				 }
 				 while (1){
@@ -600,7 +612,7 @@ namespace FunBrainz {
 						 break;
 					 }
 				 }
-				 String ^ str = "media\\" + image_file_name[random_index];
+				 String ^ str = "media\\" + label1->Text + "\\" +image_file_name[random_index];
 				 image1 = gcnew Bitmap(str);
 				 PB_Quiz_Image->Image = image1;
 				 PB_Quiz_Image->Name = image_name[random_index];
@@ -686,6 +698,7 @@ namespace FunBrainz {
 
 	private: System::Void Image_Quiz_Display_Load(System::Object^  sender, System::EventArgs^  e) {
 				 srand(time(0));
+				 label1->Text = label_name;
 				 try {
 					 OleDb::OleDbConnection ^ con = gcnew OleDb::OleDbConnection();
 					 con->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=FunBrainzForKids.accdb;";
@@ -700,6 +713,8 @@ namespace FunBrainz {
 						 //int index = System::Int64::Parse(dum);
 						 image_file_name[counter_image] = reader[2]->ToString();
 						 image_name[counter_image] = reader[3] -> ToString();
+						 Debug::WriteLine(image_name[counter_image]);
+						 Debug::WriteLine(image_file_name[counter_image]);
 						 visited_image[counter_image++] = false;
 
 					 }

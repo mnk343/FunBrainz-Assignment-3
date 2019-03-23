@@ -149,18 +149,18 @@ namespace FunBrainz {
 			 }
 	private: System::Void btn_2048_Click(System::Object^  sender, System::EventArgs^  e) {
 				 Form1::Hide();
-				 MyForm1^ form = gcnew MyForm1;
+				 MyForm1^ form = gcnew MyForm1(this);
 				 form->Begin();
 				 form->ShowDialog();
 			 }
 	private: System::Void btn_Image_Quiz_Click(System::Object^  sender, System::EventArgs^  e) {
 				 Form1::Hide();
-				 Image_Quiz ^ form = gcnew Image_Quiz;
+				 Image_Quiz ^ form = gcnew Image_Quiz(this);
 				 form->ShowDialog();
 			 }
 private: System::Void btn_pipeline_Click(System::Object^  sender, System::EventArgs^  e) {
 			 Form1::Hide();
-			 Pipeline_Game ^ form = gcnew Pipeline_Game;
+			 Pipeline_Game ^ form = gcnew Pipeline_Game(this);
 			 form->ShowDialog();
 		 }
 };
