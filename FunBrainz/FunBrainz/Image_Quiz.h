@@ -6,6 +6,7 @@
 #include <string>
 #include <algorithm>
 #include <iterator>
+//#include "Form1.h"
 
 
 using namespace std;
@@ -46,6 +47,7 @@ namespace FunBrainz {
 			}
 		}
 	private: System::Windows::Forms::Button^  btn_Animal;
+	private: System::Windows::Forms::Button^  btn_Back_To_Main_From_Image_Quiz;
 	protected:
 
 	private:
@@ -62,24 +64,38 @@ namespace FunBrainz {
 		void InitializeComponent(void)
 		{
 			this->btn_Animal = (gcnew System::Windows::Forms::Button());
+			this->btn_Back_To_Main_From_Image_Quiz = (gcnew System::Windows::Forms::Button());
 			this->SuspendLayout();
 			// 
 			// btn_Animal
 			// 
-			this->btn_Animal->Location = System::Drawing::Point(69, 119);
+			this->btn_Animal->Location = System::Drawing::Point(92, 146);
+			this->btn_Animal->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->btn_Animal->Name = L"btn_Animal";
-			this->btn_Animal->Size = System::Drawing::Size(105, 36);
+			this->btn_Animal->Size = System::Drawing::Size(140, 44);
 			this->btn_Animal->TabIndex = 0;
 			this->btn_Animal->Text = L"ANIMALS";
 			this->btn_Animal->UseVisualStyleBackColor = true;
 			this->btn_Animal->Click += gcnew System::EventHandler(this, &Image_Quiz::btn_Animal_Click);
 			// 
+			// btn_Back_To_Main_From_Image_Quiz
+			// 
+			this->btn_Back_To_Main_From_Image_Quiz->Location = System::Drawing::Point(467, 81);
+			this->btn_Back_To_Main_From_Image_Quiz->Name = L"btn_Back_To_Main_From_Image_Quiz";
+			this->btn_Back_To_Main_From_Image_Quiz->Size = System::Drawing::Size(75, 23);
+			this->btn_Back_To_Main_From_Image_Quiz->TabIndex = 1;
+			this->btn_Back_To_Main_From_Image_Quiz->Text = L"BACK";
+			this->btn_Back_To_Main_From_Image_Quiz->UseVisualStyleBackColor = true;
+			this->btn_Back_To_Main_From_Image_Quiz->Click += gcnew System::EventHandler(this, &Image_Quiz::btn_Back_To_Main_From_Image_Quiz_Click);
+			// 
 			// Image_Quiz
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
+			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(529, 485);
+			this->ClientSize = System::Drawing::Size(705, 597);
+			this->Controls->Add(this->btn_Back_To_Main_From_Image_Quiz);
 			this->Controls->Add(this->btn_Animal);
+			this->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->Name = L"Image_Quiz";
 			this->Text = L"Image_Quiz";
 			this->Load += gcnew System::EventHandler(this, &Image_Quiz::Image_Quiz_Load_1);
@@ -118,7 +134,12 @@ namespace FunBrainz {
 				 /*String ^ str = "C:\\Users\\Aryan Agrawal\\Desktop\\ChildEudcation\\FunBrainz-Assignment-3\\FunBrainz\\FunBrainz\\media";
 				 read_directory()*/
 			 }
-	};
+	private: System::Void btn_Back_To_Main_From_Image_Quiz_Click(System::Object^  sender, System::EventArgs^  e) {
+				/* Image_Quiz::Hide();
+				 Form1 ^ form = gcnew Form1;
+				 form->ShowDialog();*/
+			 }
+};
 
 	
 }

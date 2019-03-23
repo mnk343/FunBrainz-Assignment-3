@@ -4,6 +4,7 @@
 #include <ctime>
 #include<utility>
 #include<algorithm>
+//#include "Form1.h"
 
 using namespace std;
 
@@ -86,6 +87,8 @@ namespace FunBrainz {
 	private: System::Windows::Forms::Label^  lbl_Score_Value;
 	private: System::Windows::Forms::Label^  lblMax_Score_Title;
 	private: System::Windows::Forms::Label^  lblMax_Score_Value;
+	private: System::Windows::Forms::Button^  btn_Back_To_Main_From_2048_Game;
+
 
 
 
@@ -136,6 +139,7 @@ namespace FunBrainz {
 			this->lbl_Score_Value = (gcnew System::Windows::Forms::Label());
 			this->lblMax_Score_Title = (gcnew System::Windows::Forms::Label());
 			this->lblMax_Score_Value = (gcnew System::Windows::Forms::Label());
+			this->btn_Back_To_Main_From_2048_Game = (gcnew System::Windows::Forms::Button());
 			this->SuspendLayout();
 			// 
 			// btn11
@@ -389,11 +393,22 @@ namespace FunBrainz {
 			this->lblMax_Score_Value->TabIndex = 26;
 			this->lblMax_Score_Value->Text = L"0";
 			// 
+			// btn_Back_To_Main_From_2048_Game
+			// 
+			this->btn_Back_To_Main_From_2048_Game->Location = System::Drawing::Point(746, 324);
+			this->btn_Back_To_Main_From_2048_Game->Name = L"btn_Back_To_Main_From_2048_Game";
+			this->btn_Back_To_Main_From_2048_Game->Size = System::Drawing::Size(75, 23);
+			this->btn_Back_To_Main_From_2048_Game->TabIndex = 27;
+			this->btn_Back_To_Main_From_2048_Game->Text = L"BACK";
+			this->btn_Back_To_Main_From_2048_Game->UseVisualStyleBackColor = true;
+			this->btn_Back_To_Main_From_2048_Game->Click += gcnew System::EventHandler(this, &MyForm1::btn_Back_To_Main_From_2048_Game_Click);
+			// 
 			// MyForm1
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(1019, 526);
+			this->Controls->Add(this->btn_Back_To_Main_From_2048_Game);
 			this->Controls->Add(this->lblMax_Score_Value);
 			this->Controls->Add(this->lblMax_Score_Title);
 			this->Controls->Add(this->lbl_Score_Value);
@@ -1050,6 +1065,11 @@ private: System::Void KeyUp_form(System::Object^  sender, System::Windows::Forms
 
 		 }
 private: System::Void MyForm1_Load(System::Object^  sender, System::EventArgs^  e) {
+		 }
+private: System::Void btn_Back_To_Main_From_2048_Game_Click(System::Object^  sender, System::EventArgs^  e) {
+			 /*MyForm1::Hide();
+			 Form1 ^ form = gcnew Form1;
+			 form->ShowDialog();*/
 		 }
 };
 }

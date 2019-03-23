@@ -97,6 +97,8 @@ namespace FunBrainz {
 	private: System::Windows::Forms::PictureBox^  PB_42;
 
 	private: System::Windows::Forms::PictureBox^  PB_41;
+	private: System::Windows::Forms::Button^  btn_Back_To_Main_From_Pipeline_Game;
+
 
 
 	private:
@@ -128,6 +130,7 @@ namespace FunBrainz {
 			this->PB_43 = (gcnew System::Windows::Forms::PictureBox());
 			this->PB_42 = (gcnew System::Windows::Forms::PictureBox());
 			this->PB_41 = (gcnew System::Windows::Forms::PictureBox());
+			this->btn_Back_To_Main_From_Pipeline_Game = (gcnew System::Windows::Forms::Button());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->PB_11))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->PB_33))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->PB_32))->BeginInit();
@@ -307,11 +310,21 @@ namespace FunBrainz {
 			this->PB_41->TabStop = false;
 			this->PB_41->Click += gcnew System::EventHandler(this, &Pipeline_Game::pictureBox_Click);
 			// 
+			// btn_Back_To_Main_From_Pipeline_Game
+			// 
+			this->btn_Back_To_Main_From_Pipeline_Game->Location = System::Drawing::Point(669, 79);
+			this->btn_Back_To_Main_From_Pipeline_Game->Name = L"btn_Back_To_Main_From_Pipeline_Game";
+			this->btn_Back_To_Main_From_Pipeline_Game->Size = System::Drawing::Size(75, 23);
+			this->btn_Back_To_Main_From_Pipeline_Game->TabIndex = 16;
+			this->btn_Back_To_Main_From_Pipeline_Game->Text = L"BACK";
+			this->btn_Back_To_Main_From_Pipeline_Game->UseVisualStyleBackColor = true;
+			// 
 			// Pipeline_Game
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(847, 482);
+			this->Controls->Add(this->btn_Back_To_Main_From_Pipeline_Game);
 			this->Controls->Add(this->PB_41);
 			this->Controls->Add(this->PB_42);
 			this->Controls->Add(this->PB_43);
@@ -355,6 +368,7 @@ namespace FunBrainz {
 		static int **visited;
 		static int count_2=0;
 		static vector<int> *v;
+		static int **encoding_of_image_loaded;
 		//left=0
 		//right=1;
 		//up=2
@@ -641,6 +655,14 @@ namespace FunBrainz {
 			return 0;
 		}
 	private: System::Void Pipeline_Game_Load(System::Object^  sender, System::EventArgs^  e) {
+				 encoding_of_image_loaded=new int*[4];
+				 for(int i=0;i<4;i++){
+					 encoding_of_image_loaded[i]=new int[4];
+					 for(int j=0;j<4;j++){
+						 encoding_of_image_loaded[i][j]=-1;
+					 }
+				 }
+
 				 int n=4;
 				 visited=new int*[n];
 				 for(int i=0;i<n;i++){
@@ -651,6 +673,7 @@ namespace FunBrainz {
 				 }
 				 v=new vector<int>[1000];
 				 String^ dummy="";
+				 String^ dummy2="";
 				 //func(0,0,4,-1);
 				  try {
 					 OleDb::OleDbConnection ^ con = gcnew OleDb::OleDbConnection();
@@ -660,9 +683,12 @@ namespace FunBrainz {
 					 int stuID = 757;
 
 					 String ^ Sql = "Select [Type_Of_Image_String] from Pipeline_Game where [Player_ID] = " + stuID + ";";
+					 String ^ Sq2 = "Select [Answer_Matrix] from Pipeline_Game where [Player_ID] = " + stuID + ";";
 					 OleDb::OleDbCommand ^ command = gcnew OleDb::OleDbCommand(Sql, con);
+					 OleDb::OleDbCommand ^ command2 = gcnew OleDb::OleDbCommand(Sq2, con);
 					 con->Open();
 					 dummy = (String^)(command->ExecuteScalar());
+					 dummy2=(String^)(command2->ExecuteScalar());
 					 con->Close();
 				 }
 				 catch (Exception ^ ex) {
@@ -674,30 +700,99 @@ namespace FunBrainz {
 				 String ^ str2 = "media\\Type_B.jpg";
 				 Image^ Type_B = gcnew Bitmap(str2);
 				 MessageBox::Show(dummy);
+				 MessageBox::Show(dummy2);
 				 array<PictureBox^,2> ^ image_array={ { PB_11, PB_12, PB_13, PB_14 }, { PB_21, PB_22, PB_23, PB_24 }, { PB_31, PB_32, PB_33, PB_34 }, { PB_41, PB_42, PB_43, PB_44 } };
 				 ///*PB_11->Image=Type_B;
 				 //ima*/ge_array[0,1]->Image=Type_A;
 				 for(int i=0;i<4;i++){
 					 for(int j=0;j<4;j++){
-						 //MessageBox::Show(System::Convert::ToString(dummy[j+i*4]));
+						 int random_position;
+						 while(1){
+							 random_position=rand()%4;
+							 if(random_position!=System::Int64::Parse(System::Convert::ToString(dummy2[j+i*4]))){
+								 break;
+							 }
+						 }
+						 encoding_of_image_loaded[i][j]=random_position;
+						 if(System::Convert::ToString(dummy[j+i*4])=="G"){
+							 int rand_type=rand()%2;
+							 if(rand_type==0){
+								 image_array[i,j]->Image=Type_A;
+							 }else{
+								 image_array[i,j]->Image=Type_B;
+							 }
+							 int rand_orientation=rand()%4;
+							 encoding_of_image_loaded[i][j]=rand_orientation;
+						 }
+
 						 if(System::Convert::ToString(dummy[j+i*4])=="A" || System::Convert::ToString(dummy[j+i*4])=="C"){
+							 
 							 image_array[i,j]->Image=Type_A;
+							 /*Bitmap^ var;
+							  var=(Bitmap^)(image_array[i,j]->Image);
+							  var->RotateFlip(RotateFlipType::Rotate90FlipNone);
+							  image_array[i,j]->Image=var;*/
+							 
+							 
 						 }else{
 							 if(System::Convert::ToString(dummy[j+i*4])=="B"){
 								 image_array[i,j]->Image=Type_B;
+								 /*Bitmap^ var;
+								 var=(Bitmap^)(image_array[i,j]->Image);
+								 var->RotateFlip(RotateFlipType::Rotate90FlipNone);
+								 image_array[i,j]->Image=var;*/
 							 }
 						 }
+						 //MessageBox::Show("start");
+						 //MessageBox::Show(System::Convert::ToString(random_position));
+						 //if(random_position==1){
+							// //MessageBox::Show("type1");
+							// Bitmap^ var;
+							// var=(Bitmap^)(image_array[i,j]->Image);
+							// var->RotateFlip(RotateFlipType::Rotate90FlipNone);
+							// image_array[i,j]->Image=var;
+						 //}
+						 //if(random_position==2){
+							//  //MessageBox::Show("type2");
+							// Bitmap^ var2;
+							// var2=(Bitmap^)(image_array[i,j]->Image);
+							// var2->RotateFlip(RotateFlipType::Rotate180FlipNone);
+							// image_array[i,j]->Image=var2;
+						 //}
+						 //if(random_position==3){
+							//  //MessageBox::Show("type3");
+							// Bitmap^ var3;
+							// var3=(Bitmap^)(image_array[i,j]->Image);
+							// var3->RotateFlip(RotateFlipType::Rotate270FlipNone);
+							// image_array[i,j]->Image=var3;
+						 //}
+						 //MessageBox::Show("end");
 					 }
 				 }
-				 //MessageBox::Show(System::Convert::ToString(count_2));
+
+				 /*Bitmap^ var3;
+				  var3=(Bitmap^)(image_array[0,2]->Image);
+				  var3->RotateFlip(RotateFlipType::Rotate90FlipNone);*/
+				  PB_13->Image->RotateFlip(RotateFlipType::Rotate90FlipNone);
+
+				 for(int i=0;i<4;i++){
+					 for(int j=0;j<4;j++){
+						// MessageBox::Show(System::Convert::ToString(encoding_of_image_loaded[i][j]));
+					 }
+				 }
 			 }
 	private: System::Void pictureBox_Click(System::Object^  sender, System::EventArgs^  e) {
 				 
 				 PictureBox^ pb = ((PictureBox^)sender);
 				 Bitmap^ var;
 				 var=(Bitmap^)(pb->Image);
-				 var->RotateFlip(RotateFlipType::Rotate90FlipNone);
+				 var->RotateFlip(RotateFlipType::Rotate270FlipNone);
 				 pb->Image=var;
+				 String^ var2 = pb->Name;
+				 //MessageBox::Show(var2);
+				 //MessageBox::Show(System::Convert::ToString(var2->Length));
+				 //MessageBox::Show(System::Convert::ToString(var2[var2->Length()-2]));
+				 encoding_of_image_loaded[System::Int64::Parse(System::Convert::ToString(var2[var2->Length-2]))-1][System::Int64::Parse(System::Convert::ToString(var2[var2->Length-1]))-1]=(encoding_of_image_loaded[System::Int64::Parse(System::Convert::ToString(var2[var2->Length-2]))-1][System::Int64::Parse(System::Convert::ToString(var2[var2->Length-1]))-1]+1)%4;
 			 }
 };
 }

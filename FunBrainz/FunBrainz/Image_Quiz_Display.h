@@ -45,6 +45,7 @@ namespace FunBrainz {
 	private: System::Windows::Forms::Button^  btn_extra;
 	private: System::Windows::Forms::Button^  btn_selected;
 	private: System::Windows::Forms::Button^  btn_random;
+	private: System::Windows::Forms::Label^  lbl_Selected_letter;
 	protected:
 
 	private:
@@ -69,16 +70,17 @@ namespace FunBrainz {
 			this->btn_extra = (gcnew System::Windows::Forms::Button());
 			this->btn_selected = (gcnew System::Windows::Forms::Button());
 			this->btn_random = (gcnew System::Windows::Forms::Button());
+			this->lbl_Selected_letter = (gcnew System::Windows::Forms::Label());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->PB_Quiz_Image))->BeginInit();
 			this->panel1->SuspendLayout();
 			this->SuspendLayout();
 			// 
 			// PB_Quiz_Image
 			// 
-			this->PB_Quiz_Image->Location = System::Drawing::Point(260, 10);
-			this->PB_Quiz_Image->Margin = System::Windows::Forms::Padding(2);
+			this->PB_Quiz_Image->Location = System::Drawing::Point(347, 12);
+			this->PB_Quiz_Image->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->PB_Quiz_Image->Name = L"PB_Quiz_Image";
-			this->PB_Quiz_Image->Size = System::Drawing::Size(237, 188);
+			this->PB_Quiz_Image->Size = System::Drawing::Size(316, 231);
 			this->PB_Quiz_Image->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
 			this->PB_Quiz_Image->TabIndex = 0;
 			this->PB_Quiz_Image->TabStop = false;
@@ -87,10 +89,10 @@ namespace FunBrainz {
 			// 
 			this->btnNext->BackColor = System::Drawing::SystemColors::ButtonHighlight;
 			this->btnNext->ForeColor = System::Drawing::SystemColors::ControlDark;
-			this->btnNext->Location = System::Drawing::Point(601, 26);
-			this->btnNext->Margin = System::Windows::Forms::Padding(2);
+			this->btnNext->Location = System::Drawing::Point(801, 32);
+			this->btnNext->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->btnNext->Name = L"btnNext";
-			this->btnNext->Size = System::Drawing::Size(79, 72);
+			this->btnNext->Size = System::Drawing::Size(105, 89);
 			this->btnNext->TabIndex = 1;
 			this->btnNext->Text = L"NEXT";
 			this->btnNext->UseVisualStyleBackColor = false;
@@ -99,10 +101,9 @@ namespace FunBrainz {
 			// label1
 			// 
 			this->label1->AutoSize = true;
-			this->label1->Location = System::Drawing::Point(28, 10);
-			this->label1->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label1->Location = System::Drawing::Point(37, 12);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(38, 13);
+			this->label1->Size = System::Drawing::Size(50, 17);
 			this->label1->TabIndex = 2;
 			this->label1->Text = L"Animal";
 			// 
@@ -110,10 +111,10 @@ namespace FunBrainz {
 			// 
 			this->btn_submit->BackColor = System::Drawing::SystemColors::ButtonHighlight;
 			this->btn_submit->ForeColor = System::Drawing::SystemColors::ControlDark;
-			this->btn_submit->Location = System::Drawing::Point(601, 126);
-			this->btn_submit->Margin = System::Windows::Forms::Padding(2);
+			this->btn_submit->Location = System::Drawing::Point(801, 155);
+			this->btn_submit->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->btn_submit->Name = L"btn_submit";
-			this->btn_submit->Size = System::Drawing::Size(79, 72);
+			this->btn_submit->Size = System::Drawing::Size(105, 89);
 			this->btn_submit->TabIndex = 3;
 			this->btn_submit->Text = L"SUBMIT";
 			this->btn_submit->UseVisualStyleBackColor = false;
@@ -126,18 +127,19 @@ namespace FunBrainz {
 			this->panel1->Controls->Add(this->btn_extra);
 			this->panel1->Controls->Add(this->btn_selected);
 			this->panel1->Controls->Add(this->btn_random);
-			this->panel1->Location = System::Drawing::Point(234, 160);
-			this->panel1->Margin = System::Windows::Forms::Padding(2);
+			this->panel1->Location = System::Drawing::Point(331, 169);
+			this->panel1->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->panel1->Name = L"panel1";
-			this->panel1->Size = System::Drawing::Size(290, 233);
+			this->panel1->Size = System::Drawing::Size(387, 287);
 			this->panel1->TabIndex = 4;
 			this->panel1->Visible = false;
 			// 
 			// btn_solve
 			// 
-			this->btn_solve->Location = System::Drawing::Point(36, 170);
+			this->btn_solve->Location = System::Drawing::Point(48, 209);
+			this->btn_solve->Margin = System::Windows::Forms::Padding(4);
 			this->btn_solve->Name = L"btn_solve";
-			this->btn_solve->Size = System::Drawing::Size(218, 45);
+			this->btn_solve->Size = System::Drawing::Size(291, 55);
 			this->btn_solve->TabIndex = 11;
 			this->btn_solve->Text = L"Solve";
 			this->btn_solve->UseVisualStyleBackColor = true;
@@ -145,9 +147,10 @@ namespace FunBrainz {
 			// 
 			// btn_extra
 			// 
-			this->btn_extra->Location = System::Drawing::Point(36, 120);
+			this->btn_extra->Location = System::Drawing::Point(48, 148);
+			this->btn_extra->Margin = System::Windows::Forms::Padding(4);
 			this->btn_extra->Name = L"btn_extra";
-			this->btn_extra->Size = System::Drawing::Size(218, 45);
+			this->btn_extra->Size = System::Drawing::Size(291, 55);
 			this->btn_extra->TabIndex = 10;
 			this->btn_extra->Text = L"Remove Extra Letter";
 			this->btn_extra->UseVisualStyleBackColor = true;
@@ -155,9 +158,10 @@ namespace FunBrainz {
 			// 
 			// btn_selected
 			// 
-			this->btn_selected->Location = System::Drawing::Point(36, 69);
+			this->btn_selected->Location = System::Drawing::Point(48, 85);
+			this->btn_selected->Margin = System::Windows::Forms::Padding(4);
 			this->btn_selected->Name = L"btn_selected";
-			this->btn_selected->Size = System::Drawing::Size(218, 45);
+			this->btn_selected->Size = System::Drawing::Size(291, 55);
 			this->btn_selected->TabIndex = 9;
 			this->btn_selected->Text = L"Selected Letter";
 			this->btn_selected->UseVisualStyleBackColor = true;
@@ -165,26 +169,38 @@ namespace FunBrainz {
 			// 
 			// btn_random
 			// 
-			this->btn_random->Location = System::Drawing::Point(36, 18);
+			this->btn_random->Location = System::Drawing::Point(48, 22);
+			this->btn_random->Margin = System::Windows::Forms::Padding(4);
 			this->btn_random->Name = L"btn_random";
-			this->btn_random->Size = System::Drawing::Size(218, 45);
+			this->btn_random->Size = System::Drawing::Size(291, 55);
 			this->btn_random->TabIndex = 8;
 			this->btn_random->Text = L"Random Letter";
 			this->btn_random->UseVisualStyleBackColor = true;
 			this->btn_random->Click += gcnew System::EventHandler(this, &Image_Quiz_Display::btn_random_Click);
 			// 
+			// lbl_Selected_letter
+			// 
+			this->lbl_Selected_letter->AutoSize = true;
+			this->lbl_Selected_letter->Location = System::Drawing::Point(463, 257);
+			this->lbl_Selected_letter->Name = L"lbl_Selected_letter";
+			this->lbl_Selected_letter->Size = System::Drawing::Size(120, 17);
+			this->lbl_Selected_letter->TabIndex = 5;
+			this->lbl_Selected_letter->Text = L"Choose one letter";
+			this->lbl_Selected_letter->Visible = false;
+			// 
 			// Image_Quiz_Display
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
+			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(754, 586);
+			this->ClientSize = System::Drawing::Size(1005, 721);
+			this->Controls->Add(this->lbl_Selected_letter);
 			this->Controls->Add(this->panel1);
 			this->Controls->Add(this->btn_submit);
 			this->Controls->Add(this->label1);
 			this->Controls->Add(this->btnNext);
 			this->Controls->Add(this->PB_Quiz_Image);
 			this->KeyPreview = true;
-			this->Margin = System::Windows::Forms::Padding(2);
+			this->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->Name = L"Image_Quiz_Display";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"Image_Quiz_Display";
@@ -225,7 +241,64 @@ namespace FunBrainz {
 			var->UseVisualStyleBackColor = false;
 			var->Enabled = false;
 			this->Controls->Add(var);
+			var->Click += gcnew System::EventHandler(this, &Image_Quiz_Display::Selected_Button);
 		}
+
+	private: System::Void Selected_Button(System::Object^  sender, System::EventArgs^  e){
+				  int randomindex;
+				  Button^ btn = ((Button^)sender);
+				  randomindex = System::Int64::Parse(btn->Name);
+				  isFixed[randomindex]=true;
+				  btn->Enabled=false;
+				  for(int i=0;i<14;i++){
+					  Control^ curr_btn = this->Controls[System::Convert::ToString(100+i)];
+					  ((Button^)curr_btn)->Visible=true;
+				  }
+				  Control^ btn_clear = this->Controls[L"clear"];
+				  ((Button^)btn_clear)->Visible=true;
+				  Control^ btn_hint = this->Controls[L"hint"];
+				  ((Button^)btn_hint)->Visible=true;
+				  Control^ btn_back = this->Controls[L"back"];
+				  ((Button^)btn_back)->Visible=true;
+				  lbl_Selected_letter->Visible=false;
+				  for(int i=0;i<length_of_answer;i++){
+					  if(isFixed[i]==true){
+						  continue;
+					  }
+					  Control^ var = this->Controls[System::Convert::ToString(i)];
+					  ((Button^)var)->Text = "";
+					  ((Button^)var)->Enabled=false;
+				  }
+
+				 ((Button^)btn_clear)->PerformClick();
+				 String^ actual_ans = PB_Quiz_Image->Name->ToUpper();
+				 actual_ans= actual_ans->Replace(" ","");
+				 Char^ dum = actual_ans[randomindex];
+				 String^ access_char = System::Convert::ToString(dum);
+				 Control^ ans_btn = this->Controls[System::Convert::ToString(randomindex)];
+				 ((Button^)ans_btn)->Text = access_char;
+				 Control^ curr_btn = this->Controls[System::Convert::ToString(100+randomindex)];
+				 ((Button^)curr_btn)->Enabled=false;
+
+				 int flag2=0;
+				 for(int i=0;i<length_of_answer;i++){
+					 if(isFixed[i]==false){
+						 flag2=1;
+						 break;
+					 }
+				 }
+				 if(flag2==0){
+					 btn_submit->PerformClick();
+				 }
+				 for(int i=0;i<length_of_answer;i++){
+					 if(isFixed[i]==false){
+						 index_to_be_filled=i;
+						 break;
+					 }
+				 }
+			 }
+
+
 		void button_creator2(int x, int y){
 			Button^ hint = gcnew Button();
 			Button^ clear = gcnew Button();
@@ -287,17 +360,11 @@ namespace FunBrainz {
 				 actual_ans= actual_ans->Replace(" ","");
 				 Char^ dum = actual_ans[randomindex];
 				 String^ access_char = System::Convert::ToString(dum);
-				 for(int i=0;i<14;i++)
-				 {
-					 Control^ curr_btn = this->Controls[System::Convert::ToString(100+i)];
-					 if(curr_btn->Text == access_char && curr_btn->Enabled==true)
-					 {
-						 Control^ ans_btn = this->Controls[System::Convert::ToString(randomindex)];
-						 ((Button^)ans_btn)->Text = access_char;
-						 ((Button^)curr_btn)->Enabled=false;
-						 break;
-					 }
-				 }
+				 Control^ ans_btn = this->Controls[System::Convert::ToString(randomindex)];
+				 ((Button^)ans_btn)->Text = access_char;
+				 Control^ curr_btn = this->Controls[System::Convert::ToString(100+randomindex)];
+				 ((Button^)curr_btn)->Enabled=false;
+
 				 int flag2=0;
 				 for(int i=0;i<length_of_answer;i++){
 					 if(isFixed[i]==false){
@@ -308,15 +375,41 @@ namespace FunBrainz {
 				 if(flag2==0){
 					 btn_submit->PerformClick();
 				 }
+				 for(int i=0;i<length_of_answer;i++){
+					 if(isFixed[i]==false){
+						 index_to_be_filled=i;
+						 break;
+					 }
+				 }
 			 }
 
 			 void SelectedLetter()
 			 {
-
+				 for(int i=0;i<length_of_answer;i++){
+					 if(isFixed[i]==true){
+						 continue;
+					 }
+					 Control^ var = this->Controls[System::Convert::ToString(i)];
+					 ((Button^)var)->Text = "?";
+					 ((Button^)var)->Enabled=true;
+				 }
+				 for(int i=0;i<14;i++){
+					 Control^ curr_btn = this->Controls[System::Convert::ToString(100+i)];
+					 ((Button^)curr_btn)->Visible=false;
+				 }
+				 Control^ btn_clear = this->Controls[L"clear"];
+				 ((Button^)btn_clear)->Visible=false;
+				 Control^ btn_hint = this->Controls[L"hint"];
+				 ((Button^)btn_hint)->Visible=false;
+				 Control^ btn_back = this->Controls[L"back"];
+				 ((Button^)btn_back)->Visible=false;
+				 lbl_Selected_letter->Visible=true;
 			 }
 
 			 void Remove_Extra_Letter()
 			 {
+				 Control^ btn_clear = this->Controls[L"clear"];
+				 ((Button^)btn_clear)->PerformClick();
 				 String^ actual_ans = PB_Quiz_Image->Name->ToUpper();
 				 actual_ans= actual_ans->Replace(" ","");
 				 int char_present[26]={ 0 };
@@ -326,7 +419,6 @@ namespace FunBrainz {
 				 }
 				 for (int i=0;i<14;i++)
 				 {
-					 int flag=0;
 					 Control^ ans_btn = this->Controls[System::Convert::ToString(100+i)];
 					 if (char_present[System::Char::Parse(ans_btn->Text)-65]>0)
 					 {
@@ -335,6 +427,12 @@ namespace FunBrainz {
 					 else
 					 {
 						 ans_btn->Enabled=false;
+					 }
+				 }
+				 for(int i=0;i<length_of_answer;i++){
+					 if(isFixed[i]==false){
+						 index_to_be_filled=i;
+						 break;
 					 }
 				 }
 			 }
@@ -359,6 +457,7 @@ namespace FunBrainz {
 
 
 	private: System::Void btnClear_Click(System::Object^  sender, System::EventArgs^  e){
+				  //MessageBox::Show(System::Convert::ToString(index_to_be_filled));
 				 for (int i=0;i<length_of_answer;i++)
 				 {
 					 Control^ btn_to_remove = this->Controls[System::Convert::ToString(i)];
@@ -367,33 +466,66 @@ namespace FunBrainz {
 					 }
 					 btn_to_remove->Text="";
 				 }
-
-				 for (int i=0;i<14;i++)
+				 for (int i=0;i<length_of_answer;i++)
 				 {
 					 if(isFixed[i]==true){
 						 continue;
 					 }
+					 //MessageBox::Show(System::Convert::ToString(i));
 					 Control^ btn_to_enable = this->Controls[System::Convert::ToString(100+i)];
 					 btn_to_enable->Enabled=true;
 				 }
-				 index_to_be_filled=0;
+				/* index_to_be_filled=0;
+				 while(isFixed[index_to_be_filled]==true && index_to_be_filled<length_of_answer){
+					 index_to_be_filled++;
+				 }
+				 if(index_to_be_filled==length_of_answer){
+					 btn_submit->PerformClick();
+				 }*/
+				 int all_True_flag=1;
+				 for(int i=0;i<length_of_answer;i++){
+					 if(isFixed[i]==false){
+						 all_True_flag=0;
+						 index_to_be_filled=i;
+						 break;
+					 }
+				 }
+				 if(all_True_flag==1){
+					 btn_submit->PerformClick();
+				 }
+				  //MessageBox::Show(System::Convert::ToString(index_to_be_filled));
 			 }
 
 	private: System::Void btnBack_Click(System::Object^  sender, System::EventArgs^  e){
-				 if (index_to_be_filled==0)
-				 {
-					 MessageBox::Show("can't back");
+				 //MessageBox::Show(System::Convert::ToString(index_to_be_filled));
+				 if(index_to_be_filled==0){
+					 MessageBox::Show("cant back");
 					 return;
 				 }
-				 while(index_to_be_filled>0 && isFixed[index_to_be_filled]==true){
+				 index_to_be_filled--;
+				 while(isFixed[index_to_be_filled]==true){
+					 if(index_to_be_filled==0){
+						 MessageBox::Show("Can't back too");
+						 for(int i=0;i<length_of_answer;i++){
+							 Control^ curr_btn = this->Controls[System::Convert::ToString(i)];
+							 if(curr_btn->Text==""){
+								 index_to_be_filled=i;
+								 break;
+							 }
+						 }
+						 return;
+					 }
 					 index_to_be_filled--;
 				 }
-				 Control^ btn_to_remove = this->Controls[System::Convert::ToString(--index_to_be_filled)];
+
+				 Control^ btn_to_remove = this->Controls[System::Convert::ToString(index_to_be_filled)];
 				 btn_to_remove->Text="";
 
 				 Control^ btn_to_enable = this->Controls[System::Convert::ToString(index_ans[index_to_be_filled])];
 				 btn_to_enable->Enabled=true;
 				 index_ans[index_to_be_filled]=0;
+				  //MessageBox::Show(System::Convert::ToString(index_to_be_filled));
+				 
 			 }
 
 			 void button_creator3(int x, int y,Char^ s,int i)
@@ -415,10 +547,7 @@ namespace FunBrainz {
 			 }
 
 	private: System::Void btnChar_Click(System::Object^  sender, System::EventArgs^  e){
-				 while(index_to_be_filled<length_of_answer && isFixed[index_to_be_filled]==true)
-				 {
-					 index_to_be_filled++;
-				 }
+				  //MessageBox::Show(System::Convert::ToString(index_to_be_filled));
 				 if (index_to_be_filled == length_of_answer)
 				 {
 					 MessageBox::Show("Can't Filled further");
@@ -426,9 +555,22 @@ namespace FunBrainz {
 				 }
 				 Button^ btn = ((Button^)sender);
 				 index_ans[index_to_be_filled]= System::Int64::Parse(btn->Name);
-				 Control^ random = this->Controls[System::Convert::ToString(index_to_be_filled++)];
+				 Control^ random = this->Controls[System::Convert::ToString(index_to_be_filled)];
 				 btn->Enabled = false;
 				 random->Text = btn->Text;
+				 int all_filled_by_some_means=1;
+				 for(int i=0;i<length_of_answer;i++){
+					 Control^ curr_btn = this->Controls[System::Convert::ToString(i)];
+					 if(curr_btn->Text==""){
+						 index_to_be_filled=i;
+						 all_filled_by_some_means=0;
+						 break;
+					 }
+				 }
+				 if(all_filled_by_some_means==1){
+					 index_to_be_filled=length_of_answer;
+				 }
+				  //MessageBox::Show(System::Convert::ToString(index_to_be_filled));
 			 }
 
 			 void refresh_image(){
