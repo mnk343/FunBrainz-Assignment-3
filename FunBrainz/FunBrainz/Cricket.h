@@ -477,6 +477,7 @@ namespace FunBrainz {
 		int * scores;
 
 	private: System::Void Cricket_Load(System::Object^  sender, System::EventArgs^  e) {
+				 
 				 try {
 					 OleDb::OleDbConnection ^ con = gcnew OleDb::OleDbConnection();
 					 con->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=FunBrainzForKids.accdb;";
@@ -810,6 +811,18 @@ private: System::Void StopButton_Click(System::Object^  sender, System::EventArg
 				con->Close();
 
 				Sql = "Update Cricket Set [IncorrectAnswers] = " + incorrect+ " where [StudentId] = " + stuID + ";";
+				command = gcnew OleDb::OleDbCommand(Sql, con);
+				con->Open();
+				command->ExecuteNonQuery();
+				con->Close();
+
+				time_t now = time(0);
+				tm *ltm = localtime(&now);
+				int year =  1900 + ltm->tm_year;
+				int month =  1 + ltm->tm_mon;
+				int date = ltm->tm_mday ;
+				String ^ touse = date +"/" + month + "/" +year;
+				Sql = "Insert into CricketGraph (StudentID, DatePlayed) Values (" + stuID+ " , '" + touse + "');";
 				command = gcnew OleDb::OleDbCommand(Sql, con);
 				con->Open();
 				command->ExecuteNonQuery();
