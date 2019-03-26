@@ -54,6 +54,7 @@ namespace FunBrainz {
 	private: System::Windows::Forms::Button^  btn_selected;
 	private: System::Windows::Forms::Button^  btn_random;
 	private: System::Windows::Forms::Label^  lbl_Selected_letter;
+
 	protected:
 
 	private:
@@ -74,19 +75,19 @@ namespace FunBrainz {
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->btn_submit = (gcnew System::Windows::Forms::Button());
 			this->panel1 = (gcnew System::Windows::Forms::Panel());
+			this->lbl_Selected_letter = (gcnew System::Windows::Forms::Label());
 			this->btn_solve = (gcnew System::Windows::Forms::Button());
 			this->btn_extra = (gcnew System::Windows::Forms::Button());
 			this->btn_selected = (gcnew System::Windows::Forms::Button());
 			this->btn_random = (gcnew System::Windows::Forms::Button());
-			this->lbl_Selected_letter = (gcnew System::Windows::Forms::Label());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->PB_Quiz_Image))->BeginInit();
 			this->panel1->SuspendLayout();
 			this->SuspendLayout();
 			// 
 			// PB_Quiz_Image
 			// 
-			this->PB_Quiz_Image->Location = System::Drawing::Point(260, 10);
-			this->PB_Quiz_Image->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->PB_Quiz_Image->Location = System::Drawing::Point(255, 26);
+			this->PB_Quiz_Image->Margin = System::Windows::Forms::Padding(2);
 			this->PB_Quiz_Image->Name = L"PB_Quiz_Image";
 			this->PB_Quiz_Image->Size = System::Drawing::Size(237, 188);
 			this->PB_Quiz_Image->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
@@ -96,9 +97,10 @@ namespace FunBrainz {
 			// btnNext
 			// 
 			this->btnNext->BackColor = System::Drawing::SystemColors::ButtonHighlight;
+			this->btnNext->Font = (gcnew System::Drawing::Font(L"Century Gothic", 10));
 			this->btnNext->ForeColor = System::Drawing::SystemColors::ControlDark;
 			this->btnNext->Location = System::Drawing::Point(601, 26);
-			this->btnNext->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->btnNext->Margin = System::Windows::Forms::Padding(2);
 			this->btnNext->Name = L"btnNext";
 			this->btnNext->Size = System::Drawing::Size(79, 72);
 			this->btnNext->TabIndex = 1;
@@ -109,107 +111,119 @@ namespace FunBrainz {
 			// label1
 			// 
 			this->label1->AutoSize = true;
-			this->label1->BackColor = System::Drawing::SystemColors::ControlLightLight;
-			this->label1->Font = (gcnew System::Drawing::Font(L"Lucida Handwriting", 20.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
+			this->label1->BackColor = System::Drawing::Color::Transparent;
+			this->label1->Font = (gcnew System::Drawing::Font(L"Century Gothic", 21.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->label1->Location = System::Drawing::Point(11, 10);
+			this->label1->Location = System::Drawing::Point(53, 62);
 			this->label1->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(137, 36);
+			this->label1->Size = System::Drawing::Size(115, 36);
 			this->label1->TabIndex = 2;
 			this->label1->Text = L"Animal";
 			// 
 			// btn_submit
 			// 
 			this->btn_submit->BackColor = System::Drawing::SystemColors::ButtonHighlight;
+			this->btn_submit->Font = (gcnew System::Drawing::Font(L"Century Gothic", 10));
 			this->btn_submit->ForeColor = System::Drawing::SystemColors::ControlDark;
 			this->btn_submit->Location = System::Drawing::Point(601, 126);
-			this->btn_submit->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->btn_submit->Margin = System::Windows::Forms::Padding(2);
 			this->btn_submit->Name = L"btn_submit";
 			this->btn_submit->Size = System::Drawing::Size(79, 72);
 			this->btn_submit->TabIndex = 3;
 			this->btn_submit->Text = L"SUBMIT";
-			this->btn_submit->UseVisualStyleBackColor = false;
+			this->btn_submit->UseVisualStyleBackColor = true;
 			this->btn_submit->Click += gcnew System::EventHandler(this, &Image_Quiz_Display::btn_submit_Click);
 			// 
 			// panel1
 			// 
 			this->panel1->BackColor = System::Drawing::Color::White;
+			this->panel1->Controls->Add(this->lbl_Selected_letter);
 			this->panel1->Controls->Add(this->btn_solve);
 			this->panel1->Controls->Add(this->btn_extra);
 			this->panel1->Controls->Add(this->btn_selected);
 			this->panel1->Controls->Add(this->btn_random);
-			this->panel1->Location = System::Drawing::Point(248, 137);
-			this->panel1->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->panel1->Location = System::Drawing::Point(242, 149);
+			this->panel1->Margin = System::Windows::Forms::Padding(2);
 			this->panel1->Name = L"panel1";
-			this->panel1->Size = System::Drawing::Size(290, 233);
+			this->panel1->Size = System::Drawing::Size(265, 222);
 			this->panel1->TabIndex = 4;
 			this->panel1->Visible = false;
-			// 
-			// btn_solve
-			// 
-			this->btn_solve->Location = System::Drawing::Point(36, 170);
-			this->btn_solve->Name = L"btn_solve";
-			this->btn_solve->Size = System::Drawing::Size(218, 45);
-			this->btn_solve->TabIndex = 11;
-			this->btn_solve->Text = L"Solve";
-			this->btn_solve->UseVisualStyleBackColor = true;
-			this->btn_solve->Click += gcnew System::EventHandler(this, &Image_Quiz_Display::btn_solve_Click);
-			// 
-			// btn_extra
-			// 
-			this->btn_extra->Location = System::Drawing::Point(36, 120);
-			this->btn_extra->Name = L"btn_extra";
-			this->btn_extra->Size = System::Drawing::Size(218, 45);
-			this->btn_extra->TabIndex = 10;
-			this->btn_extra->Text = L"Remove Extra Letter";
-			this->btn_extra->UseVisualStyleBackColor = true;
-			this->btn_extra->Click += gcnew System::EventHandler(this, &Image_Quiz_Display::btn_extra_Click);
-			// 
-			// btn_selected
-			// 
-			this->btn_selected->Location = System::Drawing::Point(36, 69);
-			this->btn_selected->Name = L"btn_selected";
-			this->btn_selected->Size = System::Drawing::Size(218, 45);
-			this->btn_selected->TabIndex = 9;
-			this->btn_selected->Text = L"Selected Letter";
-			this->btn_selected->UseVisualStyleBackColor = true;
-			this->btn_selected->Click += gcnew System::EventHandler(this, &Image_Quiz_Display::btn_selected_Click);
-			// 
-			// btn_random
-			// 
-			this->btn_random->Location = System::Drawing::Point(36, 18);
-			this->btn_random->Name = L"btn_random";
-			this->btn_random->Size = System::Drawing::Size(218, 45);
-			this->btn_random->TabIndex = 8;
-			this->btn_random->Text = L"Random Letter";
-			this->btn_random->UseVisualStyleBackColor = true;
-			this->btn_random->Click += gcnew System::EventHandler(this, &Image_Quiz_Display::btn_random_Click);
 			// 
 			// lbl_Selected_letter
 			// 
 			this->lbl_Selected_letter->AutoSize = true;
-			this->lbl_Selected_letter->Location = System::Drawing::Point(347, 209);
+			this->lbl_Selected_letter->Font = (gcnew System::Drawing::Font(L"Century Gothic", 10));
+			this->lbl_Selected_letter->Location = System::Drawing::Point(61, 70);
 			this->lbl_Selected_letter->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->lbl_Selected_letter->Name = L"lbl_Selected_letter";
-			this->lbl_Selected_letter->Size = System::Drawing::Size(90, 13);
+			this->lbl_Selected_letter->Size = System::Drawing::Size(131, 19);
 			this->lbl_Selected_letter->TabIndex = 5;
 			this->lbl_Selected_letter->Text = L"Choose one letter";
 			this->lbl_Selected_letter->Visible = false;
+			// 
+			// btn_solve
+			// 
+			this->btn_solve->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+			this->btn_solve->Font = (gcnew System::Drawing::Font(L"Century Gothic", 10));
+			this->btn_solve->Location = System::Drawing::Point(34, 160);
+			this->btn_solve->Name = L"btn_solve";
+			this->btn_solve->Size = System::Drawing::Size(202, 39);
+			this->btn_solve->TabIndex = 11;
+			this->btn_solve->Text = L"Solve";
+			this->btn_solve->UseVisualStyleBackColor = true;
+			this->btn_solve->Click += gcnew System::EventHandler(this, &Image_Quiz_Display::btn_solve_MouseLeave);
+			// 
+			// btn_extra
+			// 
+			this->btn_extra->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+			this->btn_extra->Font = (gcnew System::Drawing::Font(L"Century Gothic", 10));
+			this->btn_extra->Location = System::Drawing::Point(34, 115);
+			this->btn_extra->Name = L"btn_extra";
+			this->btn_extra->Size = System::Drawing::Size(202, 39);
+			this->btn_extra->TabIndex = 10;
+			this->btn_extra->Text = L"Remove Extra Letter";
+			this->btn_extra->UseVisualStyleBackColor = true;
+			this->btn_extra->Click += gcnew System::EventHandler(this, &Image_Quiz_Display::btn_extra_MouseLeave);
+			// 
+			// btn_selected
+			// 
+			this->btn_selected->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+			this->btn_selected->Font = (gcnew System::Drawing::Font(L"Century Gothic", 10));
+			this->btn_selected->Location = System::Drawing::Point(34, 70);
+			this->btn_selected->Name = L"btn_selected";
+			this->btn_selected->Size = System::Drawing::Size(202, 39);
+			this->btn_selected->TabIndex = 9;
+			this->btn_selected->Text = L"Selected Letter";
+			this->btn_selected->UseVisualStyleBackColor = true;
+			this->btn_selected->Click += gcnew System::EventHandler(this, &Image_Quiz_Display::btn_selected_MouseLeave);
+			// 
+			// btn_random
+			// 
+			this->btn_random->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+			this->btn_random->Font = (gcnew System::Drawing::Font(L"Century Gothic", 10));
+			this->btn_random->Location = System::Drawing::Point(34, 25);
+			this->btn_random->Name = L"btn_random";
+			this->btn_random->Size = System::Drawing::Size(202, 39);
+			this->btn_random->TabIndex = 8;
+			this->btn_random->Text = L"Random Letter";
+			this->btn_random->UseVisualStyleBackColor = true;
+			this->btn_random->Click += gcnew System::EventHandler(this, &Image_Quiz_Display::btn_random_MouseLeave);
 			// 
 			// Image_Quiz_Display
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(754, 586);
-			this->Controls->Add(this->lbl_Selected_letter);
+			this->BackColor = System::Drawing::Color::MintCream;
+			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->ClientSize = System::Drawing::Size(754, 517);
 			this->Controls->Add(this->panel1);
 			this->Controls->Add(this->btn_submit);
 			this->Controls->Add(this->label1);
 			this->Controls->Add(this->btnNext);
 			this->Controls->Add(this->PB_Quiz_Image);
 			this->KeyPreview = true;
-			this->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->Margin = System::Windows::Forms::Padding(2);
 			this->Name = L"Image_Quiz_Display";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"Image Quiz";
@@ -218,6 +232,7 @@ namespace FunBrainz {
 			this->KeyUp += gcnew System::Windows::Forms::KeyEventHandler(this, &Image_Quiz_Display::ImageQuiz_KeyUp);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->PB_Quiz_Image))->EndInit();
 			this->panel1->ResumeLayout(false);
+			this->panel1->PerformLayout();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -835,9 +850,45 @@ namespace FunBrainz {
 				 panel1->Visible=false;
 				 Remove_Extra_Letter();
 			 }
+
 	private: System::Void btn_solve_Click(System::Object^  sender, System::EventArgs^  e) {
 				 panel1->Visible=false;
 				 Solve();
 			 }
-	};
+	private: System::Void btn_solve_MouseHover(System::Object^ sender, System::EventArgs^ e){
+				//shipdbutton.BackColor = Color.White;
+				this->btn_solve->BackColor = System::Drawing::SystemColors::MenuHighlight;
+			}
+	private: System::Void btn_solve_MouseLeave(System::Object^ sender, System::EventArgs^ e){
+				//shipdbutton.BackColor = Color.FromArgb(32, 38, 71); // ****add the color you want here.**
+				this->btn_solve->BackColor = System::Drawing::SystemColors::ButtonHighlight;
+			}
+			 //
+			 	private: System::Void btn_selected_MouseHover(System::Object^ sender, System::EventArgs^ e){
+				//shipdbutton.BackColor = Color.White;
+				this->btn_selected->BackColor = System::Drawing::SystemColors::MenuHighlight;
+			}
+	private: System::Void btn_selected_MouseLeave(System::Object^ sender, System::EventArgs^ e){
+				//shipdbutton.BackColor = Color.FromArgb(32, 38, 71); // ****add the color you want here.**
+				this->btn_selected->BackColor = System::Drawing::SystemColors::ButtonHighlight;
+			}
+			 //
+			 	private: System::Void btn_extra_MouseHover(System::Object^ sender, System::EventArgs^ e){
+				//shipdbutton.BackColor = Color.White;
+				this->btn_extra->BackColor = System::Drawing::SystemColors::MenuHighlight;
+			}
+	private: System::Void btn_extra_MouseLeave(System::Object^ sender, System::EventArgs^ e){
+				//shipdbutton.BackColor = Color.FromArgb(32, 38, 71); // ****add the color you want here.**
+				this->btn_extra->BackColor = System::Drawing::SystemColors::ButtonHighlight;
+			}
+			 //
+			 	private: System::Void btn_random_MouseHover(System::Object^ sender, System::EventArgs^ e){
+				//shipdbutton.BackColor = Color.White;
+				this->btn_random->BackColor = System::Drawing::SystemColors::MenuHighlight;
+			}
+	private: System::Void btn_random_MouseLeave(System::Object^ sender, System::EventArgs^ e){
+				//shipdbutton.BackColor = Color.FromArgb(32, 38, 71); // ****add the color you want here.**
+				this->btn_random->BackColor = System::Drawing::SystemColors::ButtonHighlight;
+			}
+};
 }
