@@ -1,5 +1,5 @@
 #pragma once
-#include "Cricket.h"
+#include "cloud.h"
 #include "GlobalFuncs.h"
 namespace FunBrainz {
 
@@ -92,7 +92,7 @@ namespace FunBrainz {
 				 std::pair <std::string, long int> ques = GlobalFuncs::generateQuestion(4, 1);
 				 String ^ x = gcnew String(ques.first.c_str());
 				 MessageBox::Show(x); 
-				 Cricket ^ form = gcnew Cricket(this, 1); 
+				 cloud ^ form = gcnew cloud; 
 				 form->ShowDialog();
 			 }
 

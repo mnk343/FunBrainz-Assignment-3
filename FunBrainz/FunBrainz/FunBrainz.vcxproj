@@ -75,6 +75,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <Reference Include="*Microsoft.VisualBasic, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="*System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+    <Reference Include="*System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="*System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -87,6 +93,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AssemblyInfo.cpp" />
+    <ClCompile Include="cloud.cpp" />
+    <ClCompile Include="cloudgame.cpp" />
     <ClCompile Include="Cricket.cpp" />
     <ClCompile Include="FunBrainz.cpp" />
     <ClCompile Include="GlobalFuncs.cpp" />
@@ -96,6 +104,12 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="cloud.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="cloudgame.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="Cricket.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -110,6 +124,12 @@
     <ResourceCompile Include="app.rc" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="cloud.resx">
+      <DependentUpon>cloud.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cloudgame.resx">
+      <DependentUpon>cloudgame.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Cricket.resx">
       <DependentUpon>Cricket.h</DependentUpon>
     </EmbeddedResource>
