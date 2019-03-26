@@ -71,6 +71,17 @@ namespace FunBrainz {
 	private: System::Windows::Forms::Button^  btn_sports;
 
 
+
+
+
+
+
+
+
+
+
+
+
 	protected:
 
 	private:
@@ -86,6 +97,7 @@ namespace FunBrainz {
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(Image_Quiz::typeid));
 			this->btn_Animal = (gcnew System::Windows::Forms::Button());
 			this->btn_Back_To_Main_From_Image_Quiz = (gcnew System::Windows::Forms::Button());
 			this->btn_landmark = (gcnew System::Windows::Forms::Button());
@@ -100,110 +112,156 @@ namespace FunBrainz {
 			// 
 			// btn_Animal
 			// 
-			this->btn_Animal->Location = System::Drawing::Point(69, 119);
+			this->btn_Animal->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(245)), static_cast<System::Int32>(static_cast<System::Byte>(152)), 
+				static_cast<System::Int32>(static_cast<System::Byte>(48)));
+			this->btn_Animal->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+			this->btn_Animal->Font = (gcnew System::Drawing::Font(L"Century Gothic", 12));
+			this->btn_Animal->Location = System::Drawing::Point(210, 177);
 			this->btn_Animal->Name = L"btn_Animal";
-			this->btn_Animal->Size = System::Drawing::Size(107, 80);
+			this->btn_Animal->Size = System::Drawing::Size(107, 50);
 			this->btn_Animal->TabIndex = 0;
 			this->btn_Animal->Text = L"Animals";
-			this->btn_Animal->UseVisualStyleBackColor = true;
+			this->btn_Animal->UseVisualStyleBackColor = false;
 			this->btn_Animal->Click += gcnew System::EventHandler(this, &Image_Quiz::btn_Animal_Click);
 			// 
 			// btn_Back_To_Main_From_Image_Quiz
 			// 
-			this->btn_Back_To_Main_From_Image_Quiz->Location = System::Drawing::Point(642, 21);
+			this->btn_Back_To_Main_From_Image_Quiz->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(155)), 
+				static_cast<System::Int32>(static_cast<System::Byte>(199)), static_cast<System::Int32>(static_cast<System::Byte>(52)));
+			this->btn_Back_To_Main_From_Image_Quiz->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+			this->btn_Back_To_Main_From_Image_Quiz->Font = (gcnew System::Drawing::Font(L"Century Gothic", 10));
+			this->btn_Back_To_Main_From_Image_Quiz->Location = System::Drawing::Point(618, 186);
 			this->btn_Back_To_Main_From_Image_Quiz->Margin = System::Windows::Forms::Padding(2);
 			this->btn_Back_To_Main_From_Image_Quiz->Name = L"btn_Back_To_Main_From_Image_Quiz";
-			this->btn_Back_To_Main_From_Image_Quiz->Size = System::Drawing::Size(56, 19);
+			this->btn_Back_To_Main_From_Image_Quiz->Size = System::Drawing::Size(92, 36);
 			this->btn_Back_To_Main_From_Image_Quiz->TabIndex = 1;
 			this->btn_Back_To_Main_From_Image_Quiz->Text = L"BACK";
-			this->btn_Back_To_Main_From_Image_Quiz->UseVisualStyleBackColor = true;
+			this->btn_Back_To_Main_From_Image_Quiz->UseVisualStyleBackColor = false;
 			this->btn_Back_To_Main_From_Image_Quiz->Click += gcnew System::EventHandler(this, &Image_Quiz::btn_Back_To_Main_From_Image_Quiz_Click);
 			// 
 			// btn_landmark
 			// 
-			this->btn_landmark->Location = System::Drawing::Point(324, 218);
+			this->btn_landmark->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(204)), static_cast<System::Int32>(static_cast<System::Byte>(41)), 
+				static_cast<System::Int32>(static_cast<System::Byte>(11)));
+			this->btn_landmark->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+			this->btn_landmark->Font = (gcnew System::Drawing::Font(L"Century Gothic", 12));
+			this->btn_landmark->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
+			this->btn_landmark->Location = System::Drawing::Point(436, 233);
 			this->btn_landmark->Name = L"btn_landmark";
-			this->btn_landmark->Size = System::Drawing::Size(107, 80);
+			this->btn_landmark->Size = System::Drawing::Size(107, 50);
 			this->btn_landmark->TabIndex = 2;
 			this->btn_landmark->Text = L"Landmark";
-			this->btn_landmark->UseVisualStyleBackColor = true;
+			this->btn_landmark->UseVisualStyleBackColor = false;
 			this->btn_landmark->Click += gcnew System::EventHandler(this, &Image_Quiz::btn_landmark_Click);
 			// 
 			// btn_fruit
 			// 
-			this->btn_fruit->Location = System::Drawing::Point(200, 218);
+			this->btn_fruit->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(255)), 
+				static_cast<System::Int32>(static_cast<System::Byte>(128)));
+			this->btn_fruit->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+			this->btn_fruit->Font = (gcnew System::Drawing::Font(L"Century Gothic", 12));
+			this->btn_fruit->Location = System::Drawing::Point(436, 121);
 			this->btn_fruit->Name = L"btn_fruit";
-			this->btn_fruit->Size = System::Drawing::Size(107, 80);
+			this->btn_fruit->Size = System::Drawing::Size(107, 50);
 			this->btn_fruit->TabIndex = 3;
 			this->btn_fruit->Text = L"Fruit";
-			this->btn_fruit->UseVisualStyleBackColor = true;
+			this->btn_fruit->UseVisualStyleBackColor = false;
 			this->btn_fruit->Click += gcnew System::EventHandler(this, &Image_Quiz::btn_fruit_Click);
 			// 
 			// btn_objects
 			// 
-			this->btn_objects->Location = System::Drawing::Point(69, 316);
+			this->btn_objects->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(255)), 
+				static_cast<System::Int32>(static_cast<System::Byte>(128)));
+			this->btn_objects->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+			this->btn_objects->Font = (gcnew System::Drawing::Font(L"Century Gothic", 12));
+			this->btn_objects->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->btn_objects->Location = System::Drawing::Point(210, 121);
 			this->btn_objects->Name = L"btn_objects";
-			this->btn_objects->Size = System::Drawing::Size(107, 80);
+			this->btn_objects->Size = System::Drawing::Size(107, 50);
 			this->btn_objects->TabIndex = 4;
 			this->btn_objects->Text = L"Objects";
-			this->btn_objects->UseVisualStyleBackColor = true;
+			this->btn_objects->UseVisualStyleBackColor = false;
 			this->btn_objects->Click += gcnew System::EventHandler(this, &Image_Quiz::btn_objects_Click);
 			// 
 			// btn_flower
 			// 
-			this->btn_flower->Location = System::Drawing::Point(69, 218);
+			this->btn_flower->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(255)), 
+				static_cast<System::Int32>(static_cast<System::Byte>(128)));
+			this->btn_flower->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+			this->btn_flower->Font = (gcnew System::Drawing::Font(L"Century Gothic", 12));
+			this->btn_flower->Location = System::Drawing::Point(323, 121);
 			this->btn_flower->Name = L"btn_flower";
-			this->btn_flower->Size = System::Drawing::Size(107, 80);
+			this->btn_flower->Size = System::Drawing::Size(107, 50);
 			this->btn_flower->TabIndex = 5;
 			this->btn_flower->Text = L"Flower";
-			this->btn_flower->UseVisualStyleBackColor = true;
+			this->btn_flower->UseVisualStyleBackColor = false;
 			this->btn_flower->Click += gcnew System::EventHandler(this, &Image_Quiz::btn_flower_Click);
 			// 
 			// btn_flag
 			// 
-			this->btn_flag->Location = System::Drawing::Point(324, 119);
+			this->btn_flag->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(245)), static_cast<System::Int32>(static_cast<System::Byte>(152)), 
+				static_cast<System::Int32>(static_cast<System::Byte>(48)));
+			this->btn_flag->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+			this->btn_flag->Font = (gcnew System::Drawing::Font(L"Century Gothic", 12));
+			this->btn_flag->Location = System::Drawing::Point(436, 177);
 			this->btn_flag->Name = L"btn_flag";
-			this->btn_flag->Size = System::Drawing::Size(107, 80);
+			this->btn_flag->Size = System::Drawing::Size(107, 50);
 			this->btn_flag->TabIndex = 6;
 			this->btn_flag->Text = L"Flag";
-			this->btn_flag->UseVisualStyleBackColor = true;
+			this->btn_flag->UseVisualStyleBackColor = false;
 			this->btn_flag->Click += gcnew System::EventHandler(this, &Image_Quiz::btn_flag_Click);
 			// 
 			// btn_bird
 			// 
-			this->btn_bird->Location = System::Drawing::Point(200, 119);
+			this->btn_bird->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(245)), static_cast<System::Int32>(static_cast<System::Byte>(152)), 
+				static_cast<System::Int32>(static_cast<System::Byte>(48)));
+			this->btn_bird->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+			this->btn_bird->Font = (gcnew System::Drawing::Font(L"Century Gothic", 12));
+			this->btn_bird->Location = System::Drawing::Point(323, 177);
 			this->btn_bird->Name = L"btn_bird";
-			this->btn_bird->Size = System::Drawing::Size(107, 80);
+			this->btn_bird->Size = System::Drawing::Size(107, 50);
 			this->btn_bird->TabIndex = 7;
 			this->btn_bird->Text = L"Bird";
-			this->btn_bird->UseVisualStyleBackColor = true;
+			this->btn_bird->UseVisualStyleBackColor = false;
 			this->btn_bird->Click += gcnew System::EventHandler(this, &Image_Quiz::btn_bird_Click);
 			// 
 			// btn_veg
 			// 
-			this->btn_veg->Location = System::Drawing::Point(324, 316);
+			this->btn_veg->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(204)), static_cast<System::Int32>(static_cast<System::Byte>(41)), 
+				static_cast<System::Int32>(static_cast<System::Byte>(11)));
+			this->btn_veg->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+			this->btn_veg->Font = (gcnew System::Drawing::Font(L"Century Gothic", 12));
+			this->btn_veg->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
+			this->btn_veg->Location = System::Drawing::Point(323, 233);
 			this->btn_veg->Name = L"btn_veg";
-			this->btn_veg->Size = System::Drawing::Size(107, 80);
+			this->btn_veg->Size = System::Drawing::Size(107, 50);
 			this->btn_veg->TabIndex = 8;
 			this->btn_veg->Text = L"Vegetable";
-			this->btn_veg->UseVisualStyleBackColor = true;
+			this->btn_veg->UseVisualStyleBackColor = false;
 			this->btn_veg->Click += gcnew System::EventHandler(this, &Image_Quiz::btn_veg_Click);
 			// 
 			// btn_sports
 			// 
-			this->btn_sports->Location = System::Drawing::Point(200, 316);
+			this->btn_sports->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(204)), static_cast<System::Int32>(static_cast<System::Byte>(41)), 
+				static_cast<System::Int32>(static_cast<System::Byte>(11)));
+			this->btn_sports->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+			this->btn_sports->Font = (gcnew System::Drawing::Font(L"Century Gothic", 12));
+			this->btn_sports->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
+			this->btn_sports->Location = System::Drawing::Point(210, 233);
 			this->btn_sports->Name = L"btn_sports";
-			this->btn_sports->Size = System::Drawing::Size(107, 80);
+			this->btn_sports->Size = System::Drawing::Size(107, 50);
 			this->btn_sports->TabIndex = 9;
 			this->btn_sports->Text = L"Sports";
-			this->btn_sports->UseVisualStyleBackColor = true;
+			this->btn_sports->UseVisualStyleBackColor = false;
 			this->btn_sports->Click += gcnew System::EventHandler(this, &Image_Quiz::btn_sports_Click);
 			// 
 			// Image_Quiz
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(754, 586);
+			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"$this.BackgroundImage")));
+			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->ClientSize = System::Drawing::Size(764, 437);
 			this->Controls->Add(this->btn_sports);
 			this->Controls->Add(this->btn_veg);
 			this->Controls->Add(this->btn_bird);
@@ -214,6 +272,7 @@ namespace FunBrainz {
 			this->Controls->Add(this->btn_landmark);
 			this->Controls->Add(this->btn_Back_To_Main_From_Image_Quiz);
 			this->Controls->Add(this->btn_Animal);
+			this->DoubleBuffered = true;
 			this->Name = L"Image_Quiz";
 			this->Text = L"Image Quiz";
 			this->Load += gcnew System::EventHandler(this, &Image_Quiz::Image_Quiz_Load_1);

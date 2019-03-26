@@ -319,6 +319,7 @@ namespace FunBrainz {
 			this->panel_4X4->Name = L"panel_4X4";
 			this->panel_4X4->Size = System::Drawing::Size(621, 578);
 			this->panel_4X4->TabIndex = 17;
+			this->panel_4X4->Visible = false;
 			// 
 			// PB_41
 			// 
@@ -516,53 +517,58 @@ namespace FunBrainz {
 			// 
 			// PB5_55
 			// 
-			this->PB5_55->Location = System::Drawing::Point(443, 376);
+			this->PB5_55->Location = System::Drawing::Point(443, 380);
 			this->PB5_55->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->PB5_55->Name = L"PB5_55";
 			this->PB5_55->Size = System::Drawing::Size(91, 90);
 			this->PB5_55->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
 			this->PB5_55->TabIndex = 40;
 			this->PB5_55->TabStop = false;
+			this->PB5_55->Click += gcnew System::EventHandler(this, &Pipeline_Game::pictureBox_Click);
 			// 
 			// PB5_51
 			// 
-			this->PB5_51->Location = System::Drawing::Point(84, 376);
+			this->PB5_51->Location = System::Drawing::Point(84, 380);
 			this->PB5_51->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->PB5_51->Name = L"PB5_51";
 			this->PB5_51->Size = System::Drawing::Size(91, 90);
 			this->PB5_51->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
 			this->PB5_51->TabIndex = 39;
 			this->PB5_51->TabStop = false;
+			this->PB5_51->Click += gcnew System::EventHandler(this, &Pipeline_Game::pictureBox_Click);
 			// 
 			// PB5_52
 			// 
-			this->PB5_52->Location = System::Drawing::Point(174, 376);
+			this->PB5_52->Location = System::Drawing::Point(174, 380);
 			this->PB5_52->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->PB5_52->Name = L"PB5_52";
 			this->PB5_52->Size = System::Drawing::Size(91, 90);
 			this->PB5_52->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
 			this->PB5_52->TabIndex = 38;
 			this->PB5_52->TabStop = false;
+			this->PB5_52->Click += gcnew System::EventHandler(this, &Pipeline_Game::pictureBox_Click);
 			// 
 			// PB5_53
 			// 
-			this->PB5_53->Location = System::Drawing::Point(264, 376);
+			this->PB5_53->Location = System::Drawing::Point(264, 380);
 			this->PB5_53->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->PB5_53->Name = L"PB5_53";
 			this->PB5_53->Size = System::Drawing::Size(91, 90);
 			this->PB5_53->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
 			this->PB5_53->TabIndex = 37;
 			this->PB5_53->TabStop = false;
+			this->PB5_53->Click += gcnew System::EventHandler(this, &Pipeline_Game::pictureBox_Click);
 			// 
 			// PB5_54
 			// 
-			this->PB5_54->Location = System::Drawing::Point(354, 376);
+			this->PB5_54->Location = System::Drawing::Point(354, 380);
 			this->PB5_54->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->PB5_54->Name = L"PB5_54";
 			this->PB5_54->Size = System::Drawing::Size(91, 90);
 			this->PB5_54->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
 			this->PB5_54->TabIndex = 36;
 			this->PB5_54->TabStop = false;
+			this->PB5_54->Click += gcnew System::EventHandler(this, &Pipeline_Game::pictureBox_Click);
 			// 
 			// PB5_45
 			// 
@@ -573,6 +579,7 @@ namespace FunBrainz {
 			this->PB5_45->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
 			this->PB5_45->TabIndex = 35;
 			this->PB5_45->TabStop = false;
+			this->PB5_45->Click += gcnew System::EventHandler(this, &Pipeline_Game::pictureBox_Click);
 			// 
 			// PB5_35
 			// 
@@ -583,6 +590,7 @@ namespace FunBrainz {
 			this->PB5_35->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
 			this->PB5_35->TabIndex = 34;
 			this->PB5_35->TabStop = false;
+			this->PB5_35->Click += gcnew System::EventHandler(this, &Pipeline_Game::pictureBox_Click);
 			// 
 			// PB5_15
 			// 
@@ -593,6 +601,7 @@ namespace FunBrainz {
 			this->PB5_15->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
 			this->PB5_15->TabIndex = 33;
 			this->PB5_15->TabStop = false;
+			this->PB5_15->Click += gcnew System::EventHandler(this, &Pipeline_Game::pictureBox_Click);
 			// 
 			// PB5_25
 			// 
@@ -603,6 +612,7 @@ namespace FunBrainz {
 			this->PB5_25->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
 			this->PB5_25->TabIndex = 32;
 			this->PB5_25->TabStop = false;
+			this->PB5_25->Click += gcnew System::EventHandler(this, &Pipeline_Game::pictureBox_Click);
 			// 
 			// PB5_41
 			// 
@@ -613,6 +623,7 @@ namespace FunBrainz {
 			this->PB5_41->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
 			this->PB5_41->TabIndex = 31;
 			this->PB5_41->TabStop = false;
+			this->PB5_41->Click += gcnew System::EventHandler(this, &Pipeline_Game::pictureBox_Click);
 			// 
 			// PB5_42
 			// 
@@ -623,6 +634,7 @@ namespace FunBrainz {
 			this->PB5_42->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
 			this->PB5_42->TabIndex = 30;
 			this->PB5_42->TabStop = false;
+			this->PB5_42->Click += gcnew System::EventHandler(this, &Pipeline_Game::pictureBox_Click);
 			// 
 			// PB5_43
 			// 
@@ -633,6 +645,7 @@ namespace FunBrainz {
 			this->PB5_43->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
 			this->PB5_43->TabIndex = 29;
 			this->PB5_43->TabStop = false;
+			this->PB5_43->Click += gcnew System::EventHandler(this, &Pipeline_Game::pictureBox_Click);
 			// 
 			// PB5_44
 			// 
@@ -643,6 +656,7 @@ namespace FunBrainz {
 			this->PB5_44->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
 			this->PB5_44->TabIndex = 28;
 			this->PB5_44->TabStop = false;
+			this->PB5_44->Click += gcnew System::EventHandler(this, &Pipeline_Game::pictureBox_Click);
 			// 
 			// PB5_34
 			// 
@@ -653,6 +667,7 @@ namespace FunBrainz {
 			this->PB5_34->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
 			this->PB5_34->TabIndex = 27;
 			this->PB5_34->TabStop = false;
+			this->PB5_34->Click += gcnew System::EventHandler(this, &Pipeline_Game::pictureBox_Click);
 			// 
 			// PB5_12
 			// 
@@ -663,6 +678,7 @@ namespace FunBrainz {
 			this->PB5_12->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
 			this->PB5_12->TabIndex = 26;
 			this->PB5_12->TabStop = false;
+			this->PB5_12->Click += gcnew System::EventHandler(this, &Pipeline_Game::pictureBox_Click);
 			// 
 			// PB5_13
 			// 
@@ -673,6 +689,7 @@ namespace FunBrainz {
 			this->PB5_13->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
 			this->PB5_13->TabIndex = 25;
 			this->PB5_13->TabStop = false;
+			this->PB5_13->Click += gcnew System::EventHandler(this, &Pipeline_Game::pictureBox_Click);
 			// 
 			// PB5_14
 			// 
@@ -683,6 +700,7 @@ namespace FunBrainz {
 			this->PB5_14->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
 			this->PB5_14->TabIndex = 24;
 			this->PB5_14->TabStop = false;
+			this->PB5_14->Click += gcnew System::EventHandler(this, &Pipeline_Game::pictureBox_Click);
 			// 
 			// PB5_21
 			// 
@@ -693,6 +711,7 @@ namespace FunBrainz {
 			this->PB5_21->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
 			this->PB5_21->TabIndex = 23;
 			this->PB5_21->TabStop = false;
+			this->PB5_21->Click += gcnew System::EventHandler(this, &Pipeline_Game::pictureBox_Click);
 			// 
 			// PB5_22
 			// 
@@ -703,6 +722,7 @@ namespace FunBrainz {
 			this->PB5_22->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
 			this->PB5_22->TabIndex = 22;
 			this->PB5_22->TabStop = false;
+			this->PB5_22->Click += gcnew System::EventHandler(this, &Pipeline_Game::pictureBox_Click);
 			// 
 			// PB5_23
 			// 
@@ -713,6 +733,7 @@ namespace FunBrainz {
 			this->PB5_23->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
 			this->PB5_23->TabIndex = 21;
 			this->PB5_23->TabStop = false;
+			this->PB5_23->Click += gcnew System::EventHandler(this, &Pipeline_Game::pictureBox_Click);
 			// 
 			// PB5_24
 			// 
@@ -723,6 +744,7 @@ namespace FunBrainz {
 			this->PB5_24->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
 			this->PB5_24->TabIndex = 20;
 			this->PB5_24->TabStop = false;
+			this->PB5_24->Click += gcnew System::EventHandler(this, &Pipeline_Game::pictureBox_Click);
 			// 
 			// PB5_31
 			// 
@@ -733,6 +755,7 @@ namespace FunBrainz {
 			this->PB5_31->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
 			this->PB5_31->TabIndex = 19;
 			this->PB5_31->TabStop = false;
+			this->PB5_31->Click += gcnew System::EventHandler(this, &Pipeline_Game::pictureBox_Click);
 			// 
 			// PB5_32
 			// 
@@ -743,6 +766,7 @@ namespace FunBrainz {
 			this->PB5_32->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
 			this->PB5_32->TabIndex = 18;
 			this->PB5_32->TabStop = false;
+			this->PB5_32->Click += gcnew System::EventHandler(this, &Pipeline_Game::pictureBox_Click);
 			// 
 			// PB5_33
 			// 
@@ -753,6 +777,7 @@ namespace FunBrainz {
 			this->PB5_33->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
 			this->PB5_33->TabIndex = 17;
 			this->PB5_33->TabStop = false;
+			this->PB5_33->Click += gcnew System::EventHandler(this, &Pipeline_Game::pictureBox_Click);
 			// 
 			// PB5_11
 			// 
@@ -765,6 +790,7 @@ namespace FunBrainz {
 			this->PB5_11->TabIndex = 16;
 			this->PB5_11->TabStop = false;
 			this->PB5_11->UseWaitCursor = true;
+			this->PB5_11->Click += gcnew System::EventHandler(this, &Pipeline_Game::pictureBox_Click);
 			// 
 			// Pipeline_Game
 			// 
@@ -832,8 +858,8 @@ namespace FunBrainz {
 		static vector<int> *v;
 		static int **encoding_of_image_loaded;
 		static char **type_of_image_loaded;
-		static array<String^>^ answer_type = gcnew array<String^>(1000);
-		static array<String^>^ answer_index = gcnew array<String^>(1000);
+		static array<String^>^ answer_type = gcnew array<String^>(10000);
+		static array<String^>^ answer_index = gcnew array<String^>(10000);
 		static int count=0;
 		static String ^ str_1 = "media\\Type_A[0].jpg";
 		static Image^ Type_A_0 = gcnew Bitmap(str_1);
@@ -1141,23 +1167,24 @@ namespace FunBrainz {
 		}
 	private: System::Void Pipeline_Game_Load(System::Object^  sender, System::EventArgs^  e) {
 				 count=0;
-				 encoding_of_image_loaded=new int*[4];
-				 for(int i=0;i<4;i++){
-					 encoding_of_image_loaded[i]=new int[4];
-					 for(int j=0;j<4;j++){
+				  int n=5;
+				 encoding_of_image_loaded=new int*[n];
+				 for(int i=0;i<n;i++){
+					 encoding_of_image_loaded[i]=new int[n];
+					 for(int j=0;j<n;j++){
 						 encoding_of_image_loaded[i][j]=-1;
 					 }
 				 }
-				 type_of_image_loaded=new char*[4];
-				 for(int i=0;i<4;i++){
-					 type_of_image_loaded[i]=new char[4];
-					 for(int j=0;j<4;j++){
+				 type_of_image_loaded=new char*[n];
+				 for(int i=0;i<n;i++){
+					 type_of_image_loaded[i]=new char[n];
+					 for(int j=0;j<n;j++){
 						 type_of_image_loaded[i][j]='G';
 					 }
 
 				 }
 
-				 int n=5;
+				
 				 visited=new int*[n];
 				 for(int i=0;i<n;i++){
 					 visited[i]=new int[n];
@@ -1173,8 +1200,8 @@ namespace FunBrainz {
 					 OleDb::OleDbConnection ^ con = gcnew OleDb::OleDbConnection();
 					 con->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=FunBrainzForKids.accdb;";
 
-					 //EXTRACT STUDENT_id FROM LOGIN PAGE DATA AND STORE IN STUID
-					 int stuID = 782;
+					 //EXTRACT STUDENT_id FROM LOGIN PAGE DATA AND STORE IN 6
+					 int stuID = 962;
 
 					 String ^ Sql = "Select [Type_Of_Image_String] from Pipeline_Game where [Player_ID] = " + stuID + ";";
 					 String ^ Sq2 = "Select [Answer_Matrix] from Pipeline_Game where [Player_ID] = " + stuID + ";";
@@ -1191,10 +1218,10 @@ namespace FunBrainz {
 
 
 
-				 *MessageBox::Show(dummy);
-				 MessageBox::Show(dummy2);*/
-					array<PictureBox^,2> ^ image_array
-				 array<PictureBox^,2> ^ image_array_2={ { PB5_11, PB5_12, PB5_13, PB5_14,PB5_15 }, { PB5_21, PB5_22, PB5_23, PB5_24,PB5_25 },{ PB5_31, PB5_32, PB5_33, PB5_34,PB5_35 }, { PB5_41, PB5_42, PB5_43, PB5_44,PB5_45 },{ PB5_51, PB5_52, PB5_53, PB5_54,PB5_55 } };
+				 MessageBox::Show(dummy);
+				 MessageBox::Show(dummy2);
+				 array<PictureBox^,2> ^ image_array_4={ { PB_11, PB_12, PB_13, PB_14 }, { PB_21, PB_22, PB_23, PB_24 }, { PB_31, PB_32, PB_33, PB_34 }, { PB_41, PB_42, PB_43, PB_44 } };
+				 array<PictureBox^,2> ^ image_array_5={ { PB5_11, PB5_12, PB5_13, PB5_14,PB5_15 }, { PB5_21, PB5_22, PB5_23, PB5_24,PB5_25 },{ PB5_31, PB5_32, PB5_33, PB5_34,PB5_35 }, { PB5_41, PB5_42, PB5_43, PB5_44,PB5_45 },{ PB5_51, PB5_52, PB5_53, PB5_54,PB5_55 } };
 
 				 for(int i=0;i<n;i++){
 					 for(int j=0;j<n;j++){
@@ -1213,32 +1240,75 @@ namespace FunBrainz {
 							 if(rand_type==0){
 								 rand_orientation=rand()%4;
 								 if(rand_orientation==0){
-									 image_array[i,j]->Image=Type_A_0;
+									 if(n==4){
+										image_array_4[i,j]->Image=Type_A_0;
+									 }
+									 if(n==5){
+										 image_array_5[i,j]->Image=Type_A_0;
+									 }
+									 
 								 }
 								 if(rand_orientation==1){
-									 image_array[i,j]->Image=Type_A_1;
+									 if(n==4){
+										 image_array_4[i,j]->Image=Type_A_1;
+									 }
+									 if(n==5){
+										 image_array_5[i,j]->Image=Type_A_1;
+									 }
+									 
 								 }
 								 if(rand_orientation==2){
-									 image_array[i,j]->Image=Type_A_2;
+									 if(n==4){
+										 image_array_4[i,j]->Image=Type_A_2;
+									 }
+									 if(n==5){
+										 image_array_5[i,j]->Image=Type_A_2;
+									 }									 
 								 }
 								 if(rand_orientation==3){
-									 image_array[i,j]->Image=Type_A_3;
+									 if(n==4){
+										 image_array_4[i,j]->Image=Type_A_3;
+									 }
+									 if(n==5){
+										 image_array_5[i,j]->Image=Type_A_3;
+									 }
+									 
 								 }
 								 type_of_image_loaded[i][j]='A';
 								 encoding_of_image_loaded[i][j]=(rand_orientation%2);
 							 }else{
 								 rand_orientation=rand()%4;
 								 if(rand_orientation==0){
-									 image_array[i,j]->Image=Type_B_0;
+									 if(n==4){
+										 image_array_4[i,j]->Image=Type_B_0;
+									 }
+									 if(n==5){
+										 image_array_5[i,j]->Image=Type_B_0;
+									 }									 
 								 }
 								 if(rand_orientation==1){
-									 image_array[i,j]->Image=Type_B_1;
+									 if(n==4){
+										 image_array_4[i,j]->Image=Type_B_1;
+									 }
+									 if(n==5){
+										 image_array_5[i,j]->Image=Type_B_1;
+									 }									 
 								 }
 								 if(rand_orientation==2){
-									 image_array[i,j]->Image=Type_B_2;
+									 if(n==4){
+										 image_array_4[i,j]->Image=Type_B_2;
+									 }
+									 if(n==5){
+										 image_array_5[i,j]->Image=Type_B_2;
+									 }									 
 								 }
 								 if(rand_orientation==3){
-									 image_array[i,j]->Image=Type_B_3;
+									 if(n==4){
+										 image_array_4[i,j]->Image=Type_B_3;
+									 }
+									 if(n==5){
+										 image_array_5[i,j]->Image=Type_B_3;
+									 }									 
 								 }
 								 type_of_image_loaded[i][j]='B';
 								 encoding_of_image_loaded[i][j]=rand_orientation;
@@ -1250,16 +1320,36 @@ namespace FunBrainz {
 						 if(System::Convert::ToString(dummy[j+i*n])=="A"){
 							 //MessageBox::Show("A");
 							 if(random_position==0){
-								 image_array[i,j]->Image=Type_A_0;
+								 if(n==4){
+									 image_array_4[i,j]->Image=Type_A_0;
+								 }
+								 if(n==5){
+									 image_array_5[i,j]->Image=Type_A_0;
+								 }
 							 }
 							 if(random_position==1){
-								 image_array[i,j]->Image=Type_A_1;
+								 if(n==4){
+									 image_array_4[i,j]->Image=Type_A_1;
+								 }
+								 if(n==5){
+									 image_array_5[i,j]->Image=Type_A_1;
+								 }
 							 }
 							 if(random_position==2){
-								 image_array[i,j]->Image=Type_A_2;
+								 if(n==4){
+									 image_array_4[i,j]->Image=Type_A_2;
+								 }
+								 if(n==5){
+									 image_array_5[i,j]->Image=Type_A_2;
+								 }
 							 }
 							 if(random_position==3){
-								 image_array[i,j]->Image=Type_A_3;
+								 if(n==4){
+									 image_array_4[i,j]->Image=Type_A_3;
+								 }
+								 if(n==5){
+									 image_array_5[i,j]->Image=Type_A_3;
+								 }
 							 }
 							 type_of_image_loaded[i][j]='A';
 							 encoding_of_image_loaded[i][j]=random_position%2;
@@ -1267,16 +1357,36 @@ namespace FunBrainz {
 							 if(System::Convert::ToString(dummy[j+i*n])=="B"){
 								 //MessageBox::Show("B");
 								 if(random_position==0){
-									 image_array[i,j]->Image=Type_B_0;
+									 if(n==4){
+										 image_array_4[i,j]->Image=Type_B_0;
+									 }
+									 if(n==5){
+										 image_array_5[i,j]->Image=Type_B_0;
+									 }
 								 }
 								 if(random_position==1){
-									 image_array[i,j]->Image=Type_B_1;
+									 if(n==4){
+										 image_array_4[i,j]->Image=Type_B_1;
+									 }
+									 if(n==5){
+										 image_array_5[i,j]->Image=Type_B_1;
+									 }
 								 }
 								 if(random_position==2){
-									 image_array[i,j]->Image=Type_B_2;
+									 if(n==4){
+										 image_array_4[i,j]->Image=Type_B_2;
+									 }
+									 if(n==5){
+										 image_array_5[i,j]->Image=Type_B_2;
+									 }
 								 }
 								 if(random_position==3){
-									 image_array[i,j]->Image=Type_B_3;
+									 if(n==4){
+										 image_array_4[i,j]->Image=Type_B_3;
+									 }
+									 if(n==5){
+										 image_array_5[i,j]->Image=Type_B_3;
+									 }
 								 }
 								 type_of_image_loaded[i][j]='B';
 								 encoding_of_image_loaded[i][j]=random_position;
@@ -1284,16 +1394,36 @@ namespace FunBrainz {
 							 if(System::Convert::ToString(dummy[j+i*n])=="C"){
 								 //MessageBox::Show("A");
 								 if(random_position==0){
-									 image_array[i,j]->Image=Type_A_0;
+									 if(n==4){
+										 image_array_4[i,j]->Image=Type_A_0;
+									 }
+									 if(n==5){
+										 image_array_5[i,j]->Image=Type_A_0;
+									 }
 								 }
 								 if(random_position==1){
-									 image_array[i,j]->Image=Type_A_1;
+									 if(n==4){
+										 image_array_4[i,j]->Image=Type_A_1;
+									 }
+									 if(n==5){
+										 image_array_5[i,j]->Image=Type_A_1;
+									 }
 								 }
 								 if(random_position==2){
-									 image_array[i,j]->Image=Type_A_2;
+									 if(n==4){
+										 image_array_4[i,j]->Image=Type_A_2;
+									 }
+									 if(n==5){
+										 image_array_5[i,j]->Image=Type_A_2;
+									 }
 								 }
 								 if(random_position==3){
-									 image_array[i,j]->Image=Type_A_3;
+									 if(n==4){
+										 image_array_4[i,j]->Image=Type_A_3;
+									 }
+									 if(n==5){
+										 image_array_5[i,j]->Image=Type_A_3;
+									 }
 								 }
 								 type_of_image_loaded[i][j]='C';
 								 encoding_of_image_loaded[i][j]=random_position%4;
@@ -1315,6 +1445,7 @@ namespace FunBrainz {
 						 String^ answer_string = reader[5]->ToString();
 						 answer_type[count]=type_string;
 						 answer_index[count++]=answer_string;
+						 Debug::WriteLine(System::Convert::ToString(count));
 						 Debug::WriteLine(answer_type[count-1]);
 						 Debug::WriteLine(answer_index[count-1]);
 					 }
@@ -1391,7 +1522,7 @@ namespace FunBrainz {
 				 int isSolved=0;
 				 for(int i=0;i<count;i++){
 					 isSolved=1;
-					 for(int j=0;j<16;j++){
+					 for(int j=0;j<n*n;j++){
 						 if(answer_index[i][j]=='5'){
 							 continue;
 						 }
