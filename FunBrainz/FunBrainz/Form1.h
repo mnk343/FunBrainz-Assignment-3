@@ -4,6 +4,7 @@
 #include "MyForm1.h"
 #include "Image_Quiz.h"
 #include "Pipeline_Game.h"
+#include "Level_pipeline.h"
 
 namespace FunBrainz {
 
@@ -184,7 +185,8 @@ namespace FunBrainz {
 			 }
 private: System::Void btn_pipeline_Click(System::Object^  sender, System::EventArgs^  e) {
 			 Form1::Hide();
-			 Pipeline_Game ^ form = gcnew Pipeline_Game(this);
+			 Level_pipeline ^form =gcnew Level_pipeline(this);
+			 //Pipeline_Game ^ form = gcnew Pipeline_Game(this);
 			 form->ShowDialog();
 		 }
 };

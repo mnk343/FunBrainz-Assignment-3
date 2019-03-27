@@ -862,7 +862,9 @@ namespace FunBrainz {
 	private: System::Void btn_solve_MouseLeave(System::Object^ sender, System::EventArgs^ e){
 				//shipdbutton.BackColor = Color.FromArgb(32, 38, 71); // ****add the color you want here.**
 				this->btn_solve->BackColor = System::Drawing::SystemColors::ButtonHighlight;
-			}
+				panel1->Visible=false;
+				Solve();
+			 }
 			 //
 			 	private: System::Void btn_selected_MouseHover(System::Object^ sender, System::EventArgs^ e){
 				//shipdbutton.BackColor = Color.White;
@@ -871,16 +873,29 @@ namespace FunBrainz {
 	private: System::Void btn_selected_MouseLeave(System::Object^ sender, System::EventArgs^ e){
 				//shipdbutton.BackColor = Color.FromArgb(32, 38, 71); // ****add the color you want here.**
 				this->btn_selected->BackColor = System::Drawing::SystemColors::ButtonHighlight;
+				for (int i=0;i<14;i++)
+				{
+					index_ans[i]=0;
+				}
+				panel1->Visible=false;
+				SelectedLetter();
 			}
 			 //
 			 	private: System::Void btn_extra_MouseHover(System::Object^ sender, System::EventArgs^ e){
 				//shipdbutton.BackColor = Color.White;
 				this->btn_extra->BackColor = System::Drawing::SystemColors::MenuHighlight;
+				
 			}
 	private: System::Void btn_extra_MouseLeave(System::Object^ sender, System::EventArgs^ e){
 				//shipdbutton.BackColor = Color.FromArgb(32, 38, 71); // ****add the color you want here.**
 				this->btn_extra->BackColor = System::Drawing::SystemColors::ButtonHighlight;
-			}
+				for (int i=0;i<14;i++)
+				{
+					index_ans[i]=0;
+				}
+				panel1->Visible=false;
+				Remove_Extra_Letter();
+			 }
 			 //
 			 	private: System::Void btn_random_MouseHover(System::Object^ sender, System::EventArgs^ e){
 				//shipdbutton.BackColor = Color.White;
@@ -888,6 +903,8 @@ namespace FunBrainz {
 			}
 	private: System::Void btn_random_MouseLeave(System::Object^ sender, System::EventArgs^ e){
 				//shipdbutton.BackColor = Color.FromArgb(32, 38, 71); // ****add the color you want here.**
+				 panel1->Visible=false;
+				 Random_letter();
 				this->btn_random->BackColor = System::Drawing::SystemColors::ButtonHighlight;
 			}
 };

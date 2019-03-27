@@ -94,6 +94,7 @@
     <ClCompile Include="Hint_User_Control.cpp" />
     <ClCompile Include="Image_Quiz.cpp" />
     <ClCompile Include="Image_Quiz_Display.cpp" />
+    <ClCompile Include="Level_pipeline.cpp" />
     <ClCompile Include="MyForm1.cpp" />
     <ClCompile Include="Pipeline_Game.cpp" />
     <ClCompile Include="stdafx.cpp">
@@ -119,6 +120,9 @@
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="Image_Quiz_Display.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="Level_pipeline.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="MyForm1.h">
@@ -152,6 +156,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Image_Quiz_Display.resx">
       <DependentUpon>Image_Quiz_Display.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Level_pipeline.resx">
+      <DependentUpon>Level_pipeline.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MyForm1.resx">
       <DependentUpon>MyForm1.h</DependentUpon>

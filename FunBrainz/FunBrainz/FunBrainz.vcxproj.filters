@@ -54,6 +54,9 @@
     <ClCompile Include="Pipeline_Game.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Level_pipeline.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Form1.h">
@@ -89,6 +92,9 @@
     <ClInclude Include="Pipeline_Game.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Level_pipeline.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="app.rc">
@@ -115,6 +121,9 @@
       <Filter>Resource Files</Filter>
     </EmbeddedResource>
     <EmbeddedResource Include="Hint_user_control.resx">
+      <Filter>Resource Files</Filter>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pipeline_Game.resx">
       <Filter>Resource Files</Filter>
     </EmbeddedResource>
   </ItemGroup>

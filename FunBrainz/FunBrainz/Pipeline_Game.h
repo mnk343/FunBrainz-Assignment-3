@@ -34,10 +34,15 @@ namespace FunBrainz {
 			//TODO: Add the constructor code here
 			//
 		}
-		Pipeline_Game(Form^ obj1)
+		Pipeline_Game(Form^ obj1,int level, int level_flag,static array<String^>^ arr,static array<String^>^ arr2,int num)
 		{
 			InitializeComponent();
 			caller = obj1;
+			level_flag_of_puzzle=level_flag;
+			level_of_puzzle=level;
+			answer_type=arr;
+			answer_index=arr2;
+			count=num;
 		}
 
 	protected:
@@ -853,13 +858,16 @@ namespace FunBrainz {
 #pragma endregion
 	public:
 		Form^ caller;
+		static int level_of_puzzle;
+		static int level_flag_of_puzzle;
+		static int stu_ID;
 		static int **visited;
 		static int count_2=0;
 		static vector<int> *v;
 		static int **encoding_of_image_loaded;
 		static char **type_of_image_loaded;
-		static array<String^>^ answer_type = gcnew array<String^>(10000);
-		static array<String^>^ answer_index = gcnew array<String^>(10000);
+		static array<String^>^ answer_type ;
+		static array<String^>^ answer_index ;
 		static int count=0;
 		static String ^ str_1 = "media\\Type_A[0].jpg";
 		static Image^ Type_A_0 = gcnew Bitmap(str_1);
@@ -878,6 +886,18 @@ namespace FunBrainz {
 		static Image^ Type_B_2 = gcnew Bitmap(str3);
 		static String ^ str4 = "media\\Type_B[3].jpg";
 		static Image^ Type_B_3 = gcnew Bitmap(str4);
+
+		static String ^ str__1 = "media\\Type_C[0].jpg";
+		static Image^ Type_C_0 = gcnew Bitmap(str__1);
+		static String ^ str__2 = "media\\Type_C[1].jpg";
+		static Image^ Type_C_1 = gcnew Bitmap(str__2);
+		static String ^ str__3 = "media\\Type_C[2].jpg";
+		static Image^ Type_C_2 = gcnew Bitmap(str__3);
+		static String ^ str__4 = "media\\Type_C[3].jpg";
+		static Image^ Type_C_3 = gcnew Bitmap(str__4);
+
+		static String ^ garbage = "media\\Type_G.jpg";
+		static Image^ Type_G = gcnew Bitmap(garbage);
 		//left=0
 		//right=1;
 		//up=2
@@ -885,6 +905,7 @@ namespace FunBrainz {
 		void making_encodings(int n){
 			//MessageBox::Show("stage1");
 			String^ vector_path = "";
+			int length_of_path=0;
 			for(int i=0;i<v->size();i++){
 				if(v->at(i) == 0){
 					vector_path+=L'L';
@@ -1042,7 +1063,7 @@ namespace FunBrainz {
 					Answer_Matrix+=System::Convert::ToString(answer_matrix[i][j]);
 				}
 			}
-
+			length_of_path=v->size();
 			//MessageBox::Show("type ended");
 
 			//*******************************
@@ -1051,7 +1072,7 @@ namespace FunBrainz {
 				DB_Connection->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=FunBrainzForKids.accdb;";
 				//Debug::WriteLine(firstname);
 				//Debug::WriteLine("\n\n\n");
-				String ^ insertString = "insert into Pipeline_Game([Type_Of_Image_String],[Path_Vector],[Answer_Matrix]) VALUES('" +type_of_image_string+ "', '" +vector_path+ "', '" +Answer_Matrix+"');";
+				String ^ insertString = "insert into Pipeline_Game([Type_Of_Image_String],[Path_Vector],[Answer_Matrix],[Length_of_Path_Vector]) VALUES('" +type_of_image_string+ "', '" +vector_path+ "', '" +Answer_Matrix+"', " +length_of_path+ ");";
 				//Debug::WriteLine(insertString);
 				//Debug::WriteLine("\n\n\n");
 
@@ -1063,6 +1084,7 @@ namespace FunBrainz {
 				cmd->Parameters->Add(gcnew OleDbParameter("@Type_Of_Image_String",type_of_image_string));
 				cmd->Parameters->Add(gcnew OleDbParameter("@Path_Vector",vector_path));
 				cmd->Parameters->Add(gcnew OleDbParameter("@Answer_Matrix",Answer_Matrix));
+				cmd->Parameters->Add(gcnew OleDbParameter("@Length_of_Path_Vector",length_of_path));
 				cmd->ExecuteNonQuery();
 				DB_Connection->Close();
 
@@ -1166,8 +1188,9 @@ namespace FunBrainz {
 			return 0;
 		}
 	private: System::Void Pipeline_Game_Load(System::Object^  sender, System::EventArgs^  e) {
-				 count=0;
-				  int n=5;
+				 srand(time(0));
+				 MessageBox::Show(System::Convert::ToString(level_flag_of_puzzle));
+				 int n=5;
 				 encoding_of_image_loaded=new int*[n];
 				 for(int i=0;i<n;i++){
 					 encoding_of_image_loaded[i]=new int[n];
@@ -1183,8 +1206,6 @@ namespace FunBrainz {
 					 }
 
 				 }
-
-				
 				 visited=new int*[n];
 				 for(int i=0;i<n;i++){
 					 visited[i]=new int[n];
@@ -1201,10 +1222,14 @@ namespace FunBrainz {
 					 con->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=FunBrainzForKids.accdb;";
 
 					 //EXTRACT STUDENT_id FROM LOGIN PAGE DATA AND STORE IN 6
-					 int stuID = 962;
-
-					 String ^ Sql = "Select [Type_Of_Image_String] from Pipeline_Game where [Player_ID] = " + stuID + ";";
-					 String ^ Sq2 = "Select [Answer_Matrix] from Pipeline_Game where [Player_ID] = " + stuID + ";";
+					 //int stuID = 9622;
+					 int rand_no = rand()%(34);
+					 rand_no = rand_no+1;
+					 int level_to_extract = level_flag_of_puzzle*1700;
+					 level_to_extract+=((level_of_puzzle-1)*34)+rand_no;
+					 MessageBox::Show(System::Convert::ToString(level_to_extract));
+					 String ^ Sql = "Select [Type_Of_Image_String] from Pipeline_Game where [Level] = " + level_to_extract + ";";
+					 String ^ Sq2 = "Select [Answer_Matrix] from Pipeline_Game where [Level] = " + level_to_extract + ";";
 					 OleDb::OleDbCommand ^ command = gcnew OleDb::OleDbCommand(Sql, con);
 					 OleDb::OleDbCommand ^ command2 = gcnew OleDb::OleDbCommand(Sq2, con);
 					 con->Open();
@@ -1241,12 +1266,12 @@ namespace FunBrainz {
 								 rand_orientation=rand()%4;
 								 if(rand_orientation==0){
 									 if(n==4){
-										image_array_4[i,j]->Image=Type_A_0;
+										 image_array_4[i,j]->Image=Type_A_0;
 									 }
 									 if(n==5){
 										 image_array_5[i,j]->Image=Type_A_0;
 									 }
-									 
+
 								 }
 								 if(rand_orientation==1){
 									 if(n==4){
@@ -1255,7 +1280,7 @@ namespace FunBrainz {
 									 if(n==5){
 										 image_array_5[i,j]->Image=Type_A_1;
 									 }
-									 
+
 								 }
 								 if(rand_orientation==2){
 									 if(n==4){
@@ -1272,7 +1297,7 @@ namespace FunBrainz {
 									 if(n==5){
 										 image_array_5[i,j]->Image=Type_A_3;
 									 }
-									 
+
 								 }
 								 type_of_image_loaded[i][j]='A';
 								 encoding_of_image_loaded[i][j]=(rand_orientation%2);
@@ -1395,34 +1420,34 @@ namespace FunBrainz {
 								 //MessageBox::Show("A");
 								 if(random_position==0){
 									 if(n==4){
-										 image_array_4[i,j]->Image=Type_A_0;
+										 image_array_4[i,j]->Image=Type_C_0;
 									 }
 									 if(n==5){
-										 image_array_5[i,j]->Image=Type_A_0;
+										 image_array_5[i,j]->Image=Type_C_0;
 									 }
 								 }
 								 if(random_position==1){
 									 if(n==4){
-										 image_array_4[i,j]->Image=Type_A_1;
+										 image_array_4[i,j]->Image=Type_C_1;
 									 }
 									 if(n==5){
-										 image_array_5[i,j]->Image=Type_A_1;
+										 image_array_5[i,j]->Image=Type_C_1;
 									 }
 								 }
 								 if(random_position==2){
 									 if(n==4){
-										 image_array_4[i,j]->Image=Type_A_2;
+										 image_array_4[i,j]->Image=Type_C_2;
 									 }
 									 if(n==5){
-										 image_array_5[i,j]->Image=Type_A_2;
+										 image_array_5[i,j]->Image=Type_C_2;
 									 }
 								 }
 								 if(random_position==3){
 									 if(n==4){
-										 image_array_4[i,j]->Image=Type_A_3;
+										 image_array_4[i,j]->Image=Type_C_3;
 									 }
 									 if(n==5){
-										 image_array_5[i,j]->Image=Type_A_3;
+										 image_array_5[i,j]->Image=Type_C_3;
 									 }
 								 }
 								 type_of_image_loaded[i][j]='C';
@@ -1433,7 +1458,7 @@ namespace FunBrainz {
 				 }
 				 type_of_image_loaded[0][0]='C';
 				 type_of_image_loaded[n-1][n-1]='C';
-				 try {
+				 /*try {
 					 OleDb::OleDbConnection ^ con = gcnew OleDb::OleDbConnection();
 					 con->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=FunBrainzForKids.accdb;";
 					 String ^ Sql = "Select * from Pipeline_Game";
@@ -1441,8 +1466,8 @@ namespace FunBrainz {
 					 con->Open();
 					 OleDb::OleDbDataReader ^ reader = command->ExecuteReader();
 					 while (reader->Read()){
-						 String^ type_string =  reader[2]->ToString();
-						 String^ answer_string = reader[5]->ToString();
+						 String^ type_string =  reader[1]->ToString();
+						 String^ answer_string = reader[4]->ToString();
 						 answer_type[count]=type_string;
 						 answer_index[count++]=answer_string;
 						 Debug::WriteLine(System::Convert::ToString(count));
@@ -1453,7 +1478,7 @@ namespace FunBrainz {
 				 }
 				 catch (Exception ^ ex) {
 					 MessageBox::Show(ex->Message);
-				 }
+				 }*/
 
 			 }
 	private: System::Void pictureBox_Click(System::Object^  sender, System::EventArgs^  e) {
@@ -1487,16 +1512,16 @@ namespace FunBrainz {
 					 }
 					 if(type_of_image_loaded[I][J]=='C'){
 						 if(encoding_of_image_loaded[I][J]==0){
-							 pb->Image=Type_A_1;
+							 pb->Image=Type_C_1;
 						 }
 						 if(encoding_of_image_loaded[I][J]==1){
-							 pb->Image=Type_A_2;
+							 pb->Image=Type_C_2;
 						 }
 						 if(encoding_of_image_loaded[I][J]==2){
-							 pb->Image=Type_A_3;
+							 pb->Image=Type_C_3;
 						 }
 						 if(encoding_of_image_loaded[I][J]==3){
-							 pb->Image=Type_A_0;
+							 pb->Image=Type_C_0;
 						 }
 					 }
 				 }
@@ -1534,13 +1559,53 @@ namespace FunBrainz {
 					 }
 					 if(isSolved==1){
 						 MessageBox::Show("Correct answer");
-						 break;
+						 
+						 String^ level_flag_string="";
+						 if (level_flag_of_puzzle==0)
+						 {
+							 level_flag_string="Levels_Completed_Easy";
+						 }
+						 if (level_flag_of_puzzle==1)
+						 {
+							 level_flag_string="Levels_Completed_Medium";
+						 }
+						 if (level_flag_of_puzzle==2)
+						 {
+							 level_flag_string="Levels_Completed_Hard";
+						 }
+						 if (level_flag_of_puzzle==3)
+						 {
+							 level_flag_string="Levels_Completed_Advanced";
+						 }
+						 if (level_flag_of_puzzle==4)
+						 {
+							 level_flag_string="Levels_Completed_Expert";
+						 }
+						 //****************************update stud id according to caller form
+						 stu_ID=1;
+						 //****************
+
+
+						 try {
+							 OleDb::OleDbConnection ^ con = gcnew OleDb::OleDbConnection();
+							 con->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=FunBrainzForKids.accdb;";
+							 String ^ Sql = "UPDATE Pipeline_Scoring SET [" + level_flag_string +"] = " + level_of_puzzle + " Where [StudentID] = " + stu_ID + ";";
+							 MessageBox::Show(Sql);
+							 OleDb::OleDbCommand ^ command = gcnew OleDb::OleDbCommand(Sql, con);
+							 con->Open();
+							 command->ExecuteScalar();
+							 con->Close();
+						 }
+						 catch (Exception ^ ex) {
+							 MessageBox::Show(ex->Message);
+						 }
+						 btn_Back_To_Main_From_Pipeline_Game->PerformClick();
 					 }
 				 }
 			 }
 	private: System::Void btn_Back_To_Main_From_Pipeline_Game_Click(System::Object^  sender, System::EventArgs^  e) {
-				 this->Hide();
 				 caller->Show();
+				 this->Hide();
 			 }
 
 	};
