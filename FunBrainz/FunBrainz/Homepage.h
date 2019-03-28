@@ -7,6 +7,7 @@
 #include "Abacus.h"
 #include "Cricket.h"
 #include "operatorFilling.h"
+#include "cloud.h"
 namespace FunBrainz {
 
 	using namespace System;
@@ -310,7 +311,7 @@ private: System::Void Arithmeticbtn_Click(System::Object^  sender, System::Event
 			  //f->user=user;
 			  //panel1->Controls->Clear();
 			  //panel1->Controls->Add(f);
-			 operatorFilling ^form =gcnew operatorFilling(this);
+			 cloud ^form =gcnew cloud(this);
 			 form->ShowDialog();
 		 }
 private: System::Void Deletebtn_Click(System::Object^  sender, System::EventArgs^  e) 

@@ -90,6 +90,8 @@
     <ClCompile Include="Abacus.cpp" />
     <ClCompile Include="Arithmetic1.cpp" />
     <ClCompile Include="AssemblyInfo.cpp" />
+    <ClCompile Include="cloud.cpp" />
+    <ClCompile Include="cloudgame.cpp" />
     <ClCompile Include="Cricket.cpp" />
     <ClCompile Include="FunBrainz.cpp" />
     <ClCompile Include="Game_2048.cpp" />
@@ -113,6 +115,12 @@
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="Arithmetic1.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="cloud.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="cloudgame.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="Cricket.h">
