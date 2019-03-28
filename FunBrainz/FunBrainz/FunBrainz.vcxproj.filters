@@ -66,6 +66,9 @@
     <ClCompile Include="ImageQuiz2.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Abacus.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Form1.h">
@@ -113,6 +116,9 @@
     <ClInclude Include="ImageQuiz2.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Abacus.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="app.rc">
@@ -136,6 +142,9 @@
       <Filter>Resource Files</Filter>
     </EmbeddedResource>
     <EmbeddedResource Include="ImageQuiz2.resx">
+      <Filter>Resource Files</Filter>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Arithmetic1.resx">
       <Filter>Resource Files</Filter>
     </EmbeddedResource>
   </ItemGroup>

@@ -87,6 +87,7 @@
     <None Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Abacus.cpp" />
     <ClCompile Include="Arithmetic1.cpp" />
     <ClCompile Include="AssemblyInfo.cpp" />
     <ClCompile Include="Cricket.cpp" />
@@ -107,6 +108,9 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Abacus.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="Arithmetic1.h">
       <FileType>CppForm</FileType>
     </ClInclude>
