@@ -1,4 +1,0 @@
-# FunBrainz
-
-Software For Children
-
