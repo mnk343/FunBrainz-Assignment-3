@@ -5,7 +5,7 @@
 #include "Level_pipeline.h"
 #include "Image_Quiz.h"
 #include "Abacus.h"
-
+#include "Cricket.h"
 namespace FunBrainz {
 
 	using namespace System;
@@ -305,10 +305,12 @@ private: System::Void panel1_Paint(System::Object^  sender, System::Windows::For
 		 }
 private: System::Void Arithmeticbtn_Click(System::Object^  sender, System::EventArgs^  e)
 		 {
-              Arithmetic1 ^ f =  gcnew Arithmetic1();
-			  f->user=user;
-			  panel1->Controls->Clear();
-			  panel1->Controls->Add(f);
+              //Arithmetic1 ^ f =  gcnew Arithmetic1();
+			  //f->user=user;
+			  //panel1->Controls->Clear();
+			  //panel1->Controls->Add(f);
+			 Cricket ^form =gcnew Cricket(this,1);
+			 form->ShowDialog();
 		 }
 private: System::Void Deletebtn_Click(System::Object^  sender, System::EventArgs^  e) 
 		 {
