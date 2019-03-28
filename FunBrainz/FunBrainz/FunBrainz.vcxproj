@@ -88,12 +88,15 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Abacus.cpp" />
+    <ClCompile Include="all_shape.cpp" />
     <ClCompile Include="Arithmetic1.cpp" />
     <ClCompile Include="AssemblyInfo.cpp" />
     <ClCompile Include="cloud.cpp" />
     <ClCompile Include="cloudgame.cpp" />
     <ClCompile Include="Cricket.cpp" />
+    <ClCompile Include="drawshape.cpp" />
     <ClCompile Include="FunBrainz.cpp" />
+    <ClCompile Include="game.cpp" />
     <ClCompile Include="Game_2048.cpp" />
     <ClCompile Include="GlobalFuncs.cpp" />
     <ClCompile Include="Homepage.cpp" />
@@ -104,6 +107,10 @@
     <ClCompile Include="operatorFilling.cpp" />
     <ClCompile Include="Pipeline_Game.cpp" />
     <ClCompile Include="profile.cpp" />
+    <ClCompile Include="question_no_figure.cpp" />
+    <ClCompile Include="question_with_figure.cpp" />
+    <ClCompile Include="shapesPanel.cpp" />
+    <ClCompile Include="shape_defination.cpp" />
     <ClCompile Include="Signup.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
@@ -112,6 +119,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Abacus.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="all_shape.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="Arithmetic1.h">
@@ -126,7 +136,13 @@
     <ClInclude Include="Cricket.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="drawshape.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="Form1.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="game.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="Game_2048.h">
@@ -157,7 +173,19 @@
     <ClInclude Include="profile.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="question_no_figure.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="question_with_figure.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="resource.h" />
+    <ClInclude Include="shapesPanel.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="shape_defination.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="Signup.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -167,15 +195,24 @@
     <ResourceCompile Include="app.rc" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="all_shape.resx">
+      <DependentUpon>all_shape.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Arithmetic1.resx">
       <DependentUpon>Arithmetic1.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Cricket.resx">
       <DependentUpon>Cricket.h</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="drawshape.resx">
+      <DependentUpon>drawshape.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resX">
       <DependentUpon>Form1.h</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="game.resx">
+      <DependentUpon>game.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Homepage.resx">
       <DependentUpon>Homepage.h</DependentUpon>
@@ -185,6 +222,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="profile.resx">
       <DependentUpon>profile.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="question_no_figure.resx">
+      <DependentUpon>question_no_figure.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="question_with_figure.resx">
+      <DependentUpon>question_with_figure.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="shapesPanel.resx">
+      <DependentUpon>shapesPanel.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="shape_defination.resx">
+      <DependentUpon>shape_defination.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Signup.resx">
       <DependentUpon>Signup.h</DependentUpon>
