@@ -1,3 +1,6 @@
+
+
+
 #pragma once
 #include<iostream>
 #include <stdlib.h>
@@ -245,6 +248,7 @@ namespace FunBrainz {
 			this->pnl_Levels->Controls->Add(this->btn_Medium);
 			this->pnl_Levels->Controls->Add(this->btn_Easy);
 			this->pnl_Levels->Location = System::Drawing::Point(12, 30);
+			this->pnl_Levels->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->pnl_Levels->Name = L"pnl_Levels";
 			this->pnl_Levels->Size = System::Drawing::Size(269, 426);
 			this->pnl_Levels->TabIndex = 5;
@@ -252,8 +256,9 @@ namespace FunBrainz {
 			// btn_Expert
 			// 
 			this->btn_Expert->Location = System::Drawing::Point(15, 335);
+			this->btn_Expert->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->btn_Expert->Name = L"btn_Expert";
-			this->btn_Expert->Size = System::Drawing::Size(245, 67);
+			this->btn_Expert->Size = System::Drawing::Size(245, 66);
 			this->btn_Expert->TabIndex = 9;
 			this->btn_Expert->Text = L"EXPERT";
 			this->btn_Expert->UseVisualStyleBackColor = true;
@@ -262,8 +267,9 @@ namespace FunBrainz {
 			// btn_Advanced
 			// 
 			this->btn_Advanced->Location = System::Drawing::Point(15, 262);
+			this->btn_Advanced->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->btn_Advanced->Name = L"btn_Advanced";
-			this->btn_Advanced->Size = System::Drawing::Size(245, 67);
+			this->btn_Advanced->Size = System::Drawing::Size(245, 66);
 			this->btn_Advanced->TabIndex = 8;
 			this->btn_Advanced->Text = L"ADVANCED";
 			this->btn_Advanced->UseVisualStyleBackColor = true;
@@ -271,9 +277,10 @@ namespace FunBrainz {
 			// 
 			// btn_Hard
 			// 
-			this->btn_Hard->Location = System::Drawing::Point(15, 189);
+			this->btn_Hard->Location = System::Drawing::Point(15, 190);
+			this->btn_Hard->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->btn_Hard->Name = L"btn_Hard";
-			this->btn_Hard->Size = System::Drawing::Size(245, 67);
+			this->btn_Hard->Size = System::Drawing::Size(245, 66);
 			this->btn_Hard->TabIndex = 7;
 			this->btn_Hard->Text = L"HARD";
 			this->btn_Hard->UseVisualStyleBackColor = true;
@@ -282,8 +289,9 @@ namespace FunBrainz {
 			// btn_Medium
 			// 
 			this->btn_Medium->Location = System::Drawing::Point(15, 116);
+			this->btn_Medium->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->btn_Medium->Name = L"btn_Medium";
-			this->btn_Medium->Size = System::Drawing::Size(245, 67);
+			this->btn_Medium->Size = System::Drawing::Size(245, 66);
 			this->btn_Medium->TabIndex = 6;
 			this->btn_Medium->Text = L"MEDIUM";
 			this->btn_Medium->UseVisualStyleBackColor = true;
@@ -292,8 +300,9 @@ namespace FunBrainz {
 			// btn_Easy
 			// 
 			this->btn_Easy->Location = System::Drawing::Point(15, 43);
+			this->btn_Easy->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->btn_Easy->Name = L"btn_Easy";
-			this->btn_Easy->Size = System::Drawing::Size(245, 67);
+			this->btn_Easy->Size = System::Drawing::Size(245, 66);
 			this->btn_Easy->TabIndex = 5;
 			this->btn_Easy->Text = L"EASY";
 			this->btn_Easy->UseVisualStyleBackColor = true;
@@ -351,14 +360,16 @@ namespace FunBrainz {
 			this->pnl_Levels_Displayed->Controls->Add(this->btn_4);
 			this->pnl_Levels_Displayed->Controls->Add(this->btn_5);
 			this->pnl_Levels_Displayed->Controls->Add(this->btn_1);
-			this->pnl_Levels_Displayed->Location = System::Drawing::Point(298, 12);
+			this->pnl_Levels_Displayed->Location = System::Drawing::Point(299, 12);
+			this->pnl_Levels_Displayed->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->pnl_Levels_Displayed->Name = L"pnl_Levels_Displayed";
-			this->pnl_Levels_Displayed->Size = System::Drawing::Size(696, 509);
+			this->pnl_Levels_Displayed->Size = System::Drawing::Size(696, 510);
 			this->pnl_Levels_Displayed->TabIndex = 6;
 			// 
 			// btn_47
 			// 
 			this->btn_47->Location = System::Drawing::Point(360, 246);
+			this->btn_47->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->btn_47->Name = L"btn_47";
 			this->btn_47->Size = System::Drawing::Size(47, 48);
 			this->btn_47->TabIndex = 79;
@@ -369,6 +380,7 @@ namespace FunBrainz {
 			// btn_48
 			// 
 			this->btn_48->Location = System::Drawing::Point(412, 246);
+			this->btn_48->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->btn_48->Name = L"btn_48";
 			this->btn_48->Size = System::Drawing::Size(47, 48);
 			this->btn_48->TabIndex = 78;
@@ -378,7 +390,8 @@ namespace FunBrainz {
 			// 
 			// btn_49
 			// 
-			this->btn_49->Location = System::Drawing::Point(466, 246);
+			this->btn_49->Location = System::Drawing::Point(467, 246);
+			this->btn_49->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->btn_49->Name = L"btn_49";
 			this->btn_49->Size = System::Drawing::Size(47, 48);
 			this->btn_49->TabIndex = 77;
@@ -389,6 +402,7 @@ namespace FunBrainz {
 			// btn_50
 			// 
 			this->btn_50->Location = System::Drawing::Point(519, 246);
+			this->btn_50->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->btn_50->Name = L"btn_50";
 			this->btn_50->Size = System::Drawing::Size(47, 48);
 			this->btn_50->TabIndex = 76;
@@ -399,6 +413,7 @@ namespace FunBrainz {
 			// btn_46
 			// 
 			this->btn_46->Location = System::Drawing::Point(307, 246);
+			this->btn_46->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->btn_46->Name = L"btn_46";
 			this->btn_46->Size = System::Drawing::Size(47, 48);
 			this->btn_46->TabIndex = 75;
@@ -409,6 +424,7 @@ namespace FunBrainz {
 			// btn_42
 			// 
 			this->btn_42->Location = System::Drawing::Point(95, 246);
+			this->btn_42->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->btn_42->Name = L"btn_42";
 			this->btn_42->Size = System::Drawing::Size(47, 48);
 			this->btn_42->TabIndex = 74;
@@ -419,6 +435,7 @@ namespace FunBrainz {
 			// btn_43
 			// 
 			this->btn_43->Location = System::Drawing::Point(148, 246);
+			this->btn_43->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->btn_43->Name = L"btn_43";
 			this->btn_43->Size = System::Drawing::Size(47, 48);
 			this->btn_43->TabIndex = 73;
@@ -429,6 +446,7 @@ namespace FunBrainz {
 			// btn_44
 			// 
 			this->btn_44->Location = System::Drawing::Point(201, 246);
+			this->btn_44->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->btn_44->Name = L"btn_44";
 			this->btn_44->Size = System::Drawing::Size(47, 48);
 			this->btn_44->TabIndex = 72;
@@ -438,7 +456,8 @@ namespace FunBrainz {
 			// 
 			// btn_45
 			// 
-			this->btn_45->Location = System::Drawing::Point(254, 246);
+			this->btn_45->Location = System::Drawing::Point(253, 246);
+			this->btn_45->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->btn_45->Name = L"btn_45";
 			this->btn_45->Size = System::Drawing::Size(47, 48);
 			this->btn_45->TabIndex = 71;
@@ -448,7 +467,8 @@ namespace FunBrainz {
 			// 
 			// btn_41
 			// 
-			this->btn_41->Location = System::Drawing::Point(42, 246);
+			this->btn_41->Location = System::Drawing::Point(43, 246);
+			this->btn_41->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->btn_41->Name = L"btn_41";
 			this->btn_41->Size = System::Drawing::Size(47, 48);
 			this->btn_41->TabIndex = 70;
@@ -459,6 +479,7 @@ namespace FunBrainz {
 			// btn_37
 			// 
 			this->btn_37->Location = System::Drawing::Point(360, 192);
+			this->btn_37->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->btn_37->Name = L"btn_37";
 			this->btn_37->Size = System::Drawing::Size(47, 48);
 			this->btn_37->TabIndex = 69;
@@ -469,6 +490,7 @@ namespace FunBrainz {
 			// btn_38
 			// 
 			this->btn_38->Location = System::Drawing::Point(413, 192);
+			this->btn_38->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->btn_38->Name = L"btn_38";
 			this->btn_38->Size = System::Drawing::Size(47, 48);
 			this->btn_38->TabIndex = 68;
@@ -478,7 +500,8 @@ namespace FunBrainz {
 			// 
 			// btn_39
 			// 
-			this->btn_39->Location = System::Drawing::Point(466, 192);
+			this->btn_39->Location = System::Drawing::Point(467, 192);
+			this->btn_39->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->btn_39->Name = L"btn_39";
 			this->btn_39->Size = System::Drawing::Size(47, 48);
 			this->btn_39->TabIndex = 67;
@@ -489,6 +512,7 @@ namespace FunBrainz {
 			// btn_40
 			// 
 			this->btn_40->Location = System::Drawing::Point(519, 192);
+			this->btn_40->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->btn_40->Name = L"btn_40";
 			this->btn_40->Size = System::Drawing::Size(47, 48);
 			this->btn_40->TabIndex = 66;
@@ -499,6 +523,7 @@ namespace FunBrainz {
 			// btn_36
 			// 
 			this->btn_36->Location = System::Drawing::Point(307, 192);
+			this->btn_36->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->btn_36->Name = L"btn_36";
 			this->btn_36->Size = System::Drawing::Size(47, 48);
 			this->btn_36->TabIndex = 65;
@@ -509,6 +534,7 @@ namespace FunBrainz {
 			// btn_32
 			// 
 			this->btn_32->Location = System::Drawing::Point(95, 192);
+			this->btn_32->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->btn_32->Name = L"btn_32";
 			this->btn_32->Size = System::Drawing::Size(47, 48);
 			this->btn_32->TabIndex = 64;
@@ -519,6 +545,7 @@ namespace FunBrainz {
 			// btn_33
 			// 
 			this->btn_33->Location = System::Drawing::Point(148, 192);
+			this->btn_33->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->btn_33->Name = L"btn_33";
 			this->btn_33->Size = System::Drawing::Size(47, 48);
 			this->btn_33->TabIndex = 63;
@@ -529,6 +556,7 @@ namespace FunBrainz {
 			// btn_34
 			// 
 			this->btn_34->Location = System::Drawing::Point(201, 192);
+			this->btn_34->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->btn_34->Name = L"btn_34";
 			this->btn_34->Size = System::Drawing::Size(47, 48);
 			this->btn_34->TabIndex = 62;
@@ -538,7 +566,8 @@ namespace FunBrainz {
 			// 
 			// btn_35
 			// 
-			this->btn_35->Location = System::Drawing::Point(254, 192);
+			this->btn_35->Location = System::Drawing::Point(253, 192);
+			this->btn_35->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->btn_35->Name = L"btn_35";
 			this->btn_35->Size = System::Drawing::Size(47, 48);
 			this->btn_35->TabIndex = 61;
@@ -548,7 +577,8 @@ namespace FunBrainz {
 			// 
 			// btn_31
 			// 
-			this->btn_31->Location = System::Drawing::Point(42, 192);
+			this->btn_31->Location = System::Drawing::Point(43, 192);
+			this->btn_31->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->btn_31->Name = L"btn_31";
 			this->btn_31->Size = System::Drawing::Size(47, 48);
 			this->btn_31->TabIndex = 60;
@@ -559,6 +589,7 @@ namespace FunBrainz {
 			// btn_27
 			// 
 			this->btn_27->Location = System::Drawing::Point(360, 138);
+			this->btn_27->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->btn_27->Name = L"btn_27";
 			this->btn_27->Size = System::Drawing::Size(47, 48);
 			this->btn_27->TabIndex = 59;
@@ -569,6 +600,7 @@ namespace FunBrainz {
 			// btn_28
 			// 
 			this->btn_28->Location = System::Drawing::Point(413, 138);
+			this->btn_28->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->btn_28->Name = L"btn_28";
 			this->btn_28->Size = System::Drawing::Size(47, 48);
 			this->btn_28->TabIndex = 58;
@@ -578,7 +610,8 @@ namespace FunBrainz {
 			// 
 			// btn_29
 			// 
-			this->btn_29->Location = System::Drawing::Point(466, 138);
+			this->btn_29->Location = System::Drawing::Point(467, 138);
+			this->btn_29->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->btn_29->Name = L"btn_29";
 			this->btn_29->Size = System::Drawing::Size(47, 48);
 			this->btn_29->TabIndex = 57;
@@ -589,6 +622,7 @@ namespace FunBrainz {
 			// btn_30
 			// 
 			this->btn_30->Location = System::Drawing::Point(519, 138);
+			this->btn_30->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->btn_30->Name = L"btn_30";
 			this->btn_30->Size = System::Drawing::Size(47, 48);
 			this->btn_30->TabIndex = 56;
@@ -599,6 +633,7 @@ namespace FunBrainz {
 			// btn_26
 			// 
 			this->btn_26->Location = System::Drawing::Point(307, 138);
+			this->btn_26->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->btn_26->Name = L"btn_26";
 			this->btn_26->Size = System::Drawing::Size(47, 48);
 			this->btn_26->TabIndex = 55;
@@ -609,6 +644,7 @@ namespace FunBrainz {
 			// btn_22
 			// 
 			this->btn_22->Location = System::Drawing::Point(95, 138);
+			this->btn_22->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->btn_22->Name = L"btn_22";
 			this->btn_22->Size = System::Drawing::Size(47, 48);
 			this->btn_22->TabIndex = 54;
@@ -619,6 +655,7 @@ namespace FunBrainz {
 			// btn_23
 			// 
 			this->btn_23->Location = System::Drawing::Point(148, 138);
+			this->btn_23->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->btn_23->Name = L"btn_23";
 			this->btn_23->Size = System::Drawing::Size(47, 48);
 			this->btn_23->TabIndex = 53;
@@ -629,6 +666,7 @@ namespace FunBrainz {
 			// btn_24
 			// 
 			this->btn_24->Location = System::Drawing::Point(201, 138);
+			this->btn_24->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->btn_24->Name = L"btn_24";
 			this->btn_24->Size = System::Drawing::Size(47, 48);
 			this->btn_24->TabIndex = 52;
@@ -638,7 +676,8 @@ namespace FunBrainz {
 			// 
 			// btn_25
 			// 
-			this->btn_25->Location = System::Drawing::Point(254, 138);
+			this->btn_25->Location = System::Drawing::Point(253, 138);
+			this->btn_25->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->btn_25->Name = L"btn_25";
 			this->btn_25->Size = System::Drawing::Size(47, 48);
 			this->btn_25->TabIndex = 51;
@@ -648,7 +687,8 @@ namespace FunBrainz {
 			// 
 			// btn_21
 			// 
-			this->btn_21->Location = System::Drawing::Point(42, 138);
+			this->btn_21->Location = System::Drawing::Point(43, 138);
+			this->btn_21->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->btn_21->Name = L"btn_21";
 			this->btn_21->Size = System::Drawing::Size(47, 48);
 			this->btn_21->TabIndex = 50;
@@ -659,6 +699,7 @@ namespace FunBrainz {
 			// btn_17
 			// 
 			this->btn_17->Location = System::Drawing::Point(360, 86);
+			this->btn_17->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->btn_17->Name = L"btn_17";
 			this->btn_17->Size = System::Drawing::Size(47, 48);
 			this->btn_17->TabIndex = 49;
@@ -669,6 +710,7 @@ namespace FunBrainz {
 			// btn_18
 			// 
 			this->btn_18->Location = System::Drawing::Point(413, 86);
+			this->btn_18->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->btn_18->Name = L"btn_18";
 			this->btn_18->Size = System::Drawing::Size(47, 48);
 			this->btn_18->TabIndex = 48;
@@ -678,7 +720,8 @@ namespace FunBrainz {
 			// 
 			// btn_19
 			// 
-			this->btn_19->Location = System::Drawing::Point(466, 86);
+			this->btn_19->Location = System::Drawing::Point(467, 86);
+			this->btn_19->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->btn_19->Name = L"btn_19";
 			this->btn_19->Size = System::Drawing::Size(47, 48);
 			this->btn_19->TabIndex = 47;
@@ -689,6 +732,7 @@ namespace FunBrainz {
 			// btn_20
 			// 
 			this->btn_20->Location = System::Drawing::Point(519, 86);
+			this->btn_20->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->btn_20->Name = L"btn_20";
 			this->btn_20->Size = System::Drawing::Size(47, 48);
 			this->btn_20->TabIndex = 46;
@@ -699,6 +743,7 @@ namespace FunBrainz {
 			// btn_16
 			// 
 			this->btn_16->Location = System::Drawing::Point(307, 86);
+			this->btn_16->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->btn_16->Name = L"btn_16";
 			this->btn_16->Size = System::Drawing::Size(47, 48);
 			this->btn_16->TabIndex = 45;
@@ -709,6 +754,7 @@ namespace FunBrainz {
 			// btn_12
 			// 
 			this->btn_12->Location = System::Drawing::Point(95, 86);
+			this->btn_12->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->btn_12->Name = L"btn_12";
 			this->btn_12->Size = System::Drawing::Size(47, 48);
 			this->btn_12->TabIndex = 44;
@@ -719,6 +765,7 @@ namespace FunBrainz {
 			// btn_13
 			// 
 			this->btn_13->Location = System::Drawing::Point(148, 86);
+			this->btn_13->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->btn_13->Name = L"btn_13";
 			this->btn_13->Size = System::Drawing::Size(47, 48);
 			this->btn_13->TabIndex = 43;
@@ -729,6 +776,7 @@ namespace FunBrainz {
 			// btn_14
 			// 
 			this->btn_14->Location = System::Drawing::Point(201, 86);
+			this->btn_14->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->btn_14->Name = L"btn_14";
 			this->btn_14->Size = System::Drawing::Size(47, 48);
 			this->btn_14->TabIndex = 42;
@@ -738,7 +786,8 @@ namespace FunBrainz {
 			// 
 			// btn_15
 			// 
-			this->btn_15->Location = System::Drawing::Point(254, 86);
+			this->btn_15->Location = System::Drawing::Point(253, 86);
+			this->btn_15->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->btn_15->Name = L"btn_15";
 			this->btn_15->Size = System::Drawing::Size(47, 48);
 			this->btn_15->TabIndex = 41;
@@ -748,7 +797,8 @@ namespace FunBrainz {
 			// 
 			// btn_11
 			// 
-			this->btn_11->Location = System::Drawing::Point(42, 86);
+			this->btn_11->Location = System::Drawing::Point(43, 86);
+			this->btn_11->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->btn_11->Name = L"btn_11";
 			this->btn_11->Size = System::Drawing::Size(47, 48);
 			this->btn_11->TabIndex = 40;
@@ -759,6 +809,7 @@ namespace FunBrainz {
 			// btn_7
 			// 
 			this->btn_7->Location = System::Drawing::Point(360, 32);
+			this->btn_7->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->btn_7->Name = L"btn_7";
 			this->btn_7->Size = System::Drawing::Size(47, 48);
 			this->btn_7->TabIndex = 9;
@@ -769,6 +820,7 @@ namespace FunBrainz {
 			// btn_8
 			// 
 			this->btn_8->Location = System::Drawing::Point(413, 32);
+			this->btn_8->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->btn_8->Name = L"btn_8";
 			this->btn_8->Size = System::Drawing::Size(47, 48);
 			this->btn_8->TabIndex = 8;
@@ -778,7 +830,8 @@ namespace FunBrainz {
 			// 
 			// btn_9
 			// 
-			this->btn_9->Location = System::Drawing::Point(466, 32);
+			this->btn_9->Location = System::Drawing::Point(467, 32);
+			this->btn_9->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->btn_9->Name = L"btn_9";
 			this->btn_9->Size = System::Drawing::Size(47, 48);
 			this->btn_9->TabIndex = 7;
@@ -789,6 +842,7 @@ namespace FunBrainz {
 			// btn_10
 			// 
 			this->btn_10->Location = System::Drawing::Point(519, 32);
+			this->btn_10->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->btn_10->Name = L"btn_10";
 			this->btn_10->Size = System::Drawing::Size(47, 48);
 			this->btn_10->TabIndex = 6;
@@ -799,6 +853,7 @@ namespace FunBrainz {
 			// btn_6
 			// 
 			this->btn_6->Location = System::Drawing::Point(307, 32);
+			this->btn_6->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->btn_6->Name = L"btn_6";
 			this->btn_6->Size = System::Drawing::Size(47, 48);
 			this->btn_6->TabIndex = 5;
@@ -809,6 +864,7 @@ namespace FunBrainz {
 			// btn_2
 			// 
 			this->btn_2->Location = System::Drawing::Point(95, 32);
+			this->btn_2->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->btn_2->Name = L"btn_2";
 			this->btn_2->Size = System::Drawing::Size(47, 48);
 			this->btn_2->TabIndex = 4;
@@ -819,6 +875,7 @@ namespace FunBrainz {
 			// btn_3
 			// 
 			this->btn_3->Location = System::Drawing::Point(148, 32);
+			this->btn_3->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->btn_3->Name = L"btn_3";
 			this->btn_3->Size = System::Drawing::Size(47, 48);
 			this->btn_3->TabIndex = 3;
@@ -829,6 +886,7 @@ namespace FunBrainz {
 			// btn_4
 			// 
 			this->btn_4->Location = System::Drawing::Point(201, 32);
+			this->btn_4->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->btn_4->Name = L"btn_4";
 			this->btn_4->Size = System::Drawing::Size(47, 48);
 			this->btn_4->TabIndex = 2;
@@ -838,7 +896,8 @@ namespace FunBrainz {
 			// 
 			// btn_5
 			// 
-			this->btn_5->Location = System::Drawing::Point(254, 32);
+			this->btn_5->Location = System::Drawing::Point(253, 32);
+			this->btn_5->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->btn_5->Name = L"btn_5";
 			this->btn_5->Size = System::Drawing::Size(47, 48);
 			this->btn_5->TabIndex = 1;
@@ -848,7 +907,8 @@ namespace FunBrainz {
 			// 
 			// btn_1
 			// 
-			this->btn_1->Location = System::Drawing::Point(42, 32);
+			this->btn_1->Location = System::Drawing::Point(43, 32);
+			this->btn_1->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->btn_1->Name = L"btn_1";
 			this->btn_1->Size = System::Drawing::Size(47, 48);
 			this->btn_1->TabIndex = 0;
@@ -860,12 +920,15 @@ namespace FunBrainz {
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(1006, 721);
+			this->ClientSize = System::Drawing::Size(1005, 721);
 			this->Controls->Add(this->pnl_Levels_Displayed);
 			this->Controls->Add(this->pnl_Levels);
+			this->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->Name = L"Level_pipeline";
 			this->Text = L"Level_pipeline";
 			this->Load += gcnew System::EventHandler(this, &Level_pipeline::Level_pipeline_Load);
+			this->Shown += gcnew System::EventHandler(this, &Level_pipeline::Level_pipeline_Shown);
+			this->VisibleChanged += gcnew System::EventHandler(this, &Level_pipeline::Level_pipeline_VisibleChanged);
 			this->pnl_Levels->ResumeLayout(false);
 			this->pnl_Levels_Displayed->ResumeLayout(false);
 			this->ResumeLayout(false);
@@ -877,6 +940,12 @@ namespace FunBrainz {
 		static array<String^>^ answer_type = gcnew array<String^>(10000);
 		static array<String^>^ answer_index = gcnew array<String^>(10000);
 		static int count=0;
+		static int flag=0;
+		
+	public: void func()
+			{
+				this->Hide();
+			}
 	private: System::Void Level_pipeline_Load(System::Object^  sender, System::EventArgs^  e) {
 				
 				try {
@@ -906,10 +975,10 @@ namespace FunBrainz {
 
 private: System::Void level_click(System::Object^  sender, System::EventArgs^  e) {
 			 Button^ btn = ((Button^)sender);
-			 int level = System::Int64::Parse(btn->Text);			
+			 int level = System::Int64::Parse(btn->Text);	
 			 Pipeline_Game^ form = gcnew Pipeline_Game(this,level,level_flag,answer_type,answer_index,count);
 			 form->Show();
-			 this->Close();
+			 this->Hide();
 		 }
 private: System::Void btn_Easy_Click(System::Object^  sender, System::EventArgs^  e) {
 			 level_flag=0;
@@ -1101,5 +1170,24 @@ private: System::Void btn_Expert_Click(System::Object^  sender, System::EventArg
 				 level_btn->BackColor = System::Drawing::Color::Empty;
 			 }
 		 }
+private: System::Void Level_pipeline_Shown(System::Object^  sender, System::EventArgs^  e) {
+			 btn_Easy->PerformClick();
+		 }
+private: System::Void Level_pipeline_VisibleChanged(System::Object^  sender, System::EventArgs^  e) {
+			 if(Pipeline_Game::next_flag==1)
+			 {
+				 btn_Hard->PerformClick();
+				 MessageBox::Show(System::Convert::ToString((Pipeline_Game::level_of_puzzle)+1));				
+				int level = (Pipeline_Game::level_of_puzzle)+1;	
+				Pipeline_Game^ form = gcnew Pipeline_Game(this,level,level_flag,answer_type,answer_index,count);
+				form->Show();
+				//MessageBox::Show("this is the one we want"+level_btn->Text);
+				//this->Hide();
+			 }
+			 else
+				btn_Easy->PerformClick();
+
+		 }
 };
 }
+
