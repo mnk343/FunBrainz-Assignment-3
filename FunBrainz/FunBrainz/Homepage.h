@@ -6,6 +6,7 @@
 #include "Image_Quiz.h"
 #include "Abacus.h"
 #include "Cricket.h"
+#include "operatorFilling.h"
 namespace FunBrainz {
 
 	using namespace System;
@@ -309,7 +310,7 @@ private: System::Void Arithmeticbtn_Click(System::Object^  sender, System::Event
 			  //f->user=user;
 			  //panel1->Controls->Clear();
 			  //panel1->Controls->Add(f);
-			 Cricket ^form =gcnew Cricket(this,1);
+			 operatorFilling ^form =gcnew operatorFilling(this);
 			 form->ShowDialog();
 		 }
 private: System::Void Deletebtn_Click(System::Object^  sender, System::EventArgs^  e) 

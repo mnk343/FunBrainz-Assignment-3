@@ -99,6 +99,7 @@
     <ClCompile Include="Image_Quiz.cpp" />
     <ClCompile Include="Image_Quiz_Display.cpp" />
     <ClCompile Include="Level_pipeline.cpp" />
+    <ClCompile Include="operatorFilling.cpp" />
     <ClCompile Include="Pipeline_Game.cpp" />
     <ClCompile Include="profile.cpp" />
     <ClCompile Include="Signup.cpp" />
@@ -137,6 +138,9 @@
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="Level_pipeline.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="operatorFilling.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="Pipeline_Game.h">
