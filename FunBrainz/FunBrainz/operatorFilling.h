@@ -34,6 +34,14 @@ namespace FunBrainz {
 			//TODO: Add the constructor code here
 			//
 		}
+		operatorFilling(int student)
+		{
+			InitializeComponent();
+			stuID = student;
+			//
+			//TODO: Add the constructor code here
+			//
+		}
 
 	protected:
 		/// <summary>
@@ -549,7 +557,7 @@ namespace FunBrainz {
 		}
 #pragma endregion
 	Form^ caller;
-int num1,num2 , num3  ,level , ctrQ , counter , score , triesLeft;
+int num1,num2 , num3  ,level , ctrQ , counter , score , triesLeft,stuID;
 
 private : System::Void GenerateQuestion (int level)
 {

@@ -332,7 +332,7 @@ namespace FunBrainz {
 				  
 		private: System::Void date(String ^ str)
 		{
-			MessageBox::Show(str);
+			//MessageBox::Show(str);
 			    String ^ dd = "";
 				 dd = dd + str[0];
 				 dd = dd + str[1];
@@ -369,8 +369,8 @@ namespace FunBrainz {
 			 {
 				   disable();
 				    LoadProfilepic();
-					 con->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=ikya_database.accdb;";
-					 String ^ access1 = "SELECT FirstName,LastName,Class,DateOfBirth,Gender,MobileNumber,Email  FROM database_ikya WHERE  UserName  = '" + user + "' ";
+					 con->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=FunBrainzForKids.accdb;";
+					 String ^ access1 = "SELECT FirstName,LastName,Class,DateOfBirth,Gender,MobileNumber,Email  FROM Students WHERE  UserName  = '" + user + "' ";
 					 con->Open();
 					 OleDb::OleDbDataReader ^ reader;
 				     try{
@@ -500,7 +500,7 @@ private: System::Void save_button_Click(System::Object^  sender, System::EventAr
 		   DateTime ^ var = DOBtxt->Value;
 		   String ^  strDate = var->ToString("dd-MM-yyyy");
 		   if(!datavalid()) return ;
-			String ^ access1 = "update database_ikya set FirstName= '" + textBox1->Text + "', LastName= '" + textBox2->Text + "', Class= '" + textBox3->Text + "', DateOfBirth= '" + strDate + "', Gender= '" + Gendertxt->Text + "', MobileNumber= '" + textBox6->Text + "', Email= '" + textBox7->Text + "' WHERE  UserName  = '" + user + "' ";
+			String ^ access1 = "update Students set FirstName= '" + textBox1->Text + "', LastName= '" + textBox2->Text + "', Class= '" + textBox3->Text + "', DateOfBirth= '" + strDate + "', Gender= '" + Gendertxt->Text + "', MobileNumber= '" + textBox6->Text + "', Email= '" + textBox7->Text + "' WHERE  UserName  = '" + user + "' ";
 			con->Open();
 			try
 			{   	OleDb::OleDbCommand ^ command = gcnew OleDb::OleDbCommand(access1, con);
@@ -544,8 +544,11 @@ private: System::Void Uploadpicbtn_Click(System::Object^  sender, System::EventA
 
 private: System::Void Deletepicbtn_Click(System::Object^  sender, System::EventArgs^  e)
 		 {
-			 if(Defualtimage==pic->Image) {MessageBox::Show("No Pic"); return ;}
-			 else {MessageBox::Show("Yes pic");}
+			 if(Defualtimage==pic->Image) {
+				 //MessageBox::Show("No Pic");
+			 return ;
+			 }
+			 //else {MessageBox::Show("Yes pic");}
 			  Image ^ temp = pic->Image;
 			  pic->Image=Defualtimage;
 			  delete temp;

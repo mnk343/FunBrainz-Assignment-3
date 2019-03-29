@@ -99,6 +99,9 @@
     <ClCompile Include="shape_defination.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="operationsRedirect.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Form1.h">
@@ -179,6 +182,9 @@
     <ClInclude Include="shape_defination.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="operationsRedirect.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="app.rc">
@@ -205,6 +211,27 @@
       <Filter>Resource Files</Filter>
     </EmbeddedResource>
     <EmbeddedResource Include="Arithmetic1.resx">
+      <Filter>Resource Files</Filter>
+    </EmbeddedResource>
+    <EmbeddedResource Include="all_shape.resx">
+      <Filter>Resource Files</Filter>
+    </EmbeddedResource>
+    <EmbeddedResource Include="drawshape.resx">
+      <Filter>Resource Files</Filter>
+    </EmbeddedResource>
+    <EmbeddedResource Include="game.resx">
+      <Filter>Resource Files</Filter>
+    </EmbeddedResource>
+    <EmbeddedResource Include="question_no_figure.resx">
+      <Filter>Resource Files</Filter>
+    </EmbeddedResource>
+    <EmbeddedResource Include="question_with_figure.resx">
+      <Filter>Resource Files</Filter>
+    </EmbeddedResource>
+    <EmbeddedResource Include="shapesPanel.resx">
+      <Filter>Resource Files</Filter>
+    </EmbeddedResource>
+    <EmbeddedResource Include="shape_defination.resx">
       <Filter>Resource Files</Filter>
     </EmbeddedResource>
   </ItemGroup>

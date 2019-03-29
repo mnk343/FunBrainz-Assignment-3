@@ -27,9 +27,18 @@ namespace FunBrainz {
 			player = gcnew array<System::String ^>(12);
 			stuID = 1;
 			scores = new int[12];
+			//caller = NULL;
 			//
 			//TODO: Add the constructor code here
 			//
+		}
+		Cricket(int student)
+		{
+			InitializeComponent();
+			player = gcnew array<System::String ^>(12);
+			scores = new int[12];
+			stuID = student;
+			//caller = NULL;
 		}
 		Cricket(Form^ obj1, int student)
 		{
@@ -863,8 +872,9 @@ private: System::Void StopButton_Click(System::Object^  sender, System::EventArg
 					MessageBox::Show("You lost by "+runsneeded+ " runs!!");
 				 }
 			}
-			this->Hide();
-			caller->Show();
+			//this->Hide();
+			this->Close();
+			//caller->Show();
 			return;
 		}
 private: System::Void AnsNnumericUpDown_KeyPress(System::Object^  sender, System::Windows::Forms::KeyPressEventArgs^  e) {

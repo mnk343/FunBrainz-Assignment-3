@@ -242,7 +242,7 @@ namespace FunBrainz {
 				 try{
 				     int id;
 					// searching for ID from username
-					 con->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=ikya_database.accdb;";
+					 con->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=FunBrainzForKids.accdb;";
                      String ^Sql = "Select [ID] from database_ikya WHERE  UserName = '" + user + "' ";
 					 OleDb::OleDbCommand ^ command = gcnew OleDb::OleDbCommand(Sql, con);
 					 con->Open();
