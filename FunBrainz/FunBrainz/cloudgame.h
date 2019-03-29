@@ -55,27 +55,45 @@ namespace FunBrainz {
 	private: System::Windows::Forms::Timer^  timer2;
 	private: System::Windows::Forms::Timer^  timer3;
 	private: System::Windows::Forms::Timer^  timer4;
-	private: System::Windows::Forms::Label^  Question;
+
+	private: System::Windows::Forms::Label^  label9;
 
 
 
 
 
-	private: System::Windows::Forms::Label^  label1;
+
 	private: System::Windows::Forms::TextBox^  textBox1;
 
 
 
 
-	private: System::Windows::Forms::Button^  button1;
-	private: System::Windows::Forms::Button^  button2;
-	private: System::Windows::Forms::Button^  button3;
-	private: System::Windows::Forms::Button^  button4;
-	private: System::Windows::Forms::Panel^  panel1;
-	private: System::Windows::Forms::Panel^  panel2;
-	private: System::Windows::Forms::Panel^  panel3;
-	private: System::Windows::Forms::Panel^  panel4;
+
+
+
+
+
+
+
+
 	private: System::Windows::Forms::Button^  button5;
+	private: System::Windows::Forms::PictureBox^  pictureBox1;
+
+
+
+	private: System::Windows::Forms::Panel^  panel5;
+	private: System::Windows::Forms::Label^  label1;
+	private: System::Windows::Forms::Panel^  panel6;
+	private: System::Windows::Forms::Label^  label2;
+	private: System::Windows::Forms::PictureBox^  pictureBox2;
+	private: System::Windows::Forms::Panel^  panel7;
+	private: System::Windows::Forms::Label^  label3;
+	private: System::Windows::Forms::PictureBox^  pictureBox3;
+	private: System::Windows::Forms::Panel^  panel8;
+	private: System::Windows::Forms::Label^  label4;
+	private: System::Windows::Forms::PictureBox^  pictureBox4;
+	private: System::Windows::Forms::Label^  Question;
+
 
 	private: System::ComponentModel::IContainer^  components;
 
@@ -93,26 +111,35 @@ namespace FunBrainz {
 		void InitializeComponent(void)
 		{
 			this->components = (gcnew System::ComponentModel::Container());
+			System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(cloudgame::typeid));
 			this->timer1 = (gcnew System::Windows::Forms::Timer(this->components));
 			this->timer2 = (gcnew System::Windows::Forms::Timer(this->components));
 			this->timer3 = (gcnew System::Windows::Forms::Timer(this->components));
 			this->timer4 = (gcnew System::Windows::Forms::Timer(this->components));
-			this->Question = (gcnew System::Windows::Forms::Label());
-			this->label1 = (gcnew System::Windows::Forms::Label());
+			this->label9 = (gcnew System::Windows::Forms::Label());
 			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
-			this->button1 = (gcnew System::Windows::Forms::Button());
-			this->button2 = (gcnew System::Windows::Forms::Button());
-			this->button3 = (gcnew System::Windows::Forms::Button());
-			this->button4 = (gcnew System::Windows::Forms::Button());
-			this->panel1 = (gcnew System::Windows::Forms::Panel());
-			this->panel2 = (gcnew System::Windows::Forms::Panel());
-			this->panel3 = (gcnew System::Windows::Forms::Panel());
-			this->panel4 = (gcnew System::Windows::Forms::Panel());
 			this->button5 = (gcnew System::Windows::Forms::Button());
-			this->panel1->SuspendLayout();
-			this->panel2->SuspendLayout();
-			this->panel3->SuspendLayout();
-			this->panel4->SuspendLayout();
+			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
+			this->panel5 = (gcnew System::Windows::Forms::Panel());
+			this->label1 = (gcnew System::Windows::Forms::Label());
+			this->panel6 = (gcnew System::Windows::Forms::Panel());
+			this->label2 = (gcnew System::Windows::Forms::Label());
+			this->pictureBox2 = (gcnew System::Windows::Forms::PictureBox());
+			this->panel7 = (gcnew System::Windows::Forms::Panel());
+			this->label3 = (gcnew System::Windows::Forms::Label());
+			this->pictureBox3 = (gcnew System::Windows::Forms::PictureBox());
+			this->panel8 = (gcnew System::Windows::Forms::Panel());
+			this->label4 = (gcnew System::Windows::Forms::Label());
+			this->pictureBox4 = (gcnew System::Windows::Forms::PictureBox());
+			this->Question = (gcnew System::Windows::Forms::Label());
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->pictureBox1))->BeginInit();
+			this->panel5->SuspendLayout();
+			this->panel6->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->pictureBox2))->BeginInit();
+			this->panel7->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->pictureBox3))->BeginInit();
+			this->panel8->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->pictureBox4))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// timer1
@@ -139,139 +166,230 @@ namespace FunBrainz {
 			this->timer4->Interval = 5;
 			this->timer4->Tick += gcnew System::EventHandler(this, &cloudgame::timer4_Tick);
 			// 
-			// Question
+			// label9
 			// 
-			this->Question->AutoSize = true;
-			this->Question->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
+			this->label9->AutoSize = true;
+			this->label9->BackColor = System::Drawing::Color::Transparent;
+			this->label9->Font = (gcnew System::Drawing::Font(L"Century Gothic", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->Question->Location = System::Drawing::Point(211, 36);
-			this->Question->Name = L"Question";
-			this->Question->Size = System::Drawing::Size(99, 32);
-			this->Question->TabIndex = 1;
-			this->Question->Text = L"label1";
+			this->label9->Location = System::Drawing::Point(350, 24);
+			this->label9->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label9->Name = L"label9";
+			this->label9->Size = System::Drawing::Size(80, 30);
+			this->label9->TabIndex = 4;
+			this->label9->Text = L"Score";
+			// 
+			// textBox1
+			// 
+			this->textBox1->Font = (gcnew System::Drawing::Font(L"Century Gothic", 17.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->textBox1->Location = System::Drawing::Point(443, 23);
+			this->textBox1->Margin = System::Windows::Forms::Padding(2);
+			this->textBox1->Name = L"textBox1";
+			this->textBox1->Size = System::Drawing::Size(96, 36);
+			this->textBox1->TabIndex = 5;
+			// 
+			// button5
+			// 
+			this->button5->BackColor = System::Drawing::Color::PowderBlue;
+			this->button5->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+			this->button5->Font = (gcnew System::Drawing::Font(L"Century Gothic", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->button5->Location = System::Drawing::Point(710, 24);
+			this->button5->Margin = System::Windows::Forms::Padding(2);
+			this->button5->Name = L"button5";
+			this->button5->Size = System::Drawing::Size(89, 38);
+			this->button5->TabIndex = 18;
+			this->button5->Text = L"Back";
+			this->button5->UseVisualStyleBackColor = false;
+			this->button5->Click += gcnew System::EventHandler(this, &cloudgame::button5_Click);
+			// 
+			// pictureBox1
+			// 
+			this->pictureBox1->BackColor = System::Drawing::Color::Transparent;
+			this->pictureBox1->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"pictureBox1.BackgroundImage")));
+			this->pictureBox1->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->pictureBox1->Location = System::Drawing::Point(20, 13);
+			this->pictureBox1->Name = L"pictureBox1";
+			this->pictureBox1->Size = System::Drawing::Size(121, 77);
+			this->pictureBox1->TabIndex = 19;
+			this->pictureBox1->TabStop = false;
+			this->pictureBox1->Click += gcnew System::EventHandler(this, &cloudgame::pictureBox1_Click);
+			// 
+			// panel5
+			// 
+			this->panel5->BackColor = System::Drawing::Color::Transparent;
+			this->panel5->Controls->Add(this->label1);
+			this->panel5->Controls->Add(this->pictureBox1);
+			this->panel5->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->panel5->Location = System::Drawing::Point(105, 80);
+			this->panel5->Name = L"panel5";
+			this->panel5->Size = System::Drawing::Size(161, 100);
+			this->panel5->TabIndex = 11;
 			// 
 			// label1
 			// 
 			this->label1->AutoSize = true;
-			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
+			this->label1->Font = (gcnew System::Drawing::Font(L"Century Gothic", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->label1->Location = System::Drawing::Point(688, 36);
+			this->label1->Location = System::Drawing::Point(54, 40);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(94, 32);
-			this->label1->TabIndex = 4;
-			this->label1->Text = L"Score";
+			this->label1->Size = System::Drawing::Size(53, 20);
+			this->label1->TabIndex = 20;
+			this->label1->Text = L"label1";
+			this->label1->Click += gcnew System::EventHandler(this, &cloudgame::label1_Click);
 			// 
-			// textBox1
+			// panel6
 			// 
-			this->textBox1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
+			this->panel6->BackColor = System::Drawing::Color::Transparent;
+			this->panel6->Controls->Add(this->label2);
+			this->panel6->Controls->Add(this->pictureBox2);
+			this->panel6->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->panel6->Location = System::Drawing::Point(178, 186);
+			this->panel6->Name = L"panel6";
+			this->panel6->Size = System::Drawing::Size(163, 100);
+			this->panel6->TabIndex = 21;
+			// 
+			// label2
+			// 
+			this->label2->AutoSize = true;
+			this->label2->Font = (gcnew System::Drawing::Font(L"Century Gothic", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->textBox1->Location = System::Drawing::Point(836, 30);
-			this->textBox1->Name = L"textBox1";
-			this->textBox1->Size = System::Drawing::Size(84, 38);
-			this->textBox1->TabIndex = 5;
+			this->label2->Location = System::Drawing::Point(55, 41);
+			this->label2->Name = L"label2";
+			this->label2->Size = System::Drawing::Size(53, 20);
+			this->label2->TabIndex = 20;
+			this->label2->Text = L"label2";
+			this->label2->Click += gcnew System::EventHandler(this, &cloudgame::label2_Click);
 			// 
-			// button1
+			// pictureBox2
 			// 
-			this->button1->Location = System::Drawing::Point(37, 24);
-			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(115, 52);
-			this->button1->TabIndex = 10;
-			this->button1->Text = L"button1";
-			this->button1->UseVisualStyleBackColor = true;
-			this->button1->Click += gcnew System::EventHandler(this, &cloudgame::button1_Click);
+			this->pictureBox2->BackColor = System::Drawing::Color::Transparent;
+			this->pictureBox2->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"pictureBox2.BackgroundImage")));
+			this->pictureBox2->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->pictureBox2->Location = System::Drawing::Point(20, 13);
+			this->pictureBox2->Name = L"pictureBox2";
+			this->pictureBox2->Size = System::Drawing::Size(121, 77);
+			this->pictureBox2->TabIndex = 19;
+			this->pictureBox2->TabStop = false;
+			this->pictureBox2->Click += gcnew System::EventHandler(this, &cloudgame::pictureBox2_Click);
 			// 
-			// button2
+			// panel7
 			// 
-			this->button2->Location = System::Drawing::Point(39, 25);
-			this->button2->Name = L"button2";
-			this->button2->Size = System::Drawing::Size(128, 53);
-			this->button2->TabIndex = 11;
-			this->button2->Text = L"button2";
-			this->button2->UseVisualStyleBackColor = true;
-			this->button2->Click += gcnew System::EventHandler(this, &cloudgame::button2_Click);
+			this->panel7->BackColor = System::Drawing::Color::Transparent;
+			this->panel7->Controls->Add(this->label3);
+			this->panel7->Controls->Add(this->pictureBox3);
+			this->panel7->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->panel7->Location = System::Drawing::Point(237, 305);
+			this->panel7->Name = L"panel7";
+			this->panel7->Size = System::Drawing::Size(158, 100);
+			this->panel7->TabIndex = 21;
 			// 
-			// button3
+			// label3
 			// 
-			this->button3->Location = System::Drawing::Point(35, 23);
-			this->button3->Name = L"button3";
-			this->button3->Size = System::Drawing::Size(137, 49);
-			this->button3->TabIndex = 12;
-			this->button3->Text = L"button3";
-			this->button3->UseVisualStyleBackColor = true;
-			this->button3->Click += gcnew System::EventHandler(this, &cloudgame::button3_Click);
+			this->label3->AutoSize = true;
+			this->label3->Font = (gcnew System::Drawing::Font(L"Century Gothic", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->label3->Location = System::Drawing::Point(60, 41);
+			this->label3->Name = L"label3";
+			this->label3->Size = System::Drawing::Size(53, 20);
+			this->label3->TabIndex = 20;
+			this->label3->Text = L"label3";
+			this->label3->Click += gcnew System::EventHandler(this, &cloudgame::label3_Click);
 			// 
-			// button4
+			// pictureBox3
 			// 
-			this->button4->Location = System::Drawing::Point(32, 20);
-			this->button4->Name = L"button4";
-			this->button4->Size = System::Drawing::Size(139, 59);
-			this->button4->TabIndex = 13;
-			this->button4->Text = L"button4";
-			this->button4->UseVisualStyleBackColor = true;
-			this->button4->Click += gcnew System::EventHandler(this, &cloudgame::button4_Click);
+			this->pictureBox3->BackColor = System::Drawing::Color::Transparent;
+			this->pictureBox3->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"pictureBox3.BackgroundImage")));
+			this->pictureBox3->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->pictureBox3->Location = System::Drawing::Point(20, 13);
+			this->pictureBox3->Name = L"pictureBox3";
+			this->pictureBox3->Size = System::Drawing::Size(121, 77);
+			this->pictureBox3->TabIndex = 19;
+			this->pictureBox3->TabStop = false;
+			this->pictureBox3->Click += gcnew System::EventHandler(this, &cloudgame::pictureBox3_Click);
 			// 
-			// panel1
+			// panel8
 			// 
-			this->panel1->Controls->Add(this->button1);
-			this->panel1->Location = System::Drawing::Point(140, 92);
-			this->panel1->Name = L"panel1";
-			this->panel1->Size = System::Drawing::Size(191, 100);
-			this->panel1->TabIndex = 14;
+			this->panel8->BackColor = System::Drawing::Color::Transparent;
+			this->panel8->Controls->Add(this->label4);
+			this->panel8->Controls->Add(this->pictureBox4);
+			this->panel8->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->panel8->Location = System::Drawing::Point(154, 428);
+			this->panel8->Name = L"panel8";
+			this->panel8->Size = System::Drawing::Size(162, 100);
+			this->panel8->TabIndex = 21;
 			// 
-			// panel2
+			// label4
 			// 
-			this->panel2->Controls->Add(this->button2);
-			this->panel2->Location = System::Drawing::Point(255, 225);
-			this->panel2->Name = L"panel2";
-			this->panel2->Size = System::Drawing::Size(200, 100);
-			this->panel2->TabIndex = 15;
+			this->label4->AutoSize = true;
+			this->label4->Font = (gcnew System::Drawing::Font(L"Century Gothic", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->label4->Location = System::Drawing::Point(50, 41);
+			this->label4->Name = L"label4";
+			this->label4->Size = System::Drawing::Size(53, 20);
+			this->label4->TabIndex = 20;
+			this->label4->Text = L"label4";
+			this->label4->Click += gcnew System::EventHandler(this, &cloudgame::label4_Click);
 			// 
-			// panel3
+			// pictureBox4
 			// 
-			this->panel3->Controls->Add(this->button3);
-			this->panel3->Location = System::Drawing::Point(331, 372);
-			this->panel3->Name = L"panel3";
-			this->panel3->Size = System::Drawing::Size(200, 100);
-			this->panel3->TabIndex = 16;
+			this->pictureBox4->BackColor = System::Drawing::Color::Transparent;
+			this->pictureBox4->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"pictureBox4.BackgroundImage")));
+			this->pictureBox4->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->pictureBox4->Location = System::Drawing::Point(20, 13);
+			this->pictureBox4->Name = L"pictureBox4";
+			this->pictureBox4->Size = System::Drawing::Size(121, 77);
+			this->pictureBox4->TabIndex = 19;
+			this->pictureBox4->TabStop = false;
+			this->pictureBox4->Click += gcnew System::EventHandler(this, &cloudgame::pictureBox4_Click);
 			// 
-			// panel4
+			// Question
 			// 
-			this->panel4->Controls->Add(this->button4);
-			this->panel4->Location = System::Drawing::Point(206, 534);
-			this->panel4->Name = L"panel4";
-			this->panel4->Size = System::Drawing::Size(200, 100);
-			this->panel4->TabIndex = 17;
-			// 
-			// button5
-			// 
-			this->button5->Location = System::Drawing::Point(29, 30);
-			this->button5->Name = L"button5";
-			this->button5->Size = System::Drawing::Size(89, 32);
-			this->button5->TabIndex = 18;
-			this->button5->Text = L"Back";
-			this->button5->UseVisualStyleBackColor = true;
-			this->button5->Click += gcnew System::EventHandler(this, &cloudgame::button5_Click);
+			this->Question->AutoSize = true;
+			this->Question->BackColor = System::Drawing::Color::Transparent;
+			this->Question->Font = (gcnew System::Drawing::Font(L"Century Gothic", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->Question->Location = System::Drawing::Point(100, 24);
+			this->Question->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->Question->Name = L"Question";
+			this->Question->Size = System::Drawing::Size(86, 30);
+			this->Question->TabIndex = 1;
+			this->Question->Text = L"label1";
 			// 
 			// cloudgame
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
+			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(1113, 702);
+			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"$this.BackgroundImage")));
+			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->ClientSize = System::Drawing::Size(835, 570);
+			this->Controls->Add(this->panel6);
+			this->Controls->Add(this->panel7);
+			this->Controls->Add(this->panel8);
+			this->Controls->Add(this->panel5);
 			this->Controls->Add(this->button5);
-			this->Controls->Add(this->panel4);
-			this->Controls->Add(this->panel3);
-			this->Controls->Add(this->panel2);
-			this->Controls->Add(this->panel1);
 			this->Controls->Add(this->textBox1);
-			this->Controls->Add(this->label1);
+			this->Controls->Add(this->label9);
 			this->Controls->Add(this->Question);
+			this->DoubleBuffered = true;
+			this->Margin = System::Windows::Forms::Padding(2);
 			this->Name = L"cloudgame";
 			this->Text = L"cloudgame";
 			this->Load += gcnew System::EventHandler(this, &cloudgame::cloudgame_Load);
-			this->panel1->ResumeLayout(false);
-			this->panel2->ResumeLayout(false);
-			this->panel3->ResumeLayout(false);
-			this->panel4->ResumeLayout(false);
+			this->Click += gcnew System::EventHandler(this, &cloudgame::pictureBox4_Click);
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->pictureBox1))->EndInit();
+			this->panel5->ResumeLayout(false);
+			this->panel5->PerformLayout();
+			this->panel6->ResumeLayout(false);
+			this->panel6->PerformLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->pictureBox2))->EndInit();
+			this->panel7->ResumeLayout(false);
+			this->panel7->PerformLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->pictureBox3))->EndInit();
+			this->panel8->ResumeLayout(false);
+			this->panel8->PerformLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->pictureBox4))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -289,13 +407,13 @@ private: System::Void timer1_Tick(System::Object^  sender, System::EventArgs^  e
 			 if (sliderFlag ==0)   
 			 {
 				 xloc++;
-				 panel1->Left++;
+				 panel5->Left++;
 				 
 			 }
 			 else
 			 {
 				 xloc--;
-				 panel1->Left--;
+				 panel5->Left--;
 				 
 			 }
 
@@ -310,13 +428,13 @@ private: System::Void timer2_Tick(System::Object^  sender, System::EventArgs^  e
 			 if (sliderFlag1 ==0)
 			 {
 				 xloc1+=3;
-				 panel2->Left+=3;
+				 panel6->Left+=3;
 				 
 			 }
 			 else
 			 {
 				 xloc1-=3;
-				 panel2->Left-=3;
+				 panel6->Left-=3;
 				 
 			 }
 
@@ -330,13 +448,13 @@ private: System::Void timer3_Tick(System::Object^  sender, System::EventArgs^  e
 			if (sliderFlag2 ==0)
 			 {
 				 xloc2+=4;
-				 panel3->Left+=2;
+				 panel7->Left+=2;
 				 
 			 }
 			 else
 			 {
 				 xloc2-=4;
-				 panel3->Left-=2;
+				 panel7->Left-=2;
 				
 			 }
 
@@ -350,13 +468,13 @@ private: System::Void timer4_Tick(System::Object^  sender, System::EventArgs^  e
 	   	    if (sliderFlag3 ==0)
 			 {
 				 xloc3+=2;
-				 panel4->Left+=4;
+				 panel8->Left+=4;
 				 
 			 }
 			 else
 			 {
 				 xloc3-=2;
-				 panel4->Left-=4;
+				 panel8->Left-=4;
 				
 			 }
 
@@ -449,37 +567,37 @@ private: Void StartGame()
 				 int num=rand()%4;				//to choose any one of the panel to contain correct answer
 				 if(num==0)					
 				 {
-					 button1->Text = (ques.second)+"";			
-					 button2->Text = "" + (ques.second+3);
-					 button3->Text = "" + (ques.second-4);
-					 button4->Text = "" + (ques.second+6);
+					 label1->Text = (ques.second)+"";			
+					 label2->Text = "" + (ques.second+3);
+					 label3->Text = "" + (ques.second-4);
+					 label4->Text = "" + (ques.second+6);
 					 
 				 }else{
 				 if(num==1)
 				 {
-					 button2->Text = (ques.second)+"";					 
-					 button1->Text = "" + (ques.second+5);
-					 button3->Text = "" + (ques.second-9);
-					 button4->Text = "" + (ques.second+2);
+					 label2->Text = (ques.second)+"";					 
+					 label1->Text = "" + (ques.second+5);
+					 label3->Text = "" + (ques.second-9);
+					 label4->Text = "" + (ques.second+2);
 				 }
 				 
 				 else{
 				 if(num==2)
 				 {
-					 button3->Text = (ques.second)+"";
-					 button2->Text = "" + (ques.second-5);
-					 button1->Text = "" + (ques.second+8);
-					 button4->Text = "" + (ques.second+13);
+					 label3->Text = (ques.second)+"";
+					 label2->Text = "" + (ques.second-5);
+					 label1->Text = "" + (ques.second+8);
+					 label4->Text = "" + (ques.second+13);
 				 }
 				 
 				 else
 				 {
 				 if(num==3)
 				 {
-					 button4->Text = (ques.second)+"";
-					 button2->Text = "" + (ques.second-13);
-					 button3->Text = "" + (ques.second-3);
-					 button1->Text = "" + (ques.second+1);
+					 label4->Text = (ques.second)+"";
+					 label2->Text = "" + (ques.second-13);
+					 label3->Text = "" + (ques.second-3);
+					 label1->Text = "" + (ques.second+1);
 
 				 }
 				 }
@@ -565,37 +683,37 @@ private: Void nextQuestion()
 				 int num=rand()%4;
 				 if(num==0)
 				 {
-					 button1->Text = (ques.second)+"";
-					 button2->Text = "" + (ques.second+5);
-					 button3->Text = "" + (ques.second-6);
-					 button4->Text = "" + (ques.second-12);
+					 label1->Text = (ques.second)+"";
+					 label2->Text = "" + (ques.second+5);
+					 label3->Text = "" + (ques.second-6);
+					 label4->Text = "" + (ques.second-12);
 					 
 				 }else{
 				 if(num==1)
 				 {
-					 button2->Text = (ques.second)+"";					 
-					 button1->Text = "" + (ques.second-3);
-					 button3->Text = "" + (ques.second+4);
-					 button4->Text = "" + (ques.second-10);
+					 label2->Text = (ques.second)+"";					 
+					 label1->Text = "" + (ques.second-3);
+					 label3->Text = "" + (ques.second+4);
+					 label4->Text = "" + (ques.second-10);
 				 }
 				 
 				 else{
 				 if(num==2)
 				 {
-					 button3->Text = (ques.second)+"";
-					 button2->Text = "" + (ques.second-11);
-					 button1->Text = "" + (ques.second+13);
-					 button4->Text = "" + (ques.second+25);
+					 label3->Text = (ques.second)+"";
+					 label2->Text = "" + (ques.second-11);
+					 label1->Text = "" + (ques.second+13);
+					 label4->Text = "" + (ques.second+25);
 				 }
 				 
 				 else
 				 {
 				 if(num==3)
 				 {
-					 button4->Text = (ques.second)+"";
-					 button2->Text = "" + (ques.second-6);
-					 button3->Text = "" + (ques.second-9);
-					 button1->Text = "" + (ques.second+19);
+					 label4->Text = (ques.second)+"";
+					 label2->Text = "" + (ques.second-6);
+					 label3->Text = "" + (ques.second-9);
+					 label1->Text = "" + (ques.second+19);
 
 				 }
 				 }
@@ -603,8 +721,8 @@ private: Void nextQuestion()
 				 }
 			}
 
-private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {
-			if(answer+"" == button1->Text)
+private: System::Void pictureBox1_Click(System::Object^  sender, System::EventArgs^  e) {
+			if(answer+"" == label1->Text)
 			{
 				score = score + 10;
 				textBox1->Text = score+"";
@@ -621,8 +739,8 @@ private: System::Void button1_Click(System::Object^  sender, System::EventArgs^ 
 
 
 		 }
-private: System::Void button2_Click(System::Object^  sender, System::EventArgs^  e) {
-			 if(answer+"" == button2->Text)
+private: System::Void pictureBox2_Click(System::Object^  sender, System::EventArgs^  e) {
+			 if(answer+"" == label2->Text)
 			 {
 				 score = score + 10;
 				textBox1->Text = score+"";
@@ -637,8 +755,8 @@ private: System::Void button2_Click(System::Object^  sender, System::EventArgs^ 
 				 textBox1->Text = "0";
 			 }
 		 }
-private: System::Void button3_Click(System::Object^  sender, System::EventArgs^  e) {
-			 if(answer+"" == button3->Text)
+private: System::Void pictureBox3_Click(System::Object^  sender, System::EventArgs^  e) {
+			 if(answer+"" == label3->Text)
 			 {
 				 score = score + 10;
 				textBox1->Text = score+"";
@@ -653,8 +771,8 @@ private: System::Void button3_Click(System::Object^  sender, System::EventArgs^ 
 				 textBox1->Text = "0";
 			 }
 		 }
-private: System::Void button4_Click(System::Object^  sender, System::EventArgs^  e) {
-			 if(answer+"" == button4->Text)
+private: System::Void pictureBox4_Click(System::Object^  sender, System::EventArgs^  e) {
+			 if(answer+"" == label4->Text)
 			 {
 				 score = score + 10;
 				textBox1->Text = score+"";
@@ -672,8 +790,72 @@ private: System::Void button4_Click(System::Object^  sender, System::EventArgs^ 
 		 }
 
 private: System::Void button5_Click(System::Object^  sender, System::EventArgs^  e) {
-			 MessageBox::Show("Your Score is" + score);
+			 MessageBox::Show("Your Score is " + score);
 			 this->Close();
+		 }
+private: System::Void label1_Click(System::Object^  sender, System::EventArgs^  e) {
+			 if(answer+"" == label1->Text)
+			{
+				score = score + 10;
+				textBox1->Text = score+"";
+				nextQuestion();
+			}
+			else
+			{
+				MessageBox::Show("Your answer is incorrect! The correct answer is " + answer);
+				MessageBox::Show("Your Score is " + score);
+				nextQuestion();
+				score=0;
+				textBox1->Text = "0";
+			}
+		 }
+private: System::Void label2_Click(System::Object^  sender, System::EventArgs^  e) {
+			 if(answer+"" == label2->Text)
+			 {
+				 score = score + 10;
+				textBox1->Text = score+"";
+				nextQuestion();
+			 }
+			 else
+			 {
+				 MessageBox::Show("Your answer is incorrect! The correct answer is " + answer);
+				 MessageBox::Show("Your Score is " + score);
+				 nextQuestion();
+				 score=0;
+				 textBox1->Text = "0";
+			 }
+		 }
+private: System::Void label3_Click(System::Object^  sender, System::EventArgs^  e) {
+			 if(answer+"" == label3->Text)
+			 {
+				 score = score + 10;
+				textBox1->Text = score+"";
+				nextQuestion();
+			 }
+			 else
+			 {
+				 MessageBox::Show("Your answer is incorrect! The correct answer is " + answer);
+				 MessageBox::Show("Your Score is " + score);
+				 nextQuestion();
+				 score=0;
+				 textBox1->Text = "0";
+			 }
+		 }
+private: System::Void label4_Click(System::Object^  sender, System::EventArgs^  e) {
+			  if(answer+"" == label4->Text)
+			 {
+				 score = score + 10;
+				textBox1->Text = score+"";
+				nextQuestion();
+			 }
+			 else
+			 {
+				 MessageBox::Show("Your answer is incorrect! The correct answer is " + answer);
+				 MessageBox::Show("Your Score is " + score);
+				 nextQuestion();
+				 score=0;
+				 textBox1->Text = "0";
+			 }
 		 }
 };
 }

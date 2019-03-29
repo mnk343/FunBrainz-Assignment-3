@@ -296,106 +296,106 @@ namespace FunBrainz {
 
 		}
 #pragma endregion
-		
+
 		static OleDb::OleDbConnection ^ con = gcnew OleDb::OleDbConnection();
 	private: System::Void panel3_Paint(System::Object^  sender, System::Windows::Forms::PaintEventArgs^  e) {
 			 }
-private: System::Void Profilebtn_Click(System::Object^  sender, System::EventArgs^  e) 
-		 {
-			 profile ^ f = gcnew profile();
-			 f->user=user;
-			 panel1->Controls->Clear();
-			 panel1->Controls->Add(f);
-		 }
-private: System::Void Homepage_Load(System::Object^  sender, System::EventArgs^  e) 
-		 {
-				con->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=FunBrainzForKids.accdb;";
-		 }
-private: System::Void backbtn_Click(System::Object^  sender, System::EventArgs^  e)
-		 {
-			 this->Hide();
-			 obj->Show();
-		 }
-private: System::Void panel1_Paint(System::Object^  sender, System::Windows::Forms::PaintEventArgs^  e) {
-		 }
-private: System::Void Arithmeticbtn_Click(System::Object^  sender, System::EventArgs^  e)
-		 {
-              Arithmetic1 ^ f =  gcnew Arithmetic1();
-			  f->user=user;
-			  panel1->Controls->Clear();
-			  panel1->Controls->Add(f);
-			 //cloud ^form =gcnew cloud(this);
-			 //form->ShowDialog();
-		 }
-private: System::Void Deletebtn_Click(System::Object^  sender, System::EventArgs^  e) 
-		 {
-			 try
+	private: System::Void Profilebtn_Click(System::Object^  sender, System::EventArgs^  e) 
 			 {
-			    String ^ Sql = "DELETE  FROM Students WHERE UserName = '" + user + "'  ";
-			    con->Open();
-				OleDb::OleDbCommand ^ command = gcnew OleDb::OleDbCommand(Sql, con);
-				command->ExecuteNonQuery();
-				con->Close();
+				 profile ^ f = gcnew profile();
+				 f->user=user;
+				 panel1->Controls->Clear();
+				 panel1->Controls->Add(f);
 			 }
-			 catch(Exception ^ ex)
+	private: System::Void Homepage_Load(System::Object^  sender, System::EventArgs^  e) 
 			 {
-				  con->Close();
-				 return;
+				 con->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=FunBrainzForKids.accdb;";
 			 }
-
-			 backbtn_Click(sender,e);
-
-		 }
-private: System::Void button5_Click(System::Object^  sender, System::EventArgs^  e) {
-
-			//	puzzlesRedirect ^ var = gcnew puzzlesRedirect();
-				//var -> Show();
-
-		 }
-private: System::Void btn_2048_Click(System::Object^  sender, System::EventArgs^  e) {
-			
-			 Game_2048 ^form =gcnew Game_2048(this);
-			 form->ShowDialog();
-		 }
-private: System::Void btn_pipeline_Click(System::Object^  sender, System::EventArgs^  e) {
-			
-			 Level_pipeline ^form =gcnew Level_pipeline(this);
-			 form->ShowDialog();
-		 
-		 }
-private: System::Void btn_quiz_Click(System::Object^  sender, System::EventArgs^  e) {
-			 Image_Quiz ^form =gcnew Image_Quiz(this);
-			 form->ShowDialog();
-
-		 }
-private: System::Void button3_Click(System::Object^  sender, System::EventArgs^  e) {
-			 Abacus ^form =gcnew Abacus(this);
-			 form->ShowDialog();
-		 }
-private: System::Void button4_Click(System::Object^  sender, System::EventArgs^  e) {
-
-			 shapesPanel ^form2 = gcnew shapesPanel(this,user);
-			 form2->ShowDialog();
-
-
-
-		 }
-private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {
-			 int student=1;
-			 try {
-				 
-				 String ^Sql = "Select [StudentID] from Students where [UserName] = '" + user + "';";
-				 OleDb::OleDbCommand ^ command = gcnew OleDb::OleDbCommand(Sql, con);
-				 con->Open();
-				 student = (int) command->ExecuteScalar();
-				 con->Close();
+	private: System::Void backbtn_Click(System::Object^  sender, System::EventArgs^  e)
+			 {
+				 this->Hide();
+				 obj->Show();
 			 }
-			 catch (Exception ^ ex) {
-				 MessageBox::Show(ex->Message);
+	private: System::Void panel1_Paint(System::Object^  sender, System::Windows::Forms::PaintEventArgs^  e) {
 			 }
-			 operationsRedirect ^ f =  gcnew operationsRedirect(student);
-			 panel1->Controls->Clear();
-			 panel1->Controls->Add(f);
-		 }
-};
+	private: System::Void Arithmeticbtn_Click(System::Object^  sender, System::EventArgs^  e)
+			 {
+				 Arithmetic1 ^ f =  gcnew Arithmetic1();
+				 f->user=user;
+				 panel1->Controls->Clear();
+				 panel1->Controls->Add(f);
+				 //cloud ^form =gcnew cloud(this);
+				 //form->ShowDialog();
+			 }
+	private: System::Void Deletebtn_Click(System::Object^  sender, System::EventArgs^  e) 
+			 {
+				 try
+				 {
+					 String ^ Sql = "DELETE  FROM Students WHERE UserName = '" + user + "'  ";
+					 con->Open();
+					 OleDb::OleDbCommand ^ command = gcnew OleDb::OleDbCommand(Sql, con);
+					 command->ExecuteNonQuery();
+					 con->Close();
+				 }
+				 catch(Exception ^ ex)
+				 {
+					 con->Close();
+					 return;
+				 }
+
+				 backbtn_Click(sender,e);
+
+			 }
+	private: System::Void button5_Click(System::Object^  sender, System::EventArgs^  e) {
+
+				 //	puzzlesRedirect ^ var = gcnew puzzlesRedirect();
+				 //var -> Show();
+
+			 }
+	private: System::Void btn_2048_Click(System::Object^  sender, System::EventArgs^  e) {
+
+				 Game_2048 ^form =gcnew Game_2048(this);
+				 form->ShowDialog();
+			 }
+	private: System::Void btn_pipeline_Click(System::Object^  sender, System::EventArgs^  e) {
+
+				 Level_pipeline ^form =gcnew Level_pipeline(this);
+				 form->ShowDialog();
+
+			 }
+	private: System::Void btn_quiz_Click(System::Object^  sender, System::EventArgs^  e) {
+				 Image_Quiz ^form =gcnew Image_Quiz(this);
+				 form->ShowDialog();
+
+			 }
+	private: System::Void button3_Click(System::Object^  sender, System::EventArgs^  e) {
+				 Abacus ^form =gcnew Abacus(this);
+				 form->ShowDialog();
+			 }
+	private: System::Void button4_Click(System::Object^  sender, System::EventArgs^  e) {
+
+				 shapesPanel ^form2 = gcnew shapesPanel(this,user);
+				 form2->ShowDialog();
+
+
+
+			 }
+	private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {
+				 int student=1;
+				 try {
+
+					 String ^Sql = "Select [StudentID] from Students where [UserName] = '" + user + "';";
+					 OleDb::OleDbCommand ^ command = gcnew OleDb::OleDbCommand(Sql, con);
+					 con->Open();
+					 student = (int) command->ExecuteScalar();
+					 con->Close();
+				 }
+				 catch (Exception ^ ex) {
+					 MessageBox::Show(ex->Message);
+				 }
+				 operationsRedirect ^ f =  gcnew operationsRedirect(student);
+				 panel1->Controls->Clear();
+				 panel1->Controls->Add(f);
+			 }
+	};
 }

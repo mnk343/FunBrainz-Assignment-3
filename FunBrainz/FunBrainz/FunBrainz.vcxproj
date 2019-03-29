@@ -205,6 +205,12 @@
     <EmbeddedResource Include="Arithmetic1.resx">
       <DependentUpon>Arithmetic1.h</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="cloud.resx">
+      <DependentUpon>cloud.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cloudgame.resx">
+      <DependentUpon>cloudgame.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Cricket.resx">
       <DependentUpon>Cricket.h</DependentUpon>
     </EmbeddedResource>
@@ -218,14 +224,23 @@
     <EmbeddedResource Include="game.resx">
       <DependentUpon>game.h</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Game_2048.resx">
+      <DependentUpon>Game_2048.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Homepage.resx">
       <DependentUpon>Homepage.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ImageQuiz2.resx">
       <DependentUpon>ImageQuiz2.h</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Level_pipeline.resx">
+      <DependentUpon>Level_pipeline.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="operationsRedirect.resx">
       <DependentUpon>operationsRedirect.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pipeline_Game.resx">
+      <DependentUpon>Pipeline_Game.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="profile.resx">
       <DependentUpon>profile.h</DependentUpon>

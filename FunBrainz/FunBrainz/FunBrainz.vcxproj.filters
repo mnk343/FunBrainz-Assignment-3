@@ -234,5 +234,17 @@
     <EmbeddedResource Include="shape_defination.resx">
       <Filter>Resource Files</Filter>
     </EmbeddedResource>
+    <EmbeddedResource Include="operationsRedirect.resx">
+      <Filter>Resource Files</Filter>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cloud.resx">
+      <Filter>Resource Files</Filter>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cloudgame.resx">
+      <Filter>Resource Files</Filter>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Game_2048.resx">
+      <Filter>Resource Files</Filter>
+    </EmbeddedResource>
   </ItemGroup>
 </Project>

@@ -65,6 +65,7 @@ namespace FunBrainz {
 	private: System::Windows::Forms::Label^  label4;
 	private: System::Windows::Forms::Label^  label5;
 	private: System::Windows::Forms::Label^  label6;
+	private: System::Windows::Forms::Label^  label7;
 
 
 
@@ -94,6 +95,7 @@ namespace FunBrainz {
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(Form1::typeid));
 			this->label3 = (gcnew System::Windows::Forms::Label());
 			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->label1 = (gcnew System::Windows::Forms::Label());
@@ -113,126 +115,150 @@ namespace FunBrainz {
 			this->label4 = (gcnew System::Windows::Forms::Label());
 			this->label5 = (gcnew System::Windows::Forms::Label());
 			this->label6 = (gcnew System::Windows::Forms::Label());
+			this->label7 = (gcnew System::Windows::Forms::Label());
 			this->groupBox1->SuspendLayout();
 			this->SuspendLayout();
 			// 
 			// label3
 			// 
 			this->label3->AutoSize = true;
-			this->label3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
-				static_cast<System::Byte>(0)));
-			this->label3->Location = System::Drawing::Point(309, 126);
-			this->label3->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label3->BackColor = System::Drawing::Color::Transparent;
+			this->label3->Font = (gcnew System::Drawing::Font(L"Century Gothic", 11.25F));
+			this->label3->Location = System::Drawing::Point(453, 94);
 			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(106, 25);
+			this->label3->Size = System::Drawing::Size(79, 20);
 			this->label3->TabIndex = 10;
 			this->label3->Text = L"Password";
 			// 
 			// label2
 			// 
 			this->label2->AutoSize = true;
-			this->label2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
-				static_cast<System::Byte>(0)));
-			this->label2->Location = System::Drawing::Point(309, 66);
-			this->label2->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label2->BackColor = System::Drawing::Color::Transparent;
+			this->label2->Font = (gcnew System::Drawing::Font(L"Century Gothic", 11.25F));
+			this->label2->Location = System::Drawing::Point(453, 54);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(110, 25);
+			this->label2->Size = System::Drawing::Size(83, 20);
 			this->label2->TabIndex = 11;
 			this->label2->Text = L"Username";
 			// 
 			// label1
 			// 
 			this->label1->AutoSize = true;
-			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
-				static_cast<System::Byte>(0)));
-			this->label1->Location = System::Drawing::Point(310, 271);
-			this->label1->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label1->BackColor = System::Drawing::Color::Transparent;
+			this->label1->Font = (gcnew System::Drawing::Font(L"Century Gothic", 11.25F));
+			this->label1->Location = System::Drawing::Point(454, 263);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(255, 25);
+			this->label1->Size = System::Drawing::Size(90, 20);
 			this->label1->TabIndex = 9;
-			this->label1->Text = L"If you don\'t have an account";
+			this->label1->Text = L"Don\'t have";
 			this->label1->Click += gcnew System::EventHandler(this, &Form1::label1_Click);
 			// 
 			// Passwordtxt
 			// 
-			this->Passwordtxt->Location = System::Drawing::Point(460, 126);
-			this->Passwordtxt->Margin = System::Windows::Forms::Padding(4);
+			this->Passwordtxt->Font = (gcnew System::Drawing::Font(L"Century Gothic", 11.25F));
+			this->Passwordtxt->Location = System::Drawing::Point(566, 94);
 			this->Passwordtxt->Name = L"Passwordtxt";
-			this->Passwordtxt->Size = System::Drawing::Size(245, 22);
-			this->Passwordtxt->TabIndex = 7;
+			this->Passwordtxt->Size = System::Drawing::Size(185, 26);
+			this->Passwordtxt->TabIndex = 2;
 			// 
 			// UserNametxt
 			// 
-			this->UserNametxt->Location = System::Drawing::Point(460, 69);
-			this->UserNametxt->Margin = System::Windows::Forms::Padding(4);
+			this->UserNametxt->Font = (gcnew System::Drawing::Font(L"Century Gothic", 11.25F));
+			this->UserNametxt->Location = System::Drawing::Point(566, 52);
 			this->UserNametxt->Name = L"UserNametxt";
-			this->UserNametxt->Size = System::Drawing::Size(245, 22);
-			this->UserNametxt->TabIndex = 8;
+			this->UserNametxt->Size = System::Drawing::Size(185, 26);
+			this->UserNametxt->TabIndex = 1;
 			// 
 			// signupbtn
 			// 
-			this->signupbtn->Location = System::Drawing::Point(569, 271);
-			this->signupbtn->Margin = System::Windows::Forms::Padding(4);
+			this->signupbtn->BackColor = System::Drawing::Color::Firebrick;
+			this->signupbtn->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+			this->signupbtn->Font = (gcnew System::Drawing::Font(L"Century Gothic", 11.25F));
+			this->signupbtn->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
+			this->signupbtn->Location = System::Drawing::Point(649, 256);
 			this->signupbtn->Name = L"signupbtn";
-			this->signupbtn->Size = System::Drawing::Size(136, 50);
+			this->signupbtn->Size = System::Drawing::Size(102, 33);
 			this->signupbtn->TabIndex = 5;
 			this->signupbtn->Text = L"Sign up";
-			this->signupbtn->UseVisualStyleBackColor = true;
+			this->signupbtn->UseVisualStyleBackColor = false;
 			this->signupbtn->Click += gcnew System::EventHandler(this, &Form1::signupbtn_Click);
 			// 
 			// loginbtn
 			// 
-			this->loginbtn->Location = System::Drawing::Point(429, 191);
-			this->loginbtn->Margin = System::Windows::Forms::Padding(4);
+			this->loginbtn->BackColor = System::Drawing::Color::Firebrick;
+			this->loginbtn->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+			this->loginbtn->Font = (gcnew System::Drawing::Font(L"Century Gothic", 11.25F));
+			this->loginbtn->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
+			this->loginbtn->Location = System::Drawing::Point(457, 152);
 			this->loginbtn->Name = L"loginbtn";
-			this->loginbtn->Size = System::Drawing::Size(136, 50);
-			this->loginbtn->TabIndex = 6;
+			this->loginbtn->Size = System::Drawing::Size(94, 31);
+			this->loginbtn->TabIndex = 3;
 			this->loginbtn->Text = L"Login";
-			this->loginbtn->UseVisualStyleBackColor = true;
+			this->loginbtn->UseVisualStyleBackColor = false;
 			this->loginbtn->Click += gcnew System::EventHandler(this, &Form1::loginbtn_Click);
 			// 
 			// showpass
 			// 
-			this->showpass->Location = System::Drawing::Point(664, 191);
+			this->showpass->BackColor = System::Drawing::Color::Transparent;
+			this->showpass->Font = (gcnew System::Drawing::Font(L"Century Gothic", 11.25F));
+			this->showpass->Location = System::Drawing::Point(608, 158);
+			this->showpass->Margin = System::Windows::Forms::Padding(2);
 			this->showpass->Name = L"showpass";
-			this->showpass->Size = System::Drawing::Size(186, 24);
-			this->showpass->TabIndex = 12;
-			this->showpass->Text = L"Showpassword";
-			this->showpass->UseVisualStyleBackColor = true;
+			this->showpass->Size = System::Drawing::Size(143, 25);
+			this->showpass->TabIndex = 4;
+			this->showpass->Text = L"Show password";
+			this->showpass->UseVisualStyleBackColor = false;
 			this->showpass->CheckedChanged += gcnew System::EventHandler(this, &Form1::checkBox1_CheckedChanged);
 			// 
 			// Forget
 			// 
-			this->Forget->Location = System::Drawing::Point(314, 342);
+			this->Forget->BackColor = System::Drawing::Color::YellowGreen;
+			this->Forget->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+			this->Forget->Font = (gcnew System::Drawing::Font(L"Century Gothic", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->Forget->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->Forget->Location = System::Drawing::Point(446, 202);
+			this->Forget->Margin = System::Windows::Forms::Padding(2);
 			this->Forget->Name = L"Forget";
-			this->Forget->Size = System::Drawing::Size(150, 34);
-			this->Forget->TabIndex = 13;
-			this->Forget->Text = L"ForgetPasssword";
-			this->Forget->UseVisualStyleBackColor = true;
+			this->Forget->Size = System::Drawing::Size(138, 31);
+			this->Forget->TabIndex = 6;
+			this->Forget->Text = L"Forget Password\?";
+			this->Forget->UseVisualStyleBackColor = false;
 			this->Forget->Click += gcnew System::EventHandler(this, &Form1::Forget_Click);
 			// 
 			// Security
 			// 
-			this->Security->Location = System::Drawing::Point(555, 335);
+			this->Security->BackColor = System::Drawing::Color::YellowGreen;
+			this->Security->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+			this->Security->Font = (gcnew System::Drawing::Font(L"Century Gothic", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->Security->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->Security->Location = System::Drawing::Point(605, 202);
+			this->Security->Margin = System::Windows::Forms::Padding(2);
 			this->Security->Name = L"Security";
-			this->Security->Size = System::Drawing::Size(150, 41);
-			this->Security->TabIndex = 15;
-			this->Security->Text = L"Sequrity Question";
-			this->Security->UseVisualStyleBackColor = true;
+			this->Security->Size = System::Drawing::Size(156, 31);
+			this->Security->TabIndex = 7;
+			this->Security->Text = L"Security Question";
+			this->Security->UseVisualStyleBackColor = false;
 			this->Security->Click += gcnew System::EventHandler(this, &Form1::button1_Click);
 			// 
 			// Submitbtn
 			// 
-			this->Submitbtn->Location = System::Drawing::Point(94, 189);
+			this->Submitbtn->BackColor = System::Drawing::Color::Firebrick;
+			this->Submitbtn->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+			this->Submitbtn->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
+			this->Submitbtn->Location = System::Drawing::Point(109, 154);
+			this->Submitbtn->Margin = System::Windows::Forms::Padding(2);
 			this->Submitbtn->Name = L"Submitbtn";
-			this->Submitbtn->Size = System::Drawing::Size(171, 23);
-			this->Submitbtn->TabIndex = 16;
-			this->Submitbtn->Text = L"button1";
-			this->Submitbtn->UseVisualStyleBackColor = true;
+			this->Submitbtn->Size = System::Drawing::Size(128, 30);
+			this->Submitbtn->TabIndex = 11;
+			this->Submitbtn->Text = L"Submit";
+			this->Submitbtn->UseVisualStyleBackColor = false;
 			this->Submitbtn->Click += gcnew System::EventHandler(this, &Form1::Submitbtn_Click);
 			// 
 			// groupBox1
 			// 
+			this->groupBox1->BackColor = System::Drawing::Color::Transparent;
 			this->groupBox1->Controls->Add(this->NewPassword);
 			this->groupBox1->Controls->Add(this->Submitbtn);
 			this->groupBox1->Controls->Add(this->NewPass);
@@ -241,90 +267,108 @@ namespace FunBrainz {
 			this->groupBox1->Controls->Add(this->label4);
 			this->groupBox1->Controls->Add(this->label5);
 			this->groupBox1->Controls->Add(this->label6);
-			this->groupBox1->Location = System::Drawing::Point(314, 382);
+			this->groupBox1->Font = (gcnew System::Drawing::Font(L"Century Gothic", 11.25F));
+			this->groupBox1->Location = System::Drawing::Point(59, 33);
+			this->groupBox1->Margin = System::Windows::Forms::Padding(2);
 			this->groupBox1->Name = L"groupBox1";
-			this->groupBox1->Size = System::Drawing::Size(451, 231);
+			this->groupBox1->Padding = System::Windows::Forms::Padding(2);
+			this->groupBox1->Size = System::Drawing::Size(338, 200);
 			this->groupBox1->TabIndex = 17;
 			this->groupBox1->TabStop = false;
-			this->groupBox1->Text = L"groupBox1";
 			// 
 			// NewPassword
 			// 
 			this->NewPassword->AutoSize = true;
-			this->NewPassword->Location = System::Drawing::Point(29, 137);
-			this->NewPassword->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->NewPassword->Location = System::Drawing::Point(37, 117);
 			this->NewPassword->Name = L"NewPassword";
-			this->NewPassword->Size = System::Drawing::Size(96, 17);
+			this->NewPassword->Size = System::Drawing::Size(118, 20);
 			this->NewPassword->TabIndex = 22;
-			this->NewPassword->Text = L"NewPassowrd";
+			this->NewPassword->Text = L"New Password";
 			// 
 			// NewPass
 			// 
-			this->NewPass->Location = System::Drawing::Point(178, 132);
+			this->NewPass->Location = System::Drawing::Point(197, 117);
+			this->NewPass->Margin = System::Windows::Forms::Padding(2);
 			this->NewPass->Name = L"NewPass";
-			this->NewPass->Size = System::Drawing::Size(154, 22);
-			this->NewPass->TabIndex = 21;
+			this->NewPass->Size = System::Drawing::Size(121, 26);
+			this->NewPass->TabIndex = 10;
 			// 
 			// question
 			// 
+			this->question->BackColor = System::Drawing::SystemColors::Info;
 			this->question->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
+			this->question->Font = (gcnew System::Drawing::Font(L"Century Gothic", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
 			this->question->FormattingEnabled = true;
 			this->question->Items->AddRange(gcnew cli::array< System::Object^  >(5) {L"Favourite book", L"Favourite food", L"Favourite teacher", 
 				L"Favourite colour", L"birth place"});
-			this->question->Location = System::Drawing::Point(172, 46);
-			this->question->Margin = System::Windows::Forms::Padding(4);
+			this->question->Location = System::Drawing::Point(197, 50);
 			this->question->Name = L"question";
-			this->question->Size = System::Drawing::Size(160, 24);
-			this->question->TabIndex = 20;
+			this->question->Size = System::Drawing::Size(121, 25);
+			this->question->TabIndex = 8;
 			this->question->SelectedIndexChanged += gcnew System::EventHandler(this, &Form1::question_SelectedIndexChanged);
 			// 
 			// answer
 			// 
-			this->answer->Location = System::Drawing::Point(172, 86);
-			this->answer->Margin = System::Windows::Forms::Padding(4);
+			this->answer->Location = System::Drawing::Point(197, 83);
 			this->answer->Name = L"answer";
-			this->answer->Size = System::Drawing::Size(160, 22);
-			this->answer->TabIndex = 19;
+			this->answer->Size = System::Drawing::Size(121, 26);
+			this->answer->TabIndex = 9;
 			// 
 			// label4
 			// 
 			this->label4->AutoSize = true;
-			this->label4->Location = System::Drawing::Point(26, 86);
-			this->label4->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label4->Location = System::Drawing::Point(30, 83);
 			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(109, 17);
+			this->label4->Size = System::Drawing::Size(125, 20);
 			this->label4->TabIndex = 18;
 			this->label4->Text = L"Security Answer";
 			// 
 			// label5
 			// 
 			this->label5->AutoSize = true;
-			this->label5->Location = System::Drawing::Point(26, 47);
-			this->label5->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label5->Location = System::Drawing::Point(22, 50);
 			this->label5->Name = L"label5";
-			this->label5->Size = System::Drawing::Size(120, 17);
+			this->label5->Size = System::Drawing::Size(135, 20);
 			this->label5->TabIndex = 17;
 			this->label5->Text = L"Security Question";
+			this->label5->Click += gcnew System::EventHandler(this, &Form1::label5_Click);
 			// 
 			// label6
 			// 
 			this->label6->AutoSize = true;
-			this->label6->Location = System::Drawing::Point(29, 15);
-			this->label6->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label6->Location = System::Drawing::Point(73, 21);
 			this->label6->Name = L"label6";
-			this->label6->Size = System::Drawing::Size(170, 17);
+			this->label6->Size = System::Drawing::Size(194, 20);
 			this->label6->TabIndex = 16;
 			this->label6->Text = L"Answer Security Question";
+			this->label6->Click += gcnew System::EventHandler(this, &Form1::label6_Click);
+			// 
+			// label7
+			// 
+			this->label7->AutoSize = true;
+			this->label7->BackColor = System::Drawing::Color::Transparent;
+			this->label7->Font = (gcnew System::Drawing::Font(L"Century Gothic", 11.25F));
+			this->label7->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->label7->Location = System::Drawing::Point(539, 263);
+			this->label7->Name = L"label7";
+			this->label7->Size = System::Drawing::Size(104, 20);
+			this->label7->TabIndex = 18;
+			this->label7->Text = L"an account\?";
 			// 
 			// Form1
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
+			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(1198, 637);
-			this->Controls->Add(this->groupBox1);
+			this->BackColor = System::Drawing::Color::OliveDrab;
+			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"$this.BackgroundImage")));
+			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->ClientSize = System::Drawing::Size(865, 470);
+			this->Controls->Add(this->label7);
 			this->Controls->Add(this->Security);
-			this->Controls->Add(this->Forget);
+			this->Controls->Add(this->groupBox1);
 			this->Controls->Add(this->showpass);
+			this->Controls->Add(this->Forget);
 			this->Controls->Add(this->label3);
 			this->Controls->Add(this->label2);
 			this->Controls->Add(this->label1);
@@ -332,7 +376,8 @@ namespace FunBrainz {
 			this->Controls->Add(this->UserNametxt);
 			this->Controls->Add(this->signupbtn);
 			this->Controls->Add(this->loginbtn);
-			this->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->DoubleBuffered = true;
+			this->Margin = System::Windows::Forms::Padding(2);
 			this->Name = L"Form1";
 			this->Text = L"Form1";
 			this->Load += gcnew System::EventHandler(this, &Form1::Form1_Load);
@@ -355,7 +400,7 @@ namespace FunBrainz {
 				NewPass->Text="";
 				Passwordtxt->PasswordChar='*';
 				groupBox1->Visible=false;	
-				con->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=FunBrainzForKids.accdb;";
+				con->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=ikya_database.accdb;";
 			 }
 
 	private: System :: Void cleartext()
@@ -381,7 +426,7 @@ private: System::Void loginbtn_Click(System::Object^  sender, System::EventArgs^
 		//connection opening
 		try
 		{
-				String ^ Sql = "SELECT * FROM Students WHERE UserName = '" + UserNametxt->Text + "' and Password = '" + Passwordtxt->Text + "' ";
+				String ^ Sql = "SELECT * FROM database_ikya WHERE UserName = '" + UserNametxt->Text + "' and Password = '" + Passwordtxt->Text + "' ";
 				OleDb::OleDbCommand ^ command = gcnew OleDb::OleDbCommand(Sql, con);
 				con->Open();
 				OleDb::OleDbDataReader ^ reader=command->ExecuteReader();
@@ -463,7 +508,7 @@ private: System::String ^  SuggestPassword()
 	 {    
 		  
 	     	//connection query
-			String ^ Sql = "update [Students] set  [Password] = '"+ strPassword +"'  WHERE  UserName  = '"+ UserNametxt->Text + "' ";
+			String ^ Sql = "update [database_ikya] set  [Password] = '"+ strPassword +"'  WHERE  UserName  = '"+ UserNametxt->Text + "' ";
 			con->Open();
 			try
 			{
@@ -489,7 +534,7 @@ private: System::String ^  SuggestPassword()
 			      UserNametxt->Text=updatetext(UserNametxt->Text);
 
                   //connection query
-						 String ^ Sql = "SELECT * FROM Students WHERE UserName = '" + UserNametxt->Text + "' ";
+						 String ^ Sql = "SELECT * FROM database_ikya WHERE UserName = '" + UserNametxt->Text + "' ";
 						 OleDb::OleDbCommand ^ command = gcnew OleDb::OleDbCommand(Sql, con);
 						 con->Open();
 						 try{
@@ -515,7 +560,7 @@ private: System::Void Forget_Click(System::Object^  sender, System::EventArgs^  
 				   
 
 					 //extracting email
-                     String ^Sql = "Select  Email from Students WHERE  UserName = '" + UserNametxt->Text + "' ";
+                     String ^Sql = "Select  Email from database_ikya WHERE  UserName = '" + UserNametxt->Text + "' ";
 					 OleDb::OleDbCommand ^ command = gcnew OleDb::OleDbCommand(Sql, con);
 					 con->Open();
 					 CurrentUserEmail = (String ^)command->ExecuteScalar();
@@ -539,8 +584,12 @@ private: System::Void Forget_Click(System::Object^  sender, System::EventArgs^  
 
 private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) 
 		 {
-              if(groupBox1->Visible==true) groupBox1->Visible=false;
-			  else groupBox1->Visible=true;
+              if(groupBox1->Visible==true) {
+				  groupBox1->Visible=false;
+			  }
+			  else {
+				  groupBox1->Visible=true;
+			  }
 	        
 		 }
 private: System::Void Submitbtn_Click(System::Object^  sender, System::EventArgs^  e) 
@@ -548,7 +597,7 @@ private: System::Void Submitbtn_Click(System::Object^  sender, System::EventArgs
 			       int flag=0;
 				    UserNametxt->Text=updatetext(UserNametxt->Text);
 
-			             String ^ Sql = "SELECT *  FROM Students WHERE  UserName  = '" + UserNametxt->Text + "' ";
+			             String ^ Sql = "SELECT *  FROM database_ikya WHERE  UserName  = '" + UserNametxt->Text + "' ";
 						 OleDb::OleDbCommand ^ command = gcnew OleDb::OleDbCommand(Sql, con);
 					     con->Open();
 						 OleDb::OleDbDataReader ^ reader=command->ExecuteReader();
@@ -557,7 +606,7 @@ private: System::Void Submitbtn_Click(System::Object^  sender, System::EventArgs
 						 if(flag==0) {MessageBox::Show("Enter valid user name");cleartext();return ;}
 
 						 flag=0;
-						 Sql = "SELECT *  FROM Students WHERE  UserName= '"+UserNametxt->Text+"' and Securityquestion= '"+question->Text+"' and answer= '"+answer->Text+"' ";
+						 Sql = "SELECT *  FROM database_ikya WHERE  UserName= '"+UserNametxt->Text+"' and Securityquestion= '"+question->Text+"' and answer= '"+answer->Text+"' ";
 					     command = gcnew OleDb::OleDbCommand(Sql, con);
 					     con->Open();
 						 reader=command->ExecuteReader();
@@ -572,6 +621,10 @@ private: System::Void Submitbtn_Click(System::Object^  sender, System::EventArgs
 private: System::Void label1_Click(System::Object^  sender, System::EventArgs^  e) {
 		 }
 private: System::Void question_SelectedIndexChanged(System::Object^  sender, System::EventArgs^  e) {
+		 }
+private: System::Void label6_Click(System::Object^  sender, System::EventArgs^  e) {
+		 }
+private: System::Void label5_Click(System::Object^  sender, System::EventArgs^  e) {
 		 }
 };
 }
