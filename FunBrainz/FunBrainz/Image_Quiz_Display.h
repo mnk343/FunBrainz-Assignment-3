@@ -32,6 +32,14 @@ namespace FunBrainz {
 			caller =obj1;
 			
 		}
+		Image_Quiz_Display(Form^ obj1,String^ nameoflabel,String^ difficulty_type, int level_num)
+		{
+			label_name = nameoflabel;
+			InitializeComponent();			
+			caller =obj1;
+			level=level_num;
+			level_type_name=difficulty_type;
+		}
 
 	protected:
 		/// <summary>
@@ -54,6 +62,8 @@ namespace FunBrainz {
 	private: System::Windows::Forms::Button^  btn_selected;
 	private: System::Windows::Forms::Button^  btn_random;
 	private: System::Windows::Forms::Label^  lbl_Selected_letter;
+	private: System::Windows::Forms::Label^  lbl_Level;
+	private: System::Windows::Forms::Label^  lbl_type;
 
 	protected:
 
@@ -80,6 +90,8 @@ namespace FunBrainz {
 			this->btn_extra = (gcnew System::Windows::Forms::Button());
 			this->btn_selected = (gcnew System::Windows::Forms::Button());
 			this->btn_random = (gcnew System::Windows::Forms::Button());
+			this->lbl_Level = (gcnew System::Windows::Forms::Label());
+			this->lbl_type = (gcnew System::Windows::Forms::Label());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->PB_Quiz_Image))->BeginInit();
 			this->panel1->SuspendLayout();
 			this->SuspendLayout();
@@ -210,6 +222,24 @@ namespace FunBrainz {
 			this->btn_random->UseVisualStyleBackColor = true;
 			this->btn_random->Click += gcnew System::EventHandler(this, &Image_Quiz_Display::btn_random_MouseLeave);
 			// 
+			// lbl_Level
+			// 
+			this->lbl_Level->AutoSize = true;
+			this->lbl_Level->Location = System::Drawing::Point(56, 135);
+			this->lbl_Level->Name = L"lbl_Level";
+			this->lbl_Level->Size = System::Drawing::Size(33, 13);
+			this->lbl_Level->TabIndex = 5;
+			this->lbl_Level->Text = L"Level";
+			// 
+			// lbl_type
+			// 
+			this->lbl_type->AutoSize = true;
+			this->lbl_type->Location = System::Drawing::Point(56, 156);
+			this->lbl_type->Name = L"lbl_type";
+			this->lbl_type->Size = System::Drawing::Size(30, 13);
+			this->lbl_type->TabIndex = 6;
+			this->lbl_type->Text = L"Easy";
+			// 
 			// Image_Quiz_Display
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
@@ -217,6 +247,8 @@ namespace FunBrainz {
 			this->BackColor = System::Drawing::Color::MintCream;
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->ClientSize = System::Drawing::Size(754, 517);
+			this->Controls->Add(this->lbl_type);
+			this->Controls->Add(this->lbl_Level);
 			this->Controls->Add(this->panel1);
 			this->Controls->Add(this->btn_submit);
 			this->Controls->Add(this->label1);
@@ -243,11 +275,15 @@ namespace FunBrainz {
 		static array<String^>^ image_name = gcnew array<String^>(1000); //for image name
 		static array<bool>^ visited_image = gcnew array<bool>(1000); //boolean array to check if the image is already displayed
 		static array<int>^ index_ans = gcnew array<int>(14); // for storing the index of the pressed char button 
-
+		
 		static int counter_image = 0;
 		static int length_of_answer = 0;
 		static int index_to_be_filled = 0;
 		static array<bool>^ isFixed = gcnew array<bool>(14); //for answer characters
+		static String^ level_type_name;
+		static int level;
+
+		static int easy_level=0;
 
 	public:
 
@@ -599,6 +635,7 @@ namespace FunBrainz {
 			 }
 
 			 void refresh_image(){
+
 				 for(int i=0;i<14;i++){
 					 isFixed[i]=false;
 				 }
@@ -714,6 +751,11 @@ namespace FunBrainz {
 	private: System::Void Image_Quiz_Display_Load(System::Object^  sender, System::EventArgs^  e) {
 				 srand(time(0));
 				 label1->Text = label_name;
+				 
+				 static array<String^>^ image_file_easy = gcnew array<String^>(1000);
+				 static array<String^>^ image_file_medium = gcnew array<String^>(1000);
+				 static array<String^>^ image_file_hard = gcnew array<String^>(1000);
+
 				 try {
 					 OleDb::OleDbConnection ^ con = gcnew OleDb::OleDbConnection();
 					 con->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=FunBrainzForKids.accdb;";
@@ -907,5 +949,6 @@ namespace FunBrainz {
 				 Random_letter();
 				this->btn_random->BackColor = System::Drawing::SystemColors::ButtonHighlight;
 			}
+
 };
 }

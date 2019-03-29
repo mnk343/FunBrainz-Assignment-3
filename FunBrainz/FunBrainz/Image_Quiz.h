@@ -287,6 +287,9 @@ namespace FunBrainz {
 			 String^ str2 = gcnew String(search_path.c_str());
 			Debug::WriteLine(str2);
 			WIN32_FIND_DATA fd;
+			int level_easy = 0;
+			int level_medium = 0;
+			int level_hard = 0;
 			pin_ptr<const wchar_t> wname = PtrToStringChars(str2);
 			HANDLE hFind = ::FindFirstFile(wname,&fd) ;
 			if (hFind != INVALID_HANDLE_VALUE) {
@@ -298,32 +301,41 @@ namespace FunBrainz {
 						String^ Img = str3;
 						String^ Img_name = str3->Substring(0,str3->Length-4);
 						String^ diffuculty;
+						int level;
 						if (str3->Length-4<=5)
 						{
 							diffuculty="Easy";
+							level_easy++;
+							level=level_easy;
 						} 
 						else if(str3->Length-4<=8)
 						{
 							diffuculty="Medium";
+							level_medium++;
+							level=level_medium;
 						}
 						else
 						{
 							diffuculty="Hard";
+							level_hard++;
+							level=level_hard;
 						}
 						Debug::WriteLine(domain + " " + Img + " " + Img_name + " " + diffuculty);
+						int length_of_image = str3->Length-4;
 						try{
 							OleDbConnection ^ DB_Connection = gcnew OleDbConnection();
 							DB_Connection->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=FunBrainzForKids.accdb;";
-							String ^ insertString = "insert into Image_Quiz_Display([Domain],[Image],[Image_Name],[Difficulty_Level]) VALUES('" +domain+ "', '" +Img+ "', '" +Img_name+"', '" +diffuculty+ "');";
+							String ^ insertString = "insert into Image_Quiz_Display([Domain],[Image],[Image_Name],[Difficulty_Level],[Image_Name_Length],[Level]) VALUES('" +domain+ "', '" +Img+ "', '" +Img_name+"', '" +diffuculty+ "'," +length_of_image+ ","+level+");";
 							DB_Connection->Open();
 							OleDbCommand ^ cmd = gcnew OleDbCommand(insertString, DB_Connection);
 							cmd->Parameters->Add(gcnew OleDbParameter("@Domain",domain));
 							cmd->Parameters->Add(gcnew OleDbParameter("@Image",Img));
 							cmd->Parameters->Add(gcnew OleDbParameter("@Image_Name",Img_name));
 							cmd->Parameters->Add(gcnew OleDbParameter("@Difficulty_Level",diffuculty));
+							cmd->Parameters->Add(gcnew OleDbParameter("@Image_Name_Length",str3->Length-4));
+							cmd->Parameters->Add(gcnew OleDbParameter("@Level",level));
 							cmd->ExecuteNonQuery();
 							DB_Connection->Close();
-
 						}
 						catch(Exception ^ ex)
 						{
@@ -342,16 +354,16 @@ namespace FunBrainz {
 				 form->ShowDialog();
 	}
 	private: System::Void Image_Quiz_Load_1(System::Object^  sender, System::EventArgs^  e) {
-				 /*String ^ str = "C:\\Users\\Aryan Agrawal\\Desktop\\ChildEudcation\\FunBrainz-Assignment-3\\FunBrainz\\FunBrainz\\media";*/
+				
 				 //read_directory("Animal");
 				 //read_directory("Bird");
-				 /* read_directory("Flag");
-				 read_directory("Flower");
-				 read_directory("Fruit");
-				 read_directory("Landmark");
-				 read_directory("Objects");
-				 read_directory("Sports");
-				 read_directory("Vegetable");*/
+				 //read_directory("Flag");
+				 //read_directory("Flower");
+				 //read_directory("Fruit");
+				 //read_directory("Landmark");
+				 //read_directory("Objects");
+				 //read_directory("Sports");
+				 //read_directory("Vegetable");
 			 }
 	private: System::Void btn_Back_To_Main_From_Image_Quiz_Click(System::Object^  sender, System::EventArgs^  e) {
 				this->Hide();
