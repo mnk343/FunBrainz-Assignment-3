@@ -277,11 +277,11 @@ namespace FunBrainz {
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(1241, 654);
+			this->Controls->Add(this->panel1);
 			this->Controls->Add(this->button1);
 			this->Controls->Add(this->Deletebtn);
 			this->Controls->Add(this->button4);
 			this->Controls->Add(this->backbtn);
-			this->Controls->Add(this->panel1);
 			this->Controls->Add(this->button5);
 			this->Controls->Add(this->button3);
 			this->Controls->Add(this->Arithmeticbtn);
@@ -374,7 +374,7 @@ private: System::Void button3_Click(System::Object^  sender, System::EventArgs^ 
 		 }
 private: System::Void button4_Click(System::Object^  sender, System::EventArgs^  e) {
 
-			 shapesPanel ^form2 = gcnew shapesPanel(this);
+			 shapesPanel ^form2 = gcnew shapesPanel(this,user);
 			 form2->ShowDialog();
 
 

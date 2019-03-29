@@ -603,7 +603,7 @@ private: System::Void button3_Click(System::Object^  sender, System::EventArgs^ 
 			
 			 try{
 				 OleDbConnection^ dbcon = gcnew OleDbConnection();
-					 dbcon->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=identify_shape.accdb;";
+					 dbcon->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=FunBrainzForKids.accdb;";
 					 String ^ str = "SELECT * FROM fig_qs WHERE ID=" + c + ";";
 					 OleDb::OleDbCommand ^ command = gcnew OleDb::OleDbCommand(str, dbcon);
 					 dbcon->Open();
@@ -770,7 +770,7 @@ private: System::Void timer1_Tick(System::Object^  sender, System::EventArgs^  e
 			panel3->Show();
 			try{
 					 OleDbConnection^ dbcon = gcnew OleDbConnection();
-					 dbcon->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=identify_shape.accdb;";
+					 dbcon->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=FunBrainzForKids.accdb;";
 					 String ^ str = "SELECT * FROM fig_qs WHERE ID=" + c + ";";
 					 OleDb::OleDbCommand ^ command = gcnew OleDb::OleDbCommand(str, dbcon);
 					 dbcon->Open();
@@ -858,7 +858,7 @@ private: System::Void question_with_figure_Load(System::Object^  sender, System:
 			rowindb = 0;
 				try{
 					 OleDbConnection^ dbcon = gcnew OleDbConnection();
-					 dbcon->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=identify_shape.accdb;";
+					 dbcon->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=FunBrainzForKids.accdb;";
 					
 					 String ^ str = "SELECT * FROM register_table WHERE name='"+name+"';";
 					 OleDb::OleDbCommand ^ command = gcnew OleDb::OleDbCommand(str, dbcon);
@@ -880,7 +880,7 @@ private: System::Void question_with_figure_Load(System::Object^  sender, System:
 				
 				 try{
 					 OleDbConnection^ dbcon = gcnew OleDbConnection();
-					 dbcon->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=identify_shape.accdb;";
+					 dbcon->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=FunBrainzForKids.accdb;";
 					  //counting no of rows in the databse
 					 String ^ str = "SELECT * FROM fig_qs ";
 					 OleDb::OleDbCommand ^ command = gcnew OleDb::OleDbCommand(str, dbcon);
@@ -924,7 +924,7 @@ private: System::Void save()
 		  try{
 					
 			  OleDbConnection^ dbcon = gcnew OleDbConnection();
-					 dbcon->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=identify_shape.accdb;" ;
+					 dbcon->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=FunBrainzForKids.accdb;" ;
  OleDb::OleDbCommand ^ command = gcnew OleDb::OleDbCommand("Insert into identifying_shape_prograss (name,field_name,start_time,total_score,total_win,time_spent) values('"+name+"','"+field+"','"+date+"','"+score+"','"+correctqs+"','"+time+"') ;", dbcon);		
 			
 					 dbcon->Open();
@@ -940,7 +940,7 @@ private: System::Void save()
 
 				 try{
 					 OleDbConnection^ dbcon = gcnew OleDbConnection();
-					 dbcon->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=identify_shape.accdb;";
+					 dbcon->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=FunBrainzForKids.accdb;";
 						//storing how much question user read ....in database
 					// String ^ str = "UPDATE register_table SET time_taken_no_fig_question='"+time+"' ,score_no_figure ='"+score+"' ,total_done_nofig='"+c+"' ,nofig_correct='"+correctqs+"' WHERE name = " +name+ "; ";
 				 str = "UPDATE register_table SET figureqs_read='"+c+"' WHERE name ='"+name+"';";					

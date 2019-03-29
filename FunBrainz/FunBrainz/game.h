@@ -1543,7 +1543,7 @@ private: System::Void Exit_Click(System::Object^  sender, System::EventArgs^  e)
 			 try{
 					
 			  OleDbConnection^ dbcon = gcnew OleDbConnection();
-					 dbcon->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=identify_shape.accdb;" ;
+					 dbcon->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=FunBrainzForKids.accdb;" ;
  OleDb::OleDbCommand ^ command = gcnew OleDb::OleDbCommand("Insert into identifying_shape_prograss (name,field_name,start_time,total_score,total_win,time_spent) values('"+name+"','"+field+"','"+date+"','"+highscore+"','"+totalnumberplayed+"','"+time+"') ;", dbcon);		
 			
 					 dbcon->Open();

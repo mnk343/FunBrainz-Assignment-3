@@ -383,7 +383,7 @@ namespace FunBrainz {
 
 				 try{
 					 OleDbConnection^ dbcon = gcnew OleDbConnection();
-					 dbcon->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=identify_shape.accdb;";
+					 dbcon->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=FunBrainzForKids.accdb;";
 
 					 String ^ str = "SELECT * FROM def_table";
 					 OleDb::OleDbCommand ^ command = gcnew OleDb::OleDbCommand(str, dbcon);
@@ -427,7 +427,7 @@ namespace FunBrainz {
 				 }		  //taking defination and shape photo from databse
 				 try{
 					 OleDbConnection^ dbcon = gcnew OleDbConnection();
-					 dbcon->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=identify_shape.accdb;";
+					 dbcon->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=FunBrainzForKids.accdb;";
 
 					 String ^ str = "SELECT * FROM def_table WHERE ID=" + c + ";";
 					 OleDb::OleDbCommand ^ command = gcnew OleDb::OleDbCommand(str, dbcon);
@@ -494,7 +494,7 @@ namespace FunBrainz {
 				 textBox1->Text= Convert::ToString(c);
 				 try{
 					 OleDbConnection^ dbcon = gcnew OleDbConnection();
-					 dbcon->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=identify_shape.accdb;";
+					 dbcon->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=FunBrainzForKids.accdb;";
 
 					 String ^ str = "SELECT * FROM def_table WHERE ID=" + c + ";";
 					 OleDb::OleDbCommand ^ command = gcnew OleDb::OleDbCommand(str, dbcon);
@@ -550,7 +550,7 @@ namespace FunBrainz {
 				 textBox1->Text= Convert::ToString(c);
 				 try{
 					 OleDbConnection^ dbcon = gcnew OleDbConnection();
-					 dbcon->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=identify_shape.accdb;";
+					 dbcon->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=FunBrainzForKids.accdb;";
 
 					 String ^ str = "SELECT * FROM def_table WHERE ID=" + c + ";";
 					 OleDb::OleDbCommand ^ command = gcnew OleDb::OleDbCommand(str, dbcon);
