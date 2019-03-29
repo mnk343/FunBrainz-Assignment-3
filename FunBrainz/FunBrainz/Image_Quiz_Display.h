@@ -284,11 +284,10 @@ namespace FunBrainz {
 		static int level;
 
 		static int easy_level=0;
-
-	public:
-
-
-
+		static int medium_level=0;
+		static int hard_level=0;
+	
+public:
 		void button_creator(int x,int y,String^ s){
 			Button^ var = gcnew Button();
 			//var->BackColor = System::Drawing::SystemColors::ControlDarkDar/*k;
@@ -635,7 +634,7 @@ namespace FunBrainz {
 			 }
 
 			 void refresh_image(){
-
+				
 				 for(int i=0;i<14;i++){
 					 isFixed[i]=false;
 				 }
@@ -752,9 +751,18 @@ namespace FunBrainz {
 				 srand(time(0));
 				 label1->Text = label_name;
 				 
-				 static array<String^>^ image_file_easy = gcnew array<String^>(1000);
-				 static array<String^>^ image_file_medium = gcnew array<String^>(1000);
-				 static array<String^>^ image_file_hard = gcnew array<String^>(1000);
+				 array<String^>^ image_file_path_easy = gcnew array<String^>(1000);
+				 array<String^>^ image_file_path_medium = gcnew array<String^>(1000);
+				 array<String^>^ image_file_path_hard = gcnew array<String^>(1000);
+
+				 array<String^>^ image_file_easy = gcnew array<String^>(1000);
+				 array<String^>^ image_file_medium = gcnew array<String^>(1000);
+				 array<String^>^ image_file_hard = gcnew array<String^>(1000);
+
+				 array<int>^ image_file_easy_level =gcnew array<int>(1000);
+				 array<int>^ image_file_medium_level = gcnew array<int>(1000);
+				 array<int>^ image_file_hard_level = gcnew array<int>(1000);
+
 
 				 try {
 					 OleDb::OleDbConnection ^ con = gcnew OleDb::OleDbConnection();
@@ -766,13 +774,31 @@ namespace FunBrainz {
 					 //MessageBox::Show(command->ExecuteScalar()->ToString());
 					 OleDb::OleDbDataReader ^ reader = command->ExecuteReader();
 					 while (reader->Read()){
-						 String^ dum =  reader[0]->ToString();
+						 if(reader[4]->ToString()=="Easy")
+						 {
+							 image_file_path_easy[easy_level]=reader[2]->ToString();
+							 image_file_easy[easy_level]= reader[3]->ToString();
+							 image_file_easy_level[easy_level++]=(int)reader[4];
+						 }
+						 if(reader[4]->ToString()=="Medium")
+						 {
+							 image_file_path_medium[medium_level]=reader[2]->ToString();
+							 image_file_medium[medium_level]= reader[3]->ToString();
+							 image_file_medium_level[medium_level++]=(int)reader[4];
+						 }
+						 if(reader[4]->ToString()=="Hard")
+						 {
+							 image_file_path_hard[hard_level]=reader[2]->ToString();
+							 image_file_hard[hard_level]= reader[3]->ToString();
+							 image_file_hard_level[hard_level++]=(int)reader[4];
+						 }
+						 //String^ dum =  reader[0]->ToString();
 						 //int index = System::Int64::Parse(dum);
-						 image_file_name[counter_image] = reader[2]->ToString();
-						 image_name[counter_image] = reader[3] -> ToString();
-						 Debug::WriteLine(image_name[counter_image]);
-						 Debug::WriteLine(image_file_name[counter_image]);
-						 visited_image[counter_image++] = false;
+						 //image_file_name[counter_image] = reader[2]->ToString();
+						 //image_name[counter_image] = reader[3] -> ToString();
+						 //Debug::WriteLine(image_name[counter_image]);
+						 //Debug::WriteLine(image_file_name[counter_image]);
+						 //visited_image[counter_image++] = false;
 
 					 }
 					 con->Close();
@@ -783,12 +809,54 @@ namespace FunBrainz {
 					 MessageBox::Show(ex->Message);
 				 }
 
+				 for (int i=0;i<easy_level-1;i++)
+				 {
+					 for (int j=0;j<easy_level-1;i++)
+					 {
+						 if (image_file_easy_level[j]>image_file_easy_level[j+1])
+						 {
+							 int temp =image_file_easy_level[j];
+							 image_file_easy_level[j]=image_file_easy_level[j+1];
+							 image_file_easy_level[j+1]=temp;
+
+							 String^ temp2 = image_file_easy[j];
+							 image_file_easy[j]=image_file_easy[j+1];
+							 image_file_easy[j+1]=temp2;
+
+							 String^ temp3 = image_file_path_easy[j];
+							 image_file_path_easy[j]=image_file_path_easy[j+1];
+							 image_file_path_easy[j+1]=temp3;
+						 }
+					 }
+				 }
+
+				 for (int i=0;i<medium_level-1;i++)
+				 {
+					 for (int j=0;j<medium_level-1;i++)
+					 {
+						 if (image_file_medium_level[j]>image_file_medium_level[j+1])
+						 {
+							 int temp =image_file_medium_level[j];
+							 image_file_medium_level[j]=image_file_medium_level[j+1];
+							 image_file_medium_level[j+1]=temp;
+
+							 String^ temp2 = image_file_medium[j];
+							 image_file_medium[j]=image_file_medium[j+1];
+							 image_file_medium[j+1]=temp2;
+
+							 String^ temp3 = image_file_path_medium[j];
+							 image_file_path_medium[j]=image_file_path_medium[j+1];
+							 image_file_path_medium[j+1]=temp3;
+						 }
+					 }
+				 }
+
 				 for (int i=0;i<14;i++)
 				 {
 					 index_ans[i]=0;
 				 }
 			 }
-	private: System::Void btnNext_Click(System::Object^  sender, System::EventArgs^  e) {
+	private: System::Void sbtnNext_Click(System::Object^  sender, System::EventArgs^  e) {
 
 				 int count = 0;
 				 Control^ rndom = this->Controls[L"1"];
