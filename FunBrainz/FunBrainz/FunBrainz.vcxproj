@@ -108,6 +108,7 @@
     <ClCompile Include="operatorFilling.cpp" />
     <ClCompile Include="Pipeline_Game.cpp" />
     <ClCompile Include="profile.cpp" />
+    <ClCompile Include="PuzzlesRedirect.cpp" />
     <ClCompile Include="question_no_figure.cpp" />
     <ClCompile Include="question_with_figure.cpp" />
     <ClCompile Include="shapesPanel.cpp" />
@@ -177,6 +178,9 @@
     <ClInclude Include="profile.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="PuzzlesRedirect.h">
+      <FileType>CppControl</FileType>
+    </ClInclude>
     <ClInclude Include="question_no_figure.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -244,6 +248,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="profile.resx">
       <DependentUpon>profile.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PuzzlesRedirect.resx">
+      <DependentUpon>PuzzlesRedirect.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="question_no_figure.resx">
       <DependentUpon>question_no_figure.h</DependentUpon>

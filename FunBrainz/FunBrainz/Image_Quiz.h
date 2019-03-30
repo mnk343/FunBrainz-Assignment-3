@@ -32,6 +32,7 @@ namespace FunBrainz {
 		Image_Quiz(void)
 		{
 			InitializeComponent();
+			stuId = 1;
 			//
 			//TODO: Add the constructor code here
 			//
@@ -40,6 +41,12 @@ namespace FunBrainz {
 		{
 			InitializeComponent();
 			caller=obj1;
+			stuId = 1;
+		}
+		Image_Quiz(int x)
+		{
+			InitializeComponent();
+			stuId=x;
 		}
 
 	protected:
@@ -281,6 +288,7 @@ namespace FunBrainz {
 		}
 #pragma endregion
 		Form^ caller;
+		int stuId;
 		/*void read_directory(string folder)
 		{
 			string search_path = "media/" + folder + "/*.*";
@@ -354,8 +362,9 @@ namespace FunBrainz {
 				 read_directory("Vegetable");*/
 			 }
 	private: System::Void btn_Back_To_Main_From_Image_Quiz_Click(System::Object^  sender, System::EventArgs^  e) {
-				this->Hide();
-				caller->Show();
+				//this->Hide();
+				//caller->Show();
+				 this->Close();
 			 }
 
 private: System::Void btn_bird_Click(System::Object^  sender, System::EventArgs^  e) {

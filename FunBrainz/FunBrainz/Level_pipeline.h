@@ -33,6 +33,7 @@ namespace FunBrainz {
 		Level_pipeline(void)
 		{
 			InitializeComponent();
+			stuId = 1;
 			//
 			//TODO: Add the constructor code here
 			//
@@ -41,6 +42,12 @@ namespace FunBrainz {
 		{
 			InitializeComponent();
 			caller = obj1;
+			stuId = 1;
+		}
+		Level_pipeline(int x)
+		{
+			InitializeComponent();
+			stuId = x;
 		}
 
 	protected:
@@ -1111,6 +1118,7 @@ namespace FunBrainz {
 
 		}
 #pragma endregion
+		int stuId;
 		Form^ caller;
 		static int level_flag=0;
 		static array<String^>^ answer_type = gcnew array<String^>(10000);
