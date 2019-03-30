@@ -366,7 +366,7 @@ namespace FunBrainz {
 				 //read_directory("Vegetable");
 			 }
 	private: System::Void btn_Back_To_Main_From_Image_Quiz_Click(System::Object^  sender, System::EventArgs^  e) {
-				//this->Hide();
+				this->Close();
 				//caller->Show();
 			 }
 

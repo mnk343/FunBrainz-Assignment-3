@@ -136,14 +136,17 @@ namespace FunBrainz {
 	private: System::Void btn_Cricket_Click(System::Object^  sender, System::EventArgs^  e) {
 				 Cricket ^form =gcnew Cricket(stuId);
 				 form->ShowDialog();
+				 delete form;
 			 }
 	private: System::Void btn_cloud_Click(System::Object^  sender, System::EventArgs^  e) {
 				 cloud ^form =gcnew cloud();
 				 form->ShowDialog();
+				 delete form;
 			 }
 	private: System::Void btn_Fill_Click(System::Object^  sender, System::EventArgs^  e) {
 				 operatorFilling ^form =gcnew operatorFilling(stuId);
 				 form->ShowDialog();
+				 delete form;
 			 }
 };
 }

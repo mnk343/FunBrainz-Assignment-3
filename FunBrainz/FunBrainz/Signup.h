@@ -132,80 +132,72 @@ namespace FunBrainz {
 			// label9
 			// 
 			this->label9->AutoSize = true;
-			this->label9->Location = System::Drawing::Point(103, 297);
-			this->label9->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label9->Location = System::Drawing::Point(77, 241);
 			this->label9->Name = L"label9";
-			this->label9->Size = System::Drawing::Size(59, 17);
+			this->label9->Size = System::Drawing::Size(46, 13);
 			this->label9->TabIndex = 22;
 			this->label9->Text = L"Email ID";
 			// 
 			// label8
 			// 
 			this->label8->AutoSize = true;
-			this->label8->Location = System::Drawing::Point(103, 260);
-			this->label8->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label8->Location = System::Drawing::Point(77, 211);
 			this->label8->Name = L"label8";
-			this->label8->Size = System::Drawing::Size(103, 17);
+			this->label8->Size = System::Drawing::Size(78, 13);
 			this->label8->TabIndex = 23;
 			this->label8->Text = L"Mobile Number";
 			// 
 			// label7
 			// 
 			this->label7->AutoSize = true;
-			this->label7->Location = System::Drawing::Point(131, 151);
-			this->label7->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label7->Location = System::Drawing::Point(98, 123);
 			this->label7->Name = L"label7";
-			this->label7->Size = System::Drawing::Size(42, 17);
+			this->label7->Size = System::Drawing::Size(32, 13);
 			this->label7->TabIndex = 19;
 			this->label7->Text = L"Class";
 			// 
 			// label6
 			// 
 			this->label6->AutoSize = true;
-			this->label6->Location = System::Drawing::Point(118, 223);
-			this->label6->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label6->Location = System::Drawing::Point(88, 181);
 			this->label6->Name = L"label6";
-			this->label6->Size = System::Drawing::Size(56, 17);
+			this->label6->Size = System::Drawing::Size(42, 13);
 			this->label6->TabIndex = 20;
 			this->label6->Text = L"Gender";
 			// 
 			// label5
 			// 
 			this->label5->AutoSize = true;
-			this->label5->Location = System::Drawing::Point(118, 186);
-			this->label5->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label5->Location = System::Drawing::Point(88, 151);
 			this->label5->Name = L"label5";
-			this->label5->Size = System::Drawing::Size(87, 17);
+			this->label5->Size = System::Drawing::Size(66, 13);
 			this->label5->TabIndex = 21;
 			this->label5->Text = L"Date of Birth";
 			// 
 			// label4
 			// 
 			this->label4->AutoSize = true;
-			this->label4->Location = System::Drawing::Point(103, 119);
-			this->label4->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label4->Location = System::Drawing::Point(77, 97);
 			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(76, 17);
+			this->label4->Size = System::Drawing::Size(58, 13);
 			this->label4->TabIndex = 16;
 			this->label4->Text = L"Last Name";
 			// 
 			// label3
 			// 
 			this->label3->AutoSize = true;
-			this->label3->Location = System::Drawing::Point(103, 87);
-			this->label3->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label3->Location = System::Drawing::Point(77, 71);
 			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(76, 17);
+			this->label3->Size = System::Drawing::Size(57, 13);
 			this->label3->TabIndex = 15;
 			this->label3->Text = L"First Name";
 			// 
 			// label2
 			// 
 			this->label2->AutoSize = true;
-			this->label2->Location = System::Drawing::Point(103, 55);
-			this->label2->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label2->Location = System::Drawing::Point(77, 45);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(69, 17);
+			this->label2->Size = System::Drawing::Size(53, 13);
 			this->label2->TabIndex = 18;
 			this->label2->Text = L"Password";
 			// 
@@ -214,75 +206,67 @@ namespace FunBrainz {
 			this->label1->AutoSize = true;
 			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->label1->Location = System::Drawing::Point(102, 11);
-			this->label1->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label1->Location = System::Drawing::Point(76, 9);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(119, 25);
+			this->label1->Size = System::Drawing::Size(98, 20);
 			this->label1->TabIndex = 17;
 			this->label1->Text = L"User Name";
 			// 
 			// Emailtxt
 			// 
-			this->Emailtxt->Location = System::Drawing::Point(251, 293);
-			this->Emailtxt->Margin = System::Windows::Forms::Padding(4);
+			this->Emailtxt->Location = System::Drawing::Point(188, 238);
 			this->Emailtxt->Name = L"Emailtxt";
-			this->Emailtxt->Size = System::Drawing::Size(197, 22);
+			this->Emailtxt->Size = System::Drawing::Size(149, 20);
 			this->Emailtxt->TabIndex = 8;
 			// 
 			// Mobiletxt
 			// 
-			this->Mobiletxt->Location = System::Drawing::Point(251, 256);
-			this->Mobiletxt->Margin = System::Windows::Forms::Padding(4);
+			this->Mobiletxt->Location = System::Drawing::Point(188, 208);
 			this->Mobiletxt->Name = L"Mobiletxt";
-			this->Mobiletxt->Size = System::Drawing::Size(197, 22);
+			this->Mobiletxt->Size = System::Drawing::Size(149, 20);
 			this->Mobiletxt->TabIndex = 7;
 			// 
 			// Classtxt
 			// 
-			this->Classtxt->Location = System::Drawing::Point(251, 142);
-			this->Classtxt->Margin = System::Windows::Forms::Padding(4);
+			this->Classtxt->Location = System::Drawing::Point(188, 115);
 			this->Classtxt->Name = L"Classtxt";
-			this->Classtxt->Size = System::Drawing::Size(197, 22);
+			this->Classtxt->Size = System::Drawing::Size(149, 20);
 			this->Classtxt->TabIndex = 4;
 			// 
 			// LastNametxt
 			// 
-			this->LastNametxt->Location = System::Drawing::Point(251, 110);
-			this->LastNametxt->Margin = System::Windows::Forms::Padding(4);
+			this->LastNametxt->Location = System::Drawing::Point(188, 89);
 			this->LastNametxt->Name = L"LastNametxt";
-			this->LastNametxt->Size = System::Drawing::Size(197, 22);
+			this->LastNametxt->Size = System::Drawing::Size(149, 20);
 			this->LastNametxt->TabIndex = 3;
 			// 
 			// FirstNametxt
 			// 
-			this->FirstNametxt->Location = System::Drawing::Point(251, 78);
-			this->FirstNametxt->Margin = System::Windows::Forms::Padding(4);
+			this->FirstNametxt->Location = System::Drawing::Point(188, 63);
 			this->FirstNametxt->Name = L"FirstNametxt";
-			this->FirstNametxt->Size = System::Drawing::Size(197, 22);
+			this->FirstNametxt->Size = System::Drawing::Size(149, 20);
 			this->FirstNametxt->TabIndex = 2;
+			this->FirstNametxt->TextChanged += gcnew System::EventHandler(this, &Signup::FirstNametxt_TextChanged);
 			// 
 			// Passwordtxt
 			// 
-			this->Passwordtxt->Location = System::Drawing::Point(251, 46);
-			this->Passwordtxt->Margin = System::Windows::Forms::Padding(4);
+			this->Passwordtxt->Location = System::Drawing::Point(188, 37);
 			this->Passwordtxt->Name = L"Passwordtxt";
-			this->Passwordtxt->Size = System::Drawing::Size(197, 22);
+			this->Passwordtxt->Size = System::Drawing::Size(149, 20);
 			this->Passwordtxt->TabIndex = 1;
 			// 
 			// UserNametxt
 			// 
-			this->UserNametxt->Location = System::Drawing::Point(251, 14);
-			this->UserNametxt->Margin = System::Windows::Forms::Padding(4);
+			this->UserNametxt->Location = System::Drawing::Point(188, 11);
 			this->UserNametxt->Name = L"UserNametxt";
-			this->UserNametxt->Size = System::Drawing::Size(197, 22);
+			this->UserNametxt->Size = System::Drawing::Size(149, 20);
 			this->UserNametxt->TabIndex = 0;
 			// 
 			// Signupbtn
 			// 
-			this->Signupbtn->Location = System::Drawing::Point(276, 538);
-			this->Signupbtn->Margin = System::Windows::Forms::Padding(4);
+			this->Signupbtn->Location = System::Drawing::Point(207, 437);
 			this->Signupbtn->Name = L"Signupbtn";
-			this->Signupbtn->Size = System::Drawing::Size(117, 37);
+			this->Signupbtn->Size = System::Drawing::Size(88, 30);
 			this->Signupbtn->TabIndex = 14;
 			this->Signupbtn->Text = L"Sign Up";
 			this->Signupbtn->UseVisualStyleBackColor = true;
@@ -290,10 +274,9 @@ namespace FunBrainz {
 			// 
 			// button2
 			// 
-			this->button2->Location = System::Drawing::Point(79, 547);
-			this->button2->Margin = System::Windows::Forms::Padding(4);
+			this->button2->Location = System::Drawing::Point(59, 444);
 			this->button2->Name = L"button2";
-			this->button2->Size = System::Drawing::Size(100, 28);
+			this->button2->Size = System::Drawing::Size(75, 23);
 			this->button2->TabIndex = 15;
 			this->button2->Text = L"Back";
 			this->button2->UseVisualStyleBackColor = true;
@@ -304,35 +287,37 @@ namespace FunBrainz {
 			this->Gendertxt->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
 			this->Gendertxt->FormattingEnabled = true;
 			this->Gendertxt->Items->AddRange(gcnew cli::array< System::Object^  >(3) {L"Male", L"Female", L"Others"});
-			this->Gendertxt->Location = System::Drawing::Point(251, 220);
+			this->Gendertxt->Location = System::Drawing::Point(188, 179);
+			this->Gendertxt->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->Gendertxt->Name = L"Gendertxt";
-			this->Gendertxt->Size = System::Drawing::Size(197, 24);
+			this->Gendertxt->Size = System::Drawing::Size(149, 21);
 			this->Gendertxt->TabIndex = 6;
 			// 
 			// DOBtxt
 			// 
 			this->DOBtxt->CustomFormat = L"dd-mm-yyyy";
 			this->DOBtxt->Format = System::Windows::Forms::DateTimePickerFormat::Short;
-			this->DOBtxt->Location = System::Drawing::Point(251, 181);
+			this->DOBtxt->Location = System::Drawing::Point(188, 147);
+			this->DOBtxt->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->DOBtxt->MinDate = System::DateTime(2005, 1, 1, 0, 0, 0, 0);
 			this->DOBtxt->Name = L"DOBtxt";
-			this->DOBtxt->Size = System::Drawing::Size(197, 22);
+			this->DOBtxt->Size = System::Drawing::Size(149, 20);
 			this->DOBtxt->TabIndex = 5;
 			// 
 			// Schooltxt
 			// 
-			this->Schooltxt->Location = System::Drawing::Point(251, 332);
-			this->Schooltxt->Margin = System::Windows::Forms::Padding(4);
+			this->Schooltxt->Location = System::Drawing::Point(188, 270);
 			this->Schooltxt->Name = L"Schooltxt";
-			this->Schooltxt->Size = System::Drawing::Size(197, 22);
+			this->Schooltxt->Size = System::Drawing::Size(149, 20);
 			this->Schooltxt->TabIndex = 9;
 			// 
 			// label10
 			// 
 			this->label10->AutoSize = true;
-			this->label10->Location = System::Drawing::Point(103, 337);
+			this->label10->Location = System::Drawing::Point(77, 274);
+			this->label10->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label10->Name = L"label10";
-			this->label10->Size = System::Drawing::Size(92, 17);
+			this->label10->Size = System::Drawing::Size(71, 13);
 			this->label10->TabIndex = 28;
 			this->label10->Text = L"School Name";
 			// 
@@ -342,77 +327,77 @@ namespace FunBrainz {
 			this->Questiontxt->FormattingEnabled = true;
 			this->Questiontxt->Items->AddRange(gcnew cli::array< System::Object^  >(5) {L"Favourite book", L"Favourite food", L"Favourite teacher", 
 				L"Favourite colour", L"birth place"});
-			this->Questiontxt->Location = System::Drawing::Point(251, 371);
-			this->Questiontxt->Margin = System::Windows::Forms::Padding(4);
+			this->Questiontxt->Location = System::Drawing::Point(188, 301);
 			this->Questiontxt->Name = L"Questiontxt";
-			this->Questiontxt->Size = System::Drawing::Size(197, 24);
+			this->Questiontxt->Size = System::Drawing::Size(149, 21);
 			this->Questiontxt->TabIndex = 10;
 			// 
 			// label12
 			// 
 			this->label12->AutoSize = true;
-			this->label12->Location = System::Drawing::Point(110, 408);
-			this->label12->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label12->Location = System::Drawing::Point(82, 332);
 			this->label12->Name = L"label12";
-			this->label12->Size = System::Drawing::Size(109, 17);
+			this->label12->Size = System::Drawing::Size(83, 13);
 			this->label12->TabIndex = 36;
 			this->label12->Text = L"Security Answer";
 			// 
 			// label11
 			// 
 			this->label11->AutoSize = true;
-			this->label11->Location = System::Drawing::Point(109, 380);
-			this->label11->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label11->Location = System::Drawing::Point(82, 309);
 			this->label11->Name = L"label11";
-			this->label11->Size = System::Drawing::Size(124, 17);
+			this->label11->Size = System::Drawing::Size(92, 13);
 			this->label11->TabIndex = 35;
 			this->label11->Text = L"Sequirity Question";
 			// 
 			// Answertxt
 			// 
-			this->Answertxt->Location = System::Drawing::Point(251, 405);
-			this->Answertxt->Margin = System::Windows::Forms::Padding(4);
+			this->Answertxt->Location = System::Drawing::Point(188, 329);
 			this->Answertxt->Name = L"Answertxt";
-			this->Answertxt->Size = System::Drawing::Size(197, 22);
+			this->Answertxt->Size = System::Drawing::Size(149, 20);
 			this->Answertxt->TabIndex = 11;
 			// 
 			// label14
 			// 
 			this->label14->AutoSize = true;
-			this->label14->Location = System::Drawing::Point(89, 491);
+			this->label14->Location = System::Drawing::Point(67, 399);
+			this->label14->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label14->Name = L"label14";
-			this->label14->Size = System::Drawing::Size(138, 17);
+			this->label14->Size = System::Drawing::Size(103, 13);
 			this->label14->TabIndex = 45;
 			this->label14->Text = L"GuardiansLastName";
 			// 
 			// label13
 			// 
 			this->label13->AutoSize = true;
-			this->label13->Location = System::Drawing::Point(108, 452);
+			this->label13->Location = System::Drawing::Point(81, 367);
+			this->label13->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label13->Name = L"label13";
-			this->label13->Size = System::Drawing::Size(138, 17);
+			this->label13->Size = System::Drawing::Size(102, 13);
 			this->label13->TabIndex = 44;
 			this->label13->Text = L"GuardiansFirstName";
 			// 
 			// GuardiansLastNametxt
 			// 
-			this->GuardiansLastNametxt->Location = System::Drawing::Point(251, 488);
+			this->GuardiansLastNametxt->Location = System::Drawing::Point(188, 396);
+			this->GuardiansLastNametxt->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->GuardiansLastNametxt->Name = L"GuardiansLastNametxt";
-			this->GuardiansLastNametxt->Size = System::Drawing::Size(197, 22);
+			this->GuardiansLastNametxt->Size = System::Drawing::Size(149, 20);
 			this->GuardiansLastNametxt->TabIndex = 13;
 			// 
 			// GuardiansFirstNametxt
 			// 
-			this->GuardiansFirstNametxt->Location = System::Drawing::Point(251, 449);
+			this->GuardiansFirstNametxt->Location = System::Drawing::Point(188, 365);
+			this->GuardiansFirstNametxt->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->GuardiansFirstNametxt->Name = L"GuardiansFirstNametxt";
-			this->GuardiansFirstNametxt->Size = System::Drawing::Size(197, 22);
+			this->GuardiansFirstNametxt->Size = System::Drawing::Size(149, 20);
 			this->GuardiansFirstNametxt->TabIndex = 12;
 			// 
 			// Signup
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
+			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(872, 598);
+			this->ClientSize = System::Drawing::Size(654, 486);
 			this->Controls->Add(this->label14);
 			this->Controls->Add(this->label13);
 			this->Controls->Add(this->GuardiansLastNametxt);
@@ -443,7 +428,7 @@ namespace FunBrainz {
 			this->Controls->Add(this->Passwordtxt);
 			this->Controls->Add(this->UserNametxt);
 			this->Controls->Add(this->Signupbtn);
-			this->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->Name = L"Signup";
 			this->Text = L"Signup";
 			this->Load += gcnew System::EventHandler(this, &Signup::Signup_Load);
@@ -621,8 +606,8 @@ namespace FunBrainz {
 				 Classtxt->Text=updatetext(Classtxt->Text);
 				 Mobiletxt->Text=updatetext(Mobiletxt->Text);
 				 Emailtxt->Text=updatetext(Emailtxt->Text);
-				 FirstNametxt->Text=updatetext(FirstNametxt->Text->ToLower());
-				 LastNametxt->Text=updatetext(LastNametxt->Text->ToLower());
+				 FirstNametxt->Text=updatetext(FirstNametxt->Text);
+				 LastNametxt->Text=updatetext(LastNametxt->Text);
 				 Schooltxt->Text=updatetext(Schooltxt->Text);
 				 Questiontxt->Text=updatetext(Questiontxt->Text);
 				 Answertxt->Text=updatetext(Answertxt->Text);
@@ -684,5 +669,7 @@ namespace FunBrainz {
 				 obj->Show();
 				 this->Hide();
 			 }
-	};
+	private: System::Void FirstNametxt_TextChanged(System::Object^  sender, System::EventArgs^  e) {
+			 }
+};
 }

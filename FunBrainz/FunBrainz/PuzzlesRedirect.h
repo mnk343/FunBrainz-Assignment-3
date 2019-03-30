@@ -135,16 +135,19 @@ namespace FunBrainz {
 
 				 Game_2048 ^form =gcnew Game_2048(stuId);
 				 form->ShowDialog();
+				 delete form;
 			 }
 	private: System::Void btn_pipeline_Click(System::Object^  sender, System::EventArgs^  e) {
 
 				 Level_pipeline ^form =gcnew Level_pipeline(stuId);
 				 form->ShowDialog();
+				 delete form;
 
 			 }
 	private: System::Void btn_quiz_Click(System::Object^  sender, System::EventArgs^  e) {
 				 Image_Quiz ^form =gcnew Image_Quiz();
 				 form->ShowDialog();
+				 delete form;
 
 			 }
 	private: System::Void PuzzlesRedirect_Load(System::Object^  sender, System::EventArgs^  e) {

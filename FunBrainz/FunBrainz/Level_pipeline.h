@@ -1161,8 +1161,9 @@ private: System::Void level_click(System::Object^  sender, System::EventArgs^  e
 			 Button^ btn = ((Button^)sender);
 			 int level = System::Int64::Parse(btn->Text);	
 			 Pipeline_Game^ form = gcnew Pipeline_Game(this,level,level_flag,answer_type,answer_index,count);
-			 form->Show();
 			 this->Hide();
+			 form->ShowDialog();
+			 delete form;
 		 }
 private: System::Void btn_Easy_Click(System::Object^  sender, System::EventArgs^  e) {
 			 level_flag=0;
@@ -1364,7 +1365,8 @@ private: System::Void Level_pipeline_VisibleChanged(System::Object^  sender, Sys
 				 MessageBox::Show(System::Convert::ToString((Pipeline_Game::level_of_puzzle)+1));				
 				int level = (Pipeline_Game::level_of_puzzle)+1;	
 				Pipeline_Game^ form = gcnew Pipeline_Game(this,level,level_flag,answer_type,answer_index,count);
-				form->Show();
+				form->ShowDialog();
+				delete form;
 				//MessageBox::Show("this is the one we want"+level_btn->Text);
 				//this->Hide();
 			 }

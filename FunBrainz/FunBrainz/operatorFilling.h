@@ -49,9 +49,12 @@ namespace FunBrainz {
 		/// </summary>
 		~operatorFilling()
 		{
+			//delete ClockTimer;
+			//MessageBox::Show("sfgsgsf");
 			if (components)
 			{
 				delete components;
+				
 			}
 		}
 
@@ -111,6 +114,7 @@ namespace FunBrainz {
 	private: System::Windows::Forms::Label^  label7;
 	private: System::Windows::Forms::Button^  button1;
 	private: System::Windows::Forms::Label^  label9;
+
 
 
 
