@@ -61,6 +61,7 @@ namespace FunBrainz {
 
 
 	private: System::Windows::Forms::Button^  button6;
+	private: System::Windows::Forms::Label^  label1;
 
 	private:
 		/// <summary>
@@ -75,83 +76,128 @@ namespace FunBrainz {
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(shapesPanel::typeid));
 			this->button2 = (gcnew System::Windows::Forms::Button());
 			this->button3 = (gcnew System::Windows::Forms::Button());
 			this->button4 = (gcnew System::Windows::Forms::Button());
 			this->button5 = (gcnew System::Windows::Forms::Button());
 			this->button6 = (gcnew System::Windows::Forms::Button());
+			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->SuspendLayout();
 			// 
 			// button2
 			// 
-			this->button2->Location = System::Drawing::Point(12, 401);
-			this->button2->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->button2->BackColor = System::Drawing::Color::DarkRed;
+			this->button2->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+			this->button2->Font = (gcnew System::Drawing::Font(L"Century Gothic", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->button2->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
+			this->button2->Location = System::Drawing::Point(98, 362);
+			this->button2->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->button2->Name = L"button2";
-			this->button2->Size = System::Drawing::Size(229, 62);
+			this->button2->Size = System::Drawing::Size(208, 53);
 			this->button2->TabIndex = 2;
 			this->button2->Text = L"no_figure_question";
-			this->button2->UseVisualStyleBackColor = true;
+			this->button2->UseVisualStyleBackColor = false;
 			this->button2->Click += gcnew System::EventHandler(this, &shapesPanel::button2_Click);
 			// 
 			// button3
 			// 
-			this->button3->Location = System::Drawing::Point(596, 302);
-			this->button3->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->button3->BackColor = System::Drawing::Color::Firebrick;
+			this->button3->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+			this->button3->Font = (gcnew System::Drawing::Font(L"Century Gothic", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->button3->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
+			this->button3->Location = System::Drawing::Point(98, 290);
+			this->button3->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->button3->Name = L"button3";
-			this->button3->Size = System::Drawing::Size(301, 103);
+			this->button3->Size = System::Drawing::Size(208, 53);
 			this->button3->TabIndex = 3;
 			this->button3->Text = L"figure_question";
-			this->button3->UseVisualStyleBackColor = true;
+			this->button3->UseVisualStyleBackColor = false;
 			this->button3->Click += gcnew System::EventHandler(this, &shapesPanel::button3_Click);
 			// 
 			// button4
 			// 
-			this->button4->Location = System::Drawing::Point(12, 282);
-			this->button4->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->button4->BackColor = System::Drawing::Color::Tomato;
+			this->button4->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+			this->button4->Font = (gcnew System::Drawing::Font(L"Century Gothic", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->button4->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->button4->Location = System::Drawing::Point(98, 218);
+			this->button4->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->button4->Name = L"button4";
-			this->button4->Size = System::Drawing::Size(211, 57);
+			this->button4->Size = System::Drawing::Size(208, 53);
 			this->button4->TabIndex = 5;
 			this->button4->Text = L"shape_defination";
-			this->button4->UseVisualStyleBackColor = true;
+			this->button4->UseVisualStyleBackColor = false;
 			this->button4->Click += gcnew System::EventHandler(this, &shapesPanel::button4_Click);
 			// 
 			// button5
 			// 
-			this->button5->Location = System::Drawing::Point(12, 194);
-			this->button5->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->button5->BackColor = System::Drawing::Color::LightSalmon;
+			this->button5->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+			this->button5->Font = (gcnew System::Drawing::Font(L"Century Gothic", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->button5->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->button5->Location = System::Drawing::Point(98, 155);
+			this->button5->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->button5->Name = L"button5";
-			this->button5->Size = System::Drawing::Size(163, 75);
+			this->button5->Size = System::Drawing::Size(208, 53);
 			this->button5->TabIndex = 6;
 			this->button5->Text = L"all_shape";
-			this->button5->UseVisualStyleBackColor = true;
+			this->button5->UseVisualStyleBackColor = false;
 			this->button5->Click += gcnew System::EventHandler(this, &shapesPanel::button5_Click);
 			// 
 			// button6
 			// 
-			this->button6->Location = System::Drawing::Point(32, 52);
-			this->button6->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->button6->BackColor = System::Drawing::Color::PeachPuff;
+			this->button6->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+			this->button6->Font = (gcnew System::Drawing::Font(L"Century Gothic", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->button6->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->button6->Location = System::Drawing::Point(98, 91);
+			this->button6->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->button6->Name = L"button6";
-			this->button6->Size = System::Drawing::Size(172, 69);
+			this->button6->Size = System::Drawing::Size(208, 53);
 			this->button6->TabIndex = 7;
 			this->button6->Text = L"game";
-			this->button6->UseVisualStyleBackColor = true;
+			this->button6->UseVisualStyleBackColor = false;
 			this->button6->Click += gcnew System::EventHandler(this, &shapesPanel::button6_Click);
+			// 
+			// label1
+			// 
+			this->label1->AutoSize = true;
+			this->label1->BackColor = System::Drawing::Color::Transparent;
+			this->label1->Font = (gcnew System::Drawing::Font(L"Century Gothic", 27.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->label1->Location = System::Drawing::Point(90, 21);
+			this->label1->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label1->Name = L"label1";
+			this->label1->Size = System::Drawing::Size(216, 44);
+			this->label1->TabIndex = 8;
+			this->label1->Text = L"Categories";
 			// 
 			// shapesPanel
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
+			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(945, 545);
+			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"$this.BackgroundImage")));
+			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->ClientSize = System::Drawing::Size(414, 457);
+			this->Controls->Add(this->label1);
 			this->Controls->Add(this->button6);
 			this->Controls->Add(this->button5);
 			this->Controls->Add(this->button4);
 			this->Controls->Add(this->button3);
 			this->Controls->Add(this->button2);
-			this->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->DoubleBuffered = true;
+			this->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->Name = L"shapesPanel";
 			this->Text = L"shapesPanel";
 			this->Load += gcnew System::EventHandler(this, &shapesPanel::shapesPanel_Load);
 			this->ResumeLayout(false);
+			this->PerformLayout();
 
 		}
 #pragma endregion

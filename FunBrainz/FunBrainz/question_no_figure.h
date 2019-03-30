@@ -73,6 +73,7 @@ namespace FunBrainz {
 	private: System::Windows::Forms::Button^  button2;
 	private: System::Windows::Forms::TextBox^  textBox1;
 	private: System::Windows::Forms::Panel^  panel1;
+	private: System::Windows::Forms::Label^  label7;
 	private: System::ComponentModel::IContainer^  components;
 
 	private:
@@ -117,6 +118,7 @@ namespace FunBrainz {
 			this->button2 = (gcnew System::Windows::Forms::Button());
 			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
 			this->panel1 = (gcnew System::Windows::Forms::Panel());
+			this->label7 = (gcnew System::Windows::Forms::Label());
 			this->panel3->SuspendLayout();
 			this->panel2->SuspendLayout();
 			this->panel1->SuspendLayout();
@@ -125,22 +127,24 @@ namespace FunBrainz {
 			// label6
 			// 
 			this->label6->AutoSize = true;
-			this->label6->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+			this->label6->Font = (gcnew System::Drawing::Font(L"Century Gothic", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->label6->Location = System::Drawing::Point(545, 8);
+			this->label6->Location = System::Drawing::Point(405, 16);
+			this->label6->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label6->Name = L"label6";
-			this->label6->Size = System::Drawing::Size(39, 29);
+			this->label6->Size = System::Drawing::Size(39, 30);
 			this->label6->TabIndex = 61;
 			this->label6->Text = L"25";
 			// 
 			// label5
 			// 
 			this->label5->AutoSize = true;
-			this->label5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+			this->label5->Font = (gcnew System::Drawing::Font(L"Century Gothic", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->label5->Location = System::Drawing::Point(1086, 383);
+			this->label5->Location = System::Drawing::Point(846, 349);
+			this->label5->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label5->Name = L"label5";
-			this->label5->Size = System::Drawing::Size(23, 25);
+			this->label5->Size = System::Drawing::Size(19, 21);
 			this->label5->TabIndex = 60;
 			this->label5->Text = L"0";
 			// 
@@ -152,170 +156,226 @@ namespace FunBrainz {
 			// label4
 			// 
 			this->label4->AutoSize = true;
-			this->label4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+			this->label4->BackColor = System::Drawing::SystemColors::ButtonHighlight;
+			this->label4->Font = (gcnew System::Drawing::Font(L"Century Gothic", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->label4->Location = System::Drawing::Point(1014, 383);
+			this->label4->Location = System::Drawing::Point(792, 349);
+			this->label4->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(66, 25);
+			this->label4->Size = System::Drawing::Size(55, 21);
 			this->label4->TabIndex = 59;
 			this->label4->Text = L"Marks";
 			// 
 			// label3
 			// 
 			this->label3->AutoSize = true;
-			this->label3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+			this->label3->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->label3->Font = (gcnew System::Drawing::Font(L"Century Gothic", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->label3->Location = System::Drawing::Point(1086, 624);
+			this->label3->Location = System::Drawing::Point(681, 512);
+			this->label3->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(23, 25);
+			this->label3->Size = System::Drawing::Size(21, 23);
 			this->label3->TabIndex = 58;
 			this->label3->Text = L"0";
 			// 
 			// label2
 			// 
 			this->label2->AutoSize = true;
-			this->label2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+			this->label2->BackColor = System::Drawing::SystemColors::ButtonHighlight;
+			this->label2->Font = (gcnew System::Drawing::Font(L"Century Gothic", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->label2->Location = System::Drawing::Point(938, 624);
+			this->label2->Location = System::Drawing::Point(558, 511);
+			this->label2->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(110, 25);
+			this->label2->Size = System::Drawing::Size(110, 21);
 			this->label2->TabIndex = 57;
-			this->label2->Text = L"Your Score";
+			this->label2->Text = L"Your Score is ";
 			// 
 			// check
 			// 
-			this->check->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+			this->check->BackColor = System::Drawing::Color::Firebrick;
+			this->check->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+			this->check->Font = (gcnew System::Drawing::Font(L"Century Gothic", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->check->Location = System::Drawing::Point(156, 579);
+			this->check->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
+			this->check->Location = System::Drawing::Point(410, 421);
+			this->check->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->check->Name = L"check";
-			this->check->Size = System::Drawing::Size(124, 62);
+			this->check->Size = System::Drawing::Size(93, 45);
 			this->check->TabIndex = 51;
 			this->check->Text = L"check";
-			this->check->UseVisualStyleBackColor = true;
+			this->check->UseVisualStyleBackColor = false;
 			this->check->Click += gcnew System::EventHandler(this, &question_no_figure::check_Click);
 			// 
 			// textBox5
 			// 
-			this->textBox5->Location = System::Drawing::Point(560, 538);
+			this->textBox5->BackColor = System::Drawing::SystemColors::ButtonHighlight;
+			this->textBox5->Font = (gcnew System::Drawing::Font(L"Century Gothic", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->textBox5->Location = System::Drawing::Point(238, 508);
+			this->textBox5->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->textBox5->Name = L"textBox5";
-			this->textBox5->Size = System::Drawing::Size(352, 22);
+			this->textBox5->Size = System::Drawing::Size(216, 27);
 			this->textBox5->TabIndex = 50;
 			// 
 			// label1
 			// 
 			this->label1->AutoSize = true;
-			this->label1->Location = System::Drawing::Point(340, 2);
+			this->label1->Font = (gcnew System::Drawing::Font(L"Century Gothic", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->label1->Location = System::Drawing::Point(254, 16);
+			this->label1->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(16, 17);
+			this->label1->Size = System::Drawing::Size(26, 30);
 			this->label1->TabIndex = 56;
 			this->label1->Text = L"0";
 			this->label1->Visible = false;
 			// 
 			// textBox4
 			// 
-			this->textBox4->Location = System::Drawing::Point(798, 455);
+			this->textBox4->BackColor = System::Drawing::SystemColors::ButtonHighlight;
+			this->textBox4->Font = (gcnew System::Drawing::Font(L"Century Gothic", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->textBox4->Location = System::Drawing::Point(638, 372);
+			this->textBox4->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->textBox4->Name = L"textBox4";
 			this->textBox4->ReadOnly = true;
-			this->textBox4->Size = System::Drawing::Size(114, 22);
+			this->textBox4->Size = System::Drawing::Size(86, 31);
 			this->textBox4->TabIndex = 45;
+			this->textBox4->TextAlign = System::Windows::Forms::HorizontalAlignment::Center;
 			// 
 			// checkBox4
 			// 
 			this->checkBox4->AutoSize = true;
-			this->checkBox4->Location = System::Drawing::Point(774, 460);
+			this->checkBox4->BackColor = System::Drawing::SystemColors::ButtonHighlight;
+			this->checkBox4->Font = (gcnew System::Drawing::Font(L"Century Gothic", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->checkBox4->Location = System::Drawing::Point(618, 380);
+			this->checkBox4->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->checkBox4->Name = L"checkBox4";
-			this->checkBox4->Size = System::Drawing::Size(18, 17);
+			this->checkBox4->Size = System::Drawing::Size(15, 14);
 			this->checkBox4->TabIndex = 49;
-			this->checkBox4->UseVisualStyleBackColor = true;
+			this->checkBox4->UseVisualStyleBackColor = false;
 			this->checkBox4->CheckStateChanged += gcnew System::EventHandler(this, &question_no_figure::checkBox4_CheckStateChanged);
 			// 
 			// richTextBox1
 			// 
-			this->richTextBox1->BackColor = System::Drawing::SystemColors::ActiveCaption;
-			this->richTextBox1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+			this->richTextBox1->BackColor = System::Drawing::SystemColors::ButtonHighlight;
+			this->richTextBox1->BorderStyle = System::Windows::Forms::BorderStyle::None;
+			this->richTextBox1->Font = (gcnew System::Drawing::Font(L"Century Gothic", 12.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->richTextBox1->Location = System::Drawing::Point(17, 33);
+			this->richTextBox1->Location = System::Drawing::Point(13, 27);
+			this->richTextBox1->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->richTextBox1->Name = L"richTextBox1";
 			this->richTextBox1->ReadOnly = true;
-			this->richTextBox1->Size = System::Drawing::Size(965, 187);
+			this->richTextBox1->Size = System::Drawing::Size(725, 153);
 			this->richTextBox1->TabIndex = 0;
 			this->richTextBox1->Text = L"";
 			// 
 			// panel3
 			// 
+			this->panel3->BackColor = System::Drawing::SystemColors::ButtonHighlight;
+			this->panel3->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel3->Controls->Add(this->richTextBox3);
-			this->panel3->Location = System::Drawing::Point(187, 42);
+			this->panel3->Location = System::Drawing::Point(140, 71);
+			this->panel3->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->panel3->Name = L"panel3";
-			this->panel3->Size = System::Drawing::Size(1002, 243);
+			this->panel3->Size = System::Drawing::Size(752, 197);
 			this->panel3->TabIndex = 55;
 			// 
 			// richTextBox3
 			// 
-			this->richTextBox3->BackColor = System::Drawing::SystemColors::ActiveCaption;
-			this->richTextBox3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+			this->richTextBox3->BackColor = System::Drawing::SystemColors::ButtonHighlight;
+			this->richTextBox3->BorderStyle = System::Windows::Forms::BorderStyle::None;
+			this->richTextBox3->Font = (gcnew System::Drawing::Font(L"Century Gothic", 12.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->richTextBox3->Location = System::Drawing::Point(20, 74);
+			this->richTextBox3->Location = System::Drawing::Point(16, 31);
+			this->richTextBox3->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->richTextBox3->Name = L"richTextBox3";
 			this->richTextBox3->ReadOnly = true;
-			this->richTextBox3->Size = System::Drawing::Size(965, 187);
+			this->richTextBox3->Size = System::Drawing::Size(725, 153);
 			this->richTextBox3->TabIndex = 0;
 			this->richTextBox3->Text = L"";
 			// 
 			// checkBox3
 			// 
 			this->checkBox3->AutoSize = true;
-			this->checkBox3->Location = System::Drawing::Point(526, 461);
+			this->checkBox3->BackColor = System::Drawing::SystemColors::ButtonHighlight;
+			this->checkBox3->Font = (gcnew System::Drawing::Font(L"Century Gothic", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->checkBox3->Location = System::Drawing::Point(471, 380);
+			this->checkBox3->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->checkBox3->Name = L"checkBox3";
-			this->checkBox3->Size = System::Drawing::Size(18, 17);
+			this->checkBox3->Size = System::Drawing::Size(15, 14);
 			this->checkBox3->TabIndex = 48;
-			this->checkBox3->UseVisualStyleBackColor = true;
+			this->checkBox3->UseVisualStyleBackColor = false;
 			this->checkBox3->CheckStateChanged += gcnew System::EventHandler(this, &question_no_figure::checkBox3_CheckStateChanged);
 			// 
 			// textBox3
 			// 
-			this->textBox3->Location = System::Drawing::Point(550, 460);
+			this->textBox3->BackColor = System::Drawing::SystemColors::ButtonHighlight;
+			this->textBox3->Font = (gcnew System::Drawing::Font(L"Century Gothic", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->textBox3->Location = System::Drawing::Point(490, 372);
+			this->textBox3->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->textBox3->Name = L"textBox3";
 			this->textBox3->ReadOnly = true;
-			this->textBox3->Size = System::Drawing::Size(114, 22);
+			this->textBox3->Size = System::Drawing::Size(86, 31);
 			this->textBox3->TabIndex = 44;
+			this->textBox3->TextAlign = System::Windows::Forms::HorizontalAlignment::Center;
 			// 
 			// checkBox2
 			// 
 			this->checkBox2->AutoSize = true;
-			this->checkBox2->Location = System::Drawing::Point(296, 465);
+			this->checkBox2->BackColor = System::Drawing::SystemColors::ButtonHighlight;
+			this->checkBox2->Font = (gcnew System::Drawing::Font(L"Century Gothic", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->checkBox2->Location = System::Drawing::Point(316, 380);
+			this->checkBox2->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->checkBox2->Name = L"checkBox2";
-			this->checkBox2->Size = System::Drawing::Size(18, 17);
+			this->checkBox2->Size = System::Drawing::Size(15, 14);
 			this->checkBox2->TabIndex = 47;
-			this->checkBox2->UseVisualStyleBackColor = true;
+			this->checkBox2->UseVisualStyleBackColor = false;
 			this->checkBox2->CheckStateChanged += gcnew System::EventHandler(this, &question_no_figure::checkBox2_CheckStateChanged);
 			// 
 			// panel2
 			// 
+			this->panel2->BackColor = System::Drawing::SystemColors::ButtonHighlight;
+			this->panel2->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel2->Controls->Add(this->richTextBox2);
-			this->panel2->Location = System::Drawing::Point(95, 65);
+			this->panel2->Location = System::Drawing::Point(71, 90);
+			this->panel2->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->panel2->Name = L"panel2";
-			this->panel2->Size = System::Drawing::Size(1017, 251);
+			this->panel2->Size = System::Drawing::Size(752, 197);
 			this->panel2->TabIndex = 54;
 			// 
 			// richTextBox2
 			// 
-			this->richTextBox2->BackColor = System::Drawing::SystemColors::ActiveCaption;
-			this->richTextBox2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+			this->richTextBox2->BackColor = System::Drawing::SystemColors::ButtonHighlight;
+			this->richTextBox2->BorderStyle = System::Windows::Forms::BorderStyle::None;
+			this->richTextBox2->Font = (gcnew System::Drawing::Font(L"Century Gothic", 12.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->richTextBox2->Location = System::Drawing::Point(17, 33);
+			this->richTextBox2->Location = System::Drawing::Point(13, 27);
+			this->richTextBox2->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->richTextBox2->Name = L"richTextBox2";
 			this->richTextBox2->ReadOnly = true;
-			this->richTextBox2->Size = System::Drawing::Size(965, 187);
+			this->richTextBox2->Size = System::Drawing::Size(725, 153);
 			this->richTextBox2->TabIndex = 0;
 			this->richTextBox2->Text = L"";
 			// 
 			// textBox2
 			// 
-			this->textBox2->Location = System::Drawing::Point(320, 461);
+			this->textBox2->BackColor = System::Drawing::SystemColors::ButtonHighlight;
+			this->textBox2->Font = (gcnew System::Drawing::Font(L"Century Gothic", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->textBox2->Location = System::Drawing::Point(335, 372);
+			this->textBox2->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->textBox2->Name = L"textBox2";
 			this->textBox2->ReadOnly = true;
-			this->textBox2->Size = System::Drawing::Size(114, 22);
+			this->textBox2->Size = System::Drawing::Size(86, 31);
 			this->textBox2->TabIndex = 43;
+			this->textBox2->TextAlign = System::Windows::Forms::HorizontalAlignment::Center;
 			// 
 			// timer3
 			// 
@@ -325,27 +385,31 @@ namespace FunBrainz {
 			// checkBox1
 			// 
 			this->checkBox1->AutoSize = true;
-			this->checkBox1->Location = System::Drawing::Point(43, 470);
+			this->checkBox1->BackColor = System::Drawing::SystemColors::ButtonHighlight;
+			this->checkBox1->Font = (gcnew System::Drawing::Font(L"Century Gothic", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->checkBox1->Location = System::Drawing::Point(163, 380);
+			this->checkBox1->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->checkBox1->Name = L"checkBox1";
-			this->checkBox1->Size = System::Drawing::Size(18, 17);
+			this->checkBox1->Size = System::Drawing::Size(15, 14);
 			this->checkBox1->TabIndex = 46;
-			this->checkBox1->UseVisualStyleBackColor = true;
+			this->checkBox1->UseVisualStyleBackColor = false;
 			this->checkBox1->CheckStateChanged += gcnew System::EventHandler(this, &question_no_figure::checkBox1_CheckStateChanged);
 			// 
 			// button3
 			// 
-			this->button3->BackColor = System::Drawing::SystemColors::ControlLightLight;
-			this->button3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
+			this->button3->BackColor = System::Drawing::Color::Firebrick;
+			this->button3->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+			this->button3->Font = (gcnew System::Drawing::Font(L"Century Gothic", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->button3->ForeColor = System::Drawing::SystemColors::Highlight;
-			this->button3->Image = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"button3.Image")));
+			this->button3->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
 			this->button3->ImageAlign = System::Drawing::ContentAlignment::MiddleRight;
-			this->button3->Location = System::Drawing::Point(875, 2);
+			this->button3->Location = System::Drawing::Point(602, 23);
+			this->button3->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->button3->Name = L"button3";
-			this->button3->Size = System::Drawing::Size(162, 39);
+			this->button3->Size = System::Drawing::Size(122, 32);
 			this->button3->TabIndex = 53;
 			this->button3->Text = L"Next";
-			this->button3->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->button3->UseVisualStyleBackColor = false;
 			this->button3->Click += gcnew System::EventHandler(this, &question_no_figure::button3_Click);
 			// 
@@ -356,37 +420,63 @@ namespace FunBrainz {
 			// 
 			// button2
 			// 
-			this->button2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+			this->button2->BackColor = System::Drawing::Color::Firebrick;
+			this->button2->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+			this->button2->Font = (gcnew System::Drawing::Font(L"Century Gothic", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->button2->Location = System::Drawing::Point(654, 4);
+			this->button2->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
+			this->button2->Location = System::Drawing::Point(744, 23);
+			this->button2->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->button2->Name = L"button2";
-			this->button2->Size = System::Drawing::Size(138, 33);
+			this->button2->Size = System::Drawing::Size(122, 32);
 			this->button2->TabIndex = 52;
 			this->button2->Text = L"Exit";
-			this->button2->UseVisualStyleBackColor = true;
+			this->button2->UseVisualStyleBackColor = false;
 			this->button2->Click += gcnew System::EventHandler(this, &question_no_figure::button2_Click);
 			// 
 			// textBox1
 			// 
-			this->textBox1->Location = System::Drawing::Point(67, 465);
+			this->textBox1->BackColor = System::Drawing::SystemColors::ButtonHighlight;
+			this->textBox1->Font = (gcnew System::Drawing::Font(L"Century Gothic", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->textBox1->Location = System::Drawing::Point(182, 372);
+			this->textBox1->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->textBox1->Name = L"textBox1";
 			this->textBox1->ReadOnly = true;
-			this->textBox1->Size = System::Drawing::Size(114, 22);
+			this->textBox1->Size = System::Drawing::Size(86, 31);
 			this->textBox1->TabIndex = 42;
+			this->textBox1->TextAlign = System::Windows::Forms::HorizontalAlignment::Center;
 			// 
 			// panel1
 			// 
+			this->panel1->BackColor = System::Drawing::SystemColors::ButtonHighlight;
+			this->panel1->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel1->Controls->Add(this->richTextBox1);
-			this->panel1->Location = System::Drawing::Point(0, 96);
+			this->panel1->Location = System::Drawing::Point(0, 115);
+			this->panel1->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->panel1->Name = L"panel1";
-			this->panel1->Size = System::Drawing::Size(1017, 268);
+			this->panel1->Size = System::Drawing::Size(752, 197);
 			this->panel1->TabIndex = 41;
+			// 
+			// label7
+			// 
+			this->label7->AutoSize = true;
+			this->label7->Font = (gcnew System::Drawing::Font(L"Century Gothic", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->label7->Location = System::Drawing::Point(104, 511);
+			this->label7->Name = L"label7";
+			this->label7->Size = System::Drawing::Size(123, 21);
+			this->label7->TabIndex = 62;
+			this->label7->Text = L"Your answer is ";
 			// 
 			// question_no_figure
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
+			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(1201, 760);
+			this->BackColor = System::Drawing::SystemColors::ButtonHighlight;
+			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"$this.BackgroundImage")));
+			this->ClientSize = System::Drawing::Size(901, 602);
+			this->Controls->Add(this->label7);
 			this->Controls->Add(this->label6);
 			this->Controls->Add(this->label5);
 			this->Controls->Add(this->label4);
@@ -408,6 +498,7 @@ namespace FunBrainz {
 			this->Controls->Add(this->button2);
 			this->Controls->Add(this->textBox1);
 			this->Controls->Add(this->panel1);
+			this->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->Name = L"question_no_figure";
 			this->Text = L"question_no_figure";
 			this->Load += gcnew System::EventHandler(this, &question_no_figure::question_no_figure_Load);
@@ -767,13 +858,13 @@ private: System::Void question_no_figure_Load(System::Object^  sender, System::E
 			 urans="";
 		
 			 timeleft=25;  //initializing timefeft
-			  button2->Left = this->Width - 150;
-			 button3->Left = this->Width - 150;
+			  //button2->Left = this->Width - 150;
+			 //button3->Left = this->Width - 150;
 			 panel1->Top = 90;
 			 panel2->Top = 90;
 			 panel3->Top = 90;
-			 button2->Top=30;
-			 button3->Top=60;
+			 //button2->Top=30;
+			 //button3->Top=60;
 			 //initializing variables............
 			 z = int(this->Width - panel1->Width) / 2;
 			   time=0;

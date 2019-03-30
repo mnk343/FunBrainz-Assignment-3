@@ -191,22 +191,24 @@ namespace FunBrainz {
 			// 
 			// panel3
 			// 
-			this->panel3->BackColor = System::Drawing::Color::Gray;
+			this->panel3->BackColor = System::Drawing::SystemColors::ButtonHighlight;
 			this->panel3->Controls->Add(this->pictureBox36);
 			this->panel3->Controls->Add(this->pictureBox35);
 			this->panel3->Controls->Add(this->pictureBox33);
 			this->panel3->Controls->Add(this->pictureBox34);
 			this->panel3->Controls->Add(this->pictureBox31);
-			this->panel3->Location = System::Drawing::Point(24, 373);
+			this->panel3->Location = System::Drawing::Point(11, 303);
+			this->panel3->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->panel3->Name = L"panel3";
-			this->panel3->Size = System::Drawing::Size(1306, 571);
+			this->panel3->Size = System::Drawing::Size(852, 522);
 			this->panel3->TabIndex = 23;
 			// 
 			// pictureBox36
 			// 
-			this->pictureBox36->Location = System::Drawing::Point(385, 271);
+			this->pictureBox36->Location = System::Drawing::Point(521, 47);
+			this->pictureBox36->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->pictureBox36->Name = L"pictureBox36";
-			this->pictureBox36->Size = System::Drawing::Size(202, 190);
+			this->pictureBox36->Size = System::Drawing::Size(128, 124);
 			this->pictureBox36->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
 			this->pictureBox36->TabIndex = 22;
 			this->pictureBox36->TabStop = false;
@@ -214,9 +216,10 @@ namespace FunBrainz {
 			// 
 			// pictureBox35
 			// 
-			this->pictureBox35->Location = System::Drawing::Point(649, 52);
+			this->pictureBox35->Location = System::Drawing::Point(360, 47);
+			this->pictureBox35->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->pictureBox35->Name = L"pictureBox35";
-			this->pictureBox35->Size = System::Drawing::Size(202, 190);
+			this->pictureBox35->Size = System::Drawing::Size(128, 124);
 			this->pictureBox35->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
 			this->pictureBox35->TabIndex = 21;
 			this->pictureBox35->TabStop = false;
@@ -224,9 +227,10 @@ namespace FunBrainz {
 			// 
 			// pictureBox33
 			// 
-			this->pictureBox33->Location = System::Drawing::Point(66, 42);
+			this->pictureBox33->Location = System::Drawing::Point(38, 47);
+			this->pictureBox33->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->pictureBox33->Name = L"pictureBox33";
-			this->pictureBox33->Size = System::Drawing::Size(202, 190);
+			this->pictureBox33->Size = System::Drawing::Size(128, 124);
 			this->pictureBox33->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
 			this->pictureBox33->TabIndex = 19;
 			this->pictureBox33->TabStop = false;
@@ -234,9 +238,10 @@ namespace FunBrainz {
 			// 
 			// pictureBox34
 			// 
-			this->pictureBox34->Location = System::Drawing::Point(385, 42);
+			this->pictureBox34->Location = System::Drawing::Point(199, 47);
+			this->pictureBox34->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->pictureBox34->Name = L"pictureBox34";
-			this->pictureBox34->Size = System::Drawing::Size(202, 190);
+			this->pictureBox34->Size = System::Drawing::Size(128, 124);
 			this->pictureBox34->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
 			this->pictureBox34->TabIndex = 18;
 			this->pictureBox34->TabStop = false;
@@ -244,9 +249,10 @@ namespace FunBrainz {
 			// 
 			// pictureBox31
 			// 
-			this->pictureBox31->Location = System::Drawing::Point(69, 280);
+			this->pictureBox31->Location = System::Drawing::Point(683, 47);
+			this->pictureBox31->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->pictureBox31->Name = L"pictureBox31";
-			this->pictureBox31->Size = System::Drawing::Size(205, 190);
+			this->pictureBox31->Size = System::Drawing::Size(128, 124);
 			this->pictureBox31->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
 			this->pictureBox31->TabIndex = 15;
 			this->pictureBox31->TabStop = false;
@@ -254,7 +260,8 @@ namespace FunBrainz {
 			// 
 			// panel1
 			// 
-			this->panel1->BackColor = System::Drawing::SystemColors::ActiveCaption;
+			this->panel1->BackColor = System::Drawing::SystemColors::ButtonHighlight;
+			this->panel1->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel1->Controls->Add(this->pictureBox1);
 			this->panel1->Controls->Add(this->pictureBox11);
 			this->panel1->Controls->Add(this->pictureBox12);
@@ -270,16 +277,19 @@ namespace FunBrainz {
 			this->panel1->Controls->Add(this->pictureBox4);
 			this->panel1->Controls->Add(this->pictureBox3);
 			this->panel1->Controls->Add(this->pictureBox2);
-			this->panel1->Location = System::Drawing::Point(277, 179);
+			this->panel1->Location = System::Drawing::Point(9, 29);
+			this->panel1->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->panel1->Name = L"panel1";
-			this->panel1->Size = System::Drawing::Size(1088, 633);
+			this->panel1->Size = System::Drawing::Size(852, 522);
 			this->panel1->TabIndex = 18;
 			// 
 			// pictureBox1
 			// 
-			this->pictureBox1->Location = System::Drawing::Point(9, 24);
+			this->pictureBox1->Location = System::Drawing::Point(38, 46);
+			this->pictureBox1->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->pictureBox1->Name = L"pictureBox1";
-			this->pictureBox1->Size = System::Drawing::Size(205, 190);
+			this->pictureBox1->Padding = System::Windows::Forms::Padding(7);
+			this->pictureBox1->Size = System::Drawing::Size(128, 124);
 			this->pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
 			this->pictureBox1->TabIndex = 15;
 			this->pictureBox1->TabStop = false;
@@ -287,9 +297,11 @@ namespace FunBrainz {
 			// 
 			// pictureBox11
 			// 
-			this->pictureBox11->Location = System::Drawing::Point(3, 428);
+			this->pictureBox11->Location = System::Drawing::Point(38, 361);
+			this->pictureBox11->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->pictureBox11->Name = L"pictureBox11";
-			this->pictureBox11->Size = System::Drawing::Size(202, 190);
+			this->pictureBox11->Padding = System::Windows::Forms::Padding(7);
+			this->pictureBox11->Size = System::Drawing::Size(128, 124);
 			this->pictureBox11->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
 			this->pictureBox11->TabIndex = 14;
 			this->pictureBox11->TabStop = false;
@@ -297,9 +309,11 @@ namespace FunBrainz {
 			// 
 			// pictureBox12
 			// 
-			this->pictureBox12->Location = System::Drawing::Point(211, 428);
+			this->pictureBox12->Location = System::Drawing::Point(200, 362);
+			this->pictureBox12->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->pictureBox12->Name = L"pictureBox12";
-			this->pictureBox12->Size = System::Drawing::Size(211, 190);
+			this->pictureBox12->Padding = System::Windows::Forms::Padding(7);
+			this->pictureBox12->Size = System::Drawing::Size(128, 124);
 			this->pictureBox12->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
 			this->pictureBox12->TabIndex = 13;
 			this->pictureBox12->TabStop = false;
@@ -307,9 +321,11 @@ namespace FunBrainz {
 			// 
 			// pictureBox13
 			// 
-			this->pictureBox13->Location = System::Drawing::Point(428, 428);
+			this->pictureBox13->Location = System::Drawing::Point(361, 362);
+			this->pictureBox13->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->pictureBox13->Name = L"pictureBox13";
-			this->pictureBox13->Size = System::Drawing::Size(211, 190);
+			this->pictureBox13->Padding = System::Windows::Forms::Padding(7);
+			this->pictureBox13->Size = System::Drawing::Size(128, 124);
 			this->pictureBox13->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
 			this->pictureBox13->TabIndex = 12;
 			this->pictureBox13->TabStop = false;
@@ -317,9 +333,11 @@ namespace FunBrainz {
 			// 
 			// pictureBox15
 			// 
-			this->pictureBox15->Location = System::Drawing::Point(862, 428);
+			this->pictureBox15->Location = System::Drawing::Point(684, 362);
+			this->pictureBox15->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->pictureBox15->Name = L"pictureBox15";
-			this->pictureBox15->Size = System::Drawing::Size(211, 190);
+			this->pictureBox15->Padding = System::Windows::Forms::Padding(7);
+			this->pictureBox15->Size = System::Drawing::Size(128, 124);
 			this->pictureBox15->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
 			this->pictureBox15->TabIndex = 10;
 			this->pictureBox15->TabStop = false;
@@ -327,9 +345,11 @@ namespace FunBrainz {
 			// 
 			// pictureBox14
 			// 
-			this->pictureBox14->Location = System::Drawing::Point(645, 428);
+			this->pictureBox14->Location = System::Drawing::Point(523, 362);
+			this->pictureBox14->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->pictureBox14->Name = L"pictureBox14";
-			this->pictureBox14->Size = System::Drawing::Size(211, 190);
+			this->pictureBox14->Padding = System::Windows::Forms::Padding(7);
+			this->pictureBox14->Size = System::Drawing::Size(128, 124);
 			this->pictureBox14->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
 			this->pictureBox14->TabIndex = 11;
 			this->pictureBox14->TabStop = false;
@@ -337,9 +357,11 @@ namespace FunBrainz {
 			// 
 			// pictureBox6
 			// 
-			this->pictureBox6->Location = System::Drawing::Point(3, 220);
+			this->pictureBox6->Location = System::Drawing::Point(38, 203);
+			this->pictureBox6->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->pictureBox6->Name = L"pictureBox6";
-			this->pictureBox6->Size = System::Drawing::Size(202, 190);
+			this->pictureBox6->Padding = System::Windows::Forms::Padding(7);
+			this->pictureBox6->Size = System::Drawing::Size(128, 124);
 			this->pictureBox6->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
 			this->pictureBox6->TabIndex = 9;
 			this->pictureBox6->TabStop = false;
@@ -347,9 +369,11 @@ namespace FunBrainz {
 			// 
 			// pictureBox7
 			// 
-			this->pictureBox7->Location = System::Drawing::Point(211, 222);
+			this->pictureBox7->Location = System::Drawing::Point(200, 204);
+			this->pictureBox7->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->pictureBox7->Name = L"pictureBox7";
-			this->pictureBox7->Size = System::Drawing::Size(211, 190);
+			this->pictureBox7->Padding = System::Windows::Forms::Padding(7);
+			this->pictureBox7->Size = System::Drawing::Size(128, 124);
 			this->pictureBox7->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
 			this->pictureBox7->TabIndex = 8;
 			this->pictureBox7->TabStop = false;
@@ -357,9 +381,11 @@ namespace FunBrainz {
 			// 
 			// pictureBox8
 			// 
-			this->pictureBox8->Location = System::Drawing::Point(428, 222);
+			this->pictureBox8->Location = System::Drawing::Point(361, 203);
+			this->pictureBox8->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->pictureBox8->Name = L"pictureBox8";
-			this->pictureBox8->Size = System::Drawing::Size(211, 190);
+			this->pictureBox8->Padding = System::Windows::Forms::Padding(7);
+			this->pictureBox8->Size = System::Drawing::Size(128, 124);
 			this->pictureBox8->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
 			this->pictureBox8->TabIndex = 7;
 			this->pictureBox8->TabStop = false;
@@ -367,9 +393,11 @@ namespace FunBrainz {
 			// 
 			// pictureBox9
 			// 
-			this->pictureBox9->Location = System::Drawing::Point(645, 222);
+			this->pictureBox9->Location = System::Drawing::Point(522, 204);
+			this->pictureBox9->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->pictureBox9->Name = L"pictureBox9";
-			this->pictureBox9->Size = System::Drawing::Size(211, 190);
+			this->pictureBox9->Padding = System::Windows::Forms::Padding(7);
+			this->pictureBox9->Size = System::Drawing::Size(128, 124);
 			this->pictureBox9->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
 			this->pictureBox9->TabIndex = 6;
 			this->pictureBox9->TabStop = false;
@@ -377,9 +405,11 @@ namespace FunBrainz {
 			// 
 			// pictureBox10
 			// 
-			this->pictureBox10->Location = System::Drawing::Point(862, 222);
+			this->pictureBox10->Location = System::Drawing::Point(684, 204);
+			this->pictureBox10->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->pictureBox10->Name = L"pictureBox10";
-			this->pictureBox10->Size = System::Drawing::Size(211, 190);
+			this->pictureBox10->Padding = System::Windows::Forms::Padding(7);
+			this->pictureBox10->Size = System::Drawing::Size(128, 124);
 			this->pictureBox10->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
 			this->pictureBox10->TabIndex = 5;
 			this->pictureBox10->TabStop = false;
@@ -387,9 +417,11 @@ namespace FunBrainz {
 			// 
 			// pictureBox5
 			// 
-			this->pictureBox5->Location = System::Drawing::Point(874, 12);
+			this->pictureBox5->Location = System::Drawing::Point(684, 46);
+			this->pictureBox5->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->pictureBox5->Name = L"pictureBox5";
-			this->pictureBox5->Size = System::Drawing::Size(211, 190);
+			this->pictureBox5->Padding = System::Windows::Forms::Padding(7);
+			this->pictureBox5->Size = System::Drawing::Size(128, 124);
 			this->pictureBox5->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
 			this->pictureBox5->TabIndex = 4;
 			this->pictureBox5->TabStop = false;
@@ -397,9 +429,11 @@ namespace FunBrainz {
 			// 
 			// pictureBox4
 			// 
-			this->pictureBox4->Location = System::Drawing::Point(657, 12);
+			this->pictureBox4->Location = System::Drawing::Point(522, 46);
+			this->pictureBox4->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->pictureBox4->Name = L"pictureBox4";
-			this->pictureBox4->Size = System::Drawing::Size(211, 190);
+			this->pictureBox4->Padding = System::Windows::Forms::Padding(7);
+			this->pictureBox4->Size = System::Drawing::Size(128, 124);
 			this->pictureBox4->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
 			this->pictureBox4->TabIndex = 3;
 			this->pictureBox4->TabStop = false;
@@ -407,9 +441,11 @@ namespace FunBrainz {
 			// 
 			// pictureBox3
 			// 
-			this->pictureBox3->Location = System::Drawing::Point(440, 12);
+			this->pictureBox3->Location = System::Drawing::Point(361, 46);
+			this->pictureBox3->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->pictureBox3->Name = L"pictureBox3";
-			this->pictureBox3->Size = System::Drawing::Size(211, 190);
+			this->pictureBox3->Padding = System::Windows::Forms::Padding(7);
+			this->pictureBox3->Size = System::Drawing::Size(128, 124);
 			this->pictureBox3->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
 			this->pictureBox3->TabIndex = 2;
 			this->pictureBox3->TabStop = false;
@@ -417,9 +453,11 @@ namespace FunBrainz {
 			// 
 			// pictureBox2
 			// 
-			this->pictureBox2->Location = System::Drawing::Point(220, 12);
+			this->pictureBox2->Location = System::Drawing::Point(200, 46);
+			this->pictureBox2->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->pictureBox2->Name = L"pictureBox2";
-			this->pictureBox2->Size = System::Drawing::Size(211, 190);
+			this->pictureBox2->Padding = System::Windows::Forms::Padding(7);
+			this->pictureBox2->Size = System::Drawing::Size(128, 124);
 			this->pictureBox2->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
 			this->pictureBox2->TabIndex = 1;
 			this->pictureBox2->TabStop = false;
@@ -427,9 +465,10 @@ namespace FunBrainz {
 			// 
 			// pictureBox22
 			// 
-			this->pictureBox22->Location = System::Drawing::Point(6, 217);
+			this->pictureBox22->Location = System::Drawing::Point(41, 202);
+			this->pictureBox22->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->pictureBox22->Name = L"pictureBox22";
-			this->pictureBox22->Size = System::Drawing::Size(202, 190);
+			this->pictureBox22->Size = System::Drawing::Size(128, 124);
 			this->pictureBox22->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
 			this->pictureBox22->TabIndex = 17;
 			this->pictureBox22->TabStop = false;
@@ -453,16 +492,18 @@ namespace FunBrainz {
 			this->panel2->Controls->Add(this->pictureBox28);
 			this->panel2->Controls->Add(this->pictureBox29);
 			this->panel2->Controls->Add(this->pictureBox30);
-			this->panel2->Location = System::Drawing::Point(77, 238);
+			this->panel2->Location = System::Drawing::Point(7, 31);
+			this->panel2->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->panel2->Name = L"panel2";
-			this->panel2->Size = System::Drawing::Size(1093, 643);
+			this->panel2->Size = System::Drawing::Size(852, 522);
 			this->panel2->TabIndex = 22;
 			// 
 			// pictureBox17
 			// 
-			this->pictureBox17->Location = System::Drawing::Point(3, 428);
+			this->pictureBox17->Location = System::Drawing::Point(41, 360);
+			this->pictureBox17->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->pictureBox17->Name = L"pictureBox17";
-			this->pictureBox17->Size = System::Drawing::Size(202, 190);
+			this->pictureBox17->Size = System::Drawing::Size(128, 124);
 			this->pictureBox17->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
 			this->pictureBox17->TabIndex = 14;
 			this->pictureBox17->TabStop = false;
@@ -470,9 +511,10 @@ namespace FunBrainz {
 			// 
 			// pictureBox18
 			// 
-			this->pictureBox18->Location = System::Drawing::Point(211, 428);
+			this->pictureBox18->Location = System::Drawing::Point(203, 360);
+			this->pictureBox18->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->pictureBox18->Name = L"pictureBox18";
-			this->pictureBox18->Size = System::Drawing::Size(211, 190);
+			this->pictureBox18->Size = System::Drawing::Size(128, 124);
 			this->pictureBox18->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
 			this->pictureBox18->TabIndex = 13;
 			this->pictureBox18->TabStop = false;
@@ -480,9 +522,10 @@ namespace FunBrainz {
 			// 
 			// pictureBox19
 			// 
-			this->pictureBox19->Location = System::Drawing::Point(428, 428);
+			this->pictureBox19->Location = System::Drawing::Point(364, 360);
+			this->pictureBox19->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->pictureBox19->Name = L"pictureBox19";
-			this->pictureBox19->Size = System::Drawing::Size(211, 190);
+			this->pictureBox19->Size = System::Drawing::Size(128, 124);
 			this->pictureBox19->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
 			this->pictureBox19->TabIndex = 12;
 			this->pictureBox19->TabStop = false;
@@ -490,9 +533,10 @@ namespace FunBrainz {
 			// 
 			// pictureBox32
 			// 
-			this->pictureBox32->Location = System::Drawing::Point(871, 428);
+			this->pictureBox32->Location = System::Drawing::Point(686, 360);
+			this->pictureBox32->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->pictureBox32->Name = L"pictureBox32";
-			this->pictureBox32->Size = System::Drawing::Size(202, 190);
+			this->pictureBox32->Size = System::Drawing::Size(128, 124);
 			this->pictureBox32->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
 			this->pictureBox32->TabIndex = 16;
 			this->pictureBox32->TabStop = false;
@@ -500,9 +544,10 @@ namespace FunBrainz {
 			// 
 			// pictureBox20
 			// 
-			this->pictureBox20->Location = System::Drawing::Point(862, 222);
+			this->pictureBox20->Location = System::Drawing::Point(686, 202);
+			this->pictureBox20->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->pictureBox20->Name = L"pictureBox20";
-			this->pictureBox20->Size = System::Drawing::Size(211, 190);
+			this->pictureBox20->Size = System::Drawing::Size(128, 124);
 			this->pictureBox20->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
 			this->pictureBox20->TabIndex = 10;
 			this->pictureBox20->TabStop = false;
@@ -510,9 +555,10 @@ namespace FunBrainz {
 			// 
 			// pictureBox21
 			// 
-			this->pictureBox21->Location = System::Drawing::Point(645, 428);
+			this->pictureBox21->Location = System::Drawing::Point(525, 360);
+			this->pictureBox21->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->pictureBox21->Name = L"pictureBox21";
-			this->pictureBox21->Size = System::Drawing::Size(211, 190);
+			this->pictureBox21->Size = System::Drawing::Size(128, 124);
 			this->pictureBox21->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
 			this->pictureBox21->TabIndex = 11;
 			this->pictureBox21->TabStop = false;
@@ -520,9 +566,10 @@ namespace FunBrainz {
 			// 
 			// pictureBox23
 			// 
-			this->pictureBox23->Location = System::Drawing::Point(211, 220);
+			this->pictureBox23->Location = System::Drawing::Point(203, 202);
+			this->pictureBox23->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->pictureBox23->Name = L"pictureBox23";
-			this->pictureBox23->Size = System::Drawing::Size(211, 190);
+			this->pictureBox23->Size = System::Drawing::Size(128, 124);
 			this->pictureBox23->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
 			this->pictureBox23->TabIndex = 8;
 			this->pictureBox23->TabStop = false;
@@ -530,9 +577,10 @@ namespace FunBrainz {
 			// 
 			// pictureBox24
 			// 
-			this->pictureBox24->Location = System::Drawing::Point(428, 222);
+			this->pictureBox24->Location = System::Drawing::Point(364, 202);
+			this->pictureBox24->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->pictureBox24->Name = L"pictureBox24";
-			this->pictureBox24->Size = System::Drawing::Size(211, 190);
+			this->pictureBox24->Size = System::Drawing::Size(128, 124);
 			this->pictureBox24->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
 			this->pictureBox24->TabIndex = 7;
 			this->pictureBox24->TabStop = false;
@@ -540,9 +588,10 @@ namespace FunBrainz {
 			// 
 			// pictureBox25
 			// 
-			this->pictureBox25->Location = System::Drawing::Point(645, 222);
+			this->pictureBox25->Location = System::Drawing::Point(525, 202);
+			this->pictureBox25->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->pictureBox25->Name = L"pictureBox25";
-			this->pictureBox25->Size = System::Drawing::Size(211, 190);
+			this->pictureBox25->Size = System::Drawing::Size(128, 124);
 			this->pictureBox25->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
 			this->pictureBox25->TabIndex = 6;
 			this->pictureBox25->TabStop = false;
@@ -550,9 +599,10 @@ namespace FunBrainz {
 			// 
 			// pictureBox26
 			// 
-			this->pictureBox26->Location = System::Drawing::Point(865, 12);
+			this->pictureBox26->Location = System::Drawing::Point(686, 44);
+			this->pictureBox26->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->pictureBox26->Name = L"pictureBox26";
-			this->pictureBox26->Size = System::Drawing::Size(211, 190);
+			this->pictureBox26->Size = System::Drawing::Size(128, 124);
 			this->pictureBox26->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
 			this->pictureBox26->TabIndex = 5;
 			this->pictureBox26->TabStop = false;
@@ -560,9 +610,10 @@ namespace FunBrainz {
 			// 
 			// pictureBox27
 			// 
-			this->pictureBox27->Location = System::Drawing::Point(648, 12);
+			this->pictureBox27->Location = System::Drawing::Point(525, 44);
+			this->pictureBox27->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->pictureBox27->Name = L"pictureBox27";
-			this->pictureBox27->Size = System::Drawing::Size(211, 190);
+			this->pictureBox27->Size = System::Drawing::Size(128, 124);
 			this->pictureBox27->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
 			this->pictureBox27->TabIndex = 4;
 			this->pictureBox27->TabStop = false;
@@ -570,9 +621,10 @@ namespace FunBrainz {
 			// 
 			// pictureBox28
 			// 
-			this->pictureBox28->Location = System::Drawing::Point(431, 12);
+			this->pictureBox28->Location = System::Drawing::Point(364, 44);
+			this->pictureBox28->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->pictureBox28->Name = L"pictureBox28";
-			this->pictureBox28->Size = System::Drawing::Size(211, 190);
+			this->pictureBox28->Size = System::Drawing::Size(128, 124);
 			this->pictureBox28->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
 			this->pictureBox28->TabIndex = 3;
 			this->pictureBox28->TabStop = false;
@@ -580,9 +632,10 @@ namespace FunBrainz {
 			// 
 			// pictureBox29
 			// 
-			this->pictureBox29->Location = System::Drawing::Point(214, 12);
+			this->pictureBox29->Location = System::Drawing::Point(203, 44);
+			this->pictureBox29->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->pictureBox29->Name = L"pictureBox29";
-			this->pictureBox29->Size = System::Drawing::Size(211, 190);
+			this->pictureBox29->Size = System::Drawing::Size(128, 124);
 			this->pictureBox29->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
 			this->pictureBox29->TabIndex = 2;
 			this->pictureBox29->TabStop = false;
@@ -590,9 +643,10 @@ namespace FunBrainz {
 			// 
 			// pictureBox30
 			// 
-			this->pictureBox30->Location = System::Drawing::Point(6, 12);
+			this->pictureBox30->Location = System::Drawing::Point(41, 44);
+			this->pictureBox30->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->pictureBox30->Name = L"pictureBox30";
-			this->pictureBox30->Size = System::Drawing::Size(202, 190);
+			this->pictureBox30->Size = System::Drawing::Size(128, 124);
 			this->pictureBox30->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
 			this->pictureBox30->TabIndex = 1;
 			this->pictureBox30->TabStop = false;
@@ -610,66 +664,83 @@ namespace FunBrainz {
 			// 
 			// button1
 			// 
-			this->button1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+			this->button1->BackColor = System::Drawing::Color::Firebrick;
+			this->button1->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+			this->button1->Font = (gcnew System::Drawing::Font(L"Century Gothic", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->button1->ForeColor = System::Drawing::SystemColors::Highlight;
-			this->button1->Image = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"button1.Image")));
+			this->button1->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
 			this->button1->ImageAlign = System::Drawing::ContentAlignment::MiddleRight;
-			this->button1->Location = System::Drawing::Point(993, 63);
+			this->button1->Location = System::Drawing::Point(745, 51);
+			this->button1->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(160, 39);
+			this->button1->Size = System::Drawing::Size(120, 32);
 			this->button1->TabIndex = 19;
 			this->button1->Text = L"Next";
-			this->button1->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
-			this->button1->UseVisualStyleBackColor = true;
+			this->button1->UseVisualStyleBackColor = false;
 			this->button1->Click += gcnew System::EventHandler(this, &all_shape::button1_Click);
 			// 
 			// button2
 			// 
-			this->button2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+			this->button2->BackColor = System::Drawing::Color::Firebrick;
+			this->button2->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+			this->button2->Font = (gcnew System::Drawing::Font(L"Century Gothic", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->button2->ForeColor = System::Drawing::SystemColors::Highlight;
-			this->button2->Image = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"button2.Image")));
+			this->button2->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
 			this->button2->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
-			this->button2->Location = System::Drawing::Point(43, 66);
+			this->button2->Location = System::Drawing::Point(32, 54);
+			this->button2->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->button2->Name = L"button2";
-			this->button2->Size = System::Drawing::Size(180, 36);
+			this->button2->Size = System::Drawing::Size(135, 29);
 			this->button2->TabIndex = 20;
 			this->button2->Text = L"Last";
-			this->button2->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
-			this->button2->UseVisualStyleBackColor = true;
+			this->button2->UseVisualStyleBackColor = false;
 			this->button2->Click += gcnew System::EventHandler(this, &all_shape::button2_Click);
 			// 
 			// label1
 			// 
-			this->label1->Location = System::Drawing::Point(204, 9);
+			this->label1->BackColor = System::Drawing::SystemColors::ButtonHighlight;
+			this->label1->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->label1->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+			this->label1->Font = (gcnew System::Drawing::Font(L"Century Gothic", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->label1->Location = System::Drawing::Point(153, 7);
+			this->label1->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(103, 25);
+			this->label1->Size = System::Drawing::Size(77, 39);
 			this->label1->TabIndex = 21;
 			this->label1->Text = L"1";
+			this->label1->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
 			// 
 			// button3
 			// 
-			this->button3->Location = System::Drawing::Point(1009, 22);
+			this->button3->BackColor = System::Drawing::Color::Firebrick;
+			this->button3->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+			this->button3->Font = (gcnew System::Drawing::Font(L"Century Gothic", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->button3->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
+			this->button3->Location = System::Drawing::Point(757, 18);
+			this->button3->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->button3->Name = L"button3";
-			this->button3->Size = System::Drawing::Size(105, 35);
+			this->button3->Size = System::Drawing::Size(106, 28);
 			this->button3->TabIndex = 24;
 			this->button3->Text = L"Exit";
-			this->button3->UseVisualStyleBackColor = true;
+			this->button3->UseVisualStyleBackColor = false;
 			this->button3->Click += gcnew System::EventHandler(this, &all_shape::button3_Click);
 			// 
 			// all_shape
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
+			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(1182, 761);
-			this->Controls->Add(this->panel3);
+			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"$this.BackgroundImage")));
+			this->ClientSize = System::Drawing::Size(886, 602);
 			this->Controls->Add(this->panel1);
-			this->Controls->Add(this->button1);
+			this->Controls->Add(this->panel3);
 			this->Controls->Add(this->panel2);
+			this->Controls->Add(this->button1);
 			this->Controls->Add(this->button2);
 			this->Controls->Add(this->label1);
 			this->Controls->Add(this->button3);
+			this->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->Name = L"all_shape";
 			this->Text = L"all_shape";
 			this->Load += gcnew System::EventHandler(this, &all_shape::all_shape_Load);

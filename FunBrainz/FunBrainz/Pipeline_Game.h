@@ -166,6 +166,13 @@ private: System::Windows::Forms::Button^  btn_next;
 private: System::Windows::Forms::Button^  btn_retry;
 private: System::Windows::Forms::Button^  btn_level;
 private: System::Windows::Forms::Button^  btn_helper;
+private: System::Windows::Forms::PictureBox^  PN5_55;
+private: System::Windows::Forms::PictureBox^  PN5_11;
+
+
+
+
+
 
 private: System::ComponentModel::IContainer^  components;
 
@@ -223,6 +230,15 @@ private: System::ComponentModel::IContainer^  components;
 			System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(Pipeline_Game::typeid));
 			this->btn_Back_To_Main_From_Pipeline_Game = (gcnew System::Windows::Forms::Button());
 			this->panel_5X5 = (gcnew System::Windows::Forms::Panel());
+			this->PN5_55 = (gcnew System::Windows::Forms::PictureBox());
+			this->PN5_11 = (gcnew System::Windows::Forms::PictureBox());
+			this->panel1 = (gcnew System::Windows::Forms::Panel());
+			this->lbl_panelstar3 = (gcnew System::Windows::Forms::PictureBox());
+			this->lbl_panelstar2 = (gcnew System::Windows::Forms::PictureBox());
+			this->lbl_panelstar1 = (gcnew System::Windows::Forms::PictureBox());
+			this->btn_next = (gcnew System::Windows::Forms::Button());
+			this->btn_retry = (gcnew System::Windows::Forms::Button());
+			this->btn_level = (gcnew System::Windows::Forms::Button());
 			this->PB5_55 = (gcnew System::Windows::Forms::PictureBox());
 			this->PB5_51 = (gcnew System::Windows::Forms::PictureBox());
 			this->PB5_52 = (gcnew System::Windows::Forms::PictureBox());
@@ -253,15 +269,14 @@ private: System::ComponentModel::IContainer^  components;
 			this->lbl_star1 = (gcnew System::Windows::Forms::PictureBox());
 			this->lbl_star2 = (gcnew System::Windows::Forms::PictureBox());
 			this->lbl_star3 = (gcnew System::Windows::Forms::PictureBox());
-			this->panel1 = (gcnew System::Windows::Forms::Panel());
-			this->lbl_panelstar3 = (gcnew System::Windows::Forms::PictureBox());
-			this->lbl_panelstar2 = (gcnew System::Windows::Forms::PictureBox());
-			this->lbl_panelstar1 = (gcnew System::Windows::Forms::PictureBox());
-			this->btn_next = (gcnew System::Windows::Forms::Button());
-			this->btn_retry = (gcnew System::Windows::Forms::Button());
-			this->btn_level = (gcnew System::Windows::Forms::Button());
 			this->btn_helper = (gcnew System::Windows::Forms::Button());
 			this->panel_5X5->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->PN5_55))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->PN5_11))->BeginInit();
+			this->panel1->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->lbl_panelstar3))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->lbl_panelstar2))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->lbl_panelstar1))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->PB5_55))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->PB5_51))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->PB5_52))->BeginInit();
@@ -290,23 +305,19 @@ private: System::ComponentModel::IContainer^  components;
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->lbl_star1))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->lbl_star2))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->lbl_star3))->BeginInit();
-			this->panel1->SuspendLayout();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->lbl_panelstar3))->BeginInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->lbl_panelstar2))->BeginInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->lbl_panelstar1))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// btn_Back_To_Main_From_Pipeline_Game
 			// 
-			this->btn_Back_To_Main_From_Pipeline_Game->BackColor = System::Drawing::Color::OliveDrab;
+			this->btn_Back_To_Main_From_Pipeline_Game->BackColor = System::Drawing::Color::DarkCyan;
 			this->btn_Back_To_Main_From_Pipeline_Game->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
-			this->btn_Back_To_Main_From_Pipeline_Game->Font = (gcnew System::Drawing::Font(L"Century Gothic", 9.75F, System::Drawing::FontStyle::Regular, 
+			this->btn_Back_To_Main_From_Pipeline_Game->Font = (gcnew System::Drawing::Font(L"Century Gothic", 12, System::Drawing::FontStyle::Regular, 
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			this->btn_Back_To_Main_From_Pipeline_Game->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
-			this->btn_Back_To_Main_From_Pipeline_Game->Location = System::Drawing::Point(661, 34);
+			this->btn_Back_To_Main_From_Pipeline_Game->Location = System::Drawing::Point(741, 37);
 			this->btn_Back_To_Main_From_Pipeline_Game->Margin = System::Windows::Forms::Padding(2);
 			this->btn_Back_To_Main_From_Pipeline_Game->Name = L"btn_Back_To_Main_From_Pipeline_Game";
-			this->btn_Back_To_Main_From_Pipeline_Game->Size = System::Drawing::Size(72, 35);
+			this->btn_Back_To_Main_From_Pipeline_Game->Size = System::Drawing::Size(94, 40);
 			this->btn_Back_To_Main_From_Pipeline_Game->TabIndex = 16;
 			this->btn_Back_To_Main_From_Pipeline_Game->Text = L"BACK";
 			this->btn_Back_To_Main_From_Pipeline_Game->UseVisualStyleBackColor = false;
@@ -315,6 +326,9 @@ private: System::ComponentModel::IContainer^  components;
 			// panel_5X5
 			// 
 			this->panel_5X5->BackColor = System::Drawing::Color::Transparent;
+			this->panel_5X5->Controls->Add(this->PN5_55);
+			this->panel_5X5->Controls->Add(this->PN5_11);
+			this->panel_5X5->Controls->Add(this->panel1);
 			this->panel_5X5->Controls->Add(this->PB5_55);
 			this->panel_5X5->Controls->Add(this->PB5_51);
 			this->panel_5X5->Controls->Add(this->PB5_52);
@@ -340,353 +354,44 @@ private: System::ComponentModel::IContainer^  components;
 			this->panel_5X5->Controls->Add(this->PB5_32);
 			this->panel_5X5->Controls->Add(this->PB5_33);
 			this->panel_5X5->Controls->Add(this->PB5_11);
-			this->panel_5X5->Location = System::Drawing::Point(135, 84);
+			this->panel_5X5->Location = System::Drawing::Point(192, 65);
 			this->panel_5X5->Margin = System::Windows::Forms::Padding(2);
 			this->panel_5X5->Name = L"panel_5X5";
 			this->panel_5X5->Size = System::Drawing::Size(466, 470);
 			this->panel_5X5->TabIndex = 34;
 			// 
-			// PB5_55
+			// PN5_55
 			// 
-			this->PB5_55->Location = System::Drawing::Point(332, 309);
-			this->PB5_55->Margin = System::Windows::Forms::Padding(2);
-			this->PB5_55->Name = L"PB5_55";
-			this->PB5_55->Size = System::Drawing::Size(68, 73);
-			this->PB5_55->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
-			this->PB5_55->TabIndex = 40;
-			this->PB5_55->TabStop = false;
-			this->PB5_55->Click += gcnew System::EventHandler(this, &Pipeline_Game::pictureBox_Click);
+			this->PN5_55->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"PN5_55.BackgroundImage")));
+			this->PN5_55->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->PN5_55->Location = System::Drawing::Point(366, 338);
+			this->PN5_55->Name = L"PN5_55";
+			this->PN5_55->Size = System::Drawing::Size(40, 44);
+			this->PN5_55->TabIndex = 42;
+			this->PN5_55->TabStop = false;
+			this->PN5_55->Click += gcnew System::EventHandler(this, &Pipeline_Game::PN5_55_Click);
 			// 
-			// PB5_51
+			// PN5_11
 			// 
-			this->PB5_51->Location = System::Drawing::Point(63, 309);
-			this->PB5_51->Margin = System::Windows::Forms::Padding(2);
-			this->PB5_51->Name = L"PB5_51";
-			this->PB5_51->Size = System::Drawing::Size(68, 73);
-			this->PB5_51->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
-			this->PB5_51->TabIndex = 39;
-			this->PB5_51->TabStop = false;
-			this->PB5_51->Click += gcnew System::EventHandler(this, &Pipeline_Game::pictureBox_Click);
-			// 
-			// PB5_52
-			// 
-			this->PB5_52->Location = System::Drawing::Point(130, 309);
-			this->PB5_52->Margin = System::Windows::Forms::Padding(2);
-			this->PB5_52->Name = L"PB5_52";
-			this->PB5_52->Size = System::Drawing::Size(68, 73);
-			this->PB5_52->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
-			this->PB5_52->TabIndex = 38;
-			this->PB5_52->TabStop = false;
-			this->PB5_52->Click += gcnew System::EventHandler(this, &Pipeline_Game::pictureBox_Click);
-			// 
-			// PB5_53
-			// 
-			this->PB5_53->Location = System::Drawing::Point(198, 309);
-			this->PB5_53->Margin = System::Windows::Forms::Padding(2);
-			this->PB5_53->Name = L"PB5_53";
-			this->PB5_53->Size = System::Drawing::Size(68, 73);
-			this->PB5_53->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
-			this->PB5_53->TabIndex = 37;
-			this->PB5_53->TabStop = false;
-			this->PB5_53->Click += gcnew System::EventHandler(this, &Pipeline_Game::pictureBox_Click);
-			// 
-			// PB5_54
-			// 
-			this->PB5_54->Location = System::Drawing::Point(266, 309);
-			this->PB5_54->Margin = System::Windows::Forms::Padding(2);
-			this->PB5_54->Name = L"PB5_54";
-			this->PB5_54->Size = System::Drawing::Size(68, 73);
-			this->PB5_54->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
-			this->PB5_54->TabIndex = 36;
-			this->PB5_54->TabStop = false;
-			this->PB5_54->Click += gcnew System::EventHandler(this, &Pipeline_Game::pictureBox_Click);
-			// 
-			// PB5_45
-			// 
-			this->PB5_45->Location = System::Drawing::Point(332, 236);
-			this->PB5_45->Margin = System::Windows::Forms::Padding(2);
-			this->PB5_45->Name = L"PB5_45";
-			this->PB5_45->Size = System::Drawing::Size(68, 73);
-			this->PB5_45->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
-			this->PB5_45->TabIndex = 35;
-			this->PB5_45->TabStop = false;
-			this->PB5_45->Click += gcnew System::EventHandler(this, &Pipeline_Game::pictureBox_Click);
-			// 
-			// PB5_35
-			// 
-			this->PB5_35->Location = System::Drawing::Point(332, 162);
-			this->PB5_35->Margin = System::Windows::Forms::Padding(2);
-			this->PB5_35->Name = L"PB5_35";
-			this->PB5_35->Size = System::Drawing::Size(68, 73);
-			this->PB5_35->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
-			this->PB5_35->TabIndex = 34;
-			this->PB5_35->TabStop = false;
-			this->PB5_35->Click += gcnew System::EventHandler(this, &Pipeline_Game::pictureBox_Click);
-			// 
-			// PB5_15
-			// 
-			this->PB5_15->Location = System::Drawing::Point(332, 16);
-			this->PB5_15->Margin = System::Windows::Forms::Padding(2);
-			this->PB5_15->Name = L"PB5_15";
-			this->PB5_15->Size = System::Drawing::Size(68, 73);
-			this->PB5_15->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
-			this->PB5_15->TabIndex = 33;
-			this->PB5_15->TabStop = false;
-			this->PB5_15->Click += gcnew System::EventHandler(this, &Pipeline_Game::pictureBox_Click);
-			// 
-			// PB5_25
-			// 
-			this->PB5_25->Location = System::Drawing::Point(332, 89);
-			this->PB5_25->Margin = System::Windows::Forms::Padding(2);
-			this->PB5_25->Name = L"PB5_25";
-			this->PB5_25->Size = System::Drawing::Size(68, 73);
-			this->PB5_25->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
-			this->PB5_25->TabIndex = 32;
-			this->PB5_25->TabStop = false;
-			this->PB5_25->Click += gcnew System::EventHandler(this, &Pipeline_Game::pictureBox_Click);
-			// 
-			// PB5_41
-			// 
-			this->PB5_41->Location = System::Drawing::Point(63, 236);
-			this->PB5_41->Margin = System::Windows::Forms::Padding(2);
-			this->PB5_41->Name = L"PB5_41";
-			this->PB5_41->Size = System::Drawing::Size(68, 73);
-			this->PB5_41->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
-			this->PB5_41->TabIndex = 31;
-			this->PB5_41->TabStop = false;
-			this->PB5_41->Click += gcnew System::EventHandler(this, &Pipeline_Game::pictureBox_Click);
-			// 
-			// PB5_42
-			// 
-			this->PB5_42->Location = System::Drawing::Point(130, 236);
-			this->PB5_42->Margin = System::Windows::Forms::Padding(2);
-			this->PB5_42->Name = L"PB5_42";
-			this->PB5_42->Size = System::Drawing::Size(68, 73);
-			this->PB5_42->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
-			this->PB5_42->TabIndex = 30;
-			this->PB5_42->TabStop = false;
-			this->PB5_42->Click += gcnew System::EventHandler(this, &Pipeline_Game::pictureBox_Click);
-			// 
-			// PB5_43
-			// 
-			this->PB5_43->Location = System::Drawing::Point(198, 236);
-			this->PB5_43->Margin = System::Windows::Forms::Padding(2);
-			this->PB5_43->Name = L"PB5_43";
-			this->PB5_43->Size = System::Drawing::Size(68, 73);
-			this->PB5_43->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
-			this->PB5_43->TabIndex = 29;
-			this->PB5_43->TabStop = false;
-			this->PB5_43->Click += gcnew System::EventHandler(this, &Pipeline_Game::pictureBox_Click);
-			// 
-			// PB5_44
-			// 
-			this->PB5_44->Location = System::Drawing::Point(266, 236);
-			this->PB5_44->Margin = System::Windows::Forms::Padding(2);
-			this->PB5_44->Name = L"PB5_44";
-			this->PB5_44->Size = System::Drawing::Size(68, 73);
-			this->PB5_44->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
-			this->PB5_44->TabIndex = 28;
-			this->PB5_44->TabStop = false;
-			this->PB5_44->Click += gcnew System::EventHandler(this, &Pipeline_Game::pictureBox_Click);
-			// 
-			// PB5_34
-			// 
-			this->PB5_34->Location = System::Drawing::Point(266, 162);
-			this->PB5_34->Margin = System::Windows::Forms::Padding(2);
-			this->PB5_34->Name = L"PB5_34";
-			this->PB5_34->Size = System::Drawing::Size(68, 73);
-			this->PB5_34->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
-			this->PB5_34->TabIndex = 27;
-			this->PB5_34->TabStop = false;
-			this->PB5_34->Click += gcnew System::EventHandler(this, &Pipeline_Game::pictureBox_Click);
-			// 
-			// PB5_12
-			// 
-			this->PB5_12->Location = System::Drawing::Point(130, 16);
-			this->PB5_12->Margin = System::Windows::Forms::Padding(2);
-			this->PB5_12->Name = L"PB5_12";
-			this->PB5_12->Size = System::Drawing::Size(68, 73);
-			this->PB5_12->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
-			this->PB5_12->TabIndex = 26;
-			this->PB5_12->TabStop = false;
-			this->PB5_12->Click += gcnew System::EventHandler(this, &Pipeline_Game::pictureBox_Click);
-			// 
-			// PB5_13
-			// 
-			this->PB5_13->Location = System::Drawing::Point(198, 16);
-			this->PB5_13->Margin = System::Windows::Forms::Padding(2);
-			this->PB5_13->Name = L"PB5_13";
-			this->PB5_13->Size = System::Drawing::Size(68, 73);
-			this->PB5_13->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
-			this->PB5_13->TabIndex = 25;
-			this->PB5_13->TabStop = false;
-			this->PB5_13->Click += gcnew System::EventHandler(this, &Pipeline_Game::pictureBox_Click);
-			// 
-			// PB5_14
-			// 
-			this->PB5_14->Location = System::Drawing::Point(266, 16);
-			this->PB5_14->Margin = System::Windows::Forms::Padding(2);
-			this->PB5_14->Name = L"PB5_14";
-			this->PB5_14->Size = System::Drawing::Size(68, 73);
-			this->PB5_14->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
-			this->PB5_14->TabIndex = 24;
-			this->PB5_14->TabStop = false;
-			this->PB5_14->Click += gcnew System::EventHandler(this, &Pipeline_Game::pictureBox_Click);
-			// 
-			// PB5_21
-			// 
-			this->PB5_21->Location = System::Drawing::Point(63, 89);
-			this->PB5_21->Margin = System::Windows::Forms::Padding(2);
-			this->PB5_21->Name = L"PB5_21";
-			this->PB5_21->Size = System::Drawing::Size(68, 73);
-			this->PB5_21->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
-			this->PB5_21->TabIndex = 23;
-			this->PB5_21->TabStop = false;
-			this->PB5_21->Click += gcnew System::EventHandler(this, &Pipeline_Game::pictureBox_Click);
-			// 
-			// PB5_22
-			// 
-			this->PB5_22->Location = System::Drawing::Point(130, 89);
-			this->PB5_22->Margin = System::Windows::Forms::Padding(2);
-			this->PB5_22->Name = L"PB5_22";
-			this->PB5_22->Size = System::Drawing::Size(68, 73);
-			this->PB5_22->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
-			this->PB5_22->TabIndex = 22;
-			this->PB5_22->TabStop = false;
-			this->PB5_22->Click += gcnew System::EventHandler(this, &Pipeline_Game::pictureBox_Click);
-			// 
-			// PB5_23
-			// 
-			this->PB5_23->Location = System::Drawing::Point(198, 89);
-			this->PB5_23->Margin = System::Windows::Forms::Padding(2);
-			this->PB5_23->Name = L"PB5_23";
-			this->PB5_23->Size = System::Drawing::Size(68, 73);
-			this->PB5_23->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
-			this->PB5_23->TabIndex = 21;
-			this->PB5_23->TabStop = false;
-			this->PB5_23->Click += gcnew System::EventHandler(this, &Pipeline_Game::pictureBox_Click);
-			// 
-			// PB5_24
-			// 
-			this->PB5_24->Location = System::Drawing::Point(266, 89);
-			this->PB5_24->Margin = System::Windows::Forms::Padding(2);
-			this->PB5_24->Name = L"PB5_24";
-			this->PB5_24->Size = System::Drawing::Size(68, 73);
-			this->PB5_24->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
-			this->PB5_24->TabIndex = 20;
-			this->PB5_24->TabStop = false;
-			this->PB5_24->Click += gcnew System::EventHandler(this, &Pipeline_Game::pictureBox_Click);
-			// 
-			// PB5_31
-			// 
-			this->PB5_31->Location = System::Drawing::Point(63, 162);
-			this->PB5_31->Margin = System::Windows::Forms::Padding(2);
-			this->PB5_31->Name = L"PB5_31";
-			this->PB5_31->Size = System::Drawing::Size(68, 73);
-			this->PB5_31->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
-			this->PB5_31->TabIndex = 19;
-			this->PB5_31->TabStop = false;
-			this->PB5_31->Click += gcnew System::EventHandler(this, &Pipeline_Game::pictureBox_Click);
-			// 
-			// PB5_32
-			// 
-			this->PB5_32->Location = System::Drawing::Point(130, 162);
-			this->PB5_32->Margin = System::Windows::Forms::Padding(2);
-			this->PB5_32->Name = L"PB5_32";
-			this->PB5_32->Size = System::Drawing::Size(68, 73);
-			this->PB5_32->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
-			this->PB5_32->TabIndex = 18;
-			this->PB5_32->TabStop = false;
-			this->PB5_32->Click += gcnew System::EventHandler(this, &Pipeline_Game::pictureBox_Click);
-			// 
-			// PB5_33
-			// 
-			this->PB5_33->Location = System::Drawing::Point(198, 162);
-			this->PB5_33->Margin = System::Windows::Forms::Padding(2);
-			this->PB5_33->Name = L"PB5_33";
-			this->PB5_33->Size = System::Drawing::Size(68, 73);
-			this->PB5_33->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
-			this->PB5_33->TabIndex = 17;
-			this->PB5_33->TabStop = false;
-			this->PB5_33->Click += gcnew System::EventHandler(this, &Pipeline_Game::pictureBox_Click);
-			// 
-			// PB5_11
-			// 
-			this->PB5_11->Cursor = System::Windows::Forms::Cursors::WaitCursor;
-			this->PB5_11->Location = System::Drawing::Point(63, 16);
-			this->PB5_11->Margin = System::Windows::Forms::Padding(2);
-			this->PB5_11->Name = L"PB5_11";
-			this->PB5_11->Size = System::Drawing::Size(68, 73);
-			this->PB5_11->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
-			this->PB5_11->TabIndex = 16;
-			this->PB5_11->TabStop = false;
-			this->PB5_11->UseWaitCursor = true;
-			this->PB5_11->Click += gcnew System::EventHandler(this, &Pipeline_Game::pictureBox_Click);
-			// 
-			// timer
-			// 
-			this->timer->Interval = 1000;
-			this->timer->Tick += gcnew System::EventHandler(this, &Pipeline_Game::timer_Tick);
-			// 
-			// lbl_timer
-			// 
-			this->lbl_timer->BackColor = System::Drawing::Color::Transparent;
-			this->lbl_timer->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 20.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
-				static_cast<System::Byte>(0)));
-			this->lbl_timer->Location = System::Drawing::Point(675, 100);
-			this->lbl_timer->Name = L"lbl_timer";
-			this->lbl_timer->Size = System::Drawing::Size(58, 46);
-			this->lbl_timer->TabIndex = 35;
-			this->lbl_timer->Text = L"60";
-			// 
-			// lbl_star1
-			// 
-			this->lbl_star1->BackColor = System::Drawing::Color::Transparent;
-			this->lbl_star1->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"lbl_star1.BackgroundImage")));
-			this->lbl_star1->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->lbl_star1->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->lbl_star1->Location = System::Drawing::Point(320, 23);
-			this->lbl_star1->Name = L"lbl_star1";
-			this->lbl_star1->Size = System::Drawing::Size(35, 30);
-			this->lbl_star1->TabIndex = 36;
-			this->lbl_star1->TabStop = false;
-			// 
-			// lbl_star2
-			// 
-			this->lbl_star2->BackColor = System::Drawing::Color::Transparent;
-			this->lbl_star2->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"lbl_star2.BackgroundImage")));
-			this->lbl_star2->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->lbl_star2->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->lbl_star2->Location = System::Drawing::Point(361, 23);
-			this->lbl_star2->Name = L"lbl_star2";
-			this->lbl_star2->Size = System::Drawing::Size(35, 30);
-			this->lbl_star2->TabIndex = 37;
-			this->lbl_star2->TabStop = false;
-			// 
-			// lbl_star3
-			// 
-			this->lbl_star3->BackColor = System::Drawing::Color::Transparent;
-			this->lbl_star3->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"lbl_star3.BackgroundImage")));
-			this->lbl_star3->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->lbl_star3->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->lbl_star3->Location = System::Drawing::Point(402, 23);
-			this->lbl_star3->Name = L"lbl_star3";
-			this->lbl_star3->Size = System::Drawing::Size(35, 30);
-			this->lbl_star3->TabIndex = 38;
-			this->lbl_star3->TabStop = false;
-			this->lbl_star3->Click += gcnew System::EventHandler(this, &Pipeline_Game::lbl_star3_Click);
+			this->PN5_11->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"PN5_11.BackgroundImage")));
+			this->PN5_11->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->PN5_11->Location = System::Drawing::Point(75, 31);
+			this->PN5_11->Name = L"PN5_11";
+			this->PN5_11->Size = System::Drawing::Size(44, 46);
+			this->PN5_11->TabIndex = 44;
+			this->PN5_11->TabStop = false;
+			this->PN5_11->Click += gcnew System::EventHandler(this, &Pipeline_Game::PN5_11_Click);
 			// 
 			// panel1
 			// 
 			this->panel1->BackColor = System::Drawing::SystemColors::ButtonHighlight;
-			this->panel1->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"panel1.BackgroundImage")));
 			this->panel1->Controls->Add(this->lbl_panelstar3);
 			this->panel1->Controls->Add(this->lbl_panelstar2);
 			this->panel1->Controls->Add(this->lbl_panelstar1);
 			this->panel1->Controls->Add(this->btn_next);
 			this->panel1->Controls->Add(this->btn_retry);
 			this->panel1->Controls->Add(this->btn_level);
-			this->panel1->Location = System::Drawing::Point(232, 182);
+			this->panel1->Location = System::Drawing::Point(101, 99);
 			this->panel1->Margin = System::Windows::Forms::Padding(2);
 			this->panel1->Name = L"panel1";
 			this->panel1->Size = System::Drawing::Size(289, 221);
@@ -781,6 +486,336 @@ private: System::ComponentModel::IContainer^  components;
 			this->btn_level->UseVisualStyleBackColor = false;
 			this->btn_level->Click += gcnew System::EventHandler(this, &Pipeline_Game::btn_level_Click);
 			// 
+			// PB5_55
+			// 
+			this->PB5_55->Location = System::Drawing::Point(351, 324);
+			this->PB5_55->Margin = System::Windows::Forms::Padding(2);
+			this->PB5_55->Name = L"PB5_55";
+			this->PB5_55->Size = System::Drawing::Size(68, 73);
+			this->PB5_55->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
+			this->PB5_55->TabIndex = 40;
+			this->PB5_55->TabStop = false;
+			this->PB5_55->Click += gcnew System::EventHandler(this, &Pipeline_Game::pictureBox_Click);
+			// 
+			// PB5_51
+			// 
+			this->PB5_51->Location = System::Drawing::Point(63, 324);
+			this->PB5_51->Margin = System::Windows::Forms::Padding(2);
+			this->PB5_51->Name = L"PB5_51";
+			this->PB5_51->Size = System::Drawing::Size(68, 73);
+			this->PB5_51->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
+			this->PB5_51->TabIndex = 39;
+			this->PB5_51->TabStop = false;
+			this->PB5_51->Click += gcnew System::EventHandler(this, &Pipeline_Game::pictureBox_Click);
+			// 
+			// PB5_52
+			// 
+			this->PB5_52->Location = System::Drawing::Point(135, 324);
+			this->PB5_52->Margin = System::Windows::Forms::Padding(2);
+			this->PB5_52->Name = L"PB5_52";
+			this->PB5_52->Size = System::Drawing::Size(68, 73);
+			this->PB5_52->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
+			this->PB5_52->TabIndex = 38;
+			this->PB5_52->TabStop = false;
+			this->PB5_52->Click += gcnew System::EventHandler(this, &Pipeline_Game::pictureBox_Click);
+			// 
+			// PB5_53
+			// 
+			this->PB5_53->Location = System::Drawing::Point(207, 324);
+			this->PB5_53->Margin = System::Windows::Forms::Padding(2);
+			this->PB5_53->Name = L"PB5_53";
+			this->PB5_53->Size = System::Drawing::Size(68, 73);
+			this->PB5_53->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
+			this->PB5_53->TabIndex = 37;
+			this->PB5_53->TabStop = false;
+			this->PB5_53->Click += gcnew System::EventHandler(this, &Pipeline_Game::pictureBox_Click);
+			// 
+			// PB5_54
+			// 
+			this->PB5_54->Location = System::Drawing::Point(279, 324);
+			this->PB5_54->Margin = System::Windows::Forms::Padding(2);
+			this->PB5_54->Name = L"PB5_54";
+			this->PB5_54->Size = System::Drawing::Size(68, 73);
+			this->PB5_54->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
+			this->PB5_54->TabIndex = 36;
+			this->PB5_54->TabStop = false;
+			this->PB5_54->Click += gcnew System::EventHandler(this, &Pipeline_Game::pictureBox_Click);
+			// 
+			// PB5_45
+			// 
+			this->PB5_45->Location = System::Drawing::Point(351, 247);
+			this->PB5_45->Margin = System::Windows::Forms::Padding(2);
+			this->PB5_45->Name = L"PB5_45";
+			this->PB5_45->Size = System::Drawing::Size(68, 73);
+			this->PB5_45->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
+			this->PB5_45->TabIndex = 35;
+			this->PB5_45->TabStop = false;
+			this->PB5_45->Click += gcnew System::EventHandler(this, &Pipeline_Game::pictureBox_Click);
+			// 
+			// PB5_35
+			// 
+			this->PB5_35->Location = System::Drawing::Point(351, 170);
+			this->PB5_35->Margin = System::Windows::Forms::Padding(2);
+			this->PB5_35->Name = L"PB5_35";
+			this->PB5_35->Size = System::Drawing::Size(68, 73);
+			this->PB5_35->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
+			this->PB5_35->TabIndex = 34;
+			this->PB5_35->TabStop = false;
+			this->PB5_35->Click += gcnew System::EventHandler(this, &Pipeline_Game::pictureBox_Click);
+			// 
+			// PB5_15
+			// 
+			this->PB5_15->Location = System::Drawing::Point(351, 16);
+			this->PB5_15->Margin = System::Windows::Forms::Padding(2);
+			this->PB5_15->Name = L"PB5_15";
+			this->PB5_15->Size = System::Drawing::Size(68, 73);
+			this->PB5_15->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
+			this->PB5_15->TabIndex = 33;
+			this->PB5_15->TabStop = false;
+			this->PB5_15->Click += gcnew System::EventHandler(this, &Pipeline_Game::pictureBox_Click);
+			// 
+			// PB5_25
+			// 
+			this->PB5_25->Location = System::Drawing::Point(351, 93);
+			this->PB5_25->Margin = System::Windows::Forms::Padding(2);
+			this->PB5_25->Name = L"PB5_25";
+			this->PB5_25->Size = System::Drawing::Size(68, 73);
+			this->PB5_25->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
+			this->PB5_25->TabIndex = 32;
+			this->PB5_25->TabStop = false;
+			this->PB5_25->Click += gcnew System::EventHandler(this, &Pipeline_Game::pictureBox_Click);
+			// 
+			// PB5_41
+			// 
+			this->PB5_41->Location = System::Drawing::Point(63, 247);
+			this->PB5_41->Margin = System::Windows::Forms::Padding(2);
+			this->PB5_41->Name = L"PB5_41";
+			this->PB5_41->Size = System::Drawing::Size(68, 73);
+			this->PB5_41->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
+			this->PB5_41->TabIndex = 31;
+			this->PB5_41->TabStop = false;
+			this->PB5_41->Click += gcnew System::EventHandler(this, &Pipeline_Game::pictureBox_Click);
+			// 
+			// PB5_42
+			// 
+			this->PB5_42->Location = System::Drawing::Point(135, 247);
+			this->PB5_42->Margin = System::Windows::Forms::Padding(2);
+			this->PB5_42->Name = L"PB5_42";
+			this->PB5_42->Size = System::Drawing::Size(68, 73);
+			this->PB5_42->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
+			this->PB5_42->TabIndex = 30;
+			this->PB5_42->TabStop = false;
+			this->PB5_42->Click += gcnew System::EventHandler(this, &Pipeline_Game::pictureBox_Click);
+			// 
+			// PB5_43
+			// 
+			this->PB5_43->Location = System::Drawing::Point(207, 247);
+			this->PB5_43->Margin = System::Windows::Forms::Padding(2);
+			this->PB5_43->Name = L"PB5_43";
+			this->PB5_43->Size = System::Drawing::Size(68, 73);
+			this->PB5_43->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
+			this->PB5_43->TabIndex = 29;
+			this->PB5_43->TabStop = false;
+			this->PB5_43->Click += gcnew System::EventHandler(this, &Pipeline_Game::pictureBox_Click);
+			// 
+			// PB5_44
+			// 
+			this->PB5_44->Location = System::Drawing::Point(279, 247);
+			this->PB5_44->Margin = System::Windows::Forms::Padding(2);
+			this->PB5_44->Name = L"PB5_44";
+			this->PB5_44->Size = System::Drawing::Size(68, 73);
+			this->PB5_44->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
+			this->PB5_44->TabIndex = 28;
+			this->PB5_44->TabStop = false;
+			this->PB5_44->Click += gcnew System::EventHandler(this, &Pipeline_Game::pictureBox_Click);
+			// 
+			// PB5_34
+			// 
+			this->PB5_34->Location = System::Drawing::Point(279, 170);
+			this->PB5_34->Margin = System::Windows::Forms::Padding(2);
+			this->PB5_34->Name = L"PB5_34";
+			this->PB5_34->Size = System::Drawing::Size(68, 73);
+			this->PB5_34->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
+			this->PB5_34->TabIndex = 27;
+			this->PB5_34->TabStop = false;
+			this->PB5_34->Click += gcnew System::EventHandler(this, &Pipeline_Game::pictureBox_Click);
+			// 
+			// PB5_12
+			// 
+			this->PB5_12->Location = System::Drawing::Point(135, 16);
+			this->PB5_12->Margin = System::Windows::Forms::Padding(2);
+			this->PB5_12->Name = L"PB5_12";
+			this->PB5_12->Size = System::Drawing::Size(68, 73);
+			this->PB5_12->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
+			this->PB5_12->TabIndex = 26;
+			this->PB5_12->TabStop = false;
+			this->PB5_12->Click += gcnew System::EventHandler(this, &Pipeline_Game::pictureBox_Click);
+			// 
+			// PB5_13
+			// 
+			this->PB5_13->Location = System::Drawing::Point(207, 16);
+			this->PB5_13->Margin = System::Windows::Forms::Padding(2);
+			this->PB5_13->Name = L"PB5_13";
+			this->PB5_13->Size = System::Drawing::Size(68, 73);
+			this->PB5_13->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
+			this->PB5_13->TabIndex = 25;
+			this->PB5_13->TabStop = false;
+			this->PB5_13->Click += gcnew System::EventHandler(this, &Pipeline_Game::pictureBox_Click);
+			// 
+			// PB5_14
+			// 
+			this->PB5_14->Location = System::Drawing::Point(279, 16);
+			this->PB5_14->Margin = System::Windows::Forms::Padding(2);
+			this->PB5_14->Name = L"PB5_14";
+			this->PB5_14->Size = System::Drawing::Size(68, 73);
+			this->PB5_14->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
+			this->PB5_14->TabIndex = 24;
+			this->PB5_14->TabStop = false;
+			this->PB5_14->Click += gcnew System::EventHandler(this, &Pipeline_Game::pictureBox_Click);
+			// 
+			// PB5_21
+			// 
+			this->PB5_21->Location = System::Drawing::Point(63, 93);
+			this->PB5_21->Margin = System::Windows::Forms::Padding(2);
+			this->PB5_21->Name = L"PB5_21";
+			this->PB5_21->Size = System::Drawing::Size(68, 73);
+			this->PB5_21->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
+			this->PB5_21->TabIndex = 23;
+			this->PB5_21->TabStop = false;
+			this->PB5_21->Click += gcnew System::EventHandler(this, &Pipeline_Game::pictureBox_Click);
+			// 
+			// PB5_22
+			// 
+			this->PB5_22->Location = System::Drawing::Point(135, 93);
+			this->PB5_22->Margin = System::Windows::Forms::Padding(2);
+			this->PB5_22->Name = L"PB5_22";
+			this->PB5_22->Size = System::Drawing::Size(68, 73);
+			this->PB5_22->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
+			this->PB5_22->TabIndex = 22;
+			this->PB5_22->TabStop = false;
+			this->PB5_22->Click += gcnew System::EventHandler(this, &Pipeline_Game::pictureBox_Click);
+			// 
+			// PB5_23
+			// 
+			this->PB5_23->Location = System::Drawing::Point(207, 93);
+			this->PB5_23->Margin = System::Windows::Forms::Padding(2);
+			this->PB5_23->Name = L"PB5_23";
+			this->PB5_23->Size = System::Drawing::Size(68, 73);
+			this->PB5_23->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
+			this->PB5_23->TabIndex = 21;
+			this->PB5_23->TabStop = false;
+			this->PB5_23->Click += gcnew System::EventHandler(this, &Pipeline_Game::pictureBox_Click);
+			// 
+			// PB5_24
+			// 
+			this->PB5_24->Location = System::Drawing::Point(279, 93);
+			this->PB5_24->Margin = System::Windows::Forms::Padding(2);
+			this->PB5_24->Name = L"PB5_24";
+			this->PB5_24->Size = System::Drawing::Size(68, 73);
+			this->PB5_24->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
+			this->PB5_24->TabIndex = 20;
+			this->PB5_24->TabStop = false;
+			this->PB5_24->Click += gcnew System::EventHandler(this, &Pipeline_Game::pictureBox_Click);
+			// 
+			// PB5_31
+			// 
+			this->PB5_31->Location = System::Drawing::Point(63, 170);
+			this->PB5_31->Margin = System::Windows::Forms::Padding(2);
+			this->PB5_31->Name = L"PB5_31";
+			this->PB5_31->Size = System::Drawing::Size(68, 73);
+			this->PB5_31->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
+			this->PB5_31->TabIndex = 19;
+			this->PB5_31->TabStop = false;
+			this->PB5_31->Click += gcnew System::EventHandler(this, &Pipeline_Game::pictureBox_Click);
+			// 
+			// PB5_32
+			// 
+			this->PB5_32->Location = System::Drawing::Point(135, 170);
+			this->PB5_32->Margin = System::Windows::Forms::Padding(2);
+			this->PB5_32->Name = L"PB5_32";
+			this->PB5_32->Size = System::Drawing::Size(68, 73);
+			this->PB5_32->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
+			this->PB5_32->TabIndex = 18;
+			this->PB5_32->TabStop = false;
+			this->PB5_32->Click += gcnew System::EventHandler(this, &Pipeline_Game::pictureBox_Click);
+			// 
+			// PB5_33
+			// 
+			this->PB5_33->Location = System::Drawing::Point(207, 170);
+			this->PB5_33->Margin = System::Windows::Forms::Padding(2);
+			this->PB5_33->Name = L"PB5_33";
+			this->PB5_33->Size = System::Drawing::Size(68, 73);
+			this->PB5_33->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
+			this->PB5_33->TabIndex = 17;
+			this->PB5_33->TabStop = false;
+			this->PB5_33->Click += gcnew System::EventHandler(this, &Pipeline_Game::pictureBox_Click);
+			// 
+			// PB5_11
+			// 
+			this->PB5_11->Cursor = System::Windows::Forms::Cursors::WaitCursor;
+			this->PB5_11->Location = System::Drawing::Point(63, 16);
+			this->PB5_11->Margin = System::Windows::Forms::Padding(2);
+			this->PB5_11->Name = L"PB5_11";
+			this->PB5_11->Size = System::Drawing::Size(68, 73);
+			this->PB5_11->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
+			this->PB5_11->TabIndex = 16;
+			this->PB5_11->TabStop = false;
+			this->PB5_11->UseWaitCursor = true;
+			this->PB5_11->Click += gcnew System::EventHandler(this, &Pipeline_Game::pictureBox_Click);
+			// 
+			// timer
+			// 
+			this->timer->Interval = 1000;
+			this->timer->Tick += gcnew System::EventHandler(this, &Pipeline_Game::timer_Tick);
+			// 
+			// lbl_timer
+			// 
+			this->lbl_timer->BackColor = System::Drawing::Color::Transparent;
+			this->lbl_timer->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 20.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->lbl_timer->Location = System::Drawing::Point(767, 168);
+			this->lbl_timer->Name = L"lbl_timer";
+			this->lbl_timer->Size = System::Drawing::Size(58, 46);
+			this->lbl_timer->TabIndex = 35;
+			this->lbl_timer->Text = L"60";
+			// 
+			// lbl_star1
+			// 
+			this->lbl_star1->BackColor = System::Drawing::Color::Transparent;
+			this->lbl_star1->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"lbl_star1.BackgroundImage")));
+			this->lbl_star1->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->lbl_star1->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->lbl_star1->Location = System::Drawing::Point(343, 12);
+			this->lbl_star1->Name = L"lbl_star1";
+			this->lbl_star1->Size = System::Drawing::Size(52, 45);
+			this->lbl_star1->TabIndex = 36;
+			this->lbl_star1->TabStop = false;
+			// 
+			// lbl_star2
+			// 
+			this->lbl_star2->BackColor = System::Drawing::Color::Transparent;
+			this->lbl_star2->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"lbl_star2.BackgroundImage")));
+			this->lbl_star2->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->lbl_star2->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->lbl_star2->Location = System::Drawing::Point(407, 12);
+			this->lbl_star2->Name = L"lbl_star2";
+			this->lbl_star2->Size = System::Drawing::Size(52, 45);
+			this->lbl_star2->TabIndex = 37;
+			this->lbl_star2->TabStop = false;
+			// 
+			// lbl_star3
+			// 
+			this->lbl_star3->BackColor = System::Drawing::Color::Transparent;
+			this->lbl_star3->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"lbl_star3.BackgroundImage")));
+			this->lbl_star3->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->lbl_star3->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->lbl_star3->Location = System::Drawing::Point(472, 12);
+			this->lbl_star3->Name = L"lbl_star3";
+			this->lbl_star3->Size = System::Drawing::Size(52, 45);
+			this->lbl_star3->TabIndex = 38;
+			this->lbl_star3->TabStop = false;
+			this->lbl_star3->Click += gcnew System::EventHandler(this, &Pipeline_Game::lbl_star3_Click);
+			// 
 			// btn_helper
 			// 
 			this->btn_helper->Location = System::Drawing::Point(0, 0);
@@ -797,20 +832,26 @@ private: System::ComponentModel::IContainer^  components;
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"$this.BackgroundImage")));
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->ClientSize = System::Drawing::Size(754, 586);
+			this->ClientSize = System::Drawing::Size(892, 586);
 			this->Controls->Add(this->btn_helper);
-			this->Controls->Add(this->panel1);
 			this->Controls->Add(this->lbl_star3);
 			this->Controls->Add(this->lbl_star2);
 			this->Controls->Add(this->lbl_star1);
 			this->Controls->Add(this->lbl_timer);
 			this->Controls->Add(this->panel_5X5);
 			this->Controls->Add(this->btn_Back_To_Main_From_Pipeline_Game);
+			this->DoubleBuffered = true;
 			this->Margin = System::Windows::Forms::Padding(2);
 			this->Name = L"Pipeline_Game";
 			this->Text = L"Pipeline_Game";
 			this->Load += gcnew System::EventHandler(this, &Pipeline_Game::Pipeline_Game_Load);
 			this->panel_5X5->ResumeLayout(false);
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->PN5_55))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->PN5_11))->EndInit();
+			this->panel1->ResumeLayout(false);
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->lbl_panelstar3))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->lbl_panelstar2))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->lbl_panelstar1))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->PB5_55))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->PB5_51))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->PB5_52))->EndInit();
@@ -839,10 +880,6 @@ private: System::ComponentModel::IContainer^  components;
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->lbl_star1))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->lbl_star2))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->lbl_star3))->EndInit();
-			this->panel1->ResumeLayout(false);
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->lbl_panelstar3))->EndInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->lbl_panelstar2))->EndInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->lbl_panelstar1))->EndInit();
 			this->ResumeLayout(false);
 
 		}
@@ -1182,13 +1219,13 @@ private: System::ComponentModel::IContainer^  components;
 				v->erase(v->begin()+v->size()-1);
 			}
 			return 0;
-		}
+}
 	private: System::Void Pipeline_Game_Load(System::Object^  sender, System::EventArgs^  e) {
 				 srand(time(0));
 				 panel1->Visible=false;
 				 btn_next->Visible=true;
 				 next_flag=0;
-				 MessageBox::Show(System::Convert::ToString(level_flag_of_puzzle));
+				 //MessageBox::Show(System::Convert::ToString(level_flag_of_puzzle));
 				 int n=5;
 				 encoding_of_image_loaded=new int*[n];
 				 for(int i=0;i<n;i++){
@@ -1226,7 +1263,7 @@ private: System::ComponentModel::IContainer^  components;
 					 rand_no = rand_no+1;
 					 int level_to_extract = level_flag_of_puzzle*1700;
 					 level_to_extract+=((level_of_puzzle-1)*34)+rand_no;
-					 MessageBox::Show(System::Convert::ToString(level_to_extract));
+					 //MessageBox::Show(System::Convert::ToString(level_to_extract));
 					 String ^ Sql = "Select [Type_Of_Image_String] from Pipeline_Game where [Level] = " + level_to_extract + ";";
 					 String ^ Sq2 = "Select [Answer_Matrix] from Pipeline_Game where [Level] = " + level_to_extract + ";";
 					 OleDb::OleDbCommand ^ command = gcnew OleDb::OleDbCommand(Sql, con);
@@ -1242,8 +1279,8 @@ private: System::ComponentModel::IContainer^  components;
 
 
 
-				 MessageBox::Show(dummy);
-				 MessageBox::Show(dummy2);
+				 //MessageBox::Show(dummy);
+				 //MessageBox::Show(dummy2);
 				 array<PictureBox^,2> ^ image_array_5={ { PB5_11, PB5_12, PB5_13, PB5_14,PB5_15 }, { PB5_21, PB5_22, PB5_23, PB5_24,PB5_25 },{ PB5_31, PB5_32, PB5_33, PB5_34,PB5_35 }, { PB5_41, PB5_42, PB5_43, PB5_44,PB5_45 },{ PB5_51, PB5_52, PB5_53, PB5_54,PB5_55 } };
 
 				 for(int i=0;i<n;i++){
@@ -1515,22 +1552,22 @@ private: System::ComponentModel::IContainer^  components;
 								 OleDb::OleDbCommand ^ command2 = gcnew OleDb::OleDbCommand(Sq2, con);
 								 con->Open();
 								 scores=(String^)(command2->ExecuteScalar());
-								 MessageBox::Show(System::Convert::ToString(current_level));
-								 MessageBox::Show(System::Convert::ToString(level_of_puzzle));
+								 //MessageBox::Show(System::Convert::ToString(current_level));
+								 //MessageBox::Show(System::Convert::ToString(level_of_puzzle));
 								 if(level_of_puzzle<=current_level){
 									 array<String^>^ arr = gcnew array<String^>(1000);
 									 for(int i=0;i<1000;i++){
 										 arr[i]="";
 									 }
 									 arr=scores->Split(',');
-									 MessageBox::Show(System::Convert::ToString(stars));
+									 //MessageBox::Show(System::Convert::ToString(stars));
 									 arr[level_of_puzzle]=System::Convert::ToString(stars);
 									 scores=",";
 									 for(int i=1;i<current_level+1;i++){
-										 MessageBox::Show(arr[i]);
+										 //MessageBox::Show(arr[i]);
 										 scores+=(arr[i]+",");
 									 }
-									 MessageBox::Show(scores);
+									 //MessageBox::Show(scores);
 								 }else{
 									 scores+=(System::Convert::ToString(stars))+",";
 								 }
@@ -1553,22 +1590,22 @@ private: System::ComponentModel::IContainer^  components;
 								 OleDb::OleDbCommand ^ command2 = gcnew OleDb::OleDbCommand(Sq2, con);
 								 con->Open();
 								 scores=(String^)(command2->ExecuteScalar());
-								 MessageBox::Show(System::Convert::ToString(current_level));
-								 MessageBox::Show(System::Convert::ToString(level_of_puzzle));
+								 //MessageBox::Show(System::Convert::ToString(current_level));
+								 //MessageBox::Show(System::Convert::ToString(level_of_puzzle));
 								 if(level_of_puzzle<=current_level){
 									 array<String^>^ arr = gcnew array<String^>(1000);
 									 for(int i=0;i<1000;i++){
 										 arr[i]="";
 									 }
 									 arr=scores->Split(',');
-									 MessageBox::Show(System::Convert::ToString(stars));
+									 //MessageBox::Show(System::Convert::ToString(stars));
 									 arr[level_of_puzzle]=System::Convert::ToString(stars);
 									 scores=",";
 									 for(int i=1;i<current_level+1;i++){
-										 MessageBox::Show(arr[i]);
+										 //MessageBox::Show(arr[i]);
 										 scores+=(arr[i]+",");
 									 }
-									 MessageBox::Show(scores);
+									 //MessageBox::Show(scores);
 								 }else{
 									 scores+=(System::Convert::ToString(stars))+",";
 								 }
@@ -1591,22 +1628,22 @@ private: System::ComponentModel::IContainer^  components;
 								 OleDb::OleDbCommand ^ command2 = gcnew OleDb::OleDbCommand(Sq2, con);
 								 con->Open();
 								 scores=(String^)(command2->ExecuteScalar());
-								 MessageBox::Show(System::Convert::ToString(current_level));
-								 MessageBox::Show(System::Convert::ToString(level_of_puzzle));
+								 //MessageBox::Show(System::Convert::ToString(current_level));
+								 //MessageBox::Show(System::Convert::ToString(level_of_puzzle));
 								 if(level_of_puzzle<=current_level){
 									 array<String^>^ arr = gcnew array<String^>(1000);
 									 for(int i=0;i<1000;i++){
 										 arr[i]="";
 									 }
 									 arr=scores->Split(',');
-									 MessageBox::Show(System::Convert::ToString(stars));
+									 //MessageBox::Show(System::Convert::ToString(stars));
 									 arr[level_of_puzzle]=System::Convert::ToString(stars);
 									 scores=",";
 									 for(int i=1;i<current_level+1;i++){
-										 MessageBox::Show(arr[i]);
+										 //MessageBox::Show(arr[i]);
 										 scores+=(arr[i]+",");
 									 }
-									 MessageBox::Show(scores);
+									 //MessageBox::Show(scores);
 								 }else{
 									 scores+=(System::Convert::ToString(stars))+",";
 								 }
@@ -1629,22 +1666,22 @@ private: System::ComponentModel::IContainer^  components;
 								 OleDb::OleDbCommand ^ command2 = gcnew OleDb::OleDbCommand(Sq2, con);
 								 con->Open();
 								 scores=(String^)(command2->ExecuteScalar());
-								 MessageBox::Show(System::Convert::ToString(current_level));
-								 MessageBox::Show(System::Convert::ToString(level_of_puzzle));
+								 //MessageBox::Show(System::Convert::ToString(current_level));
+								 //MessageBox::Show(System::Convert::ToString(level_of_puzzle));
 								 if(level_of_puzzle<=current_level){
 									 array<String^>^ arr = gcnew array<String^>(1000);
 									 for(int i=0;i<1000;i++){
 										 arr[i]="";
 									 }
 									 arr=scores->Split(',');
-									 MessageBox::Show(System::Convert::ToString(stars));
+									 //MessageBox::Show(System::Convert::ToString(stars));
 									 arr[level_of_puzzle]=System::Convert::ToString(stars);
 									 scores=",";
 									 for(int i=1;i<current_level+1;i++){
-										 MessageBox::Show(arr[i]);
+										 //MessageBox::Show(arr[i]);
 										 scores+=(arr[i]+",");
 									 }
-									 MessageBox::Show(scores);
+									 //MessageBox::Show(scores);
 								 }else{
 									 scores+=(System::Convert::ToString(stars))+",";
 								 }
@@ -1668,22 +1705,22 @@ private: System::ComponentModel::IContainer^  components;
 								 OleDb::OleDbCommand ^ command2 = gcnew OleDb::OleDbCommand(Sq2, con);
 								 con->Open();
 								 scores=(String^)(command2->ExecuteScalar());
-								 MessageBox::Show(System::Convert::ToString(current_level));
-								 MessageBox::Show(System::Convert::ToString(level_of_puzzle));
+								 //MessageBox::Show(System::Convert::ToString(current_level));
+								 //MessageBox::Show(System::Convert::ToString(level_of_puzzle));
 								 if(level_of_puzzle<=current_level){
 									 array<String^>^ arr = gcnew array<String^>(1000);
 									 for(int i=0;i<1000;i++){
 										 arr[i]="";
 									 }
 									 arr=scores->Split(',');
-									 MessageBox::Show(System::Convert::ToString(stars));
+									 //MessageBox::Show(System::Convert::ToString(stars));
 									 arr[level_of_puzzle]=System::Convert::ToString(stars);
 									 scores=",";
 									 for(int i=1;i<current_level+1;i++){
-										 MessageBox::Show(arr[i]);
+										 //MessageBox::Show(arr[i]);
 										 scores+=(arr[i]+",");
 									 }
-									 MessageBox::Show(scores);
+									 //MessageBox::Show(scores);
 								 }else{
 									 scores+=(System::Convert::ToString(stars))+",";
 								 }
@@ -1776,6 +1813,678 @@ private: System::Void btn_next_Click(System::Object^  sender, System::EventArgs^
 private: System::Void lbl_star3_Click(System::Object^  sender, System::EventArgs^  e) {
 		 }
 private: System::Void lbl_panelstar3_Click(System::Object^  sender, System::EventArgs^  e) {
+		 }
+private: System::Void PN5_11_Click(System::Object^  sender, System::EventArgs^  e) {
+			 PictureBox^ pb = PB5_11;
+				 String^ var2 = pb->Name;
+				 int I=System::Int64::Parse(System::Convert::ToString(var2[var2->Length-2]))-1;
+				 int J=System::Int64::Parse(System::Convert::ToString(var2[var2->Length-1]))-1;
+				 int n=5;
+
+				 if(type_of_image_loaded[I][J]=='A'){
+					 if(encoding_of_image_loaded[I][J]==0){
+						 pb->Image=Type_A_1;
+					 }
+					 if(encoding_of_image_loaded[I][J]==1){
+						 pb->Image=Type_A_2;
+					 }
+				 }else{
+					 if(type_of_image_loaded[I][J]=='B'){
+						 if(encoding_of_image_loaded[I][J]==0){
+							 pb->Image=Type_B_1;
+						 }
+						 if(encoding_of_image_loaded[I][J]==1){
+							 pb->Image=Type_B_2;
+						 }
+						 if(encoding_of_image_loaded[I][J]==2){
+							 pb->Image=Type_B_3;
+						 }
+						 if(encoding_of_image_loaded[I][J]==3){
+							 pb->Image=Type_B_0;
+						 }
+					 }
+					 if(type_of_image_loaded[I][J]=='C'){
+						 if(encoding_of_image_loaded[I][J]==0){
+							 pb->Image=Type_C_1;
+						 }
+						 if(encoding_of_image_loaded[I][J]==1){
+							 pb->Image=Type_C_2;
+						 }
+						 if(encoding_of_image_loaded[I][J]==2){
+							 pb->Image=Type_C_3;
+						 }
+						 if(encoding_of_image_loaded[I][J]==3){
+							 pb->Image=Type_C_0;
+						 }
+					 }
+				 }
+				 encoding_of_image_loaded[System::Int64::Parse(System::Convert::ToString(var2[var2->Length-2]))-1][System::Int64::Parse(System::Convert::ToString(var2[var2->Length-1]))-1]=(encoding_of_image_loaded[System::Int64::Parse(System::Convert::ToString(var2[var2->Length-2]))-1][System::Int64::Parse(System::Convert::ToString(var2[var2->Length-1]))-1]+1)%4;
+				 if(type_of_image_loaded[System::Int64::Parse(System::Convert::ToString(var2[var2->Length-2]))-1][System::Int64::Parse(System::Convert::ToString(var2[var2->Length-1]))-1]=='A'){
+					 encoding_of_image_loaded[System::Int64::Parse(System::Convert::ToString(var2[var2->Length-2]))-1][System::Int64::Parse(System::Convert::ToString(var2[var2->Length-1]))-1]=(encoding_of_image_loaded[System::Int64::Parse(System::Convert::ToString(var2[var2->Length-2]))-1][System::Int64::Parse(System::Convert::ToString(var2[var2->Length-1]))-1])%2;
+				 }
+				 String ^ var_A="";
+				 String ^ var_T="";
+
+				 for (int i=0;i<n;i++){
+					 String^ str = gcnew String(type_of_image_loaded[i]);	
+					 //MessageBox::Show(str->Substring(0,4));
+					 for(int j=0;j<n;j++){
+
+						 var_A+=(System::Convert::ToString(encoding_of_image_loaded[i][j]));
+						 var_T+=str[j];
+					 }
+				 }
+				 /* MessageBox::Show(var_A);
+				 MessageBox::Show(var_T);*/
+
+				 int isSolved=0;
+				 for(int i=0;i<count;i++){
+					 isSolved=1;
+					 for(int j=0;j<n*n;j++){
+						 if(answer_index[i][j]=='5'){
+							 continue;
+						 }
+						 if(answer_index[i][j]!=var_A[j] || answer_type[i][j]!=var_T[j]){
+							 //MessageBox::Show("rejected");
+							 isSolved=0;
+							 break;
+						 }
+					 }
+					 if(isSolved==1){
+						 timer->Stop();
+						 MessageBox::Show("Correct answer");
+						 String^ level_flag_string="";
+						 if (level_flag_of_puzzle==0)
+						 {
+							 level_flag_string="Levels_Completed_Easy";
+						 }
+						 if (level_flag_of_puzzle==1)
+						 {
+							 level_flag_string="Levels_Completed_Medium";
+						 }
+						 if (level_flag_of_puzzle==2)
+						 {
+							 level_flag_string="Levels_Completed_Hard";
+						 }
+						 if (level_flag_of_puzzle==3)
+						 {
+							 level_flag_string="Levels_Completed_Advanced";
+						 }
+						 if (level_flag_of_puzzle==4)
+						 {
+							 level_flag_string="Levels_Completed_Expert";
+						 }
+						 //****************************update stud id according to caller form
+						 stu_ID=1;
+						 //****************
+						 int current_level;
+						 try {
+							 OleDb::OleDbConnection ^ con = gcnew OleDb::OleDbConnection();
+							 con->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=FunBrainzForKids.accdb;";
+							 
+							 String ^ Sq2 = "Select [" + level_flag_string +"] from Pipeline_Scoring where [StudentID] = " + stu_ID + ";";
+							 OleDb::OleDbCommand ^ command2 = gcnew OleDb::OleDbCommand(Sq2, con);
+							 con->Open();
+							 current_level=(int)(command2->ExecuteScalar());
+							 
+							 con->Close();
+						 }
+						 catch (Exception ^ ex) {
+							 MessageBox::Show(ex->Message);
+						 }
+
+						 if(level_flag_of_puzzle==0){
+							 try {
+								 OleDb::OleDbConnection ^ con = gcnew OleDb::OleDbConnection();
+								 con->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=FunBrainzForKids.accdb;";
+								 int stu_ID=1;
+								 String^ scores="";
+								 String ^ Sq2 = "Select [Score_Easy] from Pipeline_Scoring where [StudentID] = " + stu_ID + ";";
+								 OleDb::OleDbCommand ^ command2 = gcnew OleDb::OleDbCommand(Sq2, con);
+								 con->Open();
+								 scores=(String^)(command2->ExecuteScalar());
+								 //MessageBox::Show(System::Convert::ToString(current_level));
+								 //MessageBox::Show(System::Convert::ToString(level_of_puzzle));
+								 if(level_of_puzzle<=current_level){
+									 array<String^>^ arr = gcnew array<String^>(1000);
+									 for(int i=0;i<1000;i++){
+										 arr[i]="";
+									 }
+									 arr=scores->Split(',');
+									 //MessageBox::Show(System::Convert::ToString(stars));
+									 arr[level_of_puzzle]=System::Convert::ToString(stars);
+									 scores=",";
+									 for(int i=1;i<current_level+1;i++){
+										 //MessageBox::Show(arr[i]);
+										 scores+=(arr[i]+",");
+									 }
+									 //MessageBox::Show(scores);
+								 }else{
+									 scores+=(System::Convert::ToString(stars))+",";
+								 }
+								 String ^ Sq3 = "UPDATE Pipeline_Scoring SET [Score_Easy] = '" + scores + "' Where [StudentID] = " + stu_ID + ";";
+								 OleDb::OleDbCommand ^ command3 = gcnew OleDb::OleDbCommand(Sq3, con);
+								 command3->ExecuteScalar();
+								 con->Close();
+							 }
+							 catch (Exception ^ ex) {
+								 MessageBox::Show(ex->Message);
+							 }
+						 }
+						 if(level_flag_of_puzzle==1){
+							 try {
+								 OleDb::OleDbConnection ^ con = gcnew OleDb::OleDbConnection();
+								 con->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=FunBrainzForKids.accdb;";
+								 int stu_ID=1;
+								 String^ scores="";
+								 String ^ Sq2 = "Select [Score_Medium] from Pipeline_Scoring where [StudentID] = " + stu_ID + ";";
+								 OleDb::OleDbCommand ^ command2 = gcnew OleDb::OleDbCommand(Sq2, con);
+								 con->Open();
+								 scores=(String^)(command2->ExecuteScalar());
+								 //MessageBox::Show(System::Convert::ToString(current_level));
+								 //MessageBox::Show(System::Convert::ToString(level_of_puzzle));
+								 if(level_of_puzzle<=current_level){
+									 array<String^>^ arr = gcnew array<String^>(1000);
+									 for(int i=0;i<1000;i++){
+										 arr[i]="";
+									 }
+									 arr=scores->Split(',');
+									 //MessageBox::Show(System::Convert::ToString(stars));
+									 arr[level_of_puzzle]=System::Convert::ToString(stars);
+									 scores=",";
+									 for(int i=1;i<current_level+1;i++){
+										 //MessageBox::Show(arr[i]);
+										 scores+=(arr[i]+",");
+									 }
+									 //MessageBox::Show(scores);
+								 }else{
+									 scores+=(System::Convert::ToString(stars))+",";
+								 }
+								 String ^ Sq3 = "UPDATE Pipeline_Scoring SET [Score_Medium] = '" + scores + "' Where [StudentID] = " + stu_ID + ";";
+								 OleDb::OleDbCommand ^ command3 = gcnew OleDb::OleDbCommand(Sq3, con);
+								 command3->ExecuteScalar();
+								 con->Close();
+							 }
+							 catch (Exception ^ ex) {
+								 MessageBox::Show(ex->Message);
+							 }
+						 }
+						 if(level_flag_of_puzzle==2){
+							 try {
+								 OleDb::OleDbConnection ^ con = gcnew OleDb::OleDbConnection();
+								 con->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=FunBrainzForKids.accdb;";
+								 int stu_ID=1;
+								 String^ scores="";
+								 String ^ Sq2 = "Select [Score_Hard] from Pipeline_Scoring where [StudentID] = " + stu_ID + ";";
+								 OleDb::OleDbCommand ^ command2 = gcnew OleDb::OleDbCommand(Sq2, con);
+								 con->Open();
+								 scores=(String^)(command2->ExecuteScalar());
+								 //MessageBox::Show(System::Convert::ToString(current_level));
+								 //MessageBox::Show(System::Convert::ToString(level_of_puzzle));
+								 if(level_of_puzzle<=current_level){
+									 array<String^>^ arr = gcnew array<String^>(1000);
+									 for(int i=0;i<1000;i++){
+										 arr[i]="";
+									 }
+									 arr=scores->Split(',');
+									 //MessageBox::Show(System::Convert::ToString(stars));
+									 arr[level_of_puzzle]=System::Convert::ToString(stars);
+									 scores=",";
+									 for(int i=1;i<current_level+1;i++){
+										 //MessageBox::Show(arr[i]);
+										 scores+=(arr[i]+",");
+									 }
+									 //MessageBox::Show(scores);
+								 }else{
+									 scores+=(System::Convert::ToString(stars))+",";
+								 }
+								 String ^ Sq3 = "UPDATE Pipeline_Scoring SET [Score_Hard] = '" + scores + "' Where [StudentID] = " + stu_ID + ";";
+								 OleDb::OleDbCommand ^ command3 = gcnew OleDb::OleDbCommand(Sq3, con);
+								 command3->ExecuteScalar();
+								 con->Close();
+							 }
+							 catch (Exception ^ ex) {
+								 MessageBox::Show(ex->Message);
+							 }
+						 }
+						 if(level_flag_of_puzzle==3){
+							 try {
+								 OleDb::OleDbConnection ^ con = gcnew OleDb::OleDbConnection();
+								 con->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=FunBrainzForKids.accdb;";
+								 int stu_ID=1;
+								 String^ scores="";
+								 String ^ Sq2 = "Select [Score_Advanced] from Pipeline_Scoring where [StudentID] = " + stu_ID + ";";
+								 OleDb::OleDbCommand ^ command2 = gcnew OleDb::OleDbCommand(Sq2, con);
+								 con->Open();
+								 scores=(String^)(command2->ExecuteScalar());
+								 //MessageBox::Show(System::Convert::ToString(current_level));
+								 //MessageBox::Show(System::Convert::ToString(level_of_puzzle));
+								 if(level_of_puzzle<=current_level){
+									 array<String^>^ arr = gcnew array<String^>(1000);
+									 for(int i=0;i<1000;i++){
+										 arr[i]="";
+									 }
+									 arr=scores->Split(',');
+									 //MessageBox::Show(System::Convert::ToString(stars));
+									 arr[level_of_puzzle]=System::Convert::ToString(stars);
+									 scores=",";
+									 for(int i=1;i<current_level+1;i++){
+										 //MessageBox::Show(arr[i]);
+										 scores+=(arr[i]+",");
+									 }
+									 //MessageBox::Show(scores);
+								 }else{
+									 scores+=(System::Convert::ToString(stars))+",";
+								 }
+								 String ^ Sq3 = "UPDATE Pipeline_Scoring SET [Score_Advanced] = '" + scores + "' Where [StudentID] = " + stu_ID + ";";
+								 OleDb::OleDbCommand ^ command3 = gcnew OleDb::OleDbCommand(Sq3, con);
+								 command3->ExecuteScalar();
+								 con->Close();
+							 }
+							 catch (Exception ^ ex) {
+								 MessageBox::Show(ex->Message);
+							 }
+						 }
+						 
+						 if(level_flag_of_puzzle==4){
+							 try {
+								 OleDb::OleDbConnection ^ con = gcnew OleDb::OleDbConnection();
+								 con->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=FunBrainzForKids.accdb;";
+								 int stu_ID=1;
+								 String^ scores="";
+								 String ^ Sq2 = "Select [Score_Expert] from Pipeline_Scoring where [StudentID] = " + stu_ID + ";";
+								 OleDb::OleDbCommand ^ command2 = gcnew OleDb::OleDbCommand(Sq2, con);
+								 con->Open();
+								 scores=(String^)(command2->ExecuteScalar());
+								 //MessageBox::Show(System::Convert::ToString(current_level));
+								 //MessageBox::Show(System::Convert::ToString(level_of_puzzle));
+								 if(level_of_puzzle<=current_level){
+									 array<String^>^ arr = gcnew array<String^>(1000);
+									 for(int i=0;i<1000;i++){
+										 arr[i]="";
+									 }
+									 arr=scores->Split(',');
+									 //MessageBox::Show(System::Convert::ToString(stars));
+									 arr[level_of_puzzle]=System::Convert::ToString(stars);
+									 scores=",";
+									 for(int i=1;i<current_level+1;i++){
+										 //MessageBox::Show(arr[i]);
+										 scores+=(arr[i]+",");
+									 }
+									 //MessageBox::Show(scores);
+								 }else{
+									 scores+=(System::Convert::ToString(stars))+",";
+								 }
+								 String ^ Sq3 = "UPDATE Pipeline_Scoring SET [Score_Expert] = '" + scores + "' Where [StudentID] = " + stu_ID + ";";
+								 OleDb::OleDbCommand ^ command3 = gcnew OleDb::OleDbCommand(Sq3, con);
+								 command3->ExecuteScalar();
+								 con->Close();
+							 }
+							 catch (Exception ^ ex) {
+								 MessageBox::Show(ex->Message);
+							 }
+						 }
+
+						 if(level_of_puzzle<=current_level){
+							 btn_Back_To_Main_From_Pipeline_Game->PerformClick();
+							 return;
+						 }
+
+						 
+
+						 try {
+							 OleDb::OleDbConnection ^ con = gcnew OleDb::OleDbConnection();
+							 con->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=FunBrainzForKids.accdb;";
+							 String ^ Sql = "UPDATE Pipeline_Scoring SET [" + level_flag_string +"] = " + level_of_puzzle + " Where [StudentID] = " + stu_ID + ";";
+							 MessageBox::Show(Sql);
+							 OleDb::OleDbCommand ^ command = gcnew OleDb::OleDbCommand(Sql, con);
+							 con->Open();
+							 command->ExecuteScalar();
+							 con->Close();
+						 }
+						 catch (Exception ^ ex) {
+							 MessageBox::Show(ex->Message);
+						 }
+						 //btn_Back_To_Main_From_Pipeline_Game->PerformClick();
+						 panel1->Visible=true;						 
+					 }
+				 }
+		 }
+private: System::Void PN5_55_Click(System::Object^  sender, System::EventArgs^  e) {
+			 PictureBox^ pb = PB5_55;
+				 String^ var2 = pb->Name;
+				 int I=System::Int64::Parse(System::Convert::ToString(var2[var2->Length-2]))-1;
+				 int J=System::Int64::Parse(System::Convert::ToString(var2[var2->Length-1]))-1;
+				 int n=5;
+
+				 if(type_of_image_loaded[I][J]=='A'){
+					 if(encoding_of_image_loaded[I][J]==0){
+						 pb->Image=Type_A_1;
+					 }
+					 if(encoding_of_image_loaded[I][J]==1){
+						 pb->Image=Type_A_2;
+					 }
+				 }else{
+					 if(type_of_image_loaded[I][J]=='B'){
+						 if(encoding_of_image_loaded[I][J]==0){
+							 pb->Image=Type_B_1;
+						 }
+						 if(encoding_of_image_loaded[I][J]==1){
+							 pb->Image=Type_B_2;
+						 }
+						 if(encoding_of_image_loaded[I][J]==2){
+							 pb->Image=Type_B_3;
+						 }
+						 if(encoding_of_image_loaded[I][J]==3){
+							 pb->Image=Type_B_0;
+						 }
+					 }
+					 if(type_of_image_loaded[I][J]=='C'){
+						 if(encoding_of_image_loaded[I][J]==0){
+							 pb->Image=Type_C_1;
+						 }
+						 if(encoding_of_image_loaded[I][J]==1){
+							 pb->Image=Type_C_2;
+						 }
+						 if(encoding_of_image_loaded[I][J]==2){
+							 pb->Image=Type_C_3;
+						 }
+						 if(encoding_of_image_loaded[I][J]==3){
+							 pb->Image=Type_C_0;
+						 }
+					 }
+				 }
+				 encoding_of_image_loaded[System::Int64::Parse(System::Convert::ToString(var2[var2->Length-2]))-1][System::Int64::Parse(System::Convert::ToString(var2[var2->Length-1]))-1]=(encoding_of_image_loaded[System::Int64::Parse(System::Convert::ToString(var2[var2->Length-2]))-1][System::Int64::Parse(System::Convert::ToString(var2[var2->Length-1]))-1]+1)%4;
+				 if(type_of_image_loaded[System::Int64::Parse(System::Convert::ToString(var2[var2->Length-2]))-1][System::Int64::Parse(System::Convert::ToString(var2[var2->Length-1]))-1]=='A'){
+					 encoding_of_image_loaded[System::Int64::Parse(System::Convert::ToString(var2[var2->Length-2]))-1][System::Int64::Parse(System::Convert::ToString(var2[var2->Length-1]))-1]=(encoding_of_image_loaded[System::Int64::Parse(System::Convert::ToString(var2[var2->Length-2]))-1][System::Int64::Parse(System::Convert::ToString(var2[var2->Length-1]))-1])%2;
+				 }
+				 String ^ var_A="";
+				 String ^ var_T="";
+
+				 for (int i=0;i<n;i++){
+					 String^ str = gcnew String(type_of_image_loaded[i]);	
+					 //MessageBox::Show(str->Substring(0,4));
+					 for(int j=0;j<n;j++){
+
+						 var_A+=(System::Convert::ToString(encoding_of_image_loaded[i][j]));
+						 var_T+=str[j];
+					 }
+				 }
+				 /* MessageBox::Show(var_A);
+				 MessageBox::Show(var_T);*/
+
+				 int isSolved=0;
+				 for(int i=0;i<count;i++){
+					 isSolved=1;
+					 for(int j=0;j<n*n;j++){
+						 if(answer_index[i][j]=='5'){
+							 continue;
+						 }
+						 if(answer_index[i][j]!=var_A[j] || answer_type[i][j]!=var_T[j]){
+							 //MessageBox::Show("rejected");
+							 isSolved=0;
+							 break;
+						 }
+					 }
+					 if(isSolved==1){
+						 timer->Stop();
+						 MessageBox::Show("Correct answer");
+						 String^ level_flag_string="";
+						 if (level_flag_of_puzzle==0)
+						 {
+							 level_flag_string="Levels_Completed_Easy";
+						 }
+						 if (level_flag_of_puzzle==1)
+						 {
+							 level_flag_string="Levels_Completed_Medium";
+						 }
+						 if (level_flag_of_puzzle==2)
+						 {
+							 level_flag_string="Levels_Completed_Hard";
+						 }
+						 if (level_flag_of_puzzle==3)
+						 {
+							 level_flag_string="Levels_Completed_Advanced";
+						 }
+						 if (level_flag_of_puzzle==4)
+						 {
+							 level_flag_string="Levels_Completed_Expert";
+						 }
+						 //****************************update stud id according to caller form
+						 stu_ID=1;
+						 //****************
+						 int current_level;
+						 try {
+							 OleDb::OleDbConnection ^ con = gcnew OleDb::OleDbConnection();
+							 con->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=FunBrainzForKids.accdb;";
+							 
+							 String ^ Sq2 = "Select [" + level_flag_string +"] from Pipeline_Scoring where [StudentID] = " + stu_ID + ";";
+							 OleDb::OleDbCommand ^ command2 = gcnew OleDb::OleDbCommand(Sq2, con);
+							 con->Open();
+							 current_level=(int)(command2->ExecuteScalar());
+							 
+							 con->Close();
+						 }
+						 catch (Exception ^ ex) {
+							 MessageBox::Show(ex->Message);
+						 }
+
+						 if(level_flag_of_puzzle==0){
+							 try {
+								 OleDb::OleDbConnection ^ con = gcnew OleDb::OleDbConnection();
+								 con->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=FunBrainzForKids.accdb;";
+								 int stu_ID=1;
+								 String^ scores="";
+								 String ^ Sq2 = "Select [Score_Easy] from Pipeline_Scoring where [StudentID] = " + stu_ID + ";";
+								 OleDb::OleDbCommand ^ command2 = gcnew OleDb::OleDbCommand(Sq2, con);
+								 con->Open();
+								 scores=(String^)(command2->ExecuteScalar());
+								 //MessageBox::Show(System::Convert::ToString(current_level));
+								 //MessageBox::Show(System::Convert::ToString(level_of_puzzle));
+								 if(level_of_puzzle<=current_level){
+									 array<String^>^ arr = gcnew array<String^>(1000);
+									 for(int i=0;i<1000;i++){
+										 arr[i]="";
+									 }
+									 arr=scores->Split(',');
+									 //MessageBox::Show(System::Convert::ToString(stars));
+									 arr[level_of_puzzle]=System::Convert::ToString(stars);
+									 scores=",";
+									 for(int i=1;i<current_level+1;i++){
+										 //MessageBox::Show(arr[i]);
+										 scores+=(arr[i]+",");
+									 }
+									 //MessageBox::Show(scores);
+								 }else{
+									 scores+=(System::Convert::ToString(stars))+",";
+								 }
+								 String ^ Sq3 = "UPDATE Pipeline_Scoring SET [Score_Easy] = '" + scores + "' Where [StudentID] = " + stu_ID + ";";
+								 OleDb::OleDbCommand ^ command3 = gcnew OleDb::OleDbCommand(Sq3, con);
+								 command3->ExecuteScalar();
+								 con->Close();
+							 }
+							 catch (Exception ^ ex) {
+								 MessageBox::Show(ex->Message);
+							 }
+						 }
+						 if(level_flag_of_puzzle==1){
+							 try {
+								 OleDb::OleDbConnection ^ con = gcnew OleDb::OleDbConnection();
+								 con->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=FunBrainzForKids.accdb;";
+								 int stu_ID=1;
+								 String^ scores="";
+								 String ^ Sq2 = "Select [Score_Medium] from Pipeline_Scoring where [StudentID] = " + stu_ID + ";";
+								 OleDb::OleDbCommand ^ command2 = gcnew OleDb::OleDbCommand(Sq2, con);
+								 con->Open();
+								 scores=(String^)(command2->ExecuteScalar());
+								 //MessageBox::Show(System::Convert::ToString(current_level));
+								 //MessageBox::Show(System::Convert::ToString(level_of_puzzle));
+								 if(level_of_puzzle<=current_level){
+									 array<String^>^ arr = gcnew array<String^>(1000);
+									 for(int i=0;i<1000;i++){
+										 arr[i]="";
+									 }
+									 arr=scores->Split(',');
+									 //MessageBox::Show(System::Convert::ToString(stars));
+									 arr[level_of_puzzle]=System::Convert::ToString(stars);
+									 scores=",";
+									 for(int i=1;i<current_level+1;i++){
+										 //MessageBox::Show(arr[i]);
+										 scores+=(arr[i]+",");
+									 }
+									 //MessageBox::Show(scores);
+								 }else{
+									 scores+=(System::Convert::ToString(stars))+",";
+								 }
+								 String ^ Sq3 = "UPDATE Pipeline_Scoring SET [Score_Medium] = '" + scores + "' Where [StudentID] = " + stu_ID + ";";
+								 OleDb::OleDbCommand ^ command3 = gcnew OleDb::OleDbCommand(Sq3, con);
+								 command3->ExecuteScalar();
+								 con->Close();
+							 }
+							 catch (Exception ^ ex) {
+								 MessageBox::Show(ex->Message);
+							 }
+						 }
+						 if(level_flag_of_puzzle==2){
+							 try {
+								 OleDb::OleDbConnection ^ con = gcnew OleDb::OleDbConnection();
+								 con->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=FunBrainzForKids.accdb;";
+								 int stu_ID=1;
+								 String^ scores="";
+								 String ^ Sq2 = "Select [Score_Hard] from Pipeline_Scoring where [StudentID] = " + stu_ID + ";";
+								 OleDb::OleDbCommand ^ command2 = gcnew OleDb::OleDbCommand(Sq2, con);
+								 con->Open();
+								 scores=(String^)(command2->ExecuteScalar());
+								 //MessageBox::Show(System::Convert::ToString(current_level));
+								 //MessageBox::Show(System::Convert::ToString(level_of_puzzle));
+								 if(level_of_puzzle<=current_level){
+									 array<String^>^ arr = gcnew array<String^>(1000);
+									 for(int i=0;i<1000;i++){
+										 arr[i]="";
+									 }
+									 arr=scores->Split(',');
+									 //MessageBox::Show(System::Convert::ToString(stars));
+									 arr[level_of_puzzle]=System::Convert::ToString(stars);
+									 scores=",";
+									 for(int i=1;i<current_level+1;i++){
+										 //MessageBox::Show(arr[i]);
+										 scores+=(arr[i]+",");
+									 }
+									 //MessageBox::Show(scores);
+								 }else{
+									 scores+=(System::Convert::ToString(stars))+",";
+								 }
+								 String ^ Sq3 = "UPDATE Pipeline_Scoring SET [Score_Hard] = '" + scores + "' Where [StudentID] = " + stu_ID + ";";
+								 OleDb::OleDbCommand ^ command3 = gcnew OleDb::OleDbCommand(Sq3, con);
+								 command3->ExecuteScalar();
+								 con->Close();
+							 }
+							 catch (Exception ^ ex) {
+								 MessageBox::Show(ex->Message);
+							 }
+						 }
+						 if(level_flag_of_puzzle==3){
+							 try {
+								 OleDb::OleDbConnection ^ con = gcnew OleDb::OleDbConnection();
+								 con->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=FunBrainzForKids.accdb;";
+								 int stu_ID=1;
+								 String^ scores="";
+								 String ^ Sq2 = "Select [Score_Advanced] from Pipeline_Scoring where [StudentID] = " + stu_ID + ";";
+								 OleDb::OleDbCommand ^ command2 = gcnew OleDb::OleDbCommand(Sq2, con);
+								 con->Open();
+								 scores=(String^)(command2->ExecuteScalar());
+								 //MessageBox::Show(System::Convert::ToString(current_level));
+								 //MessageBox::Show(System::Convert::ToString(level_of_puzzle));
+								 if(level_of_puzzle<=current_level){
+									 array<String^>^ arr = gcnew array<String^>(1000);
+									 for(int i=0;i<1000;i++){
+										 arr[i]="";
+									 }
+									 arr=scores->Split(',');
+									 //MessageBox::Show(System::Convert::ToString(stars));
+									 arr[level_of_puzzle]=System::Convert::ToString(stars);
+									 scores=",";
+									 for(int i=1;i<current_level+1;i++){
+										 //MessageBox::Show(arr[i]);
+										 scores+=(arr[i]+",");
+									 }
+									 //MessageBox::Show(scores);
+								 }else{
+									 scores+=(System::Convert::ToString(stars))+",";
+								 }
+								 String ^ Sq3 = "UPDATE Pipeline_Scoring SET [Score_Advanced] = '" + scores + "' Where [StudentID] = " + stu_ID + ";";
+								 OleDb::OleDbCommand ^ command3 = gcnew OleDb::OleDbCommand(Sq3, con);
+								 command3->ExecuteScalar();
+								 con->Close();
+							 }
+							 catch (Exception ^ ex) {
+								 MessageBox::Show(ex->Message);
+							 }
+						 }
+						 
+						 if(level_flag_of_puzzle==4){
+							 try {
+								 OleDb::OleDbConnection ^ con = gcnew OleDb::OleDbConnection();
+								 con->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=FunBrainzForKids.accdb;";
+								 int stu_ID=1;
+								 String^ scores="";
+								 String ^ Sq2 = "Select [Score_Expert] from Pipeline_Scoring where [StudentID] = " + stu_ID + ";";
+								 OleDb::OleDbCommand ^ command2 = gcnew OleDb::OleDbCommand(Sq2, con);
+								 con->Open();
+								 scores=(String^)(command2->ExecuteScalar());
+								 //MessageBox::Show(System::Convert::ToString(current_level));
+								 //MessageBox::Show(System::Convert::ToString(level_of_puzzle));
+								 if(level_of_puzzle<=current_level){
+									 array<String^>^ arr = gcnew array<String^>(1000);
+									 for(int i=0;i<1000;i++){
+										 arr[i]="";
+									 }
+									 arr=scores->Split(',');
+									 //MessageBox::Show(System::Convert::ToString(stars));
+									 arr[level_of_puzzle]=System::Convert::ToString(stars);
+									 scores=",";
+									 for(int i=1;i<current_level+1;i++){
+										 //MessageBox::Show(arr[i]);
+										 scores+=(arr[i]+",");
+									 }
+									 //MessageBox::Show(scores);
+								 }else{
+									 scores+=(System::Convert::ToString(stars))+",";
+								 }
+								 String ^ Sq3 = "UPDATE Pipeline_Scoring SET [Score_Expert] = '" + scores + "' Where [StudentID] = " + stu_ID + ";";
+								 OleDb::OleDbCommand ^ command3 = gcnew OleDb::OleDbCommand(Sq3, con);
+								 command3->ExecuteScalar();
+								 con->Close();
+							 }
+							 catch (Exception ^ ex) {
+								 MessageBox::Show(ex->Message);
+							 }
+						 }
+
+						 if(level_of_puzzle<=current_level){
+							 btn_Back_To_Main_From_Pipeline_Game->PerformClick();
+							 return;
+						 }
+
+						 
+
+						 try {
+							 OleDb::OleDbConnection ^ con = gcnew OleDb::OleDbConnection();
+							 con->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=FunBrainzForKids.accdb;";
+							 String ^ Sql = "UPDATE Pipeline_Scoring SET [" + level_flag_string +"] = " + level_of_puzzle + " Where [StudentID] = " + stu_ID + ";";
+							 MessageBox::Show(Sql);
+							 OleDb::OleDbCommand ^ command = gcnew OleDb::OleDbCommand(Sql, con);
+							 con->Open();
+							 command->ExecuteScalar();
+							 con->Close();
+						 }
+						 catch (Exception ^ ex) {
+							 MessageBox::Show(ex->Message);
+						 }
+						 //btn_Back_To_Main_From_Pipeline_Game->PerformClick();
+						 panel1->Visible=true;						 
+					 }
+				 }
 		 }
 };
 }
