@@ -592,6 +592,13 @@ private: System::Void button1_Click(System::Object^  sender, System::EventArgs^ 
 			  }
 	        
 		 }
+			 private: System::Boolean Passwordvalidate(String ^ s)
+					  {
+
+						  if(s=="") return false;
+						  if(s->Length<6||s->Length>15) return false;
+						  return true;
+					  }
 private: System::Void Submitbtn_Click(System::Object^  sender, System::EventArgs^  e) 
 		 {
 			       int flag=0;
@@ -614,6 +621,7 @@ private: System::Void Submitbtn_Click(System::Object^  sender, System::EventArgs
 						 con->Close();
 						 if(flag==0) {MessageBox::Show("Enter valid question answer");cleartext();return ;}
 						 strPassword=NewPass->Text;
+						 if(!Passwordvalidate(NewPass->Text)) {MessageBox::Show("Password Should be Atleast 6 characters  And at max 15 characters");return ;}
 						 update();
 						 cleartext();
 						 groupBox1->Visible=false;
