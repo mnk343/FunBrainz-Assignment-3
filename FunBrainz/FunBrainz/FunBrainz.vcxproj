@@ -243,6 +243,9 @@
     <EmbeddedResource Include="operationsRedirect.resx">
       <DependentUpon>operationsRedirect.h</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="operatorFilling.resx">
+      <DependentUpon>operatorFilling.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Pipeline_Game.resx">
       <DependentUpon>Pipeline_Game.h</DependentUpon>
     </EmbeddedResource>

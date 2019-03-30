@@ -258,5 +258,8 @@
     <EmbeddedResource Include="Pipeline_Game.resx">
       <Filter>Resource Files</Filter>
     </EmbeddedResource>
+    <EmbeddedResource Include="PuzzlesRedirect.resx">
+      <Filter>Resource Files</Filter>
+    </EmbeddedResource>
   </ItemGroup>
 </Project>
