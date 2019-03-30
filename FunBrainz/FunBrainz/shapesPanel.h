@@ -4,6 +4,7 @@
 #include "shape_defination.h"
 #include "all_shape.h"
 #include "game.h"
+#include "drawshape.h"
 namespace FunBrainz {
 
 	using namespace System;
@@ -61,6 +62,7 @@ namespace FunBrainz {
 
 
 	private: System::Windows::Forms::Button^  button6;
+	private: System::Windows::Forms::Button^  Drawbutton;
 
 	private:
 		/// <summary>
@@ -80,6 +82,7 @@ namespace FunBrainz {
 			this->button4 = (gcnew System::Windows::Forms::Button());
 			this->button5 = (gcnew System::Windows::Forms::Button());
 			this->button6 = (gcnew System::Windows::Forms::Button());
+			this->Drawbutton = (gcnew System::Windows::Forms::Button());
 			this->SuspendLayout();
 			// 
 			// button2
@@ -137,11 +140,22 @@ namespace FunBrainz {
 			this->button6->UseVisualStyleBackColor = true;
 			this->button6->Click += gcnew System::EventHandler(this, &shapesPanel::button6_Click);
 			// 
+			// Drawbutton
+			// 
+			this->Drawbutton->Location = System::Drawing::Point(631, 67);
+			this->Drawbutton->Name = L"Drawbutton";
+			this->Drawbutton->Size = System::Drawing::Size(176, 41);
+			this->Drawbutton->TabIndex = 8;
+			this->Drawbutton->Text = L"Draw Shape";
+			this->Drawbutton->UseVisualStyleBackColor = true;
+			this->Drawbutton->Click += gcnew System::EventHandler(this, &shapesPanel::Drawbutton_Click);
+			// 
 			// shapesPanel
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(945, 545);
+			this->Controls->Add(this->Drawbutton);
 			this->Controls->Add(this->button6);
 			this->Controls->Add(this->button5);
 			this->Controls->Add(this->button4);
@@ -202,6 +216,13 @@ namespace FunBrainz {
 
 	private: System::Void shapesPanel_Load(System::Object^  sender, System::EventArgs^  e) {
 			 }
-	};
+	private: System::Void Drawbutton_Click(System::Object^  sender, System::EventArgs^  e) {
+				 drawshape^ f4 = gcnew drawshape(this);
+				 this->Hide();
+				 f4->ShowDialog();
+				 //this->Refresh();
+				 //this->Show();
+			 }
+};
 }
 
