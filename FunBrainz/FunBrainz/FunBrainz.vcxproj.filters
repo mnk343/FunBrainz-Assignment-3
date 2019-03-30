@@ -102,6 +102,9 @@
     <ClCompile Include="operationsRedirect.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="PuzzlesRedirect.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Form1.h">
@@ -185,6 +188,9 @@
     <ClInclude Include="operationsRedirect.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="PuzzlesRedirect.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="app.rc">
@@ -252,7 +258,7 @@
     <EmbeddedResource Include="Pipeline_Game.resx">
       <Filter>Resource Files</Filter>
     </EmbeddedResource>
-    <EmbeddedResource Include="operatorFilling.resx">
+    <EmbeddedResource Include="PuzzlesRedirect.resx">
       <Filter>Resource Files</Filter>
     </EmbeddedResource>
   </ItemGroup>

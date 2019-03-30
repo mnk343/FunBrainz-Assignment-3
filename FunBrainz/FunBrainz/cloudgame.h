@@ -486,6 +486,7 @@ private: System::Void timer4_Tick(System::Object^  sender, System::EventArgs^  e
 		 }			   
 
 private: System::Void cloudgame_Load(System::Object^  sender, System::EventArgs^  e) {
+			 textBox1->Enabled = false;
 			 StartGame();
     }
 private: Void StartGame()
@@ -732,9 +733,9 @@ private: System::Void pictureBox1_Click(System::Object^  sender, System::EventAr
 			{
 				MessageBox::Show("Your answer is incorrect! The correct answer is " + answer);
 				MessageBox::Show("Your Score is " + score);
-				nextQuestion();
 				score=0;
 				textBox1->Text = "0";
+				nextQuestion();				
 			}
 
 
@@ -750,9 +751,9 @@ private: System::Void pictureBox2_Click(System::Object^  sender, System::EventAr
 			 {
 				 MessageBox::Show("Your answer is incorrect! The correct answer is " + answer);
 				 MessageBox::Show("Your Score is " + score);
-				 nextQuestion();
 				 score=0;
 				 textBox1->Text = "0";
+				 nextQuestion();
 			 }
 		 }
 private: System::Void pictureBox3_Click(System::Object^  sender, System::EventArgs^  e) {
@@ -766,9 +767,9 @@ private: System::Void pictureBox3_Click(System::Object^  sender, System::EventAr
 			 {
 				 MessageBox::Show("Your answer is incorrect! The correct answer is " + answer);
 				 MessageBox::Show("Your Score is " + score);
-				 nextQuestion();
 				 score=0;
 				 textBox1->Text = "0";
+				 nextQuestion();
 			 }
 		 }
 private: System::Void pictureBox4_Click(System::Object^  sender, System::EventArgs^  e) {
@@ -782,9 +783,9 @@ private: System::Void pictureBox4_Click(System::Object^  sender, System::EventAr
 			 {
 				 MessageBox::Show("Your answer is incorrect! The correct answer is " + answer);
 				 MessageBox::Show("Your Score is " + score);
-				 nextQuestion();
 				 score=0;
 				 textBox1->Text = "0";
+				 nextQuestion();
 			 }
 
 		 }
@@ -804,9 +805,10 @@ private: System::Void label1_Click(System::Object^  sender, System::EventArgs^  
 			{
 				MessageBox::Show("Your answer is incorrect! The correct answer is " + answer);
 				MessageBox::Show("Your Score is " + score);
-				nextQuestion();
 				score=0;
 				textBox1->Text = "0";
+				nextQuestion();
+				
 			}
 		 }
 private: System::Void label2_Click(System::Object^  sender, System::EventArgs^  e) {
@@ -820,9 +822,10 @@ private: System::Void label2_Click(System::Object^  sender, System::EventArgs^  
 			 {
 				 MessageBox::Show("Your answer is incorrect! The correct answer is " + answer);
 				 MessageBox::Show("Your Score is " + score);
-				 nextQuestion();
 				 score=0;
 				 textBox1->Text = "0";
+				 nextQuestion();
+				 
 			 }
 		 }
 private: System::Void label3_Click(System::Object^  sender, System::EventArgs^  e) {
@@ -836,9 +839,10 @@ private: System::Void label3_Click(System::Object^  sender, System::EventArgs^  
 			 {
 				 MessageBox::Show("Your answer is incorrect! The correct answer is " + answer);
 				 MessageBox::Show("Your Score is " + score);
-				 nextQuestion();
 				 score=0;
 				 textBox1->Text = "0";
+				 nextQuestion();
+				 
 			 }
 		 }
 private: System::Void label4_Click(System::Object^  sender, System::EventArgs^  e) {
@@ -852,9 +856,10 @@ private: System::Void label4_Click(System::Object^  sender, System::EventArgs^  
 			 {
 				 MessageBox::Show("Your answer is incorrect! The correct answer is " + answer);
 				 MessageBox::Show("Your Score is " + score);
-				 nextQuestion();
 				 score=0;
 				 textBox1->Text = "0";
+				 nextQuestion();
+				 
 			 }
 		 }
 };

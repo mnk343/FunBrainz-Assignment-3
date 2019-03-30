@@ -400,7 +400,7 @@ namespace FunBrainz {
 				NewPass->Text="";
 				Passwordtxt->PasswordChar='*';
 				groupBox1->Visible=false;	
-				con->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=ikya_database.accdb;";
+				con->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=FunBrainzForKids.accdb;";
 			 }
 
 	private: System :: Void cleartext()
@@ -426,7 +426,7 @@ private: System::Void loginbtn_Click(System::Object^  sender, System::EventArgs^
 		//connection opening
 		try
 		{
-				String ^ Sql = "SELECT * FROM database_ikya WHERE UserName = '" + UserNametxt->Text + "' and Password = '" + Passwordtxt->Text + "' ";
+				String ^ Sql = "SELECT * FROM Students WHERE UserName = '" + UserNametxt->Text + "' and Password = '" + Passwordtxt->Text + "' ";
 				OleDb::OleDbCommand ^ command = gcnew OleDb::OleDbCommand(Sql, con);
 				con->Open();
 				OleDb::OleDbDataReader ^ reader=command->ExecuteReader();

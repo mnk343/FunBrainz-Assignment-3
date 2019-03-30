@@ -4,6 +4,7 @@
 #include "shape_defination.h"
 #include "all_shape.h"
 #include "game.h"
+#include "drawshape.h"
 namespace FunBrainz {
 
 	using namespace System;
@@ -61,7 +62,7 @@ namespace FunBrainz {
 
 
 	private: System::Windows::Forms::Button^  button6;
-	private: System::Windows::Forms::Label^  label1;
+	private: System::Windows::Forms::Button^  Drawbutton;
 
 	private:
 		/// <summary>
@@ -82,7 +83,7 @@ namespace FunBrainz {
 			this->button4 = (gcnew System::Windows::Forms::Button());
 			this->button5 = (gcnew System::Windows::Forms::Button());
 			this->button6 = (gcnew System::Windows::Forms::Button());
-			this->label1 = (gcnew System::Windows::Forms::Label());
+			this->Drawbutton = (gcnew System::Windows::Forms::Button());
 			this->SuspendLayout();
 			// 
 			// button2
@@ -165,18 +166,15 @@ namespace FunBrainz {
 			this->button6->UseVisualStyleBackColor = false;
 			this->button6->Click += gcnew System::EventHandler(this, &shapesPanel::button6_Click);
 			// 
-			// label1
+			// Drawbutton
 			// 
-			this->label1->AutoSize = true;
-			this->label1->BackColor = System::Drawing::Color::Transparent;
-			this->label1->Font = (gcnew System::Drawing::Font(L"Century Gothic", 27.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
-				static_cast<System::Byte>(0)));
-			this->label1->Location = System::Drawing::Point(90, 21);
-			this->label1->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
-			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(216, 44);
-			this->label1->TabIndex = 8;
-			this->label1->Text = L"Categories";
+			this->Drawbutton->Location = System::Drawing::Point(631, 67);
+			this->Drawbutton->Name = L"Drawbutton";
+			this->Drawbutton->Size = System::Drawing::Size(176, 41);
+			this->Drawbutton->TabIndex = 8;
+			this->Drawbutton->Text = L"Draw Shape";
+			this->Drawbutton->UseVisualStyleBackColor = true;
+			this->Drawbutton->Click += gcnew System::EventHandler(this, &shapesPanel::Drawbutton_Click);
 			// 
 			// shapesPanel
 			// 
@@ -248,6 +246,13 @@ namespace FunBrainz {
 
 	private: System::Void shapesPanel_Load(System::Object^  sender, System::EventArgs^  e) {
 			 }
-	};
+	private: System::Void Drawbutton_Click(System::Object^  sender, System::EventArgs^  e) {
+				 drawshape^ f4 = gcnew drawshape(this);
+				 this->Hide();
+				 f4->ShowDialog();
+				 //this->Refresh();
+				 //this->Show();
+			 }
+};
 }
 

@@ -103,8 +103,14 @@ namespace FunBrainz {
 	private: System::Windows::Forms::Label^  label1;
 	private: System::Windows::Forms::Label^  label3;
 	private: System::Windows::Forms::Label^  label2;
+	private: System::Windows::Forms::Label^  label6;
+	private: System::Windows::Forms::Label^  label5;
+	private: System::Windows::Forms::Label^  label4;
+	private: System::Windows::Forms::Panel^  panel9;
 	private: System::Windows::Forms::Label^  label8;
 	private: System::Windows::Forms::Label^  label7;
+	private: System::Windows::Forms::Button^  button1;
+	private: System::Windows::Forms::Label^  label9;
 
 	private: System::Windows::Forms::Label^  label4;
 
@@ -157,9 +163,8 @@ namespace FunBrainz {
 			this->lblScore = (gcnew System::Windows::Forms::Label());
 			this->submit = (gcnew System::Windows::Forms::Button());
 			this->panel1 = (gcnew System::Windows::Forms::Panel());
-			this->panel3 = (gcnew System::Windows::Forms::Panel());
-			this->label8 = (gcnew System::Windows::Forms::Label());
-			this->label7 = (gcnew System::Windows::Forms::Label());
+			this->label6 = (gcnew System::Windows::Forms::Label());
+			this->label5 = (gcnew System::Windows::Forms::Label());
 			this->label4 = (gcnew System::Windows::Forms::Label());
 			this->next = (gcnew System::Windows::Forms::Button());
 			this->panel5 = (gcnew System::Windows::Forms::Panel());
@@ -172,11 +177,17 @@ namespace FunBrainz {
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->panel8 = (gcnew System::Windows::Forms::Panel());
 			this->imageList1 = (gcnew System::Windows::Forms::ImageList(this->components));
+			this->panel9 = (gcnew System::Windows::Forms::Panel());
+			this->label9 = (gcnew System::Windows::Forms::Label());
+			this->label8 = (gcnew System::Windows::Forms::Label());
+			this->label7 = (gcnew System::Windows::Forms::Label());
+			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->panel1->SuspendLayout();
 			this->panel3->SuspendLayout();
 			this->panel5->SuspendLayout();
 			this->panel4->SuspendLayout();
 			this->panel7->SuspendLayout();
+			this->panel9->SuspendLayout();
 			this->SuspendLayout();
 			// 
 			// ClockTimer
@@ -232,7 +243,8 @@ namespace FunBrainz {
 			this->inputOp1->Name = L"inputOp1";
 			this->inputOp1->Size = System::Drawing::Size(40, 32);
 			this->inputOp1->TabIndex = 9;
-			this->inputOp1->TextAlign = System::Windows::Forms::HorizontalAlignment::Center;
+			this->inputOp1->TextChanged += gcnew System::EventHandler(this, &operatorFilling::k);
+			this->inputOp1->KeyPress += gcnew System::Windows::Forms::KeyPressEventHandler(this, &operatorFilling::inputOp1_KeyPress);
 			// 
 			// equalSign
 			// 
@@ -251,8 +263,7 @@ namespace FunBrainz {
 			// 
 			this->inputOp2->Font = (gcnew System::Drawing::Font(L"Century Gothic", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->inputOp2->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
-			this->inputOp2->Location = System::Drawing::Point(295, 160);
+			this->inputOp2->Location = System::Drawing::Point(284, 160);
 			this->inputOp2->Name = L"inputOp2";
 			this->inputOp2->Size = System::Drawing::Size(39, 32);
 			this->inputOp2->TabIndex = 10;
@@ -264,8 +275,8 @@ namespace FunBrainz {
 			this->number3->BackColor = System::Drawing::Color::Transparent;
 			this->number3->Font = (gcnew System::Drawing::Font(L"Century Gothic", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->number3->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
-			this->number3->Location = System::Drawing::Point(356, 163);
+			this->number3->ForeColor = System::Drawing::Color::White;
+			this->number3->Location = System::Drawing::Point(341, 160);
 			this->number3->Name = L"number3";
 			this->number3->Size = System::Drawing::Size(64, 23);
 			this->number3->TabIndex = 4;
@@ -292,8 +303,8 @@ namespace FunBrainz {
 			this->lblLevel->BackColor = System::Drawing::Color::Transparent;
 			this->lblLevel->Font = (gcnew System::Drawing::Font(L"Century Gothic", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->lblLevel->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
-			this->lblLevel->Location = System::Drawing::Point(125, 58);
+			this->lblLevel->ForeColor = System::Drawing::Color::White;
+			this->lblLevel->Location = System::Drawing::Point(486, 86);
 			this->lblLevel->Name = L"lblLevel";
 			this->lblLevel->Size = System::Drawing::Size(45, 20);
 			this->lblLevel->TabIndex = 12;
@@ -305,8 +316,8 @@ namespace FunBrainz {
 			this->number2->BackColor = System::Drawing::Color::Transparent;
 			this->number2->Font = (gcnew System::Drawing::Font(L"Century Gothic", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->number2->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
-			this->number2->Location = System::Drawing::Point(205, 163);
+			this->number2->ForeColor = System::Drawing::Color::White;
+			this->number2->Location = System::Drawing::Point(196, 160);
 			this->number2->Name = L"number2";
 			this->number2->Size = System::Drawing::Size(64, 23);
 			this->number2->TabIndex = 2;
@@ -319,7 +330,8 @@ namespace FunBrainz {
 			this->clock->BackColor = System::Drawing::Color::Transparent;
 			this->clock->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->clock->Location = System::Drawing::Point(3, 14);
+			this->clock->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->clock->Location = System::Drawing::Point(10, 29);
 			this->clock->Name = L"clock";
 			this->clock->Size = System::Drawing::Size(69, 29);
 			this->clock->TabIndex = 13;
@@ -346,8 +358,8 @@ namespace FunBrainz {
 			this->lblTriesLeft->BackColor = System::Drawing::Color::Transparent;
 			this->lblTriesLeft->Font = (gcnew System::Drawing::Font(L"Century Gothic", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->lblTriesLeft->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
-			this->lblTriesLeft->Location = System::Drawing::Point(393, 58);
+			this->lblTriesLeft->ForeColor = System::Drawing::Color::White;
+			this->lblTriesLeft->Location = System::Drawing::Point(159, 262);
 			this->lblTriesLeft->Name = L"lblTriesLeft";
 			this->lblTriesLeft->Size = System::Drawing::Size(69, 20);
 			this->lblTriesLeft->TabIndex = 14;
@@ -373,8 +385,8 @@ namespace FunBrainz {
 			this->lblScore->BackColor = System::Drawing::Color::Transparent;
 			this->lblScore->Font = (gcnew System::Drawing::Font(L"Century Gothic", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->lblScore->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
-			this->lblScore->Location = System::Drawing::Point(124, 93);
+			this->lblScore->ForeColor = System::Drawing::Color::White;
+			this->lblScore->Location = System::Drawing::Point(486, 44);
 			this->lblScore->Name = L"lblScore";
 			this->lblScore->Size = System::Drawing::Size(50, 20);
 			this->lblScore->TabIndex = 15;
@@ -397,11 +409,10 @@ namespace FunBrainz {
 			// 
 			// panel1
 			// 
-			this->panel1->BackColor = System::Drawing::Color::Transparent;
+			this->panel1->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"panel1.BackgroundImage")));
 			this->panel1->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->panel1->Controls->Add(this->panel3);
-			this->panel1->Controls->Add(this->label8);
-			this->panel1->Controls->Add(this->label7);
+			this->panel1->Controls->Add(this->label6);
+			this->panel1->Controls->Add(this->label5);
 			this->panel1->Controls->Add(this->label4);
 			this->panel1->Controls->Add(this->next);
 			this->panel1->Controls->Add(this->answer);
@@ -419,55 +430,50 @@ namespace FunBrainz {
 			this->panel1->Controls->Add(this->text2);
 			this->panel1->Controls->Add(this->number3);
 			this->panel1->Controls->Add(this->text1);
-			this->panel1->Location = System::Drawing::Point(27, 55);
+			this->panel1->ForeColor = System::Drawing::SystemColors::ControlLightLight;
+			this->panel1->Location = System::Drawing::Point(22, 58);
 			this->panel1->Name = L"panel1";
-			this->panel1->Size = System::Drawing::Size(631, 349);
+			this->panel1->Size = System::Drawing::Size(617, 346);
 			this->panel1->TabIndex = 16;
 			// 
-			// panel3
+			// label6
 			// 
-			this->panel3->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Center;
-			this->panel3->Controls->Add(this->clock);
-			this->panel3->Font = (gcnew System::Drawing::Font(L"Century Gothic", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+			this->label6->AutoSize = true;
+			this->label6->BackColor = System::Drawing::Color::Transparent;
+			this->label6->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->panel3->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
-			this->panel3->Location = System::Drawing::Point(530, 44);
-			this->panel3->Name = L"panel3";
-			this->panel3->Size = System::Drawing::Size(67, 52);
-			this->panel3->TabIndex = 16;
+			this->label6->ForeColor = System::Drawing::Color::White;
+			this->label6->Location = System::Drawing::Point(51, 262);
+			this->label6->Name = L"label6";
+			this->label6->Size = System::Drawing::Size(108, 25);
+			this->label6->TabIndex = 23;
+			this->label6->Text = L"Tries Left:";
 			// 
-			// label8
+			// label5
 			// 
-			this->label8->AutoSize = true;
-			this->label8->Font = (gcnew System::Drawing::Font(L"Century Gothic", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+			this->label5->AutoSize = true;
+			this->label5->BackColor = System::Drawing::Color::Transparent;
+			this->label5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->label8->Location = System::Drawing::Point(57, 93);
-			this->label8->Name = L"label8";
-			this->label8->Size = System::Drawing::Size(63, 20);
-			this->label8->TabIndex = 25;
-			this->label8->Text = L"Score : ";
-			// 
-			// label7
-			// 
-			this->label7->AutoSize = true;
-			this->label7->Font = (gcnew System::Drawing::Font(L"Century Gothic", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
-				static_cast<System::Byte>(0)));
-			this->label7->Location = System::Drawing::Point(243, 58);
-			this->label7->Name = L"label7";
-			this->label7->Size = System::Drawing::Size(145, 20);
-			this->label7->TabIndex = 24;
-			this->label7->Text = L"Tries Left                 : ";
+			this->label5->ForeColor = System::Drawing::Color::White;
+			this->label5->Location = System::Drawing::Point(409, 44);
+			this->label5->Name = L"label5";
+			this->label5->Size = System::Drawing::Size(74, 25);
+			this->label5->TabIndex = 22;
+			this->label5->Text = L"Score:";
 			// 
 			// label4
 			// 
 			this->label4->AutoSize = true;
-			this->label4->Font = (gcnew System::Drawing::Font(L"Century Gothic", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+			this->label4->BackColor = System::Drawing::Color::Transparent;
+			this->label4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->label4->Location = System::Drawing::Point(58, 58);
+			this->label4->ForeColor = System::Drawing::Color::White;
+			this->label4->Location = System::Drawing::Point(410, 86);
 			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(61, 20);
+			this->label4->Size = System::Drawing::Size(70, 25);
 			this->label4->TabIndex = 21;
-			this->label4->Text = L"Level : ";
+			this->label4->Text = L"Level:";
 			// 
 			// next
 			// 
@@ -475,8 +481,8 @@ namespace FunBrainz {
 			this->next->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
 			this->next->Font = (gcnew System::Drawing::Font(L"Century Gothic", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->next->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
-			this->next->Location = System::Drawing::Point(464, 224);
+			this->next->ForeColor = System::Drawing::Color::White;
+			this->next->Location = System::Drawing::Point(387, 259);
 			this->next->Name = L"next";
 			this->next->Size = System::Drawing::Size(133, 35);
 			this->next->TabIndex = 20;
@@ -484,12 +490,22 @@ namespace FunBrainz {
 			this->next->UseVisualStyleBackColor = false;
 			this->next->Click += gcnew System::EventHandler(this, &operatorFilling::next_Click);
 			// 
+			// panel3
+			// 
+			this->panel3->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"panel3.BackgroundImage")));
+			this->panel3->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->panel3->Controls->Add(this->clock);
+			this->panel3->Location = System::Drawing::Point(71, 53);
+			this->panel3->Name = L"panel3";
+			this->panel3->Size = System::Drawing::Size(60, 71);
+			this->panel3->TabIndex = 16;
+			// 
 			// panel5
 			// 
 			this->panel5->BackColor = System::Drawing::Color::Transparent;
 			this->panel5->Controls->Add(this->label2);
 			this->panel5->Controls->Add(this->panel6);
-			this->panel5->Location = System::Drawing::Point(682, 384);
+			this->panel5->Location = System::Drawing::Point(661, 387);
 			this->panel5->Name = L"panel5";
 			this->panel5->Size = System::Drawing::Size(220, 294);
 			this->panel5->TabIndex = 19;
@@ -500,8 +516,8 @@ namespace FunBrainz {
 			this->label2->BackColor = System::Drawing::Color::Transparent;
 			this->label2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->label2->ForeColor = System::Drawing::Color::Black;
-			this->label2->Location = System::Drawing::Point(71, 29);
+			this->label2->ForeColor = System::Drawing::Color::Maroon;
+			this->label2->Location = System::Drawing::Point(57, 57);
 			this->label2->Name = L"label2";
 			this->label2->Size = System::Drawing::Size(80, 25);
 			this->label2->TabIndex = 22;
@@ -510,7 +526,6 @@ namespace FunBrainz {
 			// panel6
 			// 
 			this->panel6->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"panel6.BackgroundImage")));
-			this->panel6->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->panel6->Location = System::Drawing::Point(41, 85);
 			this->panel6->Name = L"panel6";
 			this->panel6->Size = System::Drawing::Size(117, 125);
@@ -521,7 +536,7 @@ namespace FunBrainz {
 			this->panel4->BackColor = System::Drawing::Color::Transparent;
 			this->panel4->Controls->Add(this->label3);
 			this->panel4->Controls->Add(this->panel2);
-			this->panel4->Location = System::Drawing::Point(141, 394);
+			this->panel4->Location = System::Drawing::Point(186, 410);
 			this->panel4->Name = L"panel4";
 			this->panel4->Size = System::Drawing::Size(220, 294);
 			this->panel4->TabIndex = 18;
@@ -532,8 +547,8 @@ namespace FunBrainz {
 			this->label3->BackColor = System::Drawing::Color::Transparent;
 			this->label3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->label3->ForeColor = System::Drawing::Color::Black;
-			this->label3->Location = System::Drawing::Point(60, 32);
+			this->label3->ForeColor = System::Drawing::Color::Maroon;
+			this->label3->Location = System::Drawing::Point(61, 49);
 			this->label3->Name = L"label3";
 			this->label3->Size = System::Drawing::Size(73, 25);
 			this->label3->TabIndex = 23;
@@ -542,7 +557,6 @@ namespace FunBrainz {
 			// panel2
 			// 
 			this->panel2->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"panel2.BackgroundImage")));
-			this->panel2->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->panel2->Location = System::Drawing::Point(35, 77);
 			this->panel2->Name = L"panel2";
 			this->panel2->Size = System::Drawing::Size(130, 143);
@@ -551,9 +565,10 @@ namespace FunBrainz {
 			// panel7
 			// 
 			this->panel7->BackColor = System::Drawing::Color::Transparent;
+			this->panel7->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Zoom;
 			this->panel7->Controls->Add(this->label1);
 			this->panel7->Controls->Add(this->panel8);
-			this->panel7->Location = System::Drawing::Point(664, 71);
+			this->panel7->Location = System::Drawing::Point(664, 73);
 			this->panel7->Name = L"panel7";
 			this->panel7->Size = System::Drawing::Size(220, 294);
 			this->panel7->TabIndex = 19;
@@ -564,8 +579,8 @@ namespace FunBrainz {
 			this->label1->BackColor = System::Drawing::Color::Transparent;
 			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->label1->ForeColor = System::Drawing::Color::Black;
-			this->label1->Location = System::Drawing::Point(71, 28);
+			this->label1->ForeColor = System::Drawing::Color::Maroon;
+			this->label1->Location = System::Drawing::Point(71, 49);
 			this->label1->Name = L"label1";
 			this->label1->Size = System::Drawing::Size(75, 25);
 			this->label1->TabIndex = 21;
@@ -574,7 +589,6 @@ namespace FunBrainz {
 			// panel8
 			// 
 			this->panel8->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"panel8.BackgroundImage")));
-			this->panel8->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Zoom;
 			this->panel8->Location = System::Drawing::Point(35, 77);
 			this->panel8->Name = L"panel8";
 			this->panel8->Size = System::Drawing::Size(126, 139);
@@ -586,12 +600,80 @@ namespace FunBrainz {
 			this->imageList1->ImageSize = System::Drawing::Size(16, 16);
 			this->imageList1->TransparentColor = System::Drawing::Color::Transparent;
 			// 
+			// panel9
+			// 
+			this->panel9->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"panel9.BackgroundImage")));
+			this->panel9->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->panel9->Controls->Add(this->label9);
+			this->panel9->Controls->Add(this->label8);
+			this->panel9->Controls->Add(this->label7);
+			this->panel9->Controls->Add(this->button1);
+			this->panel9->Location = System::Drawing::Point(664, 4);
+			this->panel9->Name = L"panel9";
+			this->panel9->Size = System::Drawing::Size(217, 94);
+			this->panel9->TabIndex = 24;
+			this->panel9->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &operatorFilling::panel9_Paint);
+			// 
+			// label9
+			// 
+			this->label9->AutoSize = true;
+			this->label9->BackColor = System::Drawing::Color::Transparent;
+			this->label9->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->label9->ForeColor = System::Drawing::Color::White;
+			this->label9->Location = System::Drawing::Point(30, 54);
+			this->label9->Name = L"label9";
+			this->label9->Size = System::Drawing::Size(48, 25);
+			this->label9->TabIndex = 3;
+			this->label9->Text = L"Owl";
+			// 
+			// label8
+			// 
+			this->label8->AutoSize = true;
+			this->label8->BackColor = System::Drawing::Color::Transparent;
+			this->label8->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->label8->ForeColor = System::Drawing::Color::White;
+			this->label8->Location = System::Drawing::Point(9, 30);
+			this->label8->Name = L"label8";
+			this->label8->Size = System::Drawing::Size(89, 25);
+			this->label8->TabIndex = 2;
+			this->label8->Text = L"Click on";
+			// 
+			// label7
+			// 
+			this->label7->AutoSize = true;
+			this->label7->BackColor = System::Drawing::Color::Transparent;
+			this->label7->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->label7->ForeColor = System::Drawing::Color::White;
+			this->label7->Location = System::Drawing::Point(30, 5);
+			this->label7->Name = L"label7";
+			this->label7->Size = System::Drawing::Size(68, 25);
+			this->label7->TabIndex = 1;
+			this->label7->Text = L"Help\?";
+			// 
+			// button1
+			// 
+			this->button1->BackColor = System::Drawing::Color::Transparent;
+			this->button1->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"button1.BackgroundImage")));
+			this->button1->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->button1->Location = System::Drawing::Point(118, -3);
+			this->button1->Name = L"button1";
+			this->button1->Size = System::Drawing::Size(99, 97);
+			this->button1->TabIndex = 0;
+			this->button1->Text = L"button1";
+			this->button1->UseVisualStyleBackColor = false;
+			this->button1->Click += gcnew System::EventHandler(this, &operatorFilling::button1_Click);
+			// 
 			// operatorFilling
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"$this.BackgroundImage")));
-			this->ClientSize = System::Drawing::Size(954, 504);
+			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->ClientSize = System::Drawing::Size(885, 440);
+			this->Controls->Add(this->panel9);
 			this->Controls->Add(this->panel5);
 			this->Controls->Add(this->panel7);
 			this->Controls->Add(this->panel1);
@@ -609,12 +691,14 @@ namespace FunBrainz {
 			this->panel4->PerformLayout();
 			this->panel7->ResumeLayout(false);
 			this->panel7->PerformLayout();
+			this->panel9->ResumeLayout(false);
+			this->panel9->PerformLayout();
 			this->ResumeLayout(false);
 
 		}
 #pragma endregion
 	Form^ caller;
-int num1,num2 , num3  ,level , ctrQ , counter , score , triesLeft,stuID;
+int num1,num2 , num3  ,level , ctrQ , counter , score , triesLeft,stuID , preScore , help;
 
 private : System::Void GenerateQuestion (int level)
 {
@@ -714,7 +798,79 @@ private : System::Void GenerateQuestion (int level)
 		  
 }
 
+
+private: System::Void ClockTimer_Tick(System::Object^  sender, System::EventArgs^  e) {
+
+			 counter--;
+			 if(counter<0){
+
+				 ClockTimer->Stop();
+				 lblScore ->Text = (System::Convert::ToString(score));
+				 panel4->Hide();
+				 panel5->Hide();
+				 panel7->BringToFront();
+				 panel7->Show();
+
+				 MessageBox::Show("Time Over");
+				 triesLeft --;
+
+				 inputOp1->Text="";
+				 inputOp2->Text="";
+
+				 lblTriesLeft->Text = System::Convert::ToString(triesLeft);
+
+				 if(triesLeft == 0 )
+				 {
+					 ClockTimer->Stop();
+					 MessageBox::Show("You Lost");
+
+					 if( score > preScore )
+					 {
+
+
+						 OleDb::OleDbConnection ^ con = gcnew OleDb::OleDbConnection();
+						 con->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=FunBrainzForKids.accdb;";
+						 String ^ Sql = "Update operatorFilling SET Score = " + score + " where [Student_Id] = " + stuID + ";";
+						 OleDb::OleDbCommand ^ command = gcnew OleDb::OleDbCommand(Sql, con);
+						 con->Open();
+						 command->ExecuteNonQuery();
+						 con->Close();
+					 }
+				 }
+
+				 else
+				 {
+					counter=30;
+					ClockTimer->Start();
+					GenerateQuestion(level);
+					panel5->Hide();
+					panel7->Hide();
+					panel4->BringToFront();
+					panel4->Show();
+
+				 
+				 }
+
+			 }
+
+			 clock->Text = System::Convert::ToString(counter);
+		 }
+
 private: System::Void operatorFilling_Load(System::Object^  sender, System::EventArgs^  e) {
+
+			 help = 0;
+			 OleDb::OleDbConnection ^ con = gcnew OleDb::OleDbConnection();
+			 con->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=FunBrainzForKids.accdb;";
+			 String ^ Sql = "Select [Score] from operatorFilling where [Student_Id] = " + stuID + ";";
+			 MessageBox::Show(Sql);
+			 OleDb::OleDbCommand ^ command = gcnew OleDb::OleDbCommand(Sql, con);
+			 con->Open();
+			 preScore =  (int) command->ExecuteScalar();
+			 con->Close();
+
+
+
+
 
 			 panel4->BringToFront();
 			 panel5->BringToFront();
@@ -757,6 +913,12 @@ private: System::Void num1_Click(System::Object^  sender, System::EventArgs^  e)
 		 }
 private: System::Void submit_Click(System::Object^  sender, System::EventArgs^  e) {
 
+
+			 if ( inputOp1->Text == "+" || inputOp1->Text=="-" || inputOp1->Text=="*" || inputOp1->Text=="/" )
+			 {
+				 if ( inputOp2->Text == "+" || inputOp2->Text=="-" || inputOp2->Text=="*" || inputOp2->Text=="/" )
+				 {
+	
 			long int ans; 
 
 			if( inputOp2->Text == "+")
@@ -811,10 +973,15 @@ private: System::Void submit_Click(System::Object^  sender, System::EventArgs^  
 				
 				ClockTimer->Stop();
 
-				//MessageBox::Show("Correct");
+				button1->Enabled=false;
+				MessageBox::Show("Correct");
 				
 				submit->Hide();
 				next->Show();
+
+				inputOp1->ReadOnly= true;
+				inputOp2->ReadOnly=true;
+
 
 				panel4->Hide();
 				panel7->Hide();
@@ -886,38 +1053,47 @@ private: System::Void submit_Click(System::Object^  sender, System::EventArgs^  
 				ClockTimer->Stop();
 				
 				MessageBox::Show("You Lost");
-			}
-		 
-		 
-		 }
-private: System::Void ClockTimer_Tick(System::Object^  sender, System::EventArgs^  e) {
-
-			 counter--;
-			 if(counter<0){
-			
-				ClockTimer->Stop();
-	    		lblScore ->Text = (System::Convert::ToString(score));
-				panel4->Hide();
-				panel5->Hide();
-				panel7->BringToFront();
-				panel7->Show();
-
-				MessageBox::Show("Time Over");
-				triesLeft --;
-			    lblTriesLeft->Text = System::Convert::ToString(triesLeft);
-
-				counter=30;
-				ClockTimer->Start();
-				GenerateQuestion(level);
 				
-			 
-			 
+				if( score > preScore )
+				{
+
+				
+					OleDb::OleDbConnection ^ con = gcnew OleDb::OleDbConnection();
+					con->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=FunBrainzForKids.accdb;";
+					String ^ Sql = "Update operatorFilling SET Score = " + score + " where [Student_Id] = " + stuID + ";";
+					OleDb::OleDbCommand ^ command = gcnew OleDb::OleDbCommand(Sql, con);
+					con->Open();
+					command->ExecuteNonQuery();
+					con->Close();
+
+
+				}
+
+			}
+				 
+				 }
+
+
+				 else
+				 {
+					 MessageBox::Show("Please Enter correct values!!");
+
+				}
 			 }
 
-			 clock->Text = System::Convert::ToString(counter);
+			 else
+			 {
+				 MessageBox::Show("Please Enter correct values!!");
+			}
+
+
+		 
 		 }
 private: System::Void next_Click(System::Object^  sender, System::EventArgs^  e) {
 
+							inputOp1->ReadOnly= false;
+							inputOp2->ReadOnly=false;
+							button1->Enabled=true;
 					
 							ClockTimer->Start();
 							counter=30;
@@ -928,7 +1104,7 @@ private: System::Void next_Click(System::Object^  sender, System::EventArgs^  e)
 							submit->Show();
 
 					panel5->Hide();
-				
+
 					panel4->BringToFront();
 					panel7->Hide();
 					panel4->Show();
@@ -938,7 +1114,31 @@ private: System::Void next_Click(System::Object^  sender, System::EventArgs^  e)
 		 }
 private: System::Void number2_Click(System::Object^  sender, System::EventArgs^  e) {
 		 }
-private: System::Void clock_Click(System::Object^  sender, System::EventArgs^  e) {
+private: System::Void panel9_Paint(System::Object^  sender, System::Windows::Forms::PaintEventArgs^  e) {
 		 }
+private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {
+
+			 if(help>0)
+			 {
+				MessageBox::Show("You cannot taken a help right now!!");
+			 }
+
+			 else
+			 {
+				 help++;
+				inputOp1->Text = oper1->Text;
+			 }
+
+		 }
+private: System::Void k(System::Object^  sender, System::EventArgs^  e) {
+		 }
+private: System::Void inputOp1_KeyPress(System::Object^  sender, System::Windows::Forms::KeyPressEventArgs^  e) {
+
+		 }
+
+
+private: System::Void inputOp2_KeyPress(System::Object^  sender, System::Windows::Forms::KeyPressEventArgs^  e) {
+		 }
+
 };
 }
