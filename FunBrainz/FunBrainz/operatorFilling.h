@@ -475,7 +475,7 @@ namespace FunBrainz {
 			this->next->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->next->ForeColor = System::Drawing::Color::White;
-			this->next->Location = System::Drawing::Point(464, 224);
+			this->next->Location = System::Drawing::Point(387, 259);
 			this->next->Name = L"next";
 			this->next->Size = System::Drawing::Size(133, 35);
 			this->next->TabIndex = 20;
@@ -806,6 +806,10 @@ private: System::Void ClockTimer_Tick(System::Object^  sender, System::EventArgs
 
 				 MessageBox::Show("Time Over");
 				 triesLeft --;
+
+				 inputOp1->Text="";
+				 inputOp2->Text="";
+
 				 lblTriesLeft->Text = System::Convert::ToString(triesLeft);
 
 				 if(triesLeft == 0 )
@@ -829,7 +833,7 @@ private: System::Void ClockTimer_Tick(System::Object^  sender, System::EventArgs
 
 				 else
 				 {
-					counter=31;
+					counter=30;
 					ClockTimer->Start();
 					GenerateQuestion(level);
 					panel5->Hide();
@@ -902,6 +906,12 @@ private: System::Void num1_Click(System::Object^  sender, System::EventArgs^  e)
 		 }
 private: System::Void submit_Click(System::Object^  sender, System::EventArgs^  e) {
 
+
+			 if ( inputOp1->Text == "+" || inputOp1->Text=="-" || inputOp1->Text=="*" || inputOp1->Text=="/" )
+			 {
+				 if ( inputOp2->Text == "+" || inputOp2->Text=="-" || inputOp2->Text=="*" || inputOp2->Text=="/" )
+				 {
+	
 			long int ans; 
 
 			if( inputOp2->Text == "+")
@@ -956,6 +966,7 @@ private: System::Void submit_Click(System::Object^  sender, System::EventArgs^  
 				
 				ClockTimer->Stop();
 
+				button1->Enabled=false;
 				MessageBox::Show("Correct");
 				
 				submit->Hide();
@@ -1052,13 +1063,30 @@ private: System::Void submit_Click(System::Object^  sender, System::EventArgs^  
 				}
 
 			}
-		 
+				 
+				 }
+
+
+				 else
+				 {
+					 MessageBox::Show("Please Enter correct values!!");
+
+				}
+			 }
+
+			 else
+			 {
+				 MessageBox::Show("Please Enter correct values!!");
+			}
+
+
 		 
 		 }
 private: System::Void next_Click(System::Object^  sender, System::EventArgs^  e) {
 
 							inputOp1->ReadOnly= false;
 							inputOp2->ReadOnly=false;
+							button1->Enabled=true;
 					
 							ClockTimer->Start();
 							counter=30;
@@ -1099,39 +1127,10 @@ private: System::Void k(System::Object^  sender, System::EventArgs^  e) {
 		 }
 private: System::Void inputOp1_KeyPress(System::Object^  sender, System::Windows::Forms::KeyPressEventArgs^  e) {
 
-
-				if (e->KeyChar.ToString() == "+" || e->KeyChar.ToString() == "-" || e->KeyChar.ToString() == "*" ||e->KeyChar.ToString() == "/")
-				{
-
-				}
-
-				else
-				{
-					MessageBox::Show("Enter some valid operand");
-					inputOp1->Text="";
-				}
-
-
-
 		 }
 
 
 private: System::Void inputOp2_KeyPress(System::Object^  sender, System::Windows::Forms::KeyPressEventArgs^  e) {
-
-
-			 if (e->KeyChar.ToString() == "+" || e->KeyChar.ToString() == "-" || e->KeyChar.ToString() == "*" ||e->KeyChar.ToString() == "/")
-			 {
-
-			 }
-
-			 else
-			 {
-				 MessageBox::Show("Enter some valid operand");
-					 inputOp2->Text="";
-			 }
-
-
-
 		 }
 
 };
