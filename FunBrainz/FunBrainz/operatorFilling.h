@@ -110,6 +110,7 @@ namespace FunBrainz {
 	private: System::Windows::Forms::Label^  label8;
 	private: System::Windows::Forms::Label^  label7;
 	private: System::Windows::Forms::Button^  button1;
+	private: System::Windows::Forms::Label^  label9;
 
 
 
@@ -179,6 +180,7 @@ namespace FunBrainz {
 			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->label7 = (gcnew System::Windows::Forms::Label());
 			this->label8 = (gcnew System::Windows::Forms::Label());
+			this->label9 = (gcnew System::Windows::Forms::Label());
 			this->panel1->SuspendLayout();
 			this->panel3->SuspendLayout();
 			this->panel5->SuspendLayout();
@@ -421,9 +423,9 @@ namespace FunBrainz {
 			this->panel1->Controls->Add(this->number3);
 			this->panel1->Controls->Add(this->text1);
 			this->panel1->ForeColor = System::Drawing::SystemColors::ControlLightLight;
-			this->panel1->Location = System::Drawing::Point(27, 55);
+			this->panel1->Location = System::Drawing::Point(27, 58);
 			this->panel1->Name = L"panel1";
-			this->panel1->Size = System::Drawing::Size(631, 349);
+			this->panel1->Size = System::Drawing::Size(617, 346);
 			this->panel1->TabIndex = 16;
 			// 
 			// label6
@@ -593,6 +595,7 @@ namespace FunBrainz {
 			// 
 			this->panel9->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"panel9.BackgroundImage")));
 			this->panel9->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->panel9->Controls->Add(this->label9);
 			this->panel9->Controls->Add(this->label8);
 			this->panel9->Controls->Add(this->label7);
 			this->panel9->Controls->Add(this->button1);
@@ -613,6 +616,7 @@ namespace FunBrainz {
 			this->button1->TabIndex = 0;
 			this->button1->Text = L"button1";
 			this->button1->UseVisualStyleBackColor = false;
+			this->button1->Click += gcnew System::EventHandler(this, &operatorFilling::button1_Click);
 			// 
 			// label7
 			// 
@@ -634,11 +638,24 @@ namespace FunBrainz {
 			this->label8->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->label8->ForeColor = System::Drawing::Color::White;
-			this->label8->Location = System::Drawing::Point(3, 41);
+			this->label8->Location = System::Drawing::Point(9, 30);
 			this->label8->Name = L"label8";
-			this->label8->Size = System::Drawing::Size(131, 25);
+			this->label8->Size = System::Drawing::Size(89, 25);
 			this->label8->TabIndex = 2;
-			this->label8->Text = L"Click on Owl";
+			this->label8->Text = L"Click on";
+			// 
+			// label9
+			// 
+			this->label9->AutoSize = true;
+			this->label9->BackColor = System::Drawing::Color::Transparent;
+			this->label9->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->label9->ForeColor = System::Drawing::Color::White;
+			this->label9->Location = System::Drawing::Point(30, 54);
+			this->label9->Name = L"label9";
+			this->label9->Size = System::Drawing::Size(48, 25);
+			this->label9->TabIndex = 3;
+			this->label9->Text = L"Owl";
 			// 
 			// operatorFilling
 			// 
@@ -672,7 +689,7 @@ namespace FunBrainz {
 		}
 #pragma endregion
 	Form^ caller;
-int num1,num2 , num3  ,level , ctrQ , counter , score , triesLeft,stuID , preScore;
+int num1,num2 , num3  ,level , ctrQ , counter , score , triesLeft,stuID , preScore , help;
 
 private : System::Void GenerateQuestion (int level)
 {
@@ -774,6 +791,7 @@ private : System::Void GenerateQuestion (int level)
 
 private: System::Void operatorFilling_Load(System::Object^  sender, System::EventArgs^  e) {
 
+			 help = 0;
 			 OleDb::OleDbConnection ^ con = gcnew OleDb::OleDbConnection();
 			 con->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=FunBrainzForKids.accdb;";
 			 String ^ Sql = "Select [Score] from operatorFilling where [Student_Id] = " + stuID + ";";
@@ -1021,7 +1039,7 @@ private: System::Void next_Click(System::Object^  sender, System::EventArgs^  e)
 							submit->Show();
 
 					panel5->Hide();
-				
+
 					panel4->BringToFront();
 					panel7->Hide();
 					panel4->Show();
@@ -1032,6 +1050,20 @@ private: System::Void next_Click(System::Object^  sender, System::EventArgs^  e)
 private: System::Void number2_Click(System::Object^  sender, System::EventArgs^  e) {
 		 }
 private: System::Void panel9_Paint(System::Object^  sender, System::Windows::Forms::PaintEventArgs^  e) {
+		 }
+private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {
+
+			 if(help>0)
+			 {
+				MessageBox::Show("You cannot taken a help right now!!");
+			 }
+
+			 else
+			 {
+				
+			 }
+
+				
 		 }
 };
 }
