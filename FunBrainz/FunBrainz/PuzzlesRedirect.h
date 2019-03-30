@@ -50,6 +50,9 @@ namespace FunBrainz {
 	protected: 
 	private: System::Windows::Forms::Button^  btn_pipeline;
 	private: System::Windows::Forms::Button^  btn_2048;
+	private: System::Windows::Forms::Panel^  panel1;
+	private: System::Windows::Forms::Panel^  panel2;
+	private: System::Windows::Forms::Label^  label1;
 
 	private:
 		/// <summary>
@@ -64,19 +67,23 @@ namespace FunBrainz {
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(PuzzlesRedirect::typeid));
 			this->btn_quiz = (gcnew System::Windows::Forms::Button());
 			this->btn_pipeline = (gcnew System::Windows::Forms::Button());
 			this->btn_2048 = (gcnew System::Windows::Forms::Button());
+			this->panel1 = (gcnew System::Windows::Forms::Panel());
+			this->panel2 = (gcnew System::Windows::Forms::Panel());
+			this->label1 = (gcnew System::Windows::Forms::Label());
+			this->panel1->SuspendLayout();
 			this->SuspendLayout();
 			// 
 			// btn_quiz
 			// 
 			this->btn_quiz->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->btn_quiz->Location = System::Drawing::Point(62, 216);
-			this->btn_quiz->Margin = System::Windows::Forms::Padding(4);
+			this->btn_quiz->Location = System::Drawing::Point(275, 230);
 			this->btn_quiz->Name = L"btn_quiz";
-			this->btn_quiz->Size = System::Drawing::Size(176, 69);
+			this->btn_quiz->Size = System::Drawing::Size(132, 56);
 			this->btn_quiz->TabIndex = 5;
 			this->btn_quiz->Text = L"Image Quiz";
 			this->btn_quiz->UseVisualStyleBackColor = true;
@@ -86,10 +93,9 @@ namespace FunBrainz {
 			// 
 			this->btn_pipeline->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->btn_pipeline->Location = System::Drawing::Point(62, 111);
-			this->btn_pipeline->Margin = System::Windows::Forms::Padding(4);
+			this->btn_pipeline->Location = System::Drawing::Point(275, 144);
 			this->btn_pipeline->Name = L"btn_pipeline";
-			this->btn_pipeline->Size = System::Drawing::Size(176, 69);
+			this->btn_pipeline->Size = System::Drawing::Size(132, 56);
 			this->btn_pipeline->TabIndex = 4;
 			this->btn_pipeline->Text = L"Pipeline";
 			this->btn_pipeline->UseVisualStyleBackColor = true;
@@ -99,38 +105,76 @@ namespace FunBrainz {
 			// 
 			this->btn_2048->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->btn_2048->Location = System::Drawing::Point(62, 21);
-			this->btn_2048->Margin = System::Windows::Forms::Padding(4);
+			this->btn_2048->Location = System::Drawing::Point(275, 71);
 			this->btn_2048->Name = L"btn_2048";
-			this->btn_2048->Size = System::Drawing::Size(176, 69);
+			this->btn_2048->Size = System::Drawing::Size(132, 56);
 			this->btn_2048->TabIndex = 3;
 			this->btn_2048->Text = L"2048";
 			this->btn_2048->UseVisualStyleBackColor = true;
 			this->btn_2048->Click += gcnew System::EventHandler(this, &PuzzlesRedirect::btn_2048_Click);
 			// 
+			// panel1
+			// 
+			this->panel1->BackColor = System::Drawing::Color::White;
+			this->panel1->Controls->Add(this->panel2);
+			this->panel1->Controls->Add(this->label1);
+			this->panel1->Location = System::Drawing::Point(0, 6);
+			this->panel1->Name = L"panel1";
+			this->panel1->Size = System::Drawing::Size(705, 403);
+			this->panel1->TabIndex = 6;
+			// 
+			// panel2
+			// 
+			this->panel2->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"panel2.BackgroundImage")));
+			this->panel2->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->panel2->Location = System::Drawing::Point(297, 180);
+			this->panel2->Name = L"panel2";
+			this->panel2->Size = System::Drawing::Size(125, 99);
+			this->panel2->TabIndex = 1;
+			// 
+			// label1
+			// 
+			this->label1->AutoSize = true;
+			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->label1->Location = System::Drawing::Point(310, 127);
+			this->label1->Name = L"label1";
+			this->label1->Size = System::Drawing::Size(107, 25);
+			this->label1->TabIndex = 0;
+			this->label1->Text = L"Loading...";
+			// 
 			// PuzzlesRedirect
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
+			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
+			this->Controls->Add(this->panel1);
 			this->Controls->Add(this->btn_quiz);
 			this->Controls->Add(this->btn_pipeline);
 			this->Controls->Add(this->btn_2048);
+			this->Margin = System::Windows::Forms::Padding(2);
 			this->Name = L"PuzzlesRedirect";
-			this->Size = System::Drawing::Size(300, 306);
+			this->Size = System::Drawing::Size(708, 409);
+			this->Load += gcnew System::EventHandler(this, &PuzzlesRedirect::PuzzlesRedirect_Load);
+			this->panel1->ResumeLayout(false);
+			this->panel1->PerformLayout();
 			this->ResumeLayout(false);
 
 		}
 #pragma endregion
 		int stuId;
 	private: System::Void btn_2048_Click(System::Object^  sender, System::EventArgs^  e) {
-
 				 Game_2048 ^form =gcnew Game_2048(stuId);
 				 form->ShowDialog();
 			 }
 	private: System::Void btn_pipeline_Click(System::Object^  sender, System::EventArgs^  e) {
 
+				 panel1->Show();
+				 panel1->BringToFront();
+
 				 Level_pipeline ^form =gcnew Level_pipeline(stuId);
 				 form->ShowDialog();
+
+				 panel1->Hide();
 
 			 }
 	private: System::Void btn_quiz_Click(System::Object^  sender, System::EventArgs^  e) {
@@ -138,5 +182,8 @@ namespace FunBrainz {
 				 form->ShowDialog();
 
 			 }
-	};
+	private: System::Void PuzzlesRedirect_Load(System::Object^  sender, System::EventArgs^  e) {
+				 panel1->Hide();
+			 }
+};
 }
