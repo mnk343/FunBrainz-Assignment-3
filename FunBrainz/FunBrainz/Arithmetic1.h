@@ -243,21 +243,19 @@ namespace FunBrainz {
 				     int id;
 					// searching for ID from username
 					 con->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=FunBrainzForKids.accdb;";
-                     String ^Sql = "Select [ID] from database_ikya WHERE  UserName = '" + user + "' ";
+                     String ^Sql = "Select [StudentID] from Students WHERE  UserName = '" + user + "' ";
 					 OleDb::OleDbCommand ^ command = gcnew OleDb::OleDbCommand(Sql, con);
 					 con->Open();
 					 id = (int)command->ExecuteScalar();
 					 con->Close();
-					 msgx(Convert::ToString(id));
 					 
-
+					 
                      for(int i=0;i<=32;i++) {day[i]=0;}
-
 
 
 					// serching for dates
 					 con->Open();
-					 Sql = "Select [dateplayed] from graph WHERE  [StID] =  " + id +" ";
+					 Sql = "Select [DatePlayed] from CricketGraph WHERE  [StudentID] =  " + id +" ";
 					 command = gcnew OleDb::OleDbCommand(Sql, con);
 					 reader = command->ExecuteReader();
 					 while (reader->Read() == true)
