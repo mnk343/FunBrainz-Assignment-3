@@ -885,7 +885,7 @@ private: System::Void question_no_figure_Load(System::Object^  sender, System::E
 
 					 if(reader->Read())
 					 {
-						y=reader->GetInt32(4);
+						y=reader->GetInt32(3);
 					 }
 					 dbcon->Close();
 					 
