@@ -112,8 +112,6 @@ namespace FunBrainz {
 	private: System::Windows::Forms::Button^  button1;
 	private: System::Windows::Forms::Label^  label9;
 
-	private: System::Windows::Forms::Label^  label4;
-
 
 
 
@@ -167,6 +165,7 @@ namespace FunBrainz {
 			this->label5 = (gcnew System::Windows::Forms::Label());
 			this->label4 = (gcnew System::Windows::Forms::Label());
 			this->next = (gcnew System::Windows::Forms::Button());
+			this->panel3 = (gcnew System::Windows::Forms::Panel());
 			this->panel5 = (gcnew System::Windows::Forms::Panel());
 			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->panel6 = (gcnew System::Windows::Forms::Panel());
@@ -199,12 +198,12 @@ namespace FunBrainz {
 			// 
 			this->text1->AutoSize = true;
 			this->text1->BackColor = System::Drawing::Color::Transparent;
-			this->text1->Font = (gcnew System::Drawing::Font(L"Century Gothic", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+			this->text1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->text1->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
-			this->text1->Location = System::Drawing::Point(175, 163);
+			this->text1->ForeColor = System::Drawing::Color::White;
+			this->text1->Location = System::Drawing::Point(159, 160);
 			this->text1->Name = L"text1";
-			this->text1->Size = System::Drawing::Size(17, 23);
+			this->text1->Size = System::Drawing::Size(19, 25);
 			this->text1->TabIndex = 7;
 			this->text1->Text = L"(";
 			// 
@@ -212,12 +211,12 @@ namespace FunBrainz {
 			// 
 			this->text2->AutoSize = true;
 			this->text2->BackColor = System::Drawing::Color::Transparent;
-			this->text2->Font = (gcnew System::Drawing::Font(L"Century Gothic", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+			this->text2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->text2->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
-			this->text2->Location = System::Drawing::Point(429, 163);
+			this->text2->ForeColor = System::Drawing::Color::White;
+			this->text2->Location = System::Drawing::Point(412, 160);
 			this->text2->Name = L"text2";
-			this->text2->Size = System::Drawing::Size(17, 23);
+			this->text2->Size = System::Drawing::Size(19, 25);
 			this->text2->TabIndex = 8;
 			this->text2->Text = L")";
 			// 
@@ -225,23 +224,22 @@ namespace FunBrainz {
 			// 
 			this->answer->AutoSize = true;
 			this->answer->BackColor = System::Drawing::Color::Transparent;
-			this->answer->Font = (gcnew System::Drawing::Font(L"Century Gothic", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+			this->answer->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->answer->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
-			this->answer->Location = System::Drawing::Point(519, 163);
+			this->answer->ForeColor = System::Drawing::Color::White;
+			this->answer->Location = System::Drawing::Point(523, 160);
 			this->answer->Name = L"answer";
-			this->answer->Size = System::Drawing::Size(44, 23);
+			this->answer->Size = System::Drawing::Size(47, 25);
 			this->answer->TabIndex = 6;
 			this->answer->Text = L"ans";
 			// 
 			// inputOp1
 			// 
-			this->inputOp1->Font = (gcnew System::Drawing::Font(L"Century Gothic", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+			this->inputOp1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->inputOp1->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
-			this->inputOp1->Location = System::Drawing::Point(114, 160);
+			this->inputOp1->Location = System::Drawing::Point(110, 160);
 			this->inputOp1->Name = L"inputOp1";
-			this->inputOp1->Size = System::Drawing::Size(40, 32);
+			this->inputOp1->Size = System::Drawing::Size(40, 31);
 			this->inputOp1->TabIndex = 9;
 			this->inputOp1->TextChanged += gcnew System::EventHandler(this, &operatorFilling::k);
 			this->inputOp1->KeyPress += gcnew System::Windows::Forms::KeyPressEventHandler(this, &operatorFilling::inputOp1_KeyPress);
@@ -250,35 +248,34 @@ namespace FunBrainz {
 			// 
 			this->equalSign->AutoSize = true;
 			this->equalSign->BackColor = System::Drawing::Color::Transparent;
-			this->equalSign->Font = (gcnew System::Drawing::Font(L"Century Gothic", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+			this->equalSign->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->equalSign->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
-			this->equalSign->Location = System::Drawing::Point(471, 163);
+			this->equalSign->ForeColor = System::Drawing::Color::White;
+			this->equalSign->Location = System::Drawing::Point(459, 160);
 			this->equalSign->Name = L"equalSign";
-			this->equalSign->Size = System::Drawing::Size(22, 23);
+			this->equalSign->Size = System::Drawing::Size(24, 25);
 			this->equalSign->TabIndex = 5;
 			this->equalSign->Text = L"=";
 			// 
 			// inputOp2
 			// 
-			this->inputOp2->Font = (gcnew System::Drawing::Font(L"Century Gothic", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+			this->inputOp2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->inputOp2->Location = System::Drawing::Point(284, 160);
 			this->inputOp2->Name = L"inputOp2";
-			this->inputOp2->Size = System::Drawing::Size(39, 32);
+			this->inputOp2->Size = System::Drawing::Size(39, 31);
 			this->inputOp2->TabIndex = 10;
-			this->inputOp2->TextAlign = System::Windows::Forms::HorizontalAlignment::Center;
 			// 
 			// number3
 			// 
 			this->number3->AutoSize = true;
 			this->number3->BackColor = System::Drawing::Color::Transparent;
-			this->number3->Font = (gcnew System::Drawing::Font(L"Century Gothic", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+			this->number3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->number3->ForeColor = System::Drawing::Color::White;
 			this->number3->Location = System::Drawing::Point(341, 160);
 			this->number3->Name = L"number3";
-			this->number3->Size = System::Drawing::Size(64, 23);
+			this->number3->Size = System::Drawing::Size(65, 25);
 			this->number3->TabIndex = 4;
 			this->number3->Text = L"num3";
 			this->number3->TextAlign = System::Drawing::ContentAlignment::TopCenter;
@@ -287,26 +284,25 @@ namespace FunBrainz {
 			// 
 			this->oper2->AutoSize = true;
 			this->oper2->BackColor = System::Drawing::Color::Transparent;
-			this->oper2->Font = (gcnew System::Drawing::Font(L"Century Gothic", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+			this->oper2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->oper2->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
-			this->oper2->Location = System::Drawing::Point(439, 93);
+			this->oper2->ForeColor = System::Drawing::Color::White;
+			this->oper2->Location = System::Drawing::Point(549, 297);
 			this->oper2->Name = L"oper2";
-			this->oper2->Size = System::Drawing::Size(37, 20);
+			this->oper2->Size = System::Drawing::Size(48, 25);
 			this->oper2->TabIndex = 3;
 			this->oper2->Text = L"op2";
-			this->oper2->Visible = false;
 			// 
 			// lblLevel
 			// 
 			this->lblLevel->AutoSize = true;
 			this->lblLevel->BackColor = System::Drawing::Color::Transparent;
-			this->lblLevel->Font = (gcnew System::Drawing::Font(L"Century Gothic", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+			this->lblLevel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->lblLevel->ForeColor = System::Drawing::Color::White;
 			this->lblLevel->Location = System::Drawing::Point(486, 86);
 			this->lblLevel->Name = L"lblLevel";
-			this->lblLevel->Size = System::Drawing::Size(45, 20);
+			this->lblLevel->Size = System::Drawing::Size(57, 25);
 			this->lblLevel->TabIndex = 12;
 			this->lblLevel->Text = L"level";
 			// 
@@ -314,12 +310,12 @@ namespace FunBrainz {
 			// 
 			this->number2->AutoSize = true;
 			this->number2->BackColor = System::Drawing::Color::Transparent;
-			this->number2->Font = (gcnew System::Drawing::Font(L"Century Gothic", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+			this->number2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->number2->ForeColor = System::Drawing::Color::White;
 			this->number2->Location = System::Drawing::Point(196, 160);
 			this->number2->Name = L"number2";
-			this->number2->Size = System::Drawing::Size(64, 23);
+			this->number2->Size = System::Drawing::Size(65, 25);
 			this->number2->TabIndex = 2;
 			this->number2->Text = L"num2";
 			this->number2->Click += gcnew System::EventHandler(this, &operatorFilling::number2_Click);
@@ -336,32 +332,30 @@ namespace FunBrainz {
 			this->clock->Size = System::Drawing::Size(69, 29);
 			this->clock->TabIndex = 13;
 			this->clock->Text = L"clock";
-			this->clock->Click += gcnew System::EventHandler(this, &operatorFilling::clock_Click);
 			// 
 			// oper1
 			// 
 			this->oper1->AutoSize = true;
 			this->oper1->BackColor = System::Drawing::Color::Transparent;
-			this->oper1->Font = (gcnew System::Drawing::Font(L"Century Gothic", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+			this->oper1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->oper1->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
-			this->oper1->Location = System::Drawing::Point(393, 93);
+			this->oper1->ForeColor = System::Drawing::Color::White;
+			this->oper1->Location = System::Drawing::Point(486, 297);
 			this->oper1->Name = L"oper1";
-			this->oper1->Size = System::Drawing::Size(37, 20);
+			this->oper1->Size = System::Drawing::Size(48, 25);
 			this->oper1->TabIndex = 1;
 			this->oper1->Text = L"op1";
-			this->oper1->Visible = false;
 			// 
 			// lblTriesLeft
 			// 
 			this->lblTriesLeft->AutoSize = true;
 			this->lblTriesLeft->BackColor = System::Drawing::Color::Transparent;
-			this->lblTriesLeft->Font = (gcnew System::Drawing::Font(L"Century Gothic", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+			this->lblTriesLeft->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->lblTriesLeft->ForeColor = System::Drawing::Color::White;
 			this->lblTriesLeft->Location = System::Drawing::Point(159, 262);
 			this->lblTriesLeft->Name = L"lblTriesLeft";
-			this->lblTriesLeft->Size = System::Drawing::Size(69, 20);
+			this->lblTriesLeft->Size = System::Drawing::Size(102, 25);
 			this->lblTriesLeft->TabIndex = 14;
 			this->lblTriesLeft->Text = L"Tries Left";
 			// 
@@ -369,12 +363,12 @@ namespace FunBrainz {
 			// 
 			this->number1->AutoSize = true;
 			this->number1->BackColor = System::Drawing::Color::Transparent;
-			this->number1->Font = (gcnew System::Drawing::Font(L"Century Gothic", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+			this->number1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->number1->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
-			this->number1->Location = System::Drawing::Point(33, 163);
+			this->number1->ForeColor = System::Drawing::Color::White;
+			this->number1->Location = System::Drawing::Point(32, 160);
 			this->number1->Name = L"number1";
-			this->number1->Size = System::Drawing::Size(64, 23);
+			this->number1->Size = System::Drawing::Size(65, 25);
 			this->number1->TabIndex = 0;
 			this->number1->Text = L"num1";
 			this->number1->Click += gcnew System::EventHandler(this, &operatorFilling::num1_Click);
@@ -383,22 +377,21 @@ namespace FunBrainz {
 			// 
 			this->lblScore->AutoSize = true;
 			this->lblScore->BackColor = System::Drawing::Color::Transparent;
-			this->lblScore->Font = (gcnew System::Drawing::Font(L"Century Gothic", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+			this->lblScore->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->lblScore->ForeColor = System::Drawing::Color::White;
 			this->lblScore->Location = System::Drawing::Point(486, 44);
 			this->lblScore->Name = L"lblScore";
-			this->lblScore->Size = System::Drawing::Size(50, 20);
+			this->lblScore->Size = System::Drawing::Size(65, 25);
 			this->lblScore->TabIndex = 15;
 			this->lblScore->Text = L"score";
 			// 
 			// submit
 			// 
 			this->submit->BackColor = System::Drawing::Color::Brown;
-			this->submit->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
-			this->submit->Font = (gcnew System::Drawing::Font(L"Century Gothic", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+			this->submit->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->submit->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
+			this->submit->ForeColor = System::Drawing::Color::White;
 			this->submit->Location = System::Drawing::Point(464, 224);
 			this->submit->Name = L"submit";
 			this->submit->Size = System::Drawing::Size(133, 35);
@@ -415,6 +408,7 @@ namespace FunBrainz {
 			this->panel1->Controls->Add(this->label5);
 			this->panel1->Controls->Add(this->label4);
 			this->panel1->Controls->Add(this->next);
+			this->panel1->Controls->Add(this->panel3);
 			this->panel1->Controls->Add(this->answer);
 			this->panel1->Controls->Add(this->oper2);
 			this->panel1->Controls->Add(this->oper1);
@@ -478,8 +472,7 @@ namespace FunBrainz {
 			// next
 			// 
 			this->next->BackColor = System::Drawing::Color::Brown;
-			this->next->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
-			this->next->Font = (gcnew System::Drawing::Font(L"Century Gothic", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+			this->next->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->next->ForeColor = System::Drawing::Color::White;
 			this->next->Location = System::Drawing::Point(387, 259);
@@ -1015,7 +1008,7 @@ private: System::Void submit_Click(System::Object^  sender, System::EventArgs^  
 				panel7->BringToFront();
 				panel7->Show();
 
-				//MessageBox::Show("Wrong");
+				MessageBox::Show("Wrong");
 				triesLeft --;
 			    lblTriesLeft->Text = System::Convert::ToString(triesLeft);
 
