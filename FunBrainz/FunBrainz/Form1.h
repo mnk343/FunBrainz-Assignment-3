@@ -508,7 +508,7 @@ private: System::String ^  SuggestPassword()
 	 {    
 		  
 	     	//connection query
-			String ^ Sql = "update [database_ikya] set  [Password] = '"+ strPassword +"'  WHERE  UserName  = '"+ UserNametxt->Text + "' ";
+			String ^ Sql = "update [Students] set  [Password] = '"+ strPassword +"'  WHERE  UserName  = '"+ UserNametxt->Text + "' ";
 			con->Open();
 			try
 			{
@@ -534,7 +534,7 @@ private: System::String ^  SuggestPassword()
 			      UserNametxt->Text=updatetext(UserNametxt->Text);
 
                   //connection query
-						 String ^ Sql = "SELECT * FROM database_ikya WHERE UserName = '" + UserNametxt->Text + "' ";
+						 String ^ Sql = "SELECT * FROM Students WHERE UserName = '" + UserNametxt->Text + "' ";
 						 OleDb::OleDbCommand ^ command = gcnew OleDb::OleDbCommand(Sql, con);
 						 con->Open();
 						 try{
@@ -560,7 +560,7 @@ private: System::Void Forget_Click(System::Object^  sender, System::EventArgs^  
 				   
 
 					 //extracting email
-                     String ^Sql = "Select  Email from database_ikya WHERE  UserName = '" + UserNametxt->Text + "' ";
+                     String ^Sql = "Select  Email from Students WHERE  UserName = '" + UserNametxt->Text + "' ";
 					 OleDb::OleDbCommand ^ command = gcnew OleDb::OleDbCommand(Sql, con);
 					 con->Open();
 					 CurrentUserEmail = (String ^)command->ExecuteScalar();
@@ -597,7 +597,7 @@ private: System::Void Submitbtn_Click(System::Object^  sender, System::EventArgs
 			       int flag=0;
 				    UserNametxt->Text=updatetext(UserNametxt->Text);
 
-			             String ^ Sql = "SELECT *  FROM database_ikya WHERE  UserName  = '" + UserNametxt->Text + "' ";
+			             String ^ Sql = "SELECT *  FROM Students WHERE  UserName  = '" + UserNametxt->Text + "' ";
 						 OleDb::OleDbCommand ^ command = gcnew OleDb::OleDbCommand(Sql, con);
 					     con->Open();
 						 OleDb::OleDbDataReader ^ reader=command->ExecuteReader();
@@ -606,7 +606,7 @@ private: System::Void Submitbtn_Click(System::Object^  sender, System::EventArgs
 						 if(flag==0) {MessageBox::Show("Enter valid user name");cleartext();return ;}
 
 						 flag=0;
-						 Sql = "SELECT *  FROM database_ikya WHERE  UserName= '"+UserNametxt->Text+"' and Securityquestion= '"+question->Text+"' and answer= '"+answer->Text+"' ";
+						 Sql = "SELECT *  FROM Students WHERE  UserName= '"+UserNametxt->Text+"' and Securityquestion= '"+question->Text+"' and answer= '"+answer->Text+"' ";
 					     command = gcnew OleDb::OleDbCommand(Sql, con);
 					     con->Open();
 						 reader=command->ExecuteReader();

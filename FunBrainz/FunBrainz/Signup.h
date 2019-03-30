@@ -1,5 +1,7 @@
 #pragma once
 #include "Homepage.h"
+#using <system.dll>
+#include "regex"
 namespace FunBrainz {
 
 	using namespace System;
@@ -8,13 +10,13 @@ namespace FunBrainz {
 	using namespace System::Windows::Forms;
 	using namespace System::Data;
 	using namespace System::Drawing;
-
+	using namespace System::Text::RegularExpressions;
 	/// <summary>
 	/// Summary for Signup
 	/// </summary>
 	public ref class Signup : public System::Windows::Forms::Form
 	{
-	   Form ^ obj;
+		Form ^ obj;
 	public:
 		Signup(void)
 		{
@@ -74,6 +76,10 @@ namespace FunBrainz {
 	private: System::Windows::Forms::Label^  label12;
 	private: System::Windows::Forms::Label^  label11;
 	private: System::Windows::Forms::TextBox^  Answertxt;
+	private: System::Windows::Forms::Label^  label14;
+	private: System::Windows::Forms::Label^  label13;
+	private: System::Windows::Forms::TextBox^  GuardiansLastNametxt;
+	private: System::Windows::Forms::TextBox^  GuardiansFirstNametxt;
 
 
 
@@ -117,6 +123,10 @@ namespace FunBrainz {
 			this->label12 = (gcnew System::Windows::Forms::Label());
 			this->label11 = (gcnew System::Windows::Forms::Label());
 			this->Answertxt = (gcnew System::Windows::Forms::TextBox());
+			this->label14 = (gcnew System::Windows::Forms::Label());
+			this->label13 = (gcnew System::Windows::Forms::Label());
+			this->GuardiansLastNametxt = (gcnew System::Windows::Forms::TextBox());
+			this->GuardiansFirstNametxt = (gcnew System::Windows::Forms::TextBox());
 			this->SuspendLayout();
 			// 
 			// label9
@@ -217,7 +227,7 @@ namespace FunBrainz {
 			this->Emailtxt->Margin = System::Windows::Forms::Padding(4);
 			this->Emailtxt->Name = L"Emailtxt";
 			this->Emailtxt->Size = System::Drawing::Size(197, 22);
-			this->Emailtxt->TabIndex = 14;
+			this->Emailtxt->TabIndex = 8;
 			// 
 			// Mobiletxt
 			// 
@@ -225,7 +235,7 @@ namespace FunBrainz {
 			this->Mobiletxt->Margin = System::Windows::Forms::Padding(4);
 			this->Mobiletxt->Name = L"Mobiletxt";
 			this->Mobiletxt->Size = System::Drawing::Size(197, 22);
-			this->Mobiletxt->TabIndex = 8;
+			this->Mobiletxt->TabIndex = 7;
 			// 
 			// Classtxt
 			// 
@@ -233,7 +243,7 @@ namespace FunBrainz {
 			this->Classtxt->Margin = System::Windows::Forms::Padding(4);
 			this->Classtxt->Name = L"Classtxt";
 			this->Classtxt->Size = System::Drawing::Size(197, 22);
-			this->Classtxt->TabIndex = 7;
+			this->Classtxt->TabIndex = 4;
 			// 
 			// LastNametxt
 			// 
@@ -241,7 +251,7 @@ namespace FunBrainz {
 			this->LastNametxt->Margin = System::Windows::Forms::Padding(4);
 			this->LastNametxt->Name = L"LastNametxt";
 			this->LastNametxt->Size = System::Drawing::Size(197, 22);
-			this->LastNametxt->TabIndex = 12;
+			this->LastNametxt->TabIndex = 3;
 			// 
 			// FirstNametxt
 			// 
@@ -249,7 +259,7 @@ namespace FunBrainz {
 			this->FirstNametxt->Margin = System::Windows::Forms::Padding(4);
 			this->FirstNametxt->Name = L"FirstNametxt";
 			this->FirstNametxt->Size = System::Drawing::Size(197, 22);
-			this->FirstNametxt->TabIndex = 13;
+			this->FirstNametxt->TabIndex = 2;
 			// 
 			// Passwordtxt
 			// 
@@ -257,7 +267,7 @@ namespace FunBrainz {
 			this->Passwordtxt->Margin = System::Windows::Forms::Padding(4);
 			this->Passwordtxt->Name = L"Passwordtxt";
 			this->Passwordtxt->Size = System::Drawing::Size(197, 22);
-			this->Passwordtxt->TabIndex = 10;
+			this->Passwordtxt->TabIndex = 1;
 			// 
 			// UserNametxt
 			// 
@@ -265,26 +275,26 @@ namespace FunBrainz {
 			this->UserNametxt->Margin = System::Windows::Forms::Padding(4);
 			this->UserNametxt->Name = L"UserNametxt";
 			this->UserNametxt->Size = System::Drawing::Size(197, 22);
-			this->UserNametxt->TabIndex = 11;
+			this->UserNametxt->TabIndex = 0;
 			// 
 			// Signupbtn
 			// 
-			this->Signupbtn->Location = System::Drawing::Point(290, 447);
+			this->Signupbtn->Location = System::Drawing::Point(276, 538);
 			this->Signupbtn->Margin = System::Windows::Forms::Padding(4);
 			this->Signupbtn->Name = L"Signupbtn";
 			this->Signupbtn->Size = System::Drawing::Size(117, 37);
-			this->Signupbtn->TabIndex = 5;
+			this->Signupbtn->TabIndex = 14;
 			this->Signupbtn->Text = L"Sign Up";
 			this->Signupbtn->UseVisualStyleBackColor = true;
 			this->Signupbtn->Click += gcnew System::EventHandler(this, &Signup::Signupbtn_Click);
 			// 
 			// button2
 			// 
-			this->button2->Location = System::Drawing::Point(64, 447);
+			this->button2->Location = System::Drawing::Point(79, 547);
 			this->button2->Margin = System::Windows::Forms::Padding(4);
 			this->button2->Name = L"button2";
 			this->button2->Size = System::Drawing::Size(100, 28);
-			this->button2->TabIndex = 24;
+			this->button2->TabIndex = 15;
 			this->button2->Text = L"Back";
 			this->button2->UseVisualStyleBackColor = true;
 			this->button2->Click += gcnew System::EventHandler(this, &Signup::button2_Click);
@@ -297,7 +307,7 @@ namespace FunBrainz {
 			this->Gendertxt->Location = System::Drawing::Point(251, 220);
 			this->Gendertxt->Name = L"Gendertxt";
 			this->Gendertxt->Size = System::Drawing::Size(197, 24);
-			this->Gendertxt->TabIndex = 25;
+			this->Gendertxt->TabIndex = 6;
 			// 
 			// DOBtxt
 			// 
@@ -307,7 +317,7 @@ namespace FunBrainz {
 			this->DOBtxt->MinDate = System::DateTime(2005, 1, 1, 0, 0, 0, 0);
 			this->DOBtxt->Name = L"DOBtxt";
 			this->DOBtxt->Size = System::Drawing::Size(197, 22);
-			this->DOBtxt->TabIndex = 26;
+			this->DOBtxt->TabIndex = 5;
 			// 
 			// Schooltxt
 			// 
@@ -315,7 +325,7 @@ namespace FunBrainz {
 			this->Schooltxt->Margin = System::Windows::Forms::Padding(4);
 			this->Schooltxt->Name = L"Schooltxt";
 			this->Schooltxt->Size = System::Drawing::Size(197, 22);
-			this->Schooltxt->TabIndex = 27;
+			this->Schooltxt->TabIndex = 9;
 			// 
 			// label10
 			// 
@@ -336,7 +346,7 @@ namespace FunBrainz {
 			this->Questiontxt->Margin = System::Windows::Forms::Padding(4);
 			this->Questiontxt->Name = L"Questiontxt";
 			this->Questiontxt->Size = System::Drawing::Size(197, 24);
-			this->Questiontxt->TabIndex = 37;
+			this->Questiontxt->TabIndex = 10;
 			// 
 			// label12
 			// 
@@ -364,13 +374,49 @@ namespace FunBrainz {
 			this->Answertxt->Margin = System::Windows::Forms::Padding(4);
 			this->Answertxt->Name = L"Answertxt";
 			this->Answertxt->Size = System::Drawing::Size(197, 22);
-			this->Answertxt->TabIndex = 34;
+			this->Answertxt->TabIndex = 11;
+			// 
+			// label14
+			// 
+			this->label14->AutoSize = true;
+			this->label14->Location = System::Drawing::Point(89, 491);
+			this->label14->Name = L"label14";
+			this->label14->Size = System::Drawing::Size(138, 17);
+			this->label14->TabIndex = 45;
+			this->label14->Text = L"GuardiansLastName";
+			// 
+			// label13
+			// 
+			this->label13->AutoSize = true;
+			this->label13->Location = System::Drawing::Point(108, 452);
+			this->label13->Name = L"label13";
+			this->label13->Size = System::Drawing::Size(138, 17);
+			this->label13->TabIndex = 44;
+			this->label13->Text = L"GuardiansFirstName";
+			// 
+			// GuardiansLastNametxt
+			// 
+			this->GuardiansLastNametxt->Location = System::Drawing::Point(251, 488);
+			this->GuardiansLastNametxt->Name = L"GuardiansLastNametxt";
+			this->GuardiansLastNametxt->Size = System::Drawing::Size(197, 22);
+			this->GuardiansLastNametxt->TabIndex = 13;
+			// 
+			// GuardiansFirstNametxt
+			// 
+			this->GuardiansFirstNametxt->Location = System::Drawing::Point(251, 449);
+			this->GuardiansFirstNametxt->Name = L"GuardiansFirstNametxt";
+			this->GuardiansFirstNametxt->Size = System::Drawing::Size(197, 22);
+			this->GuardiansFirstNametxt->TabIndex = 12;
 			// 
 			// Signup
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(722, 497);
+			this->ClientSize = System::Drawing::Size(872, 598);
+			this->Controls->Add(this->label14);
+			this->Controls->Add(this->label13);
+			this->Controls->Add(this->GuardiansLastNametxt);
+			this->Controls->Add(this->GuardiansFirstNametxt);
 			this->Controls->Add(this->Questiontxt);
 			this->Controls->Add(this->label12);
 			this->Controls->Add(this->label11);
@@ -407,12 +453,13 @@ namespace FunBrainz {
 		}
 
 #pragma endregion
-		
+
 		static OleDb::OleDbConnection ^ con = gcnew OleDb::OleDbConnection();
 	private: System::Void Signup_Load(System::Object^  sender, System::EventArgs^  e) 
 			 {
-				 con->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=ikya_database.accdb;";
-				 
+
+				 con->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=FunBrainzForKids.accdb;";
+
 				 time_t now = time(0);
 				 tm *ltm = localtime(&now);
 				 int year = 1900 + ltm->tm_year;
@@ -424,195 +471,218 @@ namespace FunBrainz {
 
 
 	private : System::Boolean uservalidate ( String ^ s )
-    {
-
-		            Boolean  flag= true;
-					if(!userdatavalidate(s)) 
-					{
-						MessageBox::Show("enter valid  username");
-						return false;
-					}
-					 
-                    String ^ Sql = "SELECT * FROM database_ikya WHERE UserName = '" + UserNametxt->Text + "' ";
-					OleDb::OleDbCommand ^ command = gcnew OleDb::OleDbCommand(Sql, con);
-					con->Open();
-					try{
-						OleDb::OleDbDataReader ^ reader=command->ExecuteReader();
-						if(reader->HasRows)  flag=false;
-						con->Close();
-					}
-					catch(Exception ^ ex)
-					{
-										con->Close();
-										MessageBox::Show(ex->Message);
-										return false;
-					}
-					if(!flag) {MessageBox::Show("user name already taken");}
-					return flag;
+			  {
 
 
+				  Boolean  flag= true;
+				  if(!userdatavalidate(s)) 
+				  {
+					  MessageBox::Show("enter valid  username");
+					  return false;
+				  }
 
-	}
+				  String ^ Sql = "SELECT * FROM  Students WHERE UserName = '" + UserNametxt->Text + "' ";
+				  OleDb::OleDbCommand ^ command = gcnew OleDb::OleDbCommand(Sql, con);
+				  con->Open();
+				  try{
+					  OleDb::OleDbDataReader ^ reader=command->ExecuteReader();
+					  if(reader->HasRows)  flag=false;
+					  con->Close();
+				  }
+				  catch(Exception ^ ex)
+				  {
+					  con->Close();
+					  MessageBox::Show(ex->Message);
+					  return false;
+				  }
+				  if(!flag) {MessageBox::Show("user name already taken");}
+				  return flag;
+
+
+			  }
 
 			  //datavalidation part
-			   private : System::Boolean userdatavalidate ( String ^ s )
-				{
-					if(s=="") return false;
-					  for (int i = 0; i < s->Length; i++)
-					  {
-						  if (!(s[i] >='0' && s[i] <='9'||s[i] >='a' && s[i] <='z'||s[i] >='A' && s[i] <='Z'||s[i] == '!'||s[i] == '@'||s[i] == '#'||s[i] == '$'||s[i] == '%'||s[i] == '^'||s[i] == '&'||s[i] == '*')) return false;
-					  }
-					  return true;
-				}
-			 
-			  	private : System::Boolean classvalidate ( String ^ s )
-				{
-					  if(s=="") return false;
-					  if (s->Length >= 3 || s->Length == 0) return false;
-					  if (!(s->ToUpper() == s->ToLower()))  return false;
-					  for (int i = 0; i < s->Length; i++)
-					  {
-						  if (!(s[i] >='0' && s[i] <='9')) return false;
-					  }
-					  int l = Convert::ToInt32(s);
-					  if (l >= 11) return false;
-					  return true;
-
-				}
-				private : System::Boolean Mobilevalidate ( String ^ s )
-				{
-					if(s=="") return false;
-					if (!(s->Length == 10)) return false;
-					  for (int  i = 0; i < s->Length; i++)
-					  {
-						  if (!(s[i] >= '0' && s[i] <= '9')) return false;
-					  }
-					  return true;
-				}
-				private : System::Boolean Emailvalidate ( String ^ s )
-				{
-					 if(s=="") return false;
-					  for (int  i = 0; i < s->Length; i++)
-					  {
-						  if (s[i] == '@') return true;
-					  }
-					  return false;
-				}
-		 private: System::Boolean namevalidate(String ^ s)
-			 {
-						  s = s->ToLower();
-						  s = s->TrimEnd(' ');
-						  s = s->TrimStart(' ');
-						  if(s=="") return false;
-						  for (int i = 0; i < s->Length; i++)
-						  {
-							  if (!(s[i] >= 'a'&&s[i] <= 'z')) return false;
-						  }
-						  return true;
-			 }
-		 private: System::Boolean gendervalidate(String ^ s)
-			 {
-						  s = s->ToLower();
-						  s = s->TrimEnd(' ');
-						  s = s->TrimStart(' ');
-						  if(s=="") return false;
-						  return true;
-			 }
-				 private: System::Boolean Schoolvalidate(String ^ s)
-			 {
-						  s = s->ToLower();
-						  s = s->TrimEnd(' ');
-						  s = s->TrimStart(' ');
-						  if(s=="") return false;
-						  return true;
-			 }
-					 private: System::Boolean Questionvalidate(String ^ s)
-			 {
-						  s = s->ToLower();
-						  s = s->TrimEnd(' ');
-						  s = s->TrimStart(' ');
-						  if(s=="") return false;
-						  return true;
-			 }
-					 private: System::Boolean Answervalidate(String ^ s)
-			 {
-						  s = s->ToLower();
-						  s = s->TrimEnd(' ');
-						  s = s->TrimStart(' ');
-						  if(s=="") return false;
-						  return true;
-			 }
-
-			        private: System::String ^ updatetext(String ^ s)
-					   {
-									s = s->TrimEnd(' ');
-									s = s->TrimStart(' ');
-									return s;
-					   }
-			        private: System::Boolean  datavalid()
-					   {
-									 
-									  UserNametxt->Text=updatetext(UserNametxt->Text);
-									  Classtxt->Text=updatetext(Classtxt->Text);
-									  Mobiletxt->Text=updatetext(Mobiletxt->Text);
-									  Emailtxt->Text=updatetext(Emailtxt->Text);
-									  FirstNametxt->Text=updatetext(FirstNametxt->Text->ToLower());
-									  LastNametxt->Text=updatetext(LastNametxt->Text->ToLower());
-									  Schooltxt->Text=updatetext(Schooltxt->Text);
-									  Questiontxt->Text=updatetext(Questiontxt->Text);
-									  Answertxt->Text=updatetext(Answertxt->Text);
-
-									  if(!uservalidate(UserNametxt->Text))  return false ;
-									  if(!namevalidate(FirstNametxt->Text))   {MessageBox::Show("enter valid FirstName");return false;}
-									  if(!namevalidate(LastNametxt->Text))   {MessageBox::Show("enter valid LastName");return false;}
-									  if(!classvalidate(Classtxt->Text))  {MessageBox::Show("enter valid class between 1-10");return false;}
-									  if(!gendervalidate(Gendertxt->Text)) {MessageBox::Show("enter Gender");return false;}
-									  if(!Mobilevalidate(Mobiletxt->Text)) {MessageBox::Show("enter valid Mobile Number");return false ;}
-									  if(!Emailvalidate(Emailtxt->Text))  {MessageBox::Show("enter valid Email");return false;}
-									  if(!Schoolvalidate(Schooltxt->Text))  {MessageBox::Show("enter valid School Name");return false;}
-									  if(!Questionvalidate(Questiontxt->Text))  {MessageBox::Show("select Sequrity Question ");return false;}
-									  if(!Answervalidate(Answertxt->Text))  {MessageBox::Show("enter Answer");return false;}
-
-					                   return true;
-					   }
-
-	     private: System::Void  msgx(String ^ s)
+	private : System::Boolean userdatavalidate ( String ^ s )
+			  {
+				  if(s=="") return false;
+				  for (int i = 0; i < s->Length; i++)
 				  {
-					  MessageBox::Show(s);
+					  if (!(s[i] >='0' && s[i] <='9'||s[i] >='a' && s[i] <='z'||s[i] >='A' && s[i] <='Z'||s[i] == '!'||s[i] == '@'||s[i] == '#'||s[i] == '$'||s[i] == '%'||s[i] == '^'||s[i] == '&'||s[i] == '*')) return false;
 				  }
-       
-		
-	private: System::Void Signupbtn_Click(System::Object^  sender, System::EventArgs^  e)
-	{
-		    DateTime ^ var = DOBtxt->Value;
-		   String ^  strDate = var->ToString("dd-MM-yyyy");
-		   if(!datavalid()) { return;}
-		   MessageBox::Show("correct data");
-	      try{
-			
-				 String ^ access1 = "insert into database_ikya ([UserName],[Password],[FirstName],[LastName],[Class],[DateOfBirth],[Gender],[MobileNumber],[Email],[School Name],[Securityquestion],[answer]) values('" + UserNametxt->Text + "','" + Passwordtxt->Text + "','" + FirstNametxt->Text + "','" + LastNametxt->Text + "','" + Classtxt->Text + "','" + strDate + "','" + Gendertxt->Text + "','"+ Mobiletxt->Text + "','"+ Emailtxt->Text + "','"+ Schooltxt->Text +"','" + Questiontxt->Text + "','" + Answertxt->Text + "')";
-				 con->Open();
-				 OleDb::OleDbCommand ^ command = gcnew OleDb::OleDbCommand(access1, con);
-                 command->ExecuteNonQuery();
-	             MessageBox::Show("Succefully Added");
-				 con->Close();
+				  return true;
+			  }
 
-				 Homepage ^ f3 = gcnew Homepage(obj);
-		         this->Hide();
-				 f3->user = UserNametxt->Text;
-				 f3->ShowDialog();
-		    }
-			 catch (Exception ^ ex)
+	private : System::Boolean classvalidate ( String ^ s )
+			  {
+				  if(s=="") return false;
+				  if (s->Length >= 3 || s->Length == 0) return false;
+				  if (!(s->ToUpper() == s->ToLower()))  return false;
+				  for (int i = 0; i < s->Length; i++)
+				  {
+					  if (!(s[i] >='0' && s[i] <='9')) return false;
+				  }
+				  int l = Convert::ToInt32(s);
+				  if (l >= 11) return false;
+				  return true;
+
+			  }
+	private : System::Boolean Mobilevalidate ( String ^ s )
+			  {
+				  if(s=="") return false;
+				  if (!(s->Length == 10)) return false;
+				  for (int  i = 0; i < s->Length; i++)
+				  {
+					  if (!(s[i] >= '0' && s[i] <= '9')) return false;
+				  }
+				  return true;
+			  }
+	private : System::Boolean Emailvalidate ( String ^ s )
+			  {
+
+				  if(s=="") return false;
+
+
+				  Regex^ emailregex = gcnew Regex("(?<user>[^@]+)@(?<host>.+)");
+
+
+				  Match^ m = emailregex->Match(s);
+
+				  if (m->Success)
+				  {
+					  return true;
+				  }
+				  else
+					  return false;
+			  }
+	private: System::Boolean namevalidate(String ^ s)
 			 {
-				 MessageBox::Show(ex->Message);
+				 s = s->ToLower();
+				 s = s->TrimEnd(' ');
+				 s = s->TrimStart(' ');
+				 if(s=="") return false;
+				 for (int i = 0; i < s->Length; i++)
+				 {
+					 if (!(s[i] >= 'a'&&s[i] <= 'z')) return false;
+				 }
+				 return true;
+			 }
+	private: System::Boolean gendervalidate(String ^ s)
+			 {
+				 s = s->ToLower();
+				 s = s->TrimEnd(' ');
+				 s = s->TrimStart(' ');
+				 if(s=="") return false;
+				 return true;
+			 }
+	private: System::Boolean Schoolvalidate(String ^ s)
+			 {
+				 s = s->ToLower();
+				 s = s->TrimEnd(' ');
+				 s = s->TrimStart(' ');
+				 if(s=="") return false;
+				 return true;
+			 }
+	private: System::Boolean Questionvalidate(String ^ s)
+			 {
+				 s = s->ToLower();
+				 s = s->TrimEnd(' ');
+				 s = s->TrimStart(' ');
+				 if(s=="") return false;
+				 return true;
+			 }
+	private: System::Boolean Answervalidate(String ^ s)
+			 {
+				 s = s->ToLower();
+				 s = s->TrimEnd(' ');
+				 s = s->TrimStart(' ');
+				 if(s=="") return false;
+				 return true;
 			 }
 
-	}
+	private: System::Boolean Passwordvalidate(String ^ s)
+			 {
 
-  private: System::Void button2_Click(System::Object^  sender, System::EventArgs^  e)
-		 {
-			   obj->Show();
-			   this->Hide();
-		 }
-};
+				 if(s=="") return false;
+				 if(s->Length<6||s->Length>15) return false;
+				 return true;
+			 }
+
+	private: System::String ^ updatetext(String ^ s)
+			 {
+				 s = s->TrimEnd(' ');
+				 s = s->TrimStart(' ');
+				 return s;
+			 }
+	private: System::Boolean  datavalid()
+			 {
+
+
+				 UserNametxt->Text=updatetext(UserNametxt->Text);
+				 Classtxt->Text=updatetext(Classtxt->Text);
+				 Mobiletxt->Text=updatetext(Mobiletxt->Text);
+				 Emailtxt->Text=updatetext(Emailtxt->Text);
+				 FirstNametxt->Text=updatetext(FirstNametxt->Text->ToLower());
+				 LastNametxt->Text=updatetext(LastNametxt->Text->ToLower());
+				 Schooltxt->Text=updatetext(Schooltxt->Text);
+				 Questiontxt->Text=updatetext(Questiontxt->Text);
+				 Answertxt->Text=updatetext(Answertxt->Text);
+
+				 if(!uservalidate(UserNametxt->Text))  return false ;
+				 if(!Passwordvalidate(Passwordtxt->Text)) {MessageBox::Show("Password Should be Atleast 6 characters  And at max 15 characters");return false;}
+				 if(!namevalidate(FirstNametxt->Text))   {MessageBox::Show("enter valid FirstName and FirstName Should be Lessthan 20 characters ");return false;}
+				 if(!namevalidate(LastNametxt->Text))   {MessageBox::Show("enter valid LastName and  LastName Should be Lessthan 20 characters");return false;}
+				 if(!namevalidate(GuardiansFirstNametxt->Text))   {MessageBox::Show("enter valid GuardiansFirstName and  GuardiansLastFirst Should be Lessthan 20 characters");return false;}
+				 if(!namevalidate(GuardiansLastNametxt->Text))   {MessageBox::Show("enter valid GuardiansLastName and  GuardiansLastName Should be Lessthan 20 characters");return false;}
+
+				 if(!classvalidate(Classtxt->Text))  {MessageBox::Show("enter valid class between 1-10");return false;}
+				 if(!gendervalidate(Gendertxt->Text)) {MessageBox::Show("enter Gender");return false;}
+				 if(!Mobilevalidate(Mobiletxt->Text)) {MessageBox::Show("enter valid Mobile Number");return false ;}
+				 if(!Emailvalidate(Emailtxt->Text))  {MessageBox::Show("enter valid Email");return false;}
+				 if(!Schoolvalidate(Schooltxt->Text))  {MessageBox::Show("enter valid School Name");return false;}
+				 if(!Questionvalidate(Questiontxt->Text))  {MessageBox::Show("select Sequrity Question ");return false;}
+				 if(!Answervalidate(Answertxt->Text))  {MessageBox::Show("enter Answer");return false;}
+
+				 return true;
+			 }
+
+	private: System::Void  msgx(String ^ s)
+			 {
+				 MessageBox::Show(s);
+			 }
+
+
+	private: System::Void Signupbtn_Click(System::Object^  sender, System::EventArgs^  e)
+			 {
+				 DateTime ^ var = DOBtxt->Value;
+				 String ^  strDate = var->ToString("dd-MM-yyyy");
+				 if(!datavalid()) { return;}
+				 MessageBox::Show("correct data");
+				 try{
+
+					 con->Open();
+					 String ^ access1 = "insert into Students ([UserName],[Password],[FirstName],[LastName],[Class],[DateOfBirth],[Gender],[MobileNumber],[Email],[School Name],[Securityquestion],[answer],[GuardiansFirstName],[GuardiansLastName]) values('" + UserNametxt->Text + "','" + Passwordtxt->Text + "','" + FirstNametxt->Text + "','" + LastNametxt->Text + "','" + Classtxt->Text + "','" + strDate + "','" + Gendertxt->Text + "','"+ Mobiletxt->Text + "','"+ Emailtxt->Text + "','"+ Schooltxt->Text +"','" + Questiontxt->Text + "','" + Answertxt->Text + "','" + GuardiansFirstNametxt->Text + "','" + GuardiansLastNametxt->Text + "')";	 
+					 OleDb::OleDbCommand ^ command = gcnew OleDb::OleDbCommand(access1, con);
+					 command->ExecuteNonQuery();
+					 MessageBox::Show("Succefully Added");
+					 con->Close();
+
+					 Homepage ^ f3 = gcnew Homepage(obj);
+					 this->Hide();
+					 f3->user = UserNametxt->Text;
+					 f3->ShowDialog();
+				 }
+				 catch (Exception ^ ex)
+				 {
+					 con->Close();
+					 MessageBox::Show(ex->Message);
+				 }
+
+			 }
+
+	private: System::Void button2_Click(System::Object^  sender, System::EventArgs^  e)
+			 {
+				 obj->Show();
+				 this->Hide();
+			 }
+	};
 }
