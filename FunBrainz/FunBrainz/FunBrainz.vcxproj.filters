@@ -198,6 +198,9 @@
     </ResourceCompile>
   </ItemGroup>
   <ItemGroup>
+  <EmbeddedResource Include="Abacus.resx">
+      <Filter>Resource Files</Filter>
+    </EmbeddedResource>
     <EmbeddedResource Include="Cricket.resx">
       <Filter>Resource Files</Filter>
     </EmbeddedResource>
