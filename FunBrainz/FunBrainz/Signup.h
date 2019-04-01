@@ -641,7 +641,7 @@ namespace FunBrainz {
 				 DateTime ^ var = DOBtxt->Value;
 				 String ^  strDate = var->ToString("dd-MM-yyyy");
 				 if(!datavalid()) { return;}
-				 MessageBox::Show("correct data");
+				 //MessageBox::Show("correct data");
 				 try{
 
 					 con->Open();
@@ -649,6 +649,63 @@ namespace FunBrainz {
 					 OleDb::OleDbCommand ^ command = gcnew OleDb::OleDbCommand(access1, con);
 					 command->ExecuteNonQuery();
 					 MessageBox::Show("Succefully Added");
+					 con->Close();
+
+					 access1 = "Select [StudentID] from Students where UserName = '" + UserNametxt->Text  +"';";
+					 //MessageBox::Show(access1);
+
+					 command = gcnew OleDb::OleDbCommand(access1, con);
+					 con->Open();
+					 int id = (int) command->ExecuteScalar();
+					 con->Close();
+
+
+					 con->Open();
+					 access1 = "insert into [2048_Game] ([StudentID],[Max_Score],[Number_of_Times_Played],[Scores]) values(" + id+ "," + 0+ "," + 0 + " , ',' );";	
+					 //MessageBox::Show(access1);
+					 command = gcnew OleDb::OleDbCommand(access1, con);
+					 command->ExecuteNonQuery();
+					 con->Close();
+
+
+					 con->Open();
+					 access1 = "insert into [Cricket] ([StudentID],[TimesPlayed],[CorrectAnswers],[IncorrectAnswers],[Level]) values(" + id+ "," + 0+","+0 + "," + 0 + "," + 1+");";	
+					 //MessageBox::Show(access1);
+					 command = gcnew OleDb::OleDbCommand(access1, con);
+					 command->ExecuteNonQuery();
+					 con->Close();
+
+					 con->Open();
+					 access1 = "insert into [operatorFilling] ([Student_Id],[Score] ) values(" + id+ "," + "0"+ ");";	
+					 //MessageBox::Show(access1);
+					 command = gcnew OleDb::OleDbCommand(access1, con);
+					 command->ExecuteNonQuery();
+					 con->Close();
+
+					 con->Open();
+					 access1 = "insert into [register_table] ([name] ,[figureqs_read],[nofigqs_read]) values('"+UserNametxt->Text+"',1,1);";	
+					 //MessageBox::Show(access1);
+					 command = gcnew OleDb::OleDbCommand(access1, con);
+					 command->ExecuteNonQuery();
+					 con->Close();
+
+					 array<System::String ^>^ s = gcnew array<System::String ^> {"Animals", "Bird", "Flag","Sports","Vegetable","Landmark","Fruit","Flower","Objects"} ;
+
+					 for(int i=0;i<9;i++)
+					 {
+						 con->Open();
+						 access1 = "insert into [Image_Quiz] ([StudentID],[Domain] ,[Max_Score],[Levels_Completed_Easy],[Levels_Completed_Medium],[Levels_Completed_Hard],[Total_Score]) values(" + id+ ",'" + s[i] +"',0,0,0,0,0);";	
+						 //MessageBox::Show(access1);
+						 command = gcnew OleDb::OleDbCommand(access1, con);
+						 command->ExecuteNonQuery();
+						 con->Close();
+					 }
+
+					 con->Open();
+					 access1 = "insert into [register_table] ([name] ,[figureqs_read],[nofigqs_read]) values('" +UserNametxt->Text+"',"+1+", "+ 1 +");";	
+					 //MessageBox::Show(access1);
+					 command = gcnew OleDb::OleDbCommand(access1, con);
+					 command->ExecuteNonQuery();
 					 con->Close();
 
 					 Homepage ^ f3 = gcnew Homepage(obj);
