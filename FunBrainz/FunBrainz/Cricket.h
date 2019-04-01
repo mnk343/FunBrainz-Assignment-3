@@ -1,4 +1,5 @@
 #pragma once
+#include "ManualCricket.h"
 #include "GlobalFuncs.h"
 #include <stdio.h>  
 #include <utility> 
@@ -86,6 +87,8 @@ namespace FunBrainz {
 	private: System::Windows::Forms::Label^  rand6;
 	private: System::Windows::Forms::Button^  StopButton;
 	private: System::Windows::Forms::Panel^  panel1;
+	private: System::Windows::Forms::Button^  button1;
+	private: System::Windows::Forms::Button^  button2;
 
 
 
@@ -129,6 +132,8 @@ namespace FunBrainz {
 			this->rand6 = (gcnew System::Windows::Forms::Label());
 			this->StopButton = (gcnew System::Windows::Forms::Button());
 			this->panel1 = (gcnew System::Windows::Forms::Panel());
+			this->button1 = (gcnew System::Windows::Forms::Button());
+			this->button2 = (gcnew System::Windows::Forms::Button());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->AnsNnumericUpDown))->BeginInit();
 			this->panel1->SuspendLayout();
 			this->SuspendLayout();
@@ -417,14 +422,46 @@ namespace FunBrainz {
 			this->panel1->Size = System::Drawing::Size(926, 42);
 			this->panel1->TabIndex = 21;
 			// 
+			// button1
+			// 
+			this->button1->BackColor = System::Drawing::Color::LemonChiffon;
+			this->button1->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+			this->button1->Font = (gcnew System::Drawing::Font(L"Lucida Fax", 10.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->button1->Location = System::Drawing::Point(771, 54);
+			this->button1->Name = L"button1";
+			this->button1->Size = System::Drawing::Size(117, 29);
+			this->button1->TabIndex = 22;
+			this->button1->Text = L"Back";
+			this->button1->UseVisualStyleBackColor = false;
+			this->button1->Click += gcnew System::EventHandler(this, &Cricket::button1_Click);
+			// 
+			// button2
+			// 
+			this->button2->BackColor = System::Drawing::Color::LemonChiffon;
+			this->button2->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+			this->button2->Font = (gcnew System::Drawing::Font(L"Lucida Fax", 10.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->button2->Location = System::Drawing::Point(771, 89);
+			this->button2->Name = L"button2";
+			this->button2->Size = System::Drawing::Size(117, 29);
+			this->button2->TabIndex = 23;
+			this->button2->Text = L"Help";
+			this->button2->UseVisualStyleBackColor = false;
+			this->button2->Click += gcnew System::EventHandler(this, &Cricket::button2_Click);
+			// 
 			// Cricket
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
+			this->AutoSizeMode = System::Windows::Forms::AutoSizeMode::GrowAndShrink;
 			this->BackColor = System::Drawing::Color::LemonChiffon;
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"$this.BackgroundImage")));
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->ClientSize = System::Drawing::Size(912, 476);
+			this->ControlBox = false;
+			this->Controls->Add(this->button2);
+			this->Controls->Add(this->button1);
 			this->Controls->Add(this->TargetLabel);
 			this->Controls->Add(this->panel1);
 			this->Controls->Add(this->StopButton);
@@ -441,6 +478,10 @@ namespace FunBrainz {
 			this->Controls->Add(this->LevelLabel);
 			this->Controls->Add(this->QuestionLabel);
 			this->DoubleBuffered = true;
+			this->MaximizeBox = false;
+			this->MaximumSize = System::Drawing::Size(930, 523);
+			this->MinimizeBox = false;
+			this->MinimumSize = System::Drawing::Size(930, 523);
 			this->Name = L"Cricket";
 			this->Text = L"Cricket";
 			this->Load += gcnew System::EventHandler(this, &Cricket::Cricket_Load);
@@ -883,6 +924,15 @@ private: System::Void AnsNnumericUpDown_KeyPress(System::Object^  sender, System
 				 int ans = (int) AnsNnumericUpDown->Value;
 				 evalAnswer(ans);
 			 }
+		 }
+private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {
+			 this->Close();
+		 }
+private: System::Void button2_Click(System::Object^  sender, System::EventArgs^  e) {
+			 QuestionTimer->Stop();
+			 ManualCricket ^ fom = gcnew ManualCricket(1);
+			 fom->ShowDialog();
+			 QuestionTimer->Start();
 		 }
 };
 }

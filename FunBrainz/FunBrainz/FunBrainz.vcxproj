@@ -110,6 +110,7 @@
     <ClCompile Include="Image_Quiz.cpp" />
     <ClCompile Include="Image_Quiz_Display.cpp" />
     <ClCompile Include="Level_pipeline.cpp" />
+    <ClCompile Include="ManualCricket.cpp" />
     <ClCompile Include="operationsRedirect.cpp" />
     <ClCompile Include="operatorFilling.cpp" />
     <ClCompile Include="Pipeline_Game.cpp" />
@@ -172,6 +173,9 @@
     <ClInclude Include="Level_pipeline.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="ManualCricket.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="operationsRedirect.h">
       <FileType>CppControl</FileType>
     </ClInclude>
@@ -209,7 +213,7 @@
     <ResourceCompile Include="app.rc" />
   </ItemGroup>
   <ItemGroup>
-  <EmbeddedResource Include="Abacus.resx">
+    <EmbeddedResource Include="Abacus.resx">
       <DependentUpon>Abacus.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="all_shape.resx">
@@ -248,6 +252,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Level_pipeline.resx">
       <DependentUpon>Level_pipeline.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManualCricket.resx">
+      <DependentUpon>ManualCricket.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="operationsRedirect.resx">
       <DependentUpon>operationsRedirect.h</DependentUpon>

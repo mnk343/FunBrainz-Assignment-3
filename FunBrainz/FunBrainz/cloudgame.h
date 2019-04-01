@@ -172,10 +172,9 @@ namespace FunBrainz {
 			this->label9->BackColor = System::Drawing::Color::Transparent;
 			this->label9->Font = (gcnew System::Drawing::Font(L"Century Gothic", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->label9->Location = System::Drawing::Point(350, 24);
-			this->label9->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label9->Location = System::Drawing::Point(393, 30);
 			this->label9->Name = L"label9";
-			this->label9->Size = System::Drawing::Size(80, 30);
+			this->label9->Size = System::Drawing::Size(99, 37);
 			this->label9->TabIndex = 4;
 			this->label9->Text = L"Score";
 			// 
@@ -183,10 +182,10 @@ namespace FunBrainz {
 			// 
 			this->textBox1->Font = (gcnew System::Drawing::Font(L"Century Gothic", 17.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->textBox1->Location = System::Drawing::Point(443, 23);
-			this->textBox1->Margin = System::Windows::Forms::Padding(2);
+			this->textBox1->Location = System::Drawing::Point(526, 28);
+			this->textBox1->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->textBox1->Name = L"textBox1";
-			this->textBox1->Size = System::Drawing::Size(96, 36);
+			this->textBox1->Size = System::Drawing::Size(127, 43);
 			this->textBox1->TabIndex = 5;
 			// 
 			// button5
@@ -195,10 +194,10 @@ namespace FunBrainz {
 			this->button5->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
 			this->button5->Font = (gcnew System::Drawing::Font(L"Century Gothic", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->button5->Location = System::Drawing::Point(710, 24);
-			this->button5->Margin = System::Windows::Forms::Padding(2);
+			this->button5->Location = System::Drawing::Point(861, 30);
+			this->button5->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->button5->Name = L"button5";
-			this->button5->Size = System::Drawing::Size(89, 38);
+			this->button5->Size = System::Drawing::Size(119, 47);
 			this->button5->TabIndex = 18;
 			this->button5->Text = L"Back";
 			this->button5->UseVisualStyleBackColor = false;
@@ -209,9 +208,10 @@ namespace FunBrainz {
 			this->pictureBox1->BackColor = System::Drawing::Color::Transparent;
 			this->pictureBox1->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"pictureBox1.BackgroundImage")));
 			this->pictureBox1->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->pictureBox1->Location = System::Drawing::Point(20, 13);
+			this->pictureBox1->Location = System::Drawing::Point(27, 16);
+			this->pictureBox1->Margin = System::Windows::Forms::Padding(4);
 			this->pictureBox1->Name = L"pictureBox1";
-			this->pictureBox1->Size = System::Drawing::Size(121, 77);
+			this->pictureBox1->Size = System::Drawing::Size(161, 95);
 			this->pictureBox1->TabIndex = 19;
 			this->pictureBox1->TabStop = false;
 			this->pictureBox1->Click += gcnew System::EventHandler(this, &cloudgame::pictureBox1_Click);
@@ -222,9 +222,10 @@ namespace FunBrainz {
 			this->panel5->Controls->Add(this->label1);
 			this->panel5->Controls->Add(this->pictureBox1);
 			this->panel5->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel5->Location = System::Drawing::Point(105, 80);
+			this->panel5->Location = System::Drawing::Point(140, 98);
+			this->panel5->Margin = System::Windows::Forms::Padding(4);
 			this->panel5->Name = L"panel5";
-			this->panel5->Size = System::Drawing::Size(161, 100);
+			this->panel5->Size = System::Drawing::Size(215, 123);
 			this->panel5->TabIndex = 11;
 			// 
 			// label1
@@ -232,9 +233,10 @@ namespace FunBrainz {
 			this->label1->AutoSize = true;
 			this->label1->Font = (gcnew System::Drawing::Font(L"Century Gothic", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->label1->Location = System::Drawing::Point(54, 40);
+			this->label1->Location = System::Drawing::Point(72, 49);
+			this->label1->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(53, 20);
+			this->label1->Size = System::Drawing::Size(65, 22);
 			this->label1->TabIndex = 20;
 			this->label1->Text = L"label1";
 			this->label1->Click += gcnew System::EventHandler(this, &cloudgame::label1_Click);
@@ -245,9 +247,10 @@ namespace FunBrainz {
 			this->panel6->Controls->Add(this->label2);
 			this->panel6->Controls->Add(this->pictureBox2);
 			this->panel6->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel6->Location = System::Drawing::Point(178, 186);
+			this->panel6->Location = System::Drawing::Point(237, 229);
+			this->panel6->Margin = System::Windows::Forms::Padding(4);
 			this->panel6->Name = L"panel6";
-			this->panel6->Size = System::Drawing::Size(163, 100);
+			this->panel6->Size = System::Drawing::Size(217, 123);
 			this->panel6->TabIndex = 21;
 			// 
 			// label2
@@ -255,9 +258,10 @@ namespace FunBrainz {
 			this->label2->AutoSize = true;
 			this->label2->Font = (gcnew System::Drawing::Font(L"Century Gothic", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->label2->Location = System::Drawing::Point(55, 41);
+			this->label2->Location = System::Drawing::Point(73, 50);
+			this->label2->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(53, 20);
+			this->label2->Size = System::Drawing::Size(65, 22);
 			this->label2->TabIndex = 20;
 			this->label2->Text = L"label2";
 			this->label2->Click += gcnew System::EventHandler(this, &cloudgame::label2_Click);
@@ -267,9 +271,10 @@ namespace FunBrainz {
 			this->pictureBox2->BackColor = System::Drawing::Color::Transparent;
 			this->pictureBox2->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"pictureBox2.BackgroundImage")));
 			this->pictureBox2->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->pictureBox2->Location = System::Drawing::Point(20, 13);
+			this->pictureBox2->Location = System::Drawing::Point(27, 16);
+			this->pictureBox2->Margin = System::Windows::Forms::Padding(4);
 			this->pictureBox2->Name = L"pictureBox2";
-			this->pictureBox2->Size = System::Drawing::Size(121, 77);
+			this->pictureBox2->Size = System::Drawing::Size(161, 95);
 			this->pictureBox2->TabIndex = 19;
 			this->pictureBox2->TabStop = false;
 			this->pictureBox2->Click += gcnew System::EventHandler(this, &cloudgame::pictureBox2_Click);
@@ -280,9 +285,10 @@ namespace FunBrainz {
 			this->panel7->Controls->Add(this->label3);
 			this->panel7->Controls->Add(this->pictureBox3);
 			this->panel7->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel7->Location = System::Drawing::Point(237, 305);
+			this->panel7->Location = System::Drawing::Point(316, 375);
+			this->panel7->Margin = System::Windows::Forms::Padding(4);
 			this->panel7->Name = L"panel7";
-			this->panel7->Size = System::Drawing::Size(158, 100);
+			this->panel7->Size = System::Drawing::Size(211, 123);
 			this->panel7->TabIndex = 21;
 			// 
 			// label3
@@ -290,9 +296,10 @@ namespace FunBrainz {
 			this->label3->AutoSize = true;
 			this->label3->Font = (gcnew System::Drawing::Font(L"Century Gothic", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->label3->Location = System::Drawing::Point(60, 41);
+			this->label3->Location = System::Drawing::Point(80, 50);
+			this->label3->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(53, 20);
+			this->label3->Size = System::Drawing::Size(65, 22);
 			this->label3->TabIndex = 20;
 			this->label3->Text = L"label3";
 			this->label3->Click += gcnew System::EventHandler(this, &cloudgame::label3_Click);
@@ -302,9 +309,10 @@ namespace FunBrainz {
 			this->pictureBox3->BackColor = System::Drawing::Color::Transparent;
 			this->pictureBox3->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"pictureBox3.BackgroundImage")));
 			this->pictureBox3->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->pictureBox3->Location = System::Drawing::Point(20, 13);
+			this->pictureBox3->Location = System::Drawing::Point(27, 16);
+			this->pictureBox3->Margin = System::Windows::Forms::Padding(4);
 			this->pictureBox3->Name = L"pictureBox3";
-			this->pictureBox3->Size = System::Drawing::Size(121, 77);
+			this->pictureBox3->Size = System::Drawing::Size(161, 95);
 			this->pictureBox3->TabIndex = 19;
 			this->pictureBox3->TabStop = false;
 			this->pictureBox3->Click += gcnew System::EventHandler(this, &cloudgame::pictureBox3_Click);
@@ -315,9 +323,10 @@ namespace FunBrainz {
 			this->panel8->Controls->Add(this->label4);
 			this->panel8->Controls->Add(this->pictureBox4);
 			this->panel8->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->panel8->Location = System::Drawing::Point(154, 428);
+			this->panel8->Location = System::Drawing::Point(205, 527);
+			this->panel8->Margin = System::Windows::Forms::Padding(4);
 			this->panel8->Name = L"panel8";
-			this->panel8->Size = System::Drawing::Size(162, 100);
+			this->panel8->Size = System::Drawing::Size(216, 123);
 			this->panel8->TabIndex = 21;
 			// 
 			// label4
@@ -325,9 +334,10 @@ namespace FunBrainz {
 			this->label4->AutoSize = true;
 			this->label4->Font = (gcnew System::Drawing::Font(L"Century Gothic", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->label4->Location = System::Drawing::Point(50, 41);
+			this->label4->Location = System::Drawing::Point(67, 50);
+			this->label4->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(53, 20);
+			this->label4->Size = System::Drawing::Size(65, 22);
 			this->label4->TabIndex = 20;
 			this->label4->Text = L"label4";
 			this->label4->Click += gcnew System::EventHandler(this, &cloudgame::label4_Click);
@@ -337,9 +347,10 @@ namespace FunBrainz {
 			this->pictureBox4->BackColor = System::Drawing::Color::Transparent;
 			this->pictureBox4->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"pictureBox4.BackgroundImage")));
 			this->pictureBox4->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->pictureBox4->Location = System::Drawing::Point(20, 13);
+			this->pictureBox4->Location = System::Drawing::Point(27, 16);
+			this->pictureBox4->Margin = System::Windows::Forms::Padding(4);
 			this->pictureBox4->Name = L"pictureBox4";
-			this->pictureBox4->Size = System::Drawing::Size(121, 77);
+			this->pictureBox4->Size = System::Drawing::Size(161, 95);
 			this->pictureBox4->TabIndex = 19;
 			this->pictureBox4->TabStop = false;
 			this->pictureBox4->Click += gcnew System::EventHandler(this, &cloudgame::pictureBox4_Click);
@@ -350,20 +361,20 @@ namespace FunBrainz {
 			this->Question->BackColor = System::Drawing::Color::Transparent;
 			this->Question->Font = (gcnew System::Drawing::Font(L"Century Gothic", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->Question->Location = System::Drawing::Point(100, 24);
-			this->Question->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->Question->Location = System::Drawing::Point(133, 30);
 			this->Question->Name = L"Question";
-			this->Question->Size = System::Drawing::Size(86, 30);
+			this->Question->Size = System::Drawing::Size(105, 37);
 			this->Question->TabIndex = 1;
 			this->Question->Text = L"label1";
 			// 
 			// cloudgame
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
+			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"$this.BackgroundImage")));
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->ClientSize = System::Drawing::Size(835, 570);
+			this->ClientSize = System::Drawing::Size(1006, 713);
+			this->ControlBox = false;
 			this->Controls->Add(this->panel6);
 			this->Controls->Add(this->panel7);
 			this->Controls->Add(this->panel8);
@@ -373,7 +384,11 @@ namespace FunBrainz {
 			this->Controls->Add(this->label9);
 			this->Controls->Add(this->Question);
 			this->DoubleBuffered = true;
-			this->Margin = System::Windows::Forms::Padding(2);
+			this->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->MaximizeBox = false;
+			this->MaximumSize = System::Drawing::Size(1024, 760);
+			this->MinimizeBox = false;
+			this->MinimumSize = System::Drawing::Size(1024, 760);
 			this->Name = L"cloudgame";
 			this->Text = L"cloudgame";
 			this->Load += gcnew System::EventHandler(this, &cloudgame::cloudgame_Load);
@@ -478,7 +493,7 @@ private: System::Void timer4_Tick(System::Object^  sender, System::EventArgs^  e
 				
 			 }
 
-			 if (xloc3 == 0 || xloc3 == 250)
+			 if (xloc3 == 0 || xloc3 == 220)
 			 {
 				 sliderFlag3++;
 				 sliderFlag3 %= 2;

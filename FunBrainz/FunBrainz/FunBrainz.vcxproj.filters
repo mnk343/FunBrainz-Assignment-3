@@ -105,6 +105,9 @@
     <ClCompile Include="PuzzlesRedirect.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="ManualCricket.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Form1.h">
@@ -191,6 +194,9 @@
     <ClInclude Include="PuzzlesRedirect.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="ManualCricket.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="app.rc">
@@ -198,7 +204,7 @@
     </ResourceCompile>
   </ItemGroup>
   <ItemGroup>
-  <EmbeddedResource Include="Abacus.resx">
+    <EmbeddedResource Include="Abacus.resx">
       <Filter>Resource Files</Filter>
     </EmbeddedResource>
     <EmbeddedResource Include="Cricket.resx">
@@ -262,6 +268,9 @@
       <Filter>Resource Files</Filter>
     </EmbeddedResource>
     <EmbeddedResource Include="PuzzlesRedirect.resx">
+      <Filter>Resource Files</Filter>
+    </EmbeddedResource>
+    <EmbeddedResource Include="operatorFilling.resx">
       <Filter>Resource Files</Filter>
     </EmbeddedResource>
   </ItemGroup>
