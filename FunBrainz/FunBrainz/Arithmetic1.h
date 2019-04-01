@@ -922,6 +922,7 @@ private: System::Void OFbtn_Click(System::Object^  sender, System::EventArgs^  e
 			OFBox->Width=1219;
             OFBox->Height=517;
 			  int ofvalues[30] = { 0 };
+			  int ze=0;
 			 OleDb::OleDbConnection ^ con = gcnew OleDb::OleDbConnection();
 			 con->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=FunBrainzForKids.accdb;";
 
@@ -947,6 +948,7 @@ private: System::Void OFbtn_Click(System::Object^  sender, System::EventArgs^  e
 				 while (reader->Read() == true)
 				 {
 					 int a = reader->GetInt32(0);
+					 if(a==0) {ze++;ma++;continue;} 
 					 ofvalues[a / 100]++;
 					 ma++;
 				 }
@@ -961,13 +963,19 @@ private: System::Void OFbtn_Click(System::Object^  sender, System::EventArgs^  e
 			 }
 
 				 this->OF->Series["Values"]->Points->Clear();
+				 this->OF->Series["   "]->Points->Clear();
+				 this->OF->Series["Values"]->Points->AddXY("0",ze);
+				 if(x==0) {this->OF->Series["   "]->Points->AddXY(" ",ma);}
+				  else {this->OF->Series["   "]->Points->AddXY(" ",0);}
+
 				 for (int i = 0; i < 10; i++)
 				 {
-					 String ^ a = Convert::ToString(i*100);
+					 if(i==0) ze=1;
+					 String ^ a = Convert::ToString(i*100+ze);
 					 String ^ b = Convert::ToString((i+1)*100);
 					 this->OF->Series["Values"]->Points->AddXY(a + "-" + b, ofvalues[i]);
-					 if (x / 100 == i) this->OF->Series["   "]->Points->AddXY(" ", ma);
-					 else   this->OF->Series["   "]->Points->AddXY(" ", 0);
+					 if ( (x/100)==i&&x!=0) {this->OF->Series["   "]->Points->AddXY(" ", ma);}
+					 else   {this->OF->Series["   "]->Points->AddXY(" ", 0);}
 				 }
 
 		 }

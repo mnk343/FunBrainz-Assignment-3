@@ -564,7 +564,7 @@ namespace FunBrainz {
 				 {
 					 reader->Close();
 					 con->Close();
-					 MessageBox::Show(ex->Message);
+					 //Box::Show(ex->Message);
 				 }
 
 			 }
@@ -650,7 +650,7 @@ namespace FunBrainz {
 				 if(s=="") return false;
 				 for (int i = 0; i < s->Length; i++)
 				 {
-					 if (!(s[i] >= 'a'&&s[i] <= 'z')) return false;
+					if (!( (s[i] >= 'a'&&s[i] <= 'z') || s[i]==' ')) return false;
 				 }
 				 return true;
 			 }
@@ -674,19 +674,18 @@ namespace FunBrainz {
 				 textBox3->Text=updatetext(textBox3->Text);
 				 textBox6->Text=updatetext(textBox6->Text);
 				 textBox7->Text=updatetext(textBox7->Text);
-				 textBox1->Text=updatetext(textBox1->Text->ToLower());
-				 textBox2->Text=updatetext(textBox2->Text->ToLower());
-				 if(!namevalidate(textBox1->Text))   {MessageBox::Show("enter valid FirstayyName");return false;}
+				 textBox1->Text=updatetext(textBox1->Text);
+				 textBox2->Text=updatetext(textBox2->Text);
+				 GuardiansFirstNametxt->Text=updatetext(GuardiansFirstNametxt->Text);
+				 GuardiansLastNametxt->Text=updatetext(GuardiansLastNametxt->Text);
+				 if(!namevalidate(textBox1->Text))   {MessageBox::Show("enter valid FirstName");return false;}
 				 if(!namevalidate(textBox2->Text))   {MessageBox::Show("enter valid LastName");return false;}
-
+				 if(!Emailvalidate(textBox7->Text))  {MessageBox::Show("enter valid Email");return false;}
 				 if(!Passwordvalidate(Passwordtxt->Text)) {MessageBox::Show("Password Should be Atleast 6 characters  And at max 15 characters");return false;}
-				 if(!namevalidate(GuardiansFirstNametxt->Text))   {MessageBox::Show("enter valid GuardiansFirstName and  GuardiansLastFirst Should be Lessthan 20 characters");return false;}
-				 if(!namevalidate(GuardiansLastNametxt->Text))   {MessageBox::Show("enter valid GuardiansLastName and  GuardiansLastName Should be Lessthan 20 characters");return false;}
 				 if(!classvalidate(textBox3->Text))  {MessageBox::Show("enter valid class between 1-10");return false ;}
 				 if(!Mobilevalidate(textBox6->Text)) {MessageBox::Show("enter valid Mobile Number");return false ;}
-				 if(!Emailvalidate(textBox7->Text))  {MessageBox::Show("enter valid Email");return false;}
-				 if(!namevalidate(textBox1->Text))   {MessageBox::Show("enter valid FirstayyName");return false;}
-				 if(!namevalidate(textBox2->Text))   {MessageBox::Show("enter valid LastName");return false;}
+				 if(!namevalidate(GuardiansFirstNametxt->Text))   {MessageBox::Show("enter valid GuardiansFirstName and  GuardiansFirstName Should be Lessthan 20 characters");return false;}
+				 if(!namevalidate(GuardiansLastNametxt->Text))   {MessageBox::Show("enter valid GuardiansLastName and  GuardiansLastName Should be Lessthan 20 characters");return false;}
 				 return true;
 			 }
 	private: System::Void save_button_Click(System::Object^  sender, System::EventArgs^  e) 
@@ -706,7 +705,7 @@ namespace FunBrainz {
 				 catch (Exception ^ ex)
 				 {
 					 con->Close();
-					 MessageBox::Show(ex->Message);
+					 //Box::Show(ex->Message);
 				 }
 
 				 profile_Load(sender,e);
@@ -733,7 +732,7 @@ namespace FunBrainz {
 				 catch (Exception ^ ex)
 				 {
 					 MessageBox::Show("Upload image not avaiable");
-					 MessageBox::Show(ex->Message);
+					 //Box::Show(ex->Message);
 				 }
 
 

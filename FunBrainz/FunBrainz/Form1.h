@@ -454,7 +454,7 @@ private: System::Void loginbtn_Click(System::Object^  sender, System::EventArgs^
 		catch(Exception ^ ex)
 		{
 					con->Close();
-					MessageBox::Show(ex->Message);
+					//MessageBox::Show(ex->Message);
 					MessageBox::Show("Enter valid ones");
 					return ;
 		}
@@ -515,7 +515,7 @@ private: System::String ^  SuggestPassword()
 				 }
 				 catch (Exception ^ ex)
 				 {
-					 MessageBox::Show(ex->Message);
+					 //::Show(ex->Message);
 					 return 0;
 				 }
 				 return 0;
@@ -537,8 +537,8 @@ private: System::String ^  SuggestPassword()
 			}
 			catch (Exception ^ ex)
 			{
-					MessageBox::Show(ex->Message);
-					MessageBox::Show("something wrong with updating password");
+					//::Show(ex->Message);
+					MessageBox::Show(" password not changed");
 					con->Close();
 			}
 
@@ -563,7 +563,7 @@ private: System::String ^  SuggestPassword()
 							catch(Exception ^ ex)
 							{
 												con->Close();
-												MessageBox::Show(ex->Message);
+												//::Show(ex->Message);
 												return 0;
 							}
 							return flag;
@@ -583,7 +583,7 @@ private: System::Void Forget_Click(System::Object^  sender, System::EventArgs^  
 					 con->Open();
 					 CurrentUserEmail = (String ^)command->ExecuteScalar();
 					 con->Close();
-					 MessageBox::Show(CurrentUserEmail);
+					// MessageBox::Show(CurrentUserEmail);
 
 
 					 //sending email
@@ -594,7 +594,7 @@ private: System::Void Forget_Click(System::Object^  sender, System::EventArgs^  
 						}
 						else
 						{
-							MessageBox::Show("Forget Password Currently Unaviabale");
+							MessageBox::Show("Forget Password Currently not available");
 						}
 					  
 		 }

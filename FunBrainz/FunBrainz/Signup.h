@@ -619,7 +619,7 @@ namespace FunBrainz {
 				  catch(Exception ^ ex)
 				  {
 					  con->Close();
-					  MessageBox::Show(ex->Message);
+					  //Box::Show(ex->Message);
 					  return false;
 				  }
 				  if(!flag) {MessageBox::Show("user name already taken");}
@@ -689,7 +689,7 @@ namespace FunBrainz {
 				 if(s=="") return false;
 				 for (int i = 0; i < s->Length; i++)
 				 {
-					 if (!(s[i] >= 'a'&&s[i] <= 'z')) return false;
+					 if (!( (s[i] >= 'a'&&s[i] <= 'z') || s[i]==' ')) return false;
 				 }
 				 return true;
 			 }
@@ -758,17 +758,17 @@ namespace FunBrainz {
 				 if(!Passwordvalidate(Passwordtxt->Text)) {MessageBox::Show("Password Should be Atleast 6 characters  And at max 15 characters");return false;}
 				 if(!namevalidate(FirstNametxt->Text))   {MessageBox::Show("enter valid FirstName and FirstName Should be Lessthan 20 characters ");return false;}
 				 if(!namevalidate(LastNametxt->Text))   {MessageBox::Show("enter valid LastName and  LastName Should be Lessthan 20 characters");return false;}
-				 if(!namevalidate(GuardiansFirstNametxt->Text))   {MessageBox::Show("enter valid GuardiansFirstName and  GuardiansLastFirst Should be Lessthan 20 characters");return false;}
-				 if(!namevalidate(GuardiansLastNametxt->Text))   {MessageBox::Show("enter valid GuardiansLastName and  GuardiansLastName Should be Lessthan 20 characters");return false;}
-
+				 if(!Emailvalidate(Emailtxt->Text))  {MessageBox::Show("enter valid Email");return false;}
 				 if(!classvalidate(Classtxt->Text))  {MessageBox::Show("enter valid class between 1-10");return false;}
 				 if(!gendervalidate(Gendertxt->Text)) {MessageBox::Show("enter Gender");return false;}
 				 if(!Mobilevalidate(Mobiletxt->Text)) {MessageBox::Show("enter valid Mobile Number");return false ;}
-				 if(!Emailvalidate(Emailtxt->Text))  {MessageBox::Show("enter valid Email");return false;}
+				 
 				 if(!Schoolvalidate(Schooltxt->Text))  {MessageBox::Show("enter valid School Name");return false;}
 				 if(!Questionvalidate(Questiontxt->Text))  {MessageBox::Show("select Sequrity Question ");return false;}
 				 if(!Answervalidate(Answertxt->Text))  {MessageBox::Show("enter Answer");return false;}
-
+				 
+				 if(!namevalidate(GuardiansFirstNametxt->Text))   {MessageBox::Show("enter valid GuardiansFirstName and  GuardiansFirstName Should be Lessthan 20 characters");return false;}
+				 if(!namevalidate(GuardiansLastNametxt->Text))   {MessageBox::Show("enter valid GuardiansLastName and  GuardiansLastName Should be Lessthan 20 characters");return false;}
 				 return true;
 			 }
 
@@ -783,7 +783,7 @@ namespace FunBrainz {
 				 DateTime ^ var = DOBtxt->Value;
 				 String ^  strDate = var->ToString("dd-MM-yyyy");
 				 if(!datavalid()) { return;}
-				 MessageBox::Show("correct data");
+				 //Box::Show("correct data");
 				 try{
 
 					 con->Open();
@@ -865,7 +865,7 @@ namespace FunBrainz {
 				 catch (Exception ^ ex)
 				 {
 					 con->Close();
-					 MessageBox::Show(ex->Message);
+					 //Box::Show(ex->Message);
 				 }
 
 			 }
