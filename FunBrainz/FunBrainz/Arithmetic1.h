@@ -59,6 +59,7 @@ namespace FunBrainz {
 
 	private: System::Windows::Forms::DataVisualization::Charting::Chart^  OF;
 	private: System::Windows::Forms::Button^  OFbtn;
+	private: System::Windows::Forms::Panel^  panel1;
 
 
 
@@ -83,30 +84,31 @@ namespace FunBrainz {
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			System::Windows::Forms::DataVisualization::Charting::ChartArea^  chartArea10 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
-			System::Windows::Forms::DataVisualization::Charting::Legend^  legend6 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
-			System::Windows::Forms::DataVisualization::Charting::Series^  series11 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
-			System::Windows::Forms::DataVisualization::Charting::ChartArea^  chartArea11 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
-			System::Windows::Forms::DataVisualization::Charting::Legend^  legend7 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
-			System::Windows::Forms::DataVisualization::Charting::Series^  series12 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
-			System::Windows::Forms::DataVisualization::Charting::ChartArea^  chartArea12 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
-			System::Windows::Forms::DataVisualization::Charting::ChartArea^  chartArea13 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
-			System::Windows::Forms::DataVisualization::Charting::ChartArea^  chartArea14 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
-			System::Windows::Forms::DataVisualization::Charting::ChartArea^  chartArea15 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
-			System::Windows::Forms::DataVisualization::Charting::ChartArea^  chartArea16 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
-			System::Windows::Forms::DataVisualization::Charting::Legend^  legend8 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
-			System::Windows::Forms::DataVisualization::Charting::Series^  series13 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
-			System::Windows::Forms::DataVisualization::Charting::Series^  series14 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
-			System::Windows::Forms::DataVisualization::Charting::Series^  series15 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
-			System::Windows::Forms::DataVisualization::Charting::Series^  series16 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
-			System::Windows::Forms::DataVisualization::Charting::Series^  series17 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
-			System::Windows::Forms::DataVisualization::Charting::ChartArea^  chartArea17 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
-			System::Windows::Forms::DataVisualization::Charting::Legend^  legend9 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
-			System::Windows::Forms::DataVisualization::Charting::Series^  series18 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
-			System::Windows::Forms::DataVisualization::Charting::ChartArea^  chartArea18 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
-			System::Windows::Forms::DataVisualization::Charting::Legend^  legend10 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
-			System::Windows::Forms::DataVisualization::Charting::Series^  series19 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
-			System::Windows::Forms::DataVisualization::Charting::Series^  series20 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
+			System::Windows::Forms::DataVisualization::Charting::ChartArea^  chartArea1 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
+			System::Windows::Forms::DataVisualization::Charting::Legend^  legend1 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
+			System::Windows::Forms::DataVisualization::Charting::Series^  series1 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
+			System::Windows::Forms::DataVisualization::Charting::ChartArea^  chartArea2 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
+			System::Windows::Forms::DataVisualization::Charting::Legend^  legend2 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
+			System::Windows::Forms::DataVisualization::Charting::Series^  series2 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
+			System::Windows::Forms::DataVisualization::Charting::ChartArea^  chartArea3 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
+			System::Windows::Forms::DataVisualization::Charting::ChartArea^  chartArea4 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
+			System::Windows::Forms::DataVisualization::Charting::ChartArea^  chartArea5 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
+			System::Windows::Forms::DataVisualization::Charting::ChartArea^  chartArea6 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
+			System::Windows::Forms::DataVisualization::Charting::ChartArea^  chartArea7 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
+			System::Windows::Forms::DataVisualization::Charting::Legend^  legend3 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
+			System::Windows::Forms::DataVisualization::Charting::Series^  series3 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
+			System::Windows::Forms::DataVisualization::Charting::Series^  series4 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
+			System::Windows::Forms::DataVisualization::Charting::Series^  series5 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
+			System::Windows::Forms::DataVisualization::Charting::Series^  series6 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
+			System::Windows::Forms::DataVisualization::Charting::Series^  series7 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
+			System::Windows::Forms::DataVisualization::Charting::ChartArea^  chartArea8 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
+			System::Windows::Forms::DataVisualization::Charting::Legend^  legend4 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
+			System::Windows::Forms::DataVisualization::Charting::Series^  series8 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
+			System::Windows::Forms::DataVisualization::Charting::ChartArea^  chartArea9 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
+			System::Windows::Forms::DataVisualization::Charting::Legend^  legend5 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
+			System::Windows::Forms::DataVisualization::Charting::Series^  series9 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
+			System::Windows::Forms::DataVisualization::Charting::Series^  series10 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
+			System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(Arithmetic1::typeid));
 			this->chart1 = (gcnew System::Windows::Forms::DataVisualization::Charting::Chart());
 			this->Crgraphbtn = (gcnew System::Windows::Forms::Button());
 			this->Pipelinegraphbtn = (gcnew System::Windows::Forms::Button());
@@ -124,6 +126,7 @@ namespace FunBrainz {
 			this->OFBox = (gcnew System::Windows::Forms::GroupBox());
 			this->OF = (gcnew System::Windows::Forms::DataVisualization::Charting::Chart());
 			this->OFbtn = (gcnew System::Windows::Forms::Button());
+			this->panel1 = (gcnew System::Windows::Forms::Panel());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->chart1))->BeginInit();
 			this->pipeBox->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->chart2))->BeginInit();
@@ -137,18 +140,18 @@ namespace FunBrainz {
 			// 
 			// chart1
 			// 
-			chartArea10->Name = L"Default";
-			this->chart1->ChartAreas->Add(chartArea10);
-			legend6->Name = L"Legend1";
-			this->chart1->Legends->Add(legend6);
+			chartArea1->Name = L"Default";
+			this->chart1->ChartAreas->Add(chartArea1);
+			legend1->Name = L"Legend1";
+			this->chart1->Legends->Add(legend1);
 			this->chart1->Location = System::Drawing::Point(57, 22);
 			this->chart1->Margin = System::Windows::Forms::Padding(4);
 			this->chart1->Name = L"chart1";
-			series11->ChartArea = L"Default";
-			series11->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::FastPoint;
-			series11->Legend = L"Legend1";
-			series11->Name = L"perfomance";
-			this->chart1->Series->Add(series11);
+			series1->ChartArea = L"Default";
+			series1->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::FastPoint;
+			series1->Legend = L"Legend1";
+			series1->Name = L"perfomance";
+			this->chart1->Series->Add(series1);
 			this->chart1->Size = System::Drawing::Size(541, 369);
 			this->chart1->TabIndex = 0;
 			this->chart1->Text = L"chart1";
@@ -156,23 +159,29 @@ namespace FunBrainz {
 			// 
 			// Crgraphbtn
 			// 
-			this->Crgraphbtn->Location = System::Drawing::Point(15, 23);
+			this->Crgraphbtn->BackColor = System::Drawing::SystemColors::ButtonHighlight;
+			this->Crgraphbtn->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+			this->Crgraphbtn->Font = (gcnew System::Drawing::Font(L"Century Gothic", 9.75F));
+			this->Crgraphbtn->Location = System::Drawing::Point(18, 17);
 			this->Crgraphbtn->Margin = System::Windows::Forms::Padding(4);
 			this->Crgraphbtn->Name = L"Crgraphbtn";
-			this->Crgraphbtn->Size = System::Drawing::Size(156, 43);
+			this->Crgraphbtn->Size = System::Drawing::Size(181, 55);
 			this->Crgraphbtn->TabIndex = 1;
 			this->Crgraphbtn->Text = L"Cricket ";
-			this->Crgraphbtn->UseVisualStyleBackColor = true;
+			this->Crgraphbtn->UseVisualStyleBackColor = false;
 			this->Crgraphbtn->Click += gcnew System::EventHandler(this, &Arithmetic1::button1_Click);
 			// 
 			// Pipelinegraphbtn
 			// 
-			this->Pipelinegraphbtn->Location = System::Drawing::Point(230, 23);
+			this->Pipelinegraphbtn->BackColor = System::Drawing::SystemColors::ButtonHighlight;
+			this->Pipelinegraphbtn->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+			this->Pipelinegraphbtn->Font = (gcnew System::Drawing::Font(L"Century Gothic", 9.75F));
+			this->Pipelinegraphbtn->Location = System::Drawing::Point(233, 17);
 			this->Pipelinegraphbtn->Name = L"Pipelinegraphbtn";
-			this->Pipelinegraphbtn->Size = System::Drawing::Size(141, 43);
+			this->Pipelinegraphbtn->Size = System::Drawing::Size(181, 55);
 			this->Pipelinegraphbtn->TabIndex = 2;
 			this->Pipelinegraphbtn->Text = L"Pipeline Graph";
-			this->Pipelinegraphbtn->UseVisualStyleBackColor = true;
+			this->Pipelinegraphbtn->UseVisualStyleBackColor = false;
 			this->Pipelinegraphbtn->Click += gcnew System::EventHandler(this, &Arithmetic1::Pipelinegraphbtn_Click);
 			// 
 			// pipeBox
@@ -188,61 +197,61 @@ namespace FunBrainz {
 			// 
 			// chart2
 			// 
-			chartArea11->Name = L"Levels";
-			this->chart2->ChartAreas->Add(chartArea11);
-			legend7->Name = L"Legend1";
-			this->chart2->Legends->Add(legend7);
+			chartArea2->Name = L"Levels";
+			this->chart2->ChartAreas->Add(chartArea2);
+			legend2->Name = L"Legend1";
+			this->chart2->Legends->Add(legend2);
 			this->chart2->Location = System::Drawing::Point(647, 22);
 			this->chart2->Name = L"chart2";
-			series12->ChartArea = L"Levels";
-			series12->Legend = L"Legend1";
-			series12->Name = L"Levelscompleted";
-			this->chart2->Series->Add(series12);
+			series2->ChartArea = L"Levels";
+			series2->Legend = L"Legend1";
+			series2->Name = L"Levelscompleted";
+			this->chart2->Series->Add(series2);
 			this->chart2->Size = System::Drawing::Size(440, 428);
 			this->chart2->TabIndex = 12;
 			this->chart2->Text = L"chart2";
 			// 
 			// chart3
 			// 
-			chartArea12->Name = L"Easy";
-			chartArea13->Name = L"Medium";
-			chartArea14->Name = L"Hard";
-			chartArea15->Name = L"Advance";
-			chartArea16->Name = L"Expert";
-			this->chart3->ChartAreas->Add(chartArea12);
-			this->chart3->ChartAreas->Add(chartArea13);
-			this->chart3->ChartAreas->Add(chartArea14);
-			this->chart3->ChartAreas->Add(chartArea15);
-			this->chart3->ChartAreas->Add(chartArea16);
-			legend8->Name = L"Legend1";
-			this->chart3->Legends->Add(legend8);
+			chartArea3->Name = L"Easy";
+			chartArea4->Name = L"Medium";
+			chartArea5->Name = L"Hard";
+			chartArea6->Name = L"Advance";
+			chartArea7->Name = L"Expert";
+			this->chart3->ChartAreas->Add(chartArea3);
+			this->chart3->ChartAreas->Add(chartArea4);
+			this->chart3->ChartAreas->Add(chartArea5);
+			this->chart3->ChartAreas->Add(chartArea6);
+			this->chart3->ChartAreas->Add(chartArea7);
+			legend3->Name = L"Legend1";
+			this->chart3->Legends->Add(legend3);
 			this->chart3->Location = System::Drawing::Point(18, 22);
 			this->chart3->Name = L"chart3";
-			series13->ChartArea = L"Easy";
-			series13->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Line;
-			series13->Legend = L"Legend1";
-			series13->Name = L"Easy";
-			series14->ChartArea = L"Easy";
-			series14->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Line;
-			series14->Legend = L"Legend1";
-			series14->Name = L"Hard";
-			series15->ChartArea = L"Easy";
-			series15->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Line;
-			series15->Legend = L"Legend1";
-			series15->Name = L"Medium";
-			series16->ChartArea = L"Easy";
-			series16->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Line;
-			series16->Legend = L"Legend1";
-			series16->Name = L"Advance";
-			series17->ChartArea = L"Easy";
-			series17->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Line;
-			series17->Legend = L"Legend1";
-			series17->Name = L"Expert";
-			this->chart3->Series->Add(series13);
-			this->chart3->Series->Add(series14);
-			this->chart3->Series->Add(series15);
-			this->chart3->Series->Add(series16);
-			this->chart3->Series->Add(series17);
+			series3->ChartArea = L"Easy";
+			series3->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Line;
+			series3->Legend = L"Legend1";
+			series3->Name = L"Easy";
+			series4->ChartArea = L"Easy";
+			series4->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Line;
+			series4->Legend = L"Legend1";
+			series4->Name = L"Hard";
+			series5->ChartArea = L"Easy";
+			series5->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Line;
+			series5->Legend = L"Legend1";
+			series5->Name = L"Medium";
+			series6->ChartArea = L"Easy";
+			series6->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Line;
+			series6->Legend = L"Legend1";
+			series6->Name = L"Advance";
+			series7->ChartArea = L"Easy";
+			series7->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Line;
+			series7->Legend = L"Legend1";
+			series7->Name = L"Expert";
+			this->chart3->Series->Add(series3);
+			this->chart3->Series->Add(series4);
+			this->chart3->Series->Add(series5);
+			this->chart3->Series->Add(series6);
+			this->chart3->Series->Add(series7);
 			this->chart3->Size = System::Drawing::Size(589, 428);
 			this->chart3->TabIndex = 11;
 			this->chart3->Text = L"chart3";
@@ -309,29 +318,32 @@ namespace FunBrainz {
 			// 
 			// vakul
 			// 
-			chartArea17->Name = L"Scores";
-			this->vakul->ChartAreas->Add(chartArea17);
-			legend9->Name = L"Legend1";
-			this->vakul->Legends->Add(legend9);
+			chartArea8->Name = L"Scores";
+			this->vakul->ChartAreas->Add(chartArea8);
+			legend4->Name = L"Legend1";
+			this->vakul->Legends->Add(legend4);
 			this->vakul->Location = System::Drawing::Point(57, 41);
 			this->vakul->Name = L"vakul";
-			series18->ChartArea = L"Scores";
-			series18->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Line;
-			series18->Legend = L"Legend1";
-			series18->Name = L"Values";
-			this->vakul->Series->Add(series18);
+			series8->ChartArea = L"Scores";
+			series8->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Line;
+			series8->Legend = L"Legend1";
+			series8->Name = L"Values";
+			this->vakul->Series->Add(series8);
 			this->vakul->Size = System::Drawing::Size(675, 357);
 			this->vakul->TabIndex = 11;
 			this->vakul->Text = L"vakul";
 			// 
 			// button1
 			// 
-			this->button1->Location = System::Drawing::Point(452, 23);
+			this->button1->BackColor = System::Drawing::SystemColors::ButtonHighlight;
+			this->button1->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+			this->button1->Font = (gcnew System::Drawing::Font(L"Century Gothic", 9.75F));
+			this->button1->Location = System::Drawing::Point(455, 17);
 			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(118, 43);
+			this->button1->Size = System::Drawing::Size(181, 55);
 			this->button1->TabIndex = 14;
 			this->button1->Text = L"2048";
-			this->button1->UseVisualStyleBackColor = true;
+			this->button1->UseVisualStyleBackColor = false;
 			this->button1->Click += gcnew System::EventHandler(this, &Arithmetic1::button1_Click_1);
 			// 
 			// OFBox
@@ -346,40 +358,52 @@ namespace FunBrainz {
 			// 
 			// OF
 			// 
-			chartArea18->Name = L"Scores";
-			this->OF->ChartAreas->Add(chartArea18);
-			legend10->Name = L"Legend1";
-			this->OF->Legends->Add(legend10);
+			chartArea9->Name = L"Scores";
+			this->OF->ChartAreas->Add(chartArea9);
+			legend5->Name = L"Legend1";
+			this->OF->Legends->Add(legend5);
 			this->OF->Location = System::Drawing::Point(95, 21);
 			this->OF->Name = L"OF";
-			series19->ChartArea = L"Scores";
-			series19->Legend = L"Legend1";
-			series19->Name = L"Values";
-			series20->ChartArea = L"Scores";
-			series20->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Candlestick;
-			series20->Legend = L"Legend1";
-			series20->Name = L"   ";
-			series20->YValuesPerPoint = 4;
-			this->OF->Series->Add(series19);
-			this->OF->Series->Add(series20);
+			series9->ChartArea = L"Scores";
+			series9->Legend = L"Legend1";
+			series9->Name = L"Values";
+			series10->ChartArea = L"Scores";
+			series10->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Candlestick;
+			series10->Legend = L"Legend1";
+			series10->Name = L"   ";
+			series10->YValuesPerPoint = 4;
+			this->OF->Series->Add(series9);
+			this->OF->Series->Add(series10);
 			this->OF->Size = System::Drawing::Size(675, 357);
 			this->OF->TabIndex = 8;
 			this->OF->Text = L"vakul";
 			// 
 			// OFbtn
 			// 
-			this->OFbtn->Location = System::Drawing::Point(621, 23);
+			this->OFbtn->BackColor = System::Drawing::SystemColors::ButtonHighlight;
+			this->OFbtn->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+			this->OFbtn->Font = (gcnew System::Drawing::Font(L"Century Gothic", 9.75F));
+			this->OFbtn->Location = System::Drawing::Point(696, 17);
 			this->OFbtn->Name = L"OFbtn";
-			this->OFbtn->Size = System::Drawing::Size(164, 43);
+			this->OFbtn->Size = System::Drawing::Size(181, 55);
 			this->OFbtn->TabIndex = 17;
 			this->OFbtn->Text = L"Operation Filling";
-			this->OFbtn->UseVisualStyleBackColor = true;
+			this->OFbtn->UseVisualStyleBackColor = false;
 			this->OFbtn->Click += gcnew System::EventHandler(this, &Arithmetic1::OFbtn_Click);
+			// 
+			// panel1
+			// 
+			this->panel1->BackColor = System::Drawing::Color::Firebrick;
+			this->panel1->Location = System::Drawing::Point(1, 0);
+			this->panel1->Name = L"panel1";
+			this->panel1->Size = System::Drawing::Size(1242, 87);
+			this->panel1->TabIndex = 18;
 			// 
 			// Arithmetic1
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
+			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"$this.BackgroundImage")));
 			this->Controls->Add(this->OFbtn);
 			this->Controls->Add(this->OFBox);
 			this->Controls->Add(this->button1);
@@ -388,6 +412,7 @@ namespace FunBrainz {
 			this->Controls->Add(this->pipeBox);
 			this->Controls->Add(this->Pipelinegraphbtn);
 			this->Controls->Add(this->Crgraphbtn);
+			this->Controls->Add(this->panel1);
 			this->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->Name = L"Arithmetic1";
 			this->Size = System::Drawing::Size(1246, 681);

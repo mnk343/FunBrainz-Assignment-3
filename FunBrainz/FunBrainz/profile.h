@@ -99,6 +99,7 @@ namespace FunBrainz {
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(profile::typeid));
 			this->textBox7 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox6 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox3 = (gcnew System::Windows::Forms::TextBox());
@@ -133,43 +134,48 @@ namespace FunBrainz {
 			// textBox7
 			// 
 			this->textBox7->Font = (gcnew System::Drawing::Font(L"Century Gothic", 11.25F));
-			this->textBox7->Location = System::Drawing::Point(308, 139);
+			this->textBox7->Location = System::Drawing::Point(411, 171);
+			this->textBox7->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->textBox7->Name = L"textBox7";
-			this->textBox7->Size = System::Drawing::Size(120, 26);
+			this->textBox7->Size = System::Drawing::Size(159, 30);
 			this->textBox7->TabIndex = 4;
 			this->textBox7->TextChanged += gcnew System::EventHandler(this, &profile::textBox7_TextChanged);
 			// 
 			// textBox6
 			// 
 			this->textBox6->Font = (gcnew System::Drawing::Font(L"Century Gothic", 11.25F));
-			this->textBox6->Location = System::Drawing::Point(308, 391);
+			this->textBox6->Location = System::Drawing::Point(411, 481);
+			this->textBox6->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->textBox6->Name = L"textBox6";
-			this->textBox6->Size = System::Drawing::Size(120, 26);
+			this->textBox6->Size = System::Drawing::Size(159, 30);
 			this->textBox6->TabIndex = 31;
 			// 
 			// textBox3
 			// 
 			this->textBox3->Font = (gcnew System::Drawing::Font(L"Century Gothic", 11.25F));
-			this->textBox3->Location = System::Drawing::Point(308, 288);
+			this->textBox3->Location = System::Drawing::Point(411, 354);
+			this->textBox3->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->textBox3->Name = L"textBox3";
-			this->textBox3->Size = System::Drawing::Size(120, 26);
+			this->textBox3->Size = System::Drawing::Size(159, 30);
 			this->textBox3->TabIndex = 28;
 			this->textBox3->TextChanged += gcnew System::EventHandler(this, &profile::textBox3_TextChanged);
 			// 
 			// textBox2
 			// 
 			this->textBox2->Font = (gcnew System::Drawing::Font(L"Century Gothic", 11.25F));
-			this->textBox2->Location = System::Drawing::Point(308, 107);
+			this->textBox2->Location = System::Drawing::Point(411, 132);
+			this->textBox2->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->textBox2->Name = L"textBox2";
-			this->textBox2->Size = System::Drawing::Size(120, 26);
+			this->textBox2->Size = System::Drawing::Size(159, 30);
 			this->textBox2->TabIndex = 3;
 			// 
 			// textBox1
 			// 
 			this->textBox1->Font = (gcnew System::Drawing::Font(L"Century Gothic", 11.25F));
-			this->textBox1->Location = System::Drawing::Point(308, 74);
+			this->textBox1->Location = System::Drawing::Point(411, 91);
+			this->textBox1->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->textBox1->Name = L"textBox1";
-			this->textBox1->Size = System::Drawing::Size(120, 26);
+			this->textBox1->Size = System::Drawing::Size(159, 30);
 			this->textBox1->TabIndex = 2;
 			// 
 			// label7
@@ -177,9 +183,10 @@ namespace FunBrainz {
 			this->label7->AutoSize = true;
 			this->label7->BackColor = System::Drawing::Color::Transparent;
 			this->label7->Font = (gcnew System::Drawing::Font(L"Century Gothic", 11.25F));
-			this->label7->Location = System::Drawing::Point(140, 142);
+			this->label7->Location = System::Drawing::Point(187, 175);
+			this->label7->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label7->Name = L"label7";
-			this->label7->Size = System::Drawing::Size(66, 20);
+			this->label7->Size = System::Drawing::Size(80, 22);
 			this->label7->TabIndex = 23;
 			this->label7->Text = L"Email ID";
 			// 
@@ -188,9 +195,10 @@ namespace FunBrainz {
 			this->label6->AutoSize = true;
 			this->label6->BackColor = System::Drawing::Color::Transparent;
 			this->label6->Font = (gcnew System::Drawing::Font(L"Century Gothic", 11.25F));
-			this->label6->Location = System::Drawing::Point(84, 389);
+			this->label6->Location = System::Drawing::Point(112, 479);
+			this->label6->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label6->Name = L"label6";
-			this->label6->Size = System::Drawing::Size(122, 20);
+			this->label6->Size = System::Drawing::Size(149, 22);
 			this->label6->TabIndex = 22;
 			this->label6->Text = L"Mobile Number";
 			// 
@@ -199,9 +207,10 @@ namespace FunBrainz {
 			this->label5->AutoSize = true;
 			this->label5->BackColor = System::Drawing::Color::Transparent;
 			this->label5->Font = (gcnew System::Drawing::Font(L"Century Gothic", 11.25F));
-			this->label5->Location = System::Drawing::Point(140, 355);
+			this->label5->Location = System::Drawing::Point(187, 437);
+			this->label5->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label5->Name = L"label5";
-			this->label5->Size = System::Drawing::Size(66, 20);
+			this->label5->Size = System::Drawing::Size(82, 22);
 			this->label5->TabIndex = 21;
 			this->label5->Text = L"Gender";
 			// 
@@ -210,19 +219,22 @@ namespace FunBrainz {
 			this->label4->AutoSize = true;
 			this->label4->BackColor = System::Drawing::Color::Transparent;
 			this->label4->Font = (gcnew System::Drawing::Font(L"Century Gothic", 11.25F));
-			this->label4->Location = System::Drawing::Point(104, 322);
+			this->label4->Location = System::Drawing::Point(139, 396);
+			this->label4->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(102, 20);
+			this->label4->Size = System::Drawing::Size(128, 22);
 			this->label4->TabIndex = 20;
 			this->label4->Text = L"Date Of Birth";
 			// 
 			// label3
 			// 
 			this->label3->AutoSize = true;
+			this->label3->BackColor = System::Drawing::Color::Transparent;
 			this->label3->Font = (gcnew System::Drawing::Font(L"Century Gothic", 11.25F));
-			this->label3->Location = System::Drawing::Point(160, 288);
+			this->label3->Location = System::Drawing::Point(213, 354);
+			this->label3->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(46, 20);
+			this->label3->Size = System::Drawing::Size(55, 22);
 			this->label3->TabIndex = 19;
 			this->label3->Text = L"Class";
 			// 
@@ -231,9 +243,10 @@ namespace FunBrainz {
 			this->label2->AutoSize = true;
 			this->label2->BackColor = System::Drawing::Color::Transparent;
 			this->label2->Font = (gcnew System::Drawing::Font(L"Century Gothic", 11.25F));
-			this->label2->Location = System::Drawing::Point(123, 74);
+			this->label2->Location = System::Drawing::Point(164, 91);
+			this->label2->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(83, 20);
+			this->label2->Size = System::Drawing::Size(103, 22);
 			this->label2->TabIndex = 17;
 			this->label2->Text = L"First Name";
 			// 
@@ -242,9 +255,10 @@ namespace FunBrainz {
 			this->label1->AutoSize = true;
 			this->label1->BackColor = System::Drawing::Color::Transparent;
 			this->label1->Font = (gcnew System::Drawing::Font(L"Century Gothic", 11.25F));
-			this->label1->Location = System::Drawing::Point(121, 107);
+			this->label1->Location = System::Drawing::Point(161, 132);
+			this->label1->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(85, 20);
+			this->label1->Size = System::Drawing::Size(107, 22);
 			this->label1->TabIndex = 18;
 			this->label1->Text = L"Last Name";
 			// 
@@ -253,9 +267,10 @@ namespace FunBrainz {
 			this->save_button->BackColor = System::Drawing::SystemColors::ButtonHighlight;
 			this->save_button->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
 			this->save_button->Font = (gcnew System::Drawing::Font(L"Century Gothic", 11.25F));
-			this->save_button->Location = System::Drawing::Point(501, 472);
+			this->save_button->Location = System::Drawing::Point(668, 581);
+			this->save_button->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->save_button->Name = L"save_button";
-			this->save_button->Size = System::Drawing::Size(90, 33);
+			this->save_button->Size = System::Drawing::Size(120, 41);
 			this->save_button->TabIndex = 38;
 			this->save_button->Text = L"save";
 			this->save_button->UseVisualStyleBackColor = false;
@@ -266,9 +281,10 @@ namespace FunBrainz {
 			this->edit_button->BackColor = System::Drawing::SystemColors::ButtonHighlight;
 			this->edit_button->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
 			this->edit_button->Font = (gcnew System::Drawing::Font(L"Century Gothic", 11.25F));
-			this->edit_button->Location = System::Drawing::Point(385, 472);
+			this->edit_button->Location = System::Drawing::Point(513, 581);
+			this->edit_button->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->edit_button->Name = L"edit_button";
-			this->edit_button->Size = System::Drawing::Size(90, 33);
+			this->edit_button->Size = System::Drawing::Size(120, 41);
 			this->edit_button->TabIndex = 37;
 			this->edit_button->Text = L"edit";
 			this->edit_button->UseVisualStyleBackColor = false;
@@ -280,10 +296,10 @@ namespace FunBrainz {
 			this->Gendertxt->Font = (gcnew System::Drawing::Font(L"Century Gothic", 11.25F));
 			this->Gendertxt->FormattingEnabled = true;
 			this->Gendertxt->Items->AddRange(gcnew cli::array< System::Object^  >(3) {L"Male", L"Female", L"Others"});
-			this->Gendertxt->Location = System::Drawing::Point(308, 357);
-			this->Gendertxt->Margin = System::Windows::Forms::Padding(2);
+			this->Gendertxt->Location = System::Drawing::Point(411, 439);
+			this->Gendertxt->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->Gendertxt->Name = L"Gendertxt";
-			this->Gendertxt->Size = System::Drawing::Size(120, 28);
+			this->Gendertxt->Size = System::Drawing::Size(159, 30);
 			this->Gendertxt->TabIndex = 39;
 			// 
 			// DOBtxt
@@ -291,18 +307,18 @@ namespace FunBrainz {
 			this->DOBtxt->CustomFormat = L"dd-mm-yyyy";
 			this->DOBtxt->Font = (gcnew System::Drawing::Font(L"Century Gothic", 11.25F));
 			this->DOBtxt->Format = System::Windows::Forms::DateTimePickerFormat::Short;
-			this->DOBtxt->Location = System::Drawing::Point(308, 324);
-			this->DOBtxt->Margin = System::Windows::Forms::Padding(2);
+			this->DOBtxt->Location = System::Drawing::Point(411, 399);
+			this->DOBtxt->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->DOBtxt->Name = L"DOBtxt";
-			this->DOBtxt->Size = System::Drawing::Size(120, 26);
+			this->DOBtxt->Size = System::Drawing::Size(159, 30);
 			this->DOBtxt->TabIndex = 40;
 			// 
 			// pic
 			// 
-			this->pic->Location = System::Drawing::Point(571, 38);
-			this->pic->Margin = System::Windows::Forms::Padding(2);
+			this->pic->Location = System::Drawing::Point(761, 47);
+			this->pic->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->pic->Name = L"pic";
-			this->pic->Size = System::Drawing::Size(213, 144);
+			this->pic->Size = System::Drawing::Size(284, 177);
 			this->pic->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
 			this->pic->TabIndex = 41;
 			this->pic->TabStop = false;
@@ -312,10 +328,10 @@ namespace FunBrainz {
 			this->Uploadpicbtn->BackColor = System::Drawing::SystemColors::ButtonHighlight;
 			this->Uploadpicbtn->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
 			this->Uploadpicbtn->Font = (gcnew System::Drawing::Font(L"Century Gothic", 11.25F));
-			this->Uploadpicbtn->Location = System::Drawing::Point(571, 199);
-			this->Uploadpicbtn->Margin = System::Windows::Forms::Padding(2);
+			this->Uploadpicbtn->Location = System::Drawing::Point(761, 245);
+			this->Uploadpicbtn->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->Uploadpicbtn->Name = L"Uploadpicbtn";
-			this->Uploadpicbtn->Size = System::Drawing::Size(213, 32);
+			this->Uploadpicbtn->Size = System::Drawing::Size(284, 39);
 			this->Uploadpicbtn->TabIndex = 42;
 			this->Uploadpicbtn->Text = L"Upload Profile pic";
 			this->Uploadpicbtn->UseVisualStyleBackColor = false;
@@ -326,10 +342,10 @@ namespace FunBrainz {
 			this->Deletepicbtn->BackColor = System::Drawing::SystemColors::ButtonHighlight;
 			this->Deletepicbtn->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
 			this->Deletepicbtn->Font = (gcnew System::Drawing::Font(L"Century Gothic", 11.25F));
-			this->Deletepicbtn->Location = System::Drawing::Point(571, 241);
-			this->Deletepicbtn->Margin = System::Windows::Forms::Padding(2);
+			this->Deletepicbtn->Location = System::Drawing::Point(761, 297);
+			this->Deletepicbtn->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->Deletepicbtn->Name = L"Deletepicbtn";
-			this->Deletepicbtn->Size = System::Drawing::Size(213, 32);
+			this->Deletepicbtn->Size = System::Drawing::Size(284, 39);
 			this->Deletepicbtn->TabIndex = 43;
 			this->Deletepicbtn->Text = L"Delete Profile pic";
 			this->Deletepicbtn->UseVisualStyleBackColor = false;
@@ -338,59 +354,61 @@ namespace FunBrainz {
 			// label14
 			// 
 			this->label14->AutoSize = true;
+			this->label14->BackColor = System::Drawing::Color::Transparent;
 			this->label14->Font = (gcnew System::Drawing::Font(L"Century Gothic", 11.25F));
-			this->label14->Location = System::Drawing::Point(558, 394);
-			this->label14->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label14->Location = System::Drawing::Point(744, 485);
 			this->label14->Name = L"label14";
-			this->label14->Size = System::Drawing::Size(85, 20);
+			this->label14->Size = System::Drawing::Size(107, 22);
 			this->label14->TabIndex = 51;
 			this->label14->Text = L"Last Name";
 			// 
 			// label13
 			// 
 			this->label13->AutoSize = true;
+			this->label13->BackColor = System::Drawing::Color::Transparent;
 			this->label13->Font = (gcnew System::Drawing::Font(L"Century Gothic", 11.25F));
-			this->label13->Location = System::Drawing::Point(560, 362);
-			this->label13->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label13->Location = System::Drawing::Point(747, 446);
 			this->label13->Name = L"label13";
-			this->label13->Size = System::Drawing::Size(83, 20);
+			this->label13->Size = System::Drawing::Size(103, 22);
 			this->label13->TabIndex = 50;
 			this->label13->Text = L"First Name";
 			// 
 			// GuardiansLastNametxt
 			// 
 			this->GuardiansLastNametxt->Font = (gcnew System::Drawing::Font(L"Century Gothic", 11.25F));
-			this->GuardiansLastNametxt->Location = System::Drawing::Point(675, 391);
-			this->GuardiansLastNametxt->Margin = System::Windows::Forms::Padding(2);
+			this->GuardiansLastNametxt->Location = System::Drawing::Point(900, 481);
+			this->GuardiansLastNametxt->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->GuardiansLastNametxt->Name = L"GuardiansLastNametxt";
-			this->GuardiansLastNametxt->Size = System::Drawing::Size(120, 26);
+			this->GuardiansLastNametxt->Size = System::Drawing::Size(159, 30);
 			this->GuardiansLastNametxt->TabIndex = 49;
 			// 
 			// GuardiansFirstNametxt
 			// 
 			this->GuardiansFirstNametxt->Font = (gcnew System::Drawing::Font(L"Century Gothic", 11.25F));
-			this->GuardiansFirstNametxt->Location = System::Drawing::Point(675, 359);
-			this->GuardiansFirstNametxt->Margin = System::Windows::Forms::Padding(2);
+			this->GuardiansFirstNametxt->Location = System::Drawing::Point(900, 442);
+			this->GuardiansFirstNametxt->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->GuardiansFirstNametxt->Name = L"GuardiansFirstNametxt";
-			this->GuardiansFirstNametxt->Size = System::Drawing::Size(120, 26);
+			this->GuardiansFirstNametxt->Size = System::Drawing::Size(159, 30);
 			this->GuardiansFirstNametxt->TabIndex = 48;
 			// 
 			// Passwordtxt
 			// 
 			this->Passwordtxt->Font = (gcnew System::Drawing::Font(L"Century Gothic", 11.25F));
-			this->Passwordtxt->Location = System::Drawing::Point(308, 170);
-			this->Passwordtxt->Margin = System::Windows::Forms::Padding(2);
+			this->Passwordtxt->Location = System::Drawing::Point(411, 209);
+			this->Passwordtxt->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->Passwordtxt->Name = L"Passwordtxt";
-			this->Passwordtxt->Size = System::Drawing::Size(120, 26);
+			this->Passwordtxt->Size = System::Drawing::Size(159, 30);
 			this->Passwordtxt->TabIndex = 52;
 			// 
 			// label8
 			// 
 			this->label8->AutoSize = true;
+			this->label8->BackColor = System::Drawing::Color::Transparent;
 			this->label8->Font = (gcnew System::Drawing::Font(L"Century Gothic", 11.25F));
-			this->label8->Location = System::Drawing::Point(131, 170);
+			this->label8->Location = System::Drawing::Point(175, 209);
+			this->label8->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label8->Name = L"label8";
-			this->label8->Size = System::Drawing::Size(75, 23);
+			this->label8->Size = System::Drawing::Size(94, 28);
 			this->label8->TabIndex = 53;
 			this->label8->Text = L"Password";
 			this->label8->UseCompatibleTextRendering = true;
@@ -400,9 +418,10 @@ namespace FunBrainz {
 			this->label9->AutoSize = true;
 			this->label9->Font = (gcnew System::Drawing::Font(L"Century Gothic", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->label9->Location = System::Drawing::Point(34, 38);
+			this->label9->Location = System::Drawing::Point(45, 47);
+			this->label9->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label9->Name = L"label9";
-			this->label9->Size = System::Drawing::Size(105, 21);
+			this->label9->Size = System::Drawing::Size(130, 23);
 			this->label9->TabIndex = 54;
 			this->label9->Text = L"Basic Details";
 			// 
@@ -411,9 +430,10 @@ namespace FunBrainz {
 			this->label10->AutoSize = true;
 			this->label10->Font = (gcnew System::Drawing::Font(L"Century Gothic", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->label10->Location = System::Drawing::Point(517, 311);
+			this->label10->Location = System::Drawing::Point(689, 383);
+			this->label10->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label10->Name = L"label10";
-			this->label10->Size = System::Drawing::Size(141, 21);
+			this->label10->Size = System::Drawing::Size(173, 23);
 			this->label10->TabIndex = 55;
 			this->label10->Text = L"Guardian Details";
 			// 
@@ -422,17 +442,19 @@ namespace FunBrainz {
 			this->label11->AutoSize = true;
 			this->label11->Font = (gcnew System::Drawing::Font(L"Century Gothic", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->label11->Location = System::Drawing::Point(34, 245);
+			this->label11->Location = System::Drawing::Point(45, 302);
+			this->label11->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label11->Name = L"label11";
-			this->label11->Size = System::Drawing::Size(112, 21);
+			this->label11->Size = System::Drawing::Size(136, 23);
 			this->label11->TabIndex = 56;
 			this->label11->Text = L"Other Details";
 			// 
 			// profile
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
+			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::SystemColors::ButtonHighlight;
+			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"$this.BackgroundImage")));
 			this->Controls->Add(this->label11);
 			this->Controls->Add(this->label10);
 			this->Controls->Add(this->label9);
@@ -461,9 +483,9 @@ namespace FunBrainz {
 			this->Controls->Add(this->label3);
 			this->Controls->Add(this->label2);
 			this->Controls->Add(this->label1);
-			this->Margin = System::Windows::Forms::Padding(2);
+			this->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->Name = L"profile";
-			this->Size = System::Drawing::Size(934, 587);
+			this->Size = System::Drawing::Size(1245, 722);
 			this->Load += gcnew System::EventHandler(this, &profile::profile_Load);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->pic))->EndInit();
 			this->ResumeLayout(false);

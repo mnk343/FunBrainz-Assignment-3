@@ -127,7 +127,7 @@ namespace FunBrainz {
 			this->button5->Font = (gcnew System::Drawing::Font(L"Century Gothic", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->button5->Location = System::Drawing::Point(15, 396);
-			this->button5->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->button5->Margin = System::Windows::Forms::Padding(4);
 			this->button5->Name = L"button5";
 			this->button5->Size = System::Drawing::Size(181, 55);
 			this->button5->TabIndex = 6;
@@ -142,7 +142,7 @@ namespace FunBrainz {
 			this->button4->Font = (gcnew System::Drawing::Font(L"Century Gothic", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->button4->Location = System::Drawing::Point(15, 327);
-			this->button4->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->button4->Margin = System::Windows::Forms::Padding(4);
 			this->button4->Name = L"button4";
 			this->button4->Size = System::Drawing::Size(181, 55);
 			this->button4->TabIndex = 5;
@@ -157,7 +157,7 @@ namespace FunBrainz {
 			this->button3->Font = (gcnew System::Drawing::Font(L"Century Gothic", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->button3->Location = System::Drawing::Point(15, 258);
-			this->button3->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->button3->Margin = System::Windows::Forms::Padding(4);
 			this->button3->Name = L"button3";
 			this->button3->Size = System::Drawing::Size(181, 55);
 			this->button3->TabIndex = 2;
@@ -172,7 +172,7 @@ namespace FunBrainz {
 			this->Arithmeticbtn->Font = (gcnew System::Drawing::Font(L"Century Gothic", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->Arithmeticbtn->Location = System::Drawing::Point(15, 123);
-			this->Arithmeticbtn->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->Arithmeticbtn->Margin = System::Windows::Forms::Padding(4);
 			this->Arithmeticbtn->Name = L"Arithmeticbtn";
 			this->Arithmeticbtn->Size = System::Drawing::Size(181, 55);
 			this->Arithmeticbtn->TabIndex = 3;
@@ -187,7 +187,7 @@ namespace FunBrainz {
 			this->Profilebtn->Font = (gcnew System::Drawing::Font(L"Century Gothic", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->Profilebtn->Location = System::Drawing::Point(15, 54);
-			this->Profilebtn->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->Profilebtn->Margin = System::Windows::Forms::Padding(4);
 			this->Profilebtn->Name = L"Profilebtn";
 			this->Profilebtn->Size = System::Drawing::Size(181, 55);
 			this->Profilebtn->TabIndex = 4;
@@ -197,10 +197,10 @@ namespace FunBrainz {
 			// 
 			// panel1
 			// 
-			this->panel1->Location = System::Drawing::Point(228, 0);
+			this->panel1->Location = System::Drawing::Point(220, 0);
 			this->panel1->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->panel1->Name = L"panel1";
-			this->panel1->Size = System::Drawing::Size(1123, 663);
+			this->panel1->Size = System::Drawing::Size(1131, 663);
 			this->panel1->TabIndex = 7;
 			this->panel1->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &Homepage::panel1_Paint);
 			// 
@@ -261,7 +261,7 @@ namespace FunBrainz {
 			this->panel2->Controls->Add(this->Arithmeticbtn);
 			this->panel2->Controls->Add(this->button3);
 			this->panel2->Location = System::Drawing::Point(0, 0);
-			this->panel2->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->panel2->Margin = System::Windows::Forms::Padding(4);
 			this->panel2->Name = L"panel2";
 			this->panel2->Size = System::Drawing::Size(221, 663);
 			this->panel2->TabIndex = 12;
