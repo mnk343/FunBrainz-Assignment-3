@@ -100,7 +100,7 @@ namespace FunBrainz {
 			this->button1->Font = (gcnew System::Drawing::Font(L"Century Gothic", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->button1->Location = System::Drawing::Point(107, 126);
-			this->button1->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->button1->Margin = System::Windows::Forms::Padding(2);
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(200, 53);
 			this->button1->TabIndex = 1;
@@ -115,7 +115,7 @@ namespace FunBrainz {
 			this->button2->Font = (gcnew System::Drawing::Font(L"Century Gothic", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->button2->Location = System::Drawing::Point(107, 191);
-			this->button2->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->button2->Margin = System::Windows::Forms::Padding(2);
 			this->button2->Name = L"button2";
 			this->button2->Size = System::Drawing::Size(200, 53);
 			this->button2->TabIndex = 2;
@@ -131,7 +131,7 @@ namespace FunBrainz {
 				static_cast<System::Byte>(0)));
 			this->button3->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
 			this->button3->Location = System::Drawing::Point(107, 256);
-			this->button3->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->button3->Margin = System::Windows::Forms::Padding(2);
 			this->button3->Name = L"button3";
 			this->button3->Size = System::Drawing::Size(200, 53);
 			this->button3->TabIndex = 3;
@@ -147,7 +147,7 @@ namespace FunBrainz {
 				static_cast<System::Byte>(0)));
 			this->button4->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
 			this->button4->Location = System::Drawing::Point(107, 321);
-			this->button4->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->button4->Margin = System::Windows::Forms::Padding(2);
 			this->button4->Name = L"button4";
 			this->button4->Size = System::Drawing::Size(200, 53);
 			this->button4->TabIndex = 4;
@@ -183,7 +183,7 @@ namespace FunBrainz {
 			this->Controls->Add(this->button2);
 			this->Controls->Add(this->button1);
 			this->Controls->Add(this->label1);
-			this->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->Margin = System::Windows::Forms::Padding(2);
 			this->MaximizeBox = false;
 			this->MaximumSize = System::Drawing::Size(426, 488);
 			this->MinimizeBox = false;

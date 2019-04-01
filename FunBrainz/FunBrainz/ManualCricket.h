@@ -145,9 +145,10 @@ namespace FunBrainz {
 
 
 				 // cloud
-				 if(typex==5)
+				 if(typex==6)
 				 {
-					 label2->Text = "1. Enter the correct operators in the  given text boxes.\r\n2.Enter within the given time frame to get points\r\n3.If you fail to enter within 30 sec you will lose a try.\r\n4.You will get a total  of three tries.\r\n5.For your help hint will be provided exactly once in the game.\r\n6.There are 5 levels each having 5 questions.\r\n";
+					 label2->Text = "1. Question have been categorized on the basis of the four \r\nbasic operations.\r\n2.After selecting your operation, questions are displayed on the screen.\r\n3.You have to solve and click on the right cloud to gain points.\r\n4.If however, you click on the wrong cloud, you will lose the game.\r\n5.Your final score is displayed at the end.";
+
 				 }
 
 

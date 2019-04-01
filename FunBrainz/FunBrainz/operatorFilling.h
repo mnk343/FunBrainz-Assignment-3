@@ -486,7 +486,7 @@ namespace FunBrainz {
 			this->next->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->next->ForeColor = System::Drawing::Color::White;
-			this->next->Location = System::Drawing::Point(418, 240);
+			this->next->Location = System::Drawing::Point(414, 240);
 			this->next->Name = L"next";
 			this->next->Size = System::Drawing::Size(133, 35);
 			this->next->TabIndex = 20;
@@ -698,6 +698,8 @@ namespace FunBrainz {
 			this->Controls->Add(this->panel7);
 			this->Controls->Add(this->panel1);
 			this->Controls->Add(this->panel4);
+			this->MaximumSize = System::Drawing::Size(901, 479);
+			this->MinimumSize = System::Drawing::Size(901, 479);
 			this->Name = L"operatorFilling";
 			this->Text = L"operatorFilling";
 			this->Load += gcnew System::EventHandler(this, &operatorFilling::operatorFilling_Load);
@@ -841,8 +843,13 @@ private: System::Void ClockTimer_Tick(System::Object^  sender, System::EventArgs
 
 				 if(triesLeft == 0 )
 				 {
+					 counter++;
 					 ClockTimer->Stop();
 					 MessageBox::Show("You Lost");
+					 submit->Enabled=false;
+
+					 inputOp1->ReadOnly= true;
+					 inputOp2->ReadOnly=true;
 
 					 if( score > preScore )
 					 {
@@ -877,6 +884,7 @@ private: System::Void ClockTimer_Tick(System::Object^  sender, System::EventArgs
 		 }
 
 private: System::Void operatorFilling_Load(System::Object^  sender, System::EventArgs^  e) {
+			 submit->Enabled=true;
 
 			 help = 0;
 			 OleDb::OleDbConnection ^ con = gcnew OleDb::OleDbConnection();
@@ -1064,6 +1072,23 @@ private: System::Void submit_Click(System::Object^  sender, System::EventArgs^  
 
 				success :
 				MessageBox::Show("Game complete");
+				submit->Enabled=false;
+				inputOp1->ReadOnly= true;
+				inputOp2->ReadOnly=true;
+				if( score > preScore )
+				{
+
+
+					OleDb::OleDbConnection ^ con = gcnew OleDb::OleDbConnection();
+					con->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=FunBrainzForKids.accdb;";
+					String ^ Sql = "Update operatorFilling SET Score = " + score + " where [Student_Id] = " + stuID + ";";
+					OleDb::OleDbCommand ^ command = gcnew OleDb::OleDbCommand(Sql, con);
+					con->Open();
+					command->ExecuteNonQuery();
+					con->Close();
+
+
+				}
 
 			}
 
@@ -1073,7 +1098,11 @@ private: System::Void submit_Click(System::Object^  sender, System::EventArgs^  
 				ClockTimer->Stop();
 				
 				MessageBox::Show("You Lost");
-				
+				submit->Enabled=false;
+
+				inputOp1->ReadOnly= true;
+				inputOp2->ReadOnly=true;
+
 				if( score > preScore )
 				{
 
