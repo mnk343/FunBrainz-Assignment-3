@@ -140,7 +140,7 @@ namespace FunBrainz {
 			this->label1->AutoSize = true;
 			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 21.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->label1->Location = System::Drawing::Point(381, 141);
+			this->label1->Location = System::Drawing::Point(355, 182);
 			this->label1->Name = L"label1";
 			this->label1->Size = System::Drawing::Size(142, 33);
 			this->label1->TabIndex = 1;
@@ -151,10 +151,11 @@ namespace FunBrainz {
 			this->panel2->BackColor = System::Drawing::Color::Transparent;
 			this->panel2->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"panel2.BackgroundImage")));
 			this->panel2->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->panel2->Location = System::Drawing::Point(334, 214);
+			this->panel2->Location = System::Drawing::Point(317, 229);
 			this->panel2->Name = L"panel2";
 			this->panel2->Size = System::Drawing::Size(209, 152);
 			this->panel2->TabIndex = 0;
+			this->panel2->Visible = false;
 			// 
 			// PuzzlesRedirect
 			// 

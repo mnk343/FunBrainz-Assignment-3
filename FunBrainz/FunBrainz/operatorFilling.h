@@ -698,7 +698,6 @@ namespace FunBrainz {
 			this->Controls->Add(this->panel7);
 			this->Controls->Add(this->panel1);
 			this->Controls->Add(this->panel4);
-			this->MaximumSize = System::Drawing::Size(901, 479);
 			this->MinimumSize = System::Drawing::Size(901, 479);
 			this->Name = L"operatorFilling";
 			this->Text = L"operatorFilling";
