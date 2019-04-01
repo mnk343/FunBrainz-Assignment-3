@@ -708,6 +708,13 @@ namespace FunBrainz {
 					 command->ExecuteNonQuery();
 					 con->Close();
 
+					 con->Open();
+					 access1 = "insert into [Abacus] ([StudentID],[addition],[subtraction],[multiplication],[division]) values(" + id+ "," + 0+","+0 + "," + 0 + "," + 0+");";	
+					 //MessageBox::Show(access1);
+					 command = gcnew OleDb::OleDbCommand(access1, con);
+					 command->ExecuteNonQuery();
+					 con->Close();
+
 					 Homepage ^ f3 = gcnew Homepage(obj);
 					 this->Hide();
 					 f3->user = UserNametxt->Text;

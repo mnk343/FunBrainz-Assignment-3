@@ -20,6 +20,15 @@ namespace FunBrainz {
 		Abacus(void)
 		{
 			InitializeComponent();
+			stuID = 1;
+			//
+			//TODO: Add the constructor code here
+			//
+		}
+		Abacus(int x)
+		{
+			InitializeComponent();
+			stuID = x;
 			//
 			//TODO: Add the constructor code here
 			//
@@ -28,6 +37,7 @@ namespace FunBrainz {
 		{
 			InitializeComponent();
 			caller = obj1;
+			stuID = 1;
 			//
 			//TODO: Add the constructor code here
 			//
@@ -555,6 +565,7 @@ private: System::Windows::Forms::LinkLabel^  linkLabel5;
 private: System::Windows::Forms::LinkLabel^  linkLabel4;
 private: System::Windows::Forms::LinkLabel^  linkLabel3;
 private: System::Windows::Forms::LinkLabel^  linkLabel2;
+private: System::Windows::Forms::Button^  backbutton;
 
 
 private: System::ComponentModel::IContainer^  components;
@@ -775,6 +786,7 @@ private: System::ComponentModel::IContainer^  components;
 			this->label7 = (gcnew System::Windows::Forms::Label());
 			this->label6 = (gcnew System::Windows::Forms::Label());
 			this->timer1 = (gcnew System::Windows::Forms::Timer(this->components));
+			this->backbutton = (gcnew System::Windows::Forms::Button());
 			this->panel1->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->pictureBox1))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->pictureBox2))->BeginInit();
@@ -2020,6 +2032,7 @@ private: System::ComponentModel::IContainer^  components;
 			this->panel2->BackColor = System::Drawing::SystemColors::ActiveBorder;
 			this->panel2->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"panel2.BackgroundImage")));
 			this->panel2->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->panel2->Controls->Add(this->backbutton);
 			this->panel2->Controls->Add(this->button4);
 			this->panel2->Controls->Add(this->Intro);
 			this->panel2->Controls->Add(this->button);
@@ -2057,10 +2070,10 @@ private: System::ComponentModel::IContainer^  components;
 			this->Intro->Font = (gcnew System::Drawing::Font(L"Leelawadee UI", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->Intro->ForeColor = System::Drawing::Color::MidnightBlue;
-			this->Intro->Location = System::Drawing::Point(409, 284);
+			this->Intro->Location = System::Drawing::Point(326, 284);
 			this->Intro->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->Intro->Name = L"Intro";
-			this->Intro->Size = System::Drawing::Size(984, 240);
+			this->Intro->Size = System::Drawing::Size(693, 260);
 			this->Intro->TabIndex = 9;
 			this->Intro->Text = resources->GetString(L"Intro.Text");
 			// 
@@ -2643,15 +2656,29 @@ private: System::ComponentModel::IContainer^  components;
 			this->timer1->Interval = 1000;
 			this->timer1->Tick += gcnew System::EventHandler(this, &Abacus::timer1_Tick);
 			// 
+			// backbutton
+			// 
+			this->backbutton->Font = (gcnew System::Drawing::Font(L"Buxton Sketch", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->backbutton->Location = System::Drawing::Point(20, 96);
+			this->backbutton->Margin = System::Windows::Forms::Padding(4);
+			this->backbutton->Name = L"backbutton";
+			this->backbutton->Size = System::Drawing::Size(188, 41);
+			this->backbutton->TabIndex = 11;
+			this->backbutton->Text = L"Back";
+			this->backbutton->UseVisualStyleBackColor = true;
+			this->backbutton->Click += gcnew System::EventHandler(this, &Abacus::backbutton_Click);
+			// 
 			// Abacus
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(1245, 604);
+			this->ControlBox = false;
+			this->Controls->Add(this->panel2);
 			this->Controls->Add(this->panel3);
 			this->Controls->Add(this->panel1);
 			this->Controls->Add(this->panel4);
-			this->Controls->Add(this->panel2);
 			this->Margin = System::Windows::Forms::Padding(4);
 			this->Name = L"Abacus";
 			this->Text = L"Abacus";
@@ -2735,6 +2762,7 @@ private: System::ComponentModel::IContainer^  components;
 		}
 #pragma endregion
 		Form^ caller;
+		int stuID;
 		int tmp,count; //tmp for intro show and hide and count for timer used for time limit
 		int additionpt,subpt,mulpt,divpt,timespent,quesolved;  //point scored in an indivisual module
 private: System::Void textBox10_TextChanged(System::Object^  sender, System::EventArgs^  e) {
@@ -3535,6 +3563,39 @@ private: System::Void Abacus_Load(System::Object^  sender, System::EventArgs^  e
 			 l5->Visible=false;
 			 l6->Visible=false;
 			 l7->Visible=false;
+			 //additionpt, subpt, mulpt, divpt;
+			 try {
+				 OleDb::OleDbConnection ^ con = gcnew OleDb::OleDbConnection();
+				 con->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=FunBrainzForKids.accdb;";
+				 String ^ Sql = "Select [addition] from Abacus where [StudentId] = " + stuID + ";";
+				 OleDb::OleDbCommand ^ command = gcnew OleDb::OleDbCommand(Sql, con);
+				 con->Open();
+				 additionpt =  (int) command->ExecuteScalar();
+				 con->Close();
+
+				 Sql = "Select [subtraction] from Abacus where [StudentId] = " + stuID + ";";
+				 command = gcnew OleDb::OleDbCommand(Sql, con);
+				 con->Open();
+				 subpt =  (int) command->ExecuteScalar();
+				 con->Close();
+
+				 Sql = "Select [multiplication] from Abacus where [StudentId] = " + stuID + ";";
+				 command = gcnew OleDb::OleDbCommand(Sql, con);
+				 con->Open();
+				 mulpt =  (int) command->ExecuteScalar();
+				 con->Close();
+
+				 Sql = "Select [division] from Abacus where [StudentId] = " + stuID + ";";
+				 command = gcnew OleDb::OleDbCommand(Sql, con);
+				 con->Open();
+				 divpt =  (int) command->ExecuteScalar();
+				 con->Close();
+
+			 }
+			 catch (Exception ^ ex) {
+				 MessageBox::Show(ex->Message);
+			 }
+
 		 }
 private: System::Void BACK_Click(System::Object^  sender, System::EventArgs^  e) {
 			  this->panel1->Visible=false;
@@ -3554,6 +3615,36 @@ private: System::Void BACK_Click(System::Object^  sender, System::EventArgs^  e)
 			 l7->Visible=false;
 			 timer1->Enabled=false;
 			 label3->Visible=false;
+			 try {
+				 OleDb::OleDbConnection ^ con = gcnew OleDb::OleDbConnection();
+				 con->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=FunBrainzForKids.accdb;";
+				 String ^ Sql = "Update Abacus Set [addition] = " + additionpt+ " where [StudentId] = " + stuID + ";";
+				 OleDb::OleDbCommand ^ command = gcnew OleDb::OleDbCommand(Sql, con);
+				 con->Open();
+				 command->ExecuteNonQuery();
+				 con->Close();
+
+				 Sql = "Update Abacus Set [subtraction] = " + subpt+ " where [StudentId] = " + stuID + ";";
+				 command = gcnew OleDb::OleDbCommand(Sql, con);
+				 con->Open();
+				 command->ExecuteNonQuery();
+				 con->Close();
+
+				 Sql = "Update Abacus Set [multiplication] = " + mulpt+ " where [StudentId] = " + stuID + ";";
+				 command = gcnew OleDb::OleDbCommand(Sql, con);
+				 con->Open();
+				 command->ExecuteNonQuery();
+				 con->Close();
+
+				 Sql = "Update Abacus Set [division] = " + divpt+ " where [StudentId] = " + stuID + ";";
+				 command = gcnew OleDb::OleDbCommand(Sql, con);
+				 con->Open();
+				 command->ExecuteNonQuery();
+				 con->Close();
+			 }
+			 catch (Exception ^ ex) {
+				 MessageBox::Show(ex->Message);
+			 }
 			 resetabacus();
 		 }
 private: System::Void button3_Click(System::Object^  sender, System::EventArgs^  e) {
@@ -3718,6 +3809,9 @@ private: System::Void linkLabel8_LinkClicked(System::Object^  sender, System::Wi
 			System::Diagnostics::Process::Start("https://youtu.be/DZBcdB7iQMs");
 		 }
 private: System::Void level_TextChanged(System::Object^  sender, System::EventArgs^  e) {
+		 }
+private: System::Void backbutton_Click(System::Object^  sender, System::EventArgs^  e) {
+			 this->Close();
 		 }
 };
 }

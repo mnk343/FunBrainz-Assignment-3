@@ -304,7 +304,19 @@ namespace FunBrainz {
 			 
 
 	private: System::Void button3_Click(System::Object^  sender, System::EventArgs^  e) {
-				 Abacus ^form =gcnew Abacus(this);
+				 int student=1;
+				 try {
+
+					 String ^Sql = "Select [StudentID] from Students where [UserName] = '" + user + "';";
+					 OleDb::OleDbCommand ^ command = gcnew OleDb::OleDbCommand(Sql, con);
+					 con->Open();
+					 student = (int) command->ExecuteScalar();
+					 con->Close();
+				 }
+				 catch (Exception ^ ex) {
+					 MessageBox::Show(ex->Message);
+				 }
+				 Abacus ^form =gcnew Abacus(student);
 				 form->ShowDialog();
 			 }
 	private: System::Void button4_Click(System::Object^  sender, System::EventArgs^  e) {
