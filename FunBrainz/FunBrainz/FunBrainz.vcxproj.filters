@@ -261,5 +261,8 @@
     <EmbeddedResource Include="PuzzlesRedirect.resx">
       <Filter>Resource Files</Filter>
     </EmbeddedResource>
+    <EmbeddedResource Include="operatorFilling.resx">
+      <Filter>Resource Files</Filter>
+    </EmbeddedResource>
   </ItemGroup>
 </Project>

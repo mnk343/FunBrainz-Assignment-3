@@ -1225,6 +1225,14 @@ private: System::ComponentModel::IContainer^  components;
 				 panel1->Visible=false;
 				 btn_next->Visible=true;
 				 next_flag=0;
+				 stars=3;
+				 lbl_star1->Visible=true;
+				 lbl_star2->Visible=true;
+				 lbl_star3->Visible=true;
+				 lbl_panelstar3->Visible=true;
+				 lbl_panelstar2->Visible=true;
+				 lbl_panelstar1->Visible=true;
+				 
 				 //MessageBox::Show(System::Convert::ToString(level_flag_of_puzzle));
 				 int n=5;
 				 encoding_of_image_loaded=new int*[n];
@@ -1762,9 +1770,7 @@ private: System::ComponentModel::IContainer^  components;
 	private: System::Void btn_Back_To_Main_From_Pipeline_Game_Click(System::Object^  sender, System::EventArgs^  e) {
 				 timer->Stop();
 				 caller->Show();
-				 this->Hide();
-				 
-				
+				 this->Close();
 			 }
 
 	private: System::Void timer_Tick(System::Object^  sender, System::EventArgs^  e) {

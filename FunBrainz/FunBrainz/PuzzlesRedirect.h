@@ -143,7 +143,7 @@ namespace FunBrainz {
 
 			 }
 	private: System::Void btn_quiz_Click(System::Object^  sender, System::EventArgs^  e) {
-				 Image_Quiz ^form =gcnew Image_Quiz();
+				 Image_Quiz ^form =gcnew Image_Quiz(stuId);
 				 form->ShowDialog();
 
 			 }

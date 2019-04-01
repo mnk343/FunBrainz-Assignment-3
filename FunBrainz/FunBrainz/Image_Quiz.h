@@ -41,6 +41,11 @@ namespace FunBrainz {
 			InitializeComponent();
 			caller=obj1;
 		}
+		Image_Quiz(int num)
+		{
+			InitializeComponent();
+			stuId=num;
+		}
 
 	protected:
 		/// <summary>
@@ -281,6 +286,7 @@ namespace FunBrainz {
 		}
 #pragma endregion
 		Form^ caller;
+		int stuId;
 		/*void read_directory(string folder)
 		{
 			string search_path = "media/" + folder + "/*.*";
@@ -350,7 +356,7 @@ namespace FunBrainz {
 		}*/
 	private: System::Void btn_Animal_Click(System::Object^  sender, System::EventArgs^  e) {
 				 Image_Quiz::Hide();
-				 Image_Quiz_Display ^ form = gcnew Image_Quiz_Display(this,"Animal");
+				 Image_Quiz_Display ^ form = gcnew Image_Quiz_Display(this,"Animal",stuId);
 				 form->ShowDialog();
 	}
 	private: System::Void Image_Quiz_Load_1(System::Object^  sender, System::EventArgs^  e) {
@@ -372,42 +378,42 @@ namespace FunBrainz {
 
 private: System::Void btn_bird_Click(System::Object^  sender, System::EventArgs^  e) {
 			 Image_Quiz::Hide();
-			 Image_Quiz_Display ^ form = gcnew Image_Quiz_Display(this,"Bird");
+			 Image_Quiz_Display ^ form = gcnew Image_Quiz_Display(this,"Bird",stuId);
 			 form->ShowDialog();
 		 }
 private: System::Void btn_flag_Click(System::Object^  sender, System::EventArgs^  e) {
 			 Image_Quiz::Hide();
-			 Image_Quiz_Display ^ form = gcnew Image_Quiz_Display(this,"Flag");
+			 Image_Quiz_Display ^ form = gcnew Image_Quiz_Display(this,"Flag",stuId);
 			 form->ShowDialog();
 		 }
 private: System::Void btn_flower_Click(System::Object^  sender, System::EventArgs^  e) {
 			 Image_Quiz::Hide();
-			 Image_Quiz_Display ^ form = gcnew Image_Quiz_Display(this,"Flower");
+			 Image_Quiz_Display ^ form = gcnew Image_Quiz_Display(this,"Flower",stuId);
 			 form->ShowDialog();
 		 }
 private: System::Void btn_fruit_Click(System::Object^  sender, System::EventArgs^  e) {
 			 Image_Quiz::Hide();
-			 Image_Quiz_Display ^ form = gcnew Image_Quiz_Display(this,"Fruit");
+			 Image_Quiz_Display ^ form = gcnew Image_Quiz_Display(this,"Fruit",stuId);
 			 form->ShowDialog();
 		 }
 private: System::Void btn_landmark_Click(System::Object^  sender, System::EventArgs^  e) {
 			 Image_Quiz::Hide();
-			 Image_Quiz_Display ^ form = gcnew Image_Quiz_Display(this,"Landmark");
+			 Image_Quiz_Display ^ form = gcnew Image_Quiz_Display(this,"Landmark",stuId);
 			 form->ShowDialog();
 		 }
 private: System::Void btn_objects_Click(System::Object^  sender, System::EventArgs^  e) {
 			 Image_Quiz::Hide();
-			 Image_Quiz_Display ^ form = gcnew Image_Quiz_Display(this,"Objects");
+			 Image_Quiz_Display ^ form = gcnew Image_Quiz_Display(this,"Objects",stuId);
 			 form->ShowDialog();
 		 }
 private: System::Void btn_sports_Click(System::Object^  sender, System::EventArgs^  e) {
 			 Image_Quiz::Hide();
-			 Image_Quiz_Display ^ form = gcnew Image_Quiz_Display(this,"Sports");
+			 Image_Quiz_Display ^ form = gcnew Image_Quiz_Display(this,"Sports",stuId);
 			 form->ShowDialog();
 		 }
 private: System::Void btn_veg_Click(System::Object^  sender, System::EventArgs^  e) {
 			 Image_Quiz::Hide();
-			 Image_Quiz_Display ^ form = gcnew Image_Quiz_Display(this,"Vegetable");
+			 Image_Quiz_Display ^ form = gcnew Image_Quiz_Display(this,"Vegetable",stuId);
 			 form->ShowDialog();
 		 }
 };
