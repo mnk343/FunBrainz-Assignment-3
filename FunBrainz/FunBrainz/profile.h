@@ -480,8 +480,8 @@ namespace FunBrainz {
 				 textBox1->Enabled = true;
 				 textBox2->Enabled = true;
 				 textBox3->Enabled = true;
-				 DOBtxt->Enabled = true;
-				 Gendertxt->Enabled = true;
+			   //	 DOBtxt->Enabled = true;
+				// Gendertxt->Enabled = true;
 				 textBox6->Enabled = true;
 				 textBox7->Enabled = true;
 				 save_button->Visible = true;
@@ -494,8 +494,8 @@ namespace FunBrainz {
 				 textBox1->Enabled = false;
 				 textBox2->Enabled = false;
 				 textBox3->Enabled = false;
-				 //DOBtxt->Enabled = false;
-				 //Gendertxt->Enabled = false;
+				 DOBtxt->Enabled = false;
+				 Gendertxt->Enabled = false;
 				 textBox6->Enabled = false;
 				 textBox7->Enabled = false;
 				 save_button->Visible = false;
