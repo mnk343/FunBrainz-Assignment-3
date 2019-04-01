@@ -825,7 +825,7 @@ namespace FunBrainz {
 					 con->Close();
 
 					 con->Open();
-					 access1 = "insert into [register_table] ([name] ,[figureqs_read],[nofigqs_read]) values('"+UserNametxt->Text+"',1,1);";	
+					 access1 = "insert into [Pipeline_Scoring] ([StudentID] ,[Levels_Completed_Easy],[Levels_Completed_Medium],[Levels_Completed_Hard],[Levels_Completed_Advanced],[Levels_Completed_Expert],[Score_Easy],[Score_Medium],[Score_Hard],[Score_Adavnced],[Score_Expert]) values("+id+",0,0,0,0,0,',',',',',',',',',');";	
 					 //MessageBox::Show(access1);
 					 command = gcnew OleDb::OleDbCommand(access1, con);
 					 command->ExecuteNonQuery();

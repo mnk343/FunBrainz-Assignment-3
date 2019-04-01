@@ -623,7 +623,7 @@ private: System::Void chart1_Click(System::Object^  sender, System::EventArgs^  
 				 if (k == 3) str = "Advance";
 				 if (k == 4) str = "Expert";
 				 //MessageBox::Show(str);
-				 this->chart3->ChartAreas[str]->AxisX->Title = "PiplineDayscore";
+				 this->chart3->ChartAreas[str]->AxisX->Title = str;
 				 this->chart3->ChartAreas[str]->AxisY->Title = "";
 				 this->chart3->ChartAreas[str]->AxisX->MajorGrid->LineColor = Color();
 				 this->chart3->ChartAreas[str]->AxisY->Interval = 1;
@@ -796,6 +796,7 @@ private: System::Void Pipelinegraphbtn_Click(System::Object^  sender, System::Ev
 			 this->chart2->ChartAreas["Levels"]->AxisY->Title = "No of Levels Completed";
 			 this->chart2->ChartAreas["Levels"]->AxisY->Interval = 1;
 			 this->chart2->ChartAreas["Levels"]->AxisX->MajorGrid->LineColor = Color();
+			 this->chart2->Series["Levelscompleted"]->Points->Clear();
 			 try{
 
 				 String ^ Sql = "Select [Levels_Completed_Easy] from Pipeline_Scoring Where  StudentID = " + id + " ";

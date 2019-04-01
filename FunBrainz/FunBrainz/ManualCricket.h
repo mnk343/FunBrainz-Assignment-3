@@ -115,6 +115,21 @@ namespace FunBrainz {
 				 {
 					 label2->Text = "1. Enter the correct answer of the question and click submit.\r\n \r\n 2. Stop the slider by clicking stop and the outcome that the slider\r\n points to will be the outcome. \r\n \r\n3. Chase down the target to win the game and ENJOY!!";
 				 }
+				 //2048
+				 if(typex==2)
+				 {
+					 label2->Text = "1. Enter the correct answer of the question and click submit.\r\n \r\n 2. Stop the slider by clicking stop and the outcome that the slider\r\n points to will be the outcome. \r\n \r\n3. Chase down the target to win the game and ENJOY!!";
+				 }
+				 //imagequiz
+				 if(typex==3)
+				 {
+					 label2->Text = "1. Enter the correct answer of the question and click submit.\r\n \r\n 2. Stop the slider by clicking stop and the outcome that the slider\r\n points to will be the outcome. \r\n \r\n3. Chase down the target to win the game and ENJOY!!";
+				 }
+				 //pipeline
+				 if(typex==4)
+				 {
+					 label2->Text = "1. Enter the correct answer of the question and click submit.\r\n \r\n 2. Stop the slider by clicking stop and the outcome that the slider\r\n points to will be the outcome. \r\n \r\n3. Chase down the target to win the game and ENJOY!!";
+				 }
 			 }
 	};
 }

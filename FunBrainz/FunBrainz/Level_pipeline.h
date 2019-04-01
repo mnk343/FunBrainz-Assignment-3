@@ -8,6 +8,7 @@
 #include <ctime>
 #include<utility>
 #include<vector>
+#include "ManualCricket.h"
 #include<algorithm>
 #include "Pipeline_Game.h"
 
@@ -169,6 +170,7 @@ namespace FunBrainz {
 	private: System::Windows::Forms::Button^  btn_4;
 	private: System::Windows::Forms::Button^  btn_5;
 private: System::Windows::Forms::Label^  lbl_Difficulty;
+private: System::Windows::Forms::Button^  button2;
 
 
 
@@ -195,6 +197,7 @@ private: System::Windows::Forms::Label^  lbl_Difficulty;
 			this->btn_Medium = (gcnew System::Windows::Forms::Button());
 			this->btn_Easy = (gcnew System::Windows::Forms::Button());
 			this->pnl_Levels_Displayed = (gcnew System::Windows::Forms::Panel());
+			this->lbl_Difficulty = (gcnew System::Windows::Forms::Label());
 			this->btn_47 = (gcnew System::Windows::Forms::Button());
 			this->btn_48 = (gcnew System::Windows::Forms::Button());
 			this->btn_49 = (gcnew System::Windows::Forms::Button());
@@ -245,7 +248,7 @@ private: System::Windows::Forms::Label^  lbl_Difficulty;
 			this->btn_4 = (gcnew System::Windows::Forms::Button());
 			this->btn_5 = (gcnew System::Windows::Forms::Button());
 			this->btn_1 = (gcnew System::Windows::Forms::Button());
-			this->lbl_Difficulty = (gcnew System::Windows::Forms::Label());
+			this->button2 = (gcnew System::Windows::Forms::Button());
 			this->pnl_Levels->SuspendLayout();
 			this->pnl_Levels_Displayed->SuspendLayout();
 			this->SuspendLayout();
@@ -253,6 +256,7 @@ private: System::Windows::Forms::Label^  lbl_Difficulty;
 			// pnl_Levels
 			// 
 			this->pnl_Levels->BackColor = System::Drawing::Color::Gray;
+			this->pnl_Levels->Controls->Add(this->button2);
 			this->pnl_Levels->Controls->Add(this->btn_Expert);
 			this->pnl_Levels->Controls->Add(this->btn_Advanced);
 			this->pnl_Levels->Controls->Add(this->btn_Hard);
@@ -397,6 +401,17 @@ private: System::Windows::Forms::Label^  lbl_Difficulty;
 			this->pnl_Levels_Displayed->Size = System::Drawing::Size(765, 586);
 			this->pnl_Levels_Displayed->TabIndex = 6;
 			this->pnl_Levels_Displayed->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &Level_pipeline::pnl_Levels_Displayed_Paint);
+			// 
+			// lbl_Difficulty
+			// 
+			this->lbl_Difficulty->AutoSize = true;
+			this->lbl_Difficulty->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->lbl_Difficulty->Location = System::Drawing::Point(316, 40);
+			this->lbl_Difficulty->Name = L"lbl_Difficulty";
+			this->lbl_Difficulty->Size = System::Drawing::Size(80, 29);
+			this->lbl_Difficulty->TabIndex = 80;
+			this->lbl_Difficulty->Text = L"EASY";
 			// 
 			// btn_47
 			// 
@@ -1102,16 +1117,19 @@ private: System::Windows::Forms::Label^  lbl_Difficulty;
 			this->btn_1->UseVisualStyleBackColor = true;
 			this->btn_1->Click += gcnew System::EventHandler(this, &Level_pipeline::level_click);
 			// 
-			// lbl_Difficulty
+			// button2
 			// 
-			this->lbl_Difficulty->AutoSize = true;
-			this->lbl_Difficulty->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
+			this->button2->BackColor = System::Drawing::Color::LemonChiffon;
+			this->button2->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+			this->button2->Font = (gcnew System::Drawing::Font(L"Lucida Fax", 10.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->lbl_Difficulty->Location = System::Drawing::Point(316, 40);
-			this->lbl_Difficulty->Name = L"lbl_Difficulty";
-			this->lbl_Difficulty->Size = System::Drawing::Size(80, 29);
-			this->lbl_Difficulty->TabIndex = 80;
-			this->lbl_Difficulty->Text = L"EASY";
+			this->button2->Location = System::Drawing::Point(23, 13);
+			this->button2->Name = L"button2";
+			this->button2->Size = System::Drawing::Size(117, 29);
+			this->button2->TabIndex = 81;
+			this->button2->Text = L"Help";
+			this->button2->UseVisualStyleBackColor = false;
+			this->button2->Click += gcnew System::EventHandler(this, &Level_pipeline::button2_Click);
 			// 
 			// Level_pipeline
 			// 
@@ -1146,7 +1164,7 @@ private: System::Windows::Forms::Label^  lbl_Difficulty;
 				this->Hide();
 			}
 	private: System::Void Level_pipeline_Load(System::Object^  sender, System::EventArgs^  e) {
-				
+				count=0;				
 				try {
 					OleDb::OleDbConnection ^ con = gcnew OleDb::OleDbConnection();
 					con->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=FunBrainzForKids.accdb;";
@@ -1175,12 +1193,12 @@ private: System::Windows::Forms::Label^  lbl_Difficulty;
 private: System::Void level_click(System::Object^  sender, System::EventArgs^  e) {
 			 Button^ btn = ((Button^)sender);
 			 int level = System::Int64::Parse(btn->Text);	
-			 Pipeline_Game^ form = gcnew Pipeline_Game(this,level,level_flag,answer_type,answer_index,count);
-			 form->ShowDialog();
-			 delete form;
+			 Pipeline_Game^ form = gcnew Pipeline_Game(this,level,level_flag,answer_type,answer_index,count,stuId);
+
 			 this->Hide();
 			 form->ShowDialog();
 			 delete form;
+			 this->Show();
 		 }
 private: System::Void btn_Easy_Click(System::Object^  sender, System::EventArgs^  e) {
 			 lbl_Difficulty->Text="EASY";
@@ -1381,8 +1399,7 @@ private: System::Void Level_pipeline_Shown(System::Object^  sender, System::Even
 			 btn_Easy->PerformClick();
 		 }
 private: System::Void Level_pipeline_VisibleChanged(System::Object^  sender, System::EventArgs^  e) {
-			 if(Pipeline_Game::next_flag==1)
-			 {
+			 
 				 if(lbl_Difficulty->Text=="EASY"){
 					 btn_Easy->PerformClick();
 				 }
@@ -1398,21 +1415,16 @@ private: System::Void Level_pipeline_VisibleChanged(System::Object^  sender, Sys
 				 if(lbl_Difficulty->Text=="EXPERT"){
 					 btn_Expert->PerformClick();
 				 }
-				 //MessageBox::Show(System::Convert::ToString((Pipeline_Game::level_of_puzzle)+1));				
-				int level = (Pipeline_Game::level_of_puzzle)+1;	
-				Pipeline_Game^ form = gcnew Pipeline_Game(this,level,level_flag,answer_type,answer_index,count);
-				form->ShowDialog();
-				delete form;
-				//MessageBox::Show("this is the one we want"+level_btn->Text);
-				//this->Hide();
-			 }
-			 else
-				btn_Easy->PerformClick();
+			 
 
 		 }
 private: System::Void pnl_Levels_Displayed_Paint(System::Object^  sender, System::Windows::Forms::PaintEventArgs^  e) {
 		 }
 private: System::Void pnl_Levels_Paint(System::Object^  sender, System::Windows::Forms::PaintEventArgs^  e) {
+		 }
+private: System::Void button2_Click(System::Object^  sender, System::EventArgs^  e) {
+			 ManualCricket ^ fom = gcnew ManualCricket(1);
+			 fom->ShowDialog();
 		 }
 };
 }
