@@ -1423,7 +1423,7 @@ private: System::Void pnl_Levels_Displayed_Paint(System::Object^  sender, System
 private: System::Void pnl_Levels_Paint(System::Object^  sender, System::Windows::Forms::PaintEventArgs^  e) {
 		 }
 private: System::Void button2_Click(System::Object^  sender, System::EventArgs^  e) {
-			 ManualCricket ^ fom = gcnew ManualCricket(1);
+			 ManualCricket ^ fom = gcnew ManualCricket(4);
 			 fom->ShowDialog();
 		 }
 };

@@ -7,6 +7,8 @@
 #include<ctime>
 #include<string>
 #include<iostream>
+#include "ManualCricket.h"
+
 namespace FunBrainz {
 
 	using namespace System;
@@ -54,6 +56,7 @@ namespace FunBrainz {
 	private: System::Windows::Forms::Button^  button2;
 	private: System::Windows::Forms::Button^  button3;
 	private: System::Windows::Forms::Button^  button4;
+	private: System::Windows::Forms::Button^  button5;
 
 	private:
 		/// <summary>
@@ -74,6 +77,7 @@ namespace FunBrainz {
 			this->button2 = (gcnew System::Windows::Forms::Button());
 			this->button3 = (gcnew System::Windows::Forms::Button());
 			this->button4 = (gcnew System::Windows::Forms::Button());
+			this->button5 = (gcnew System::Windows::Forms::Button());
 			this->SuspendLayout();
 			// 
 			// label1
@@ -82,9 +86,10 @@ namespace FunBrainz {
 			this->label1->BackColor = System::Drawing::Color::Transparent;
 			this->label1->Font = (gcnew System::Drawing::Font(L"Century Gothic", 27.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->label1->Location = System::Drawing::Point(132, 59);
+			this->label1->Location = System::Drawing::Point(99, 48);
+			this->label1->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(276, 57);
+			this->label1->Size = System::Drawing::Size(216, 44);
 			this->label1->TabIndex = 0;
 			this->label1->Text = L"Categories";
 			// 
@@ -94,10 +99,10 @@ namespace FunBrainz {
 			this->button1->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
 			this->button1->Font = (gcnew System::Drawing::Font(L"Century Gothic", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->button1->Location = System::Drawing::Point(143, 155);
-			this->button1->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->button1->Location = System::Drawing::Point(107, 126);
+			this->button1->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(267, 65);
+			this->button1->Size = System::Drawing::Size(200, 53);
 			this->button1->TabIndex = 1;
 			this->button1->Text = L"Addition";
 			this->button1->UseVisualStyleBackColor = false;
@@ -109,10 +114,10 @@ namespace FunBrainz {
 			this->button2->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
 			this->button2->Font = (gcnew System::Drawing::Font(L"Century Gothic", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->button2->Location = System::Drawing::Point(143, 235);
-			this->button2->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->button2->Location = System::Drawing::Point(107, 191);
+			this->button2->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->button2->Name = L"button2";
-			this->button2->Size = System::Drawing::Size(267, 65);
+			this->button2->Size = System::Drawing::Size(200, 53);
 			this->button2->TabIndex = 2;
 			this->button2->Text = L"Subtraction";
 			this->button2->UseVisualStyleBackColor = false;
@@ -125,10 +130,10 @@ namespace FunBrainz {
 			this->button3->Font = (gcnew System::Drawing::Font(L"Century Gothic", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->button3->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
-			this->button3->Location = System::Drawing::Point(143, 315);
-			this->button3->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->button3->Location = System::Drawing::Point(107, 256);
+			this->button3->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->button3->Name = L"button3";
-			this->button3->Size = System::Drawing::Size(267, 65);
+			this->button3->Size = System::Drawing::Size(200, 53);
 			this->button3->TabIndex = 3;
 			this->button3->Text = L"Multiplication";
 			this->button3->UseVisualStyleBackColor = false;
@@ -141,32 +146,48 @@ namespace FunBrainz {
 			this->button4->Font = (gcnew System::Drawing::Font(L"Century Gothic", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->button4->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
-			this->button4->Location = System::Drawing::Point(143, 395);
-			this->button4->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->button4->Location = System::Drawing::Point(107, 321);
+			this->button4->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->button4->Name = L"button4";
-			this->button4->Size = System::Drawing::Size(267, 65);
+			this->button4->Size = System::Drawing::Size(200, 53);
 			this->button4->TabIndex = 4;
 			this->button4->Text = L"Division";
 			this->button4->UseVisualStyleBackColor = false;
 			this->button4->Click += gcnew System::EventHandler(this, &cloud::button4_Click);
 			// 
+			// button5
+			// 
+			this->button5->BackColor = System::Drawing::Color::LemonChiffon;
+			this->button5->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+			this->button5->Font = (gcnew System::Drawing::Font(L"Lucida Fax", 10.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->button5->Location = System::Drawing::Point(11, 11);
+			this->button5->Margin = System::Windows::Forms::Padding(2);
+			this->button5->Name = L"button5";
+			this->button5->Size = System::Drawing::Size(88, 24);
+			this->button5->TabIndex = 31;
+			this->button5->Text = L"Help";
+			this->button5->UseVisualStyleBackColor = false;
+			this->button5->Click += gcnew System::EventHandler(this, &cloud::button5_Click);
+			// 
 			// cloud
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
+			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"$this.BackgroundImage")));
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->ClientSize = System::Drawing::Size(545, 545);
+			this->ClientSize = System::Drawing::Size(410, 449);
+			this->Controls->Add(this->button5);
 			this->Controls->Add(this->button4);
 			this->Controls->Add(this->button3);
 			this->Controls->Add(this->button2);
 			this->Controls->Add(this->button1);
 			this->Controls->Add(this->label1);
-			this->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->MaximizeBox = false;
-			this->MaximumSize = System::Drawing::Size(563, 592);
+			this->MaximumSize = System::Drawing::Size(426, 488);
 			this->MinimizeBox = false;
-			this->MinimumSize = System::Drawing::Size(563, 592);
+			this->MinimumSize = System::Drawing::Size(426, 488);
 			this->Name = L"cloud";
 			this->Text = L"cloud";
 			this->Load += gcnew System::EventHandler(this, &cloud::cloud_Load);
@@ -202,6 +223,12 @@ private: System::Void button4_Click(System::Object^  sender, System::EventArgs^ 
 		 }
 
 private: System::Void cloud_Load(System::Object^  sender, System::EventArgs^  e) {
+		 }
+private: System::Void button5_Click(System::Object^  sender, System::EventArgs^  e) {
+
+			 ManualCricket ^ fom = gcnew ManualCricket(6);
+			 fom->ShowDialog();
+
 		 }
 };
 }

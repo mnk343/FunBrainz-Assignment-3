@@ -1,6 +1,8 @@
 #include<iostream>
 #include<stdio.h>
 #include<stdlib.h>
+#include "ManualCricket.h"
+
 #pragma once
 
 				 
@@ -114,6 +116,7 @@ namespace FunBrainz {
 	private: System::Windows::Forms::Label^  label7;
 	private: System::Windows::Forms::Button^  button1;
 	private: System::Windows::Forms::Label^  label9;
+	private: System::Windows::Forms::Button^  button2;
 
 
 
@@ -185,6 +188,7 @@ namespace FunBrainz {
 			this->label8 = (gcnew System::Windows::Forms::Label());
 			this->label7 = (gcnew System::Windows::Forms::Label());
 			this->button1 = (gcnew System::Windows::Forms::Button());
+			this->button2 = (gcnew System::Windows::Forms::Button());
 			this->panel1->SuspendLayout();
 			this->panel3->SuspendLayout();
 			this->panel5->SuspendLayout();
@@ -205,7 +209,7 @@ namespace FunBrainz {
 			this->text1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->text1->ForeColor = System::Drawing::Color::White;
-			this->text1->Location = System::Drawing::Point(159, 160);
+			this->text1->Location = System::Drawing::Point(215, 166);
 			this->text1->Name = L"text1";
 			this->text1->Size = System::Drawing::Size(19, 25);
 			this->text1->TabIndex = 7;
@@ -218,7 +222,7 @@ namespace FunBrainz {
 			this->text2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->text2->ForeColor = System::Drawing::Color::White;
-			this->text2->Location = System::Drawing::Point(412, 160);
+			this->text2->Location = System::Drawing::Point(427, 166);
 			this->text2->Name = L"text2";
 			this->text2->Size = System::Drawing::Size(19, 25);
 			this->text2->TabIndex = 8;
@@ -231,7 +235,7 @@ namespace FunBrainz {
 			this->answer->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->answer->ForeColor = System::Drawing::Color::White;
-			this->answer->Location = System::Drawing::Point(523, 160);
+			this->answer->Location = System::Drawing::Point(507, 166);
 			this->answer->Name = L"answer";
 			this->answer->Size = System::Drawing::Size(47, 25);
 			this->answer->TabIndex = 6;
@@ -241,7 +245,7 @@ namespace FunBrainz {
 			// 
 			this->inputOp1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->inputOp1->Location = System::Drawing::Point(110, 160);
+			this->inputOp1->Location = System::Drawing::Point(156, 163);
 			this->inputOp1->Name = L"inputOp1";
 			this->inputOp1->Size = System::Drawing::Size(40, 31);
 			this->inputOp1->TabIndex = 9;
@@ -255,7 +259,7 @@ namespace FunBrainz {
 			this->equalSign->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->equalSign->ForeColor = System::Drawing::Color::White;
-			this->equalSign->Location = System::Drawing::Point(459, 160);
+			this->equalSign->Location = System::Drawing::Point(462, 169);
 			this->equalSign->Name = L"equalSign";
 			this->equalSign->Size = System::Drawing::Size(24, 25);
 			this->equalSign->TabIndex = 5;
@@ -265,7 +269,7 @@ namespace FunBrainz {
 			// 
 			this->inputOp2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->inputOp2->Location = System::Drawing::Point(284, 160);
+			this->inputOp2->Location = System::Drawing::Point(304, 163);
 			this->inputOp2->Name = L"inputOp2";
 			this->inputOp2->Size = System::Drawing::Size(39, 31);
 			this->inputOp2->TabIndex = 10;
@@ -277,7 +281,7 @@ namespace FunBrainz {
 			this->number3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->number3->ForeColor = System::Drawing::Color::White;
-			this->number3->Location = System::Drawing::Point(341, 160);
+			this->number3->Location = System::Drawing::Point(356, 166);
 			this->number3->Name = L"number3";
 			this->number3->Size = System::Drawing::Size(65, 25);
 			this->number3->TabIndex = 4;
@@ -296,6 +300,7 @@ namespace FunBrainz {
 			this->oper2->Size = System::Drawing::Size(48, 25);
 			this->oper2->TabIndex = 3;
 			this->oper2->Text = L"op2";
+			this->oper2->Visible = false;
 			// 
 			// lblLevel
 			// 
@@ -317,7 +322,7 @@ namespace FunBrainz {
 			this->number2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->number2->ForeColor = System::Drawing::Color::White;
-			this->number2->Location = System::Drawing::Point(196, 160);
+			this->number2->Location = System::Drawing::Point(233, 166);
 			this->number2->Name = L"number2";
 			this->number2->Size = System::Drawing::Size(65, 25);
 			this->number2->TabIndex = 2;
@@ -349,6 +354,7 @@ namespace FunBrainz {
 			this->oper1->Size = System::Drawing::Size(48, 25);
 			this->oper1->TabIndex = 1;
 			this->oper1->Text = L"op1";
+			this->oper1->Visible = false;
 			// 
 			// lblTriesLeft
 			// 
@@ -370,7 +376,7 @@ namespace FunBrainz {
 			this->number1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->number1->ForeColor = System::Drawing::Color::White;
-			this->number1->Location = System::Drawing::Point(32, 160);
+			this->number1->Location = System::Drawing::Point(76, 166);
 			this->number1->Name = L"number1";
 			this->number1->Size = System::Drawing::Size(65, 25);
 			this->number1->TabIndex = 0;
@@ -396,7 +402,7 @@ namespace FunBrainz {
 			this->submit->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->submit->ForeColor = System::Drawing::Color::White;
-			this->submit->Location = System::Drawing::Point(464, 224);
+			this->submit->Location = System::Drawing::Point(418, 240);
 			this->submit->Name = L"submit";
 			this->submit->Size = System::Drawing::Size(133, 35);
 			this->submit->TabIndex = 11;
@@ -433,6 +439,7 @@ namespace FunBrainz {
 			this->panel1->Name = L"panel1";
 			this->panel1->Size = System::Drawing::Size(617, 346);
 			this->panel1->TabIndex = 16;
+			this->panel1->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &operatorFilling::panel1_Paint);
 			// 
 			// label6
 			// 
@@ -479,7 +486,7 @@ namespace FunBrainz {
 			this->next->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->next->ForeColor = System::Drawing::Color::White;
-			this->next->Location = System::Drawing::Point(387, 259);
+			this->next->Location = System::Drawing::Point(418, 240);
 			this->next->Name = L"next";
 			this->next->Size = System::Drawing::Size(133, 35);
 			this->next->TabIndex = 20;
@@ -605,9 +612,9 @@ namespace FunBrainz {
 			this->panel9->Controls->Add(this->label8);
 			this->panel9->Controls->Add(this->label7);
 			this->panel9->Controls->Add(this->button1);
-			this->panel9->Location = System::Drawing::Point(664, 4);
+			this->panel9->Location = System::Drawing::Point(645, 4);
 			this->panel9->Name = L"panel9";
-			this->panel9->Size = System::Drawing::Size(217, 94);
+			this->panel9->Size = System::Drawing::Size(236, 94);
 			this->panel9->TabIndex = 24;
 			this->panel9->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &operatorFilling::panel9_Paint);
 			// 
@@ -618,7 +625,7 @@ namespace FunBrainz {
 			this->label9->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->label9->ForeColor = System::Drawing::Color::White;
-			this->label9->Location = System::Drawing::Point(30, 54);
+			this->label9->Location = System::Drawing::Point(14, 55);
 			this->label9->Name = L"label9";
 			this->label9->Size = System::Drawing::Size(48, 25);
 			this->label9->TabIndex = 3;
@@ -644,7 +651,7 @@ namespace FunBrainz {
 			this->label7->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->label7->ForeColor = System::Drawing::Color::White;
-			this->label7->Location = System::Drawing::Point(30, 5);
+			this->label7->Location = System::Drawing::Point(14, 5);
 			this->label7->Name = L"label7";
 			this->label7->Size = System::Drawing::Size(68, 25);
 			this->label7->TabIndex = 1;
@@ -663,6 +670,21 @@ namespace FunBrainz {
 			this->button1->UseVisualStyleBackColor = false;
 			this->button1->Click += gcnew System::EventHandler(this, &operatorFilling::button1_Click);
 			// 
+			// button2
+			// 
+			this->button2->BackColor = System::Drawing::Color::LemonChiffon;
+			this->button2->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+			this->button2->Font = (gcnew System::Drawing::Font(L"Lucida Fax", 10.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->button2->Location = System::Drawing::Point(11, 10);
+			this->button2->Margin = System::Windows::Forms::Padding(2);
+			this->button2->Name = L"button2";
+			this->button2->Size = System::Drawing::Size(88, 24);
+			this->button2->TabIndex = 30;
+			this->button2->Text = L"Help";
+			this->button2->UseVisualStyleBackColor = false;
+			this->button2->Click += gcnew System::EventHandler(this, &operatorFilling::button2_Click);
+			// 
 			// operatorFilling
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
@@ -670,6 +692,7 @@ namespace FunBrainz {
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"$this.BackgroundImage")));
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->ClientSize = System::Drawing::Size(885, 440);
+			this->Controls->Add(this->button2);
 			this->Controls->Add(this->panel9);
 			this->Controls->Add(this->panel5);
 			this->Controls->Add(this->panel7);
@@ -859,7 +882,7 @@ private: System::Void operatorFilling_Load(System::Object^  sender, System::Even
 			 OleDb::OleDbConnection ^ con = gcnew OleDb::OleDbConnection();
 			 con->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=FunBrainzForKids.accdb;";
 			 String ^ Sql = "Select [Score] from operatorFilling where [Student_Id] = " + stuID + ";";
-			 MessageBox::Show(Sql);
+			// MessageBox::Show(Sql);
 			 OleDb::OleDbCommand ^ command = gcnew OleDb::OleDbCommand(Sql, con);
 			 con->Open();
 			 preScore =  (int) command->ExecuteScalar();
@@ -1123,6 +1146,7 @@ private: System::Void button1_Click(System::Object^  sender, System::EventArgs^ 
 			 else
 			 {
 				 help++;
+				 MessageBox::Show("Help has been provided!! See the first input Box!!");
 				inputOp1->Text = oper1->Text;
 			 }
 
@@ -1137,5 +1161,12 @@ private: System::Void inputOp1_KeyPress(System::Object^  sender, System::Windows
 private: System::Void inputOp2_KeyPress(System::Object^  sender, System::Windows::Forms::KeyPressEventArgs^  e) {
 		 }
 
+private: System::Void panel1_Paint(System::Object^  sender, System::Windows::Forms::PaintEventArgs^  e) {
+		 }
+private: System::Void button2_Click(System::Object^  sender, System::EventArgs^  e) {
+		 ManualCricket ^ fom = gcnew ManualCricket(5);
+		 fom->ShowDialog();
+
+		 }
 };
 }

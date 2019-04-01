@@ -50,6 +50,9 @@ namespace FunBrainz {
 	protected: 
 	private: System::Windows::Forms::Button^  btn_pipeline;
 	private: System::Windows::Forms::Button^  btn_2048;
+	private: System::Windows::Forms::Panel^  panel1;
+	private: System::Windows::Forms::Label^  label1;
+	private: System::Windows::Forms::Panel^  panel2;
 
 	private:
 		/// <summary>
@@ -68,6 +71,10 @@ namespace FunBrainz {
 			this->btn_quiz = (gcnew System::Windows::Forms::Button());
 			this->btn_pipeline = (gcnew System::Windows::Forms::Button());
 			this->btn_2048 = (gcnew System::Windows::Forms::Button());
+			this->panel1 = (gcnew System::Windows::Forms::Panel());
+			this->label1 = (gcnew System::Windows::Forms::Label());
+			this->panel2 = (gcnew System::Windows::Forms::Panel());
+			this->panel1->SuspendLayout();
 			this->SuspendLayout();
 			// 
 			// btn_quiz
@@ -78,7 +85,7 @@ namespace FunBrainz {
 				static_cast<System::Byte>(0)));
 			this->btn_quiz->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
 			this->btn_quiz->Location = System::Drawing::Point(521, 251);
-			this->btn_quiz->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->btn_quiz->Margin = System::Windows::Forms::Padding(2);
 			this->btn_quiz->Name = L"btn_quiz";
 			this->btn_quiz->Size = System::Drawing::Size(124, 39);
 			this->btn_quiz->TabIndex = 2;
@@ -94,7 +101,7 @@ namespace FunBrainz {
 				static_cast<System::Byte>(0)));
 			this->btn_pipeline->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
 			this->btn_pipeline->Location = System::Drawing::Point(334, 251);
-			this->btn_pipeline->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->btn_pipeline->Margin = System::Windows::Forms::Padding(2);
 			this->btn_pipeline->Name = L"btn_pipeline";
 			this->btn_pipeline->Size = System::Drawing::Size(124, 39);
 			this->btn_pipeline->TabIndex = 1;
@@ -110,7 +117,7 @@ namespace FunBrainz {
 				static_cast<System::Byte>(0)));
 			this->btn_2048->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
 			this->btn_2048->Location = System::Drawing::Point(148, 251);
-			this->btn_2048->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->btn_2048->Margin = System::Windows::Forms::Padding(2);
 			this->btn_2048->Name = L"btn_2048";
 			this->btn_2048->Size = System::Drawing::Size(124, 39);
 			this->btn_2048->TabIndex = 0;
@@ -118,20 +125,54 @@ namespace FunBrainz {
 			this->btn_2048->UseVisualStyleBackColor = false;
 			this->btn_2048->Click += gcnew System::EventHandler(this, &PuzzlesRedirect::btn_2048_Click);
 			// 
+			// panel1
+			// 
+			this->panel1->BackColor = System::Drawing::Color::Transparent;
+			this->panel1->Controls->Add(this->label1);
+			this->panel1->Controls->Add(this->panel2);
+			this->panel1->Location = System::Drawing::Point(3, 3);
+			this->panel1->Name = L"panel1";
+			this->panel1->Size = System::Drawing::Size(842, 536);
+			this->panel1->TabIndex = 3;
+			// 
+			// label1
+			// 
+			this->label1->AutoSize = true;
+			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 21.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->label1->Location = System::Drawing::Point(381, 141);
+			this->label1->Name = L"label1";
+			this->label1->Size = System::Drawing::Size(142, 33);
+			this->label1->TabIndex = 1;
+			this->label1->Text = L"Loading...";
+			// 
+			// panel2
+			// 
+			this->panel2->BackColor = System::Drawing::Color::Transparent;
+			this->panel2->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"panel2.BackgroundImage")));
+			this->panel2->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->panel2->Location = System::Drawing::Point(334, 214);
+			this->panel2->Name = L"panel2";
+			this->panel2->Size = System::Drawing::Size(209, 152);
+			this->panel2->TabIndex = 0;
+			// 
 			// PuzzlesRedirect
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"$this.BackgroundImage")));
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->Controls->Add(this->panel1);
 			this->Controls->Add(this->btn_quiz);
 			this->Controls->Add(this->btn_pipeline);
 			this->Controls->Add(this->btn_2048);
 			this->DoubleBuffered = true;
-			this->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->Margin = System::Windows::Forms::Padding(2);
 			this->Name = L"PuzzlesRedirect";
 			this->Size = System::Drawing::Size(842, 539);
 			this->Load += gcnew System::EventHandler(this, &PuzzlesRedirect::PuzzlesRedirect_Load);
+			this->panel1->ResumeLayout(false);
+			this->panel1->PerformLayout();
 			this->ResumeLayout(false);
 
 		}
@@ -144,11 +185,20 @@ namespace FunBrainz {
 				 delete form;
 			 }
 	private: System::Void btn_pipeline_Click(System::Object^  sender, System::EventArgs^  e) {
+				
+				 
+				 panel1->BringToFront();
+				 panel1->Show();
+				 panel1->BringToFront();
+				 panel2->BringToFront();
+				 label1->BringToFront();
+
 
 				 Level_pipeline ^form =gcnew Level_pipeline(stuId);
 				 form->ShowDialog();
 				 delete form;
 
+				 panel1->Hide();
 			 }
 	private: System::Void btn_quiz_Click(System::Object^  sender, System::EventArgs^  e) {
 				 Image_Quiz ^form =gcnew Image_Quiz(stuId);
@@ -157,6 +207,7 @@ namespace FunBrainz {
 
 			 }
 	private: System::Void PuzzlesRedirect_Load(System::Object^  sender, System::EventArgs^  e) {
+				panel1->Hide();
 			 }
 };
 }
