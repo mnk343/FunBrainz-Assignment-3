@@ -198,9 +198,6 @@
     </ResourceCompile>
   </ItemGroup>
   <ItemGroup>
-  <EmbeddedResource Include="Abacus.resx">
-      <Filter>Resource Files</Filter>
-    </EmbeddedResource>
     <EmbeddedResource Include="Cricket.resx">
       <Filter>Resource Files</Filter>
     </EmbeddedResource>
@@ -262,6 +259,9 @@
       <Filter>Resource Files</Filter>
     </EmbeddedResource>
     <EmbeddedResource Include="PuzzlesRedirect.resx">
+      <Filter>Resource Files</Filter>
+    </EmbeddedResource>
+    <EmbeddedResource Include="operatorFilling.resx">
       <Filter>Resource Files</Filter>
     </EmbeddedResource>
   </ItemGroup>

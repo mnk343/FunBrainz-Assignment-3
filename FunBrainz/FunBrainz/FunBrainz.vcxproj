@@ -209,9 +209,6 @@
     <ResourceCompile Include="app.rc" />
   </ItemGroup>
   <ItemGroup>
-  <EmbeddedResource Include="Abacus.resx">
-      <DependentUpon>Abacus.h</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="all_shape.resx">
       <DependentUpon>all_shape.h</DependentUpon>
     </EmbeddedResource>
@@ -245,6 +242,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ImageQuiz2.resx">
       <DependentUpon>ImageQuiz2.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Image_Quiz.resx">
+      <DependentUpon>Image_Quiz.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Image_Quiz_Display.resx">
+      <DependentUpon>Image_Quiz_Display.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Level_pipeline.resx">
       <DependentUpon>Level_pipeline.h</DependentUpon>
