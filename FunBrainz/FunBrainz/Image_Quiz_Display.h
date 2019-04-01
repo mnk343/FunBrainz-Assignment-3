@@ -159,10 +159,10 @@ namespace FunBrainz {
 			// 
 			// PB_Quiz_Image
 			// 
-			this->PB_Quiz_Image->Location = System::Drawing::Point(340, 32);
-			this->PB_Quiz_Image->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->PB_Quiz_Image->Location = System::Drawing::Point(255, 26);
+			this->PB_Quiz_Image->Margin = System::Windows::Forms::Padding(2);
 			this->PB_Quiz_Image->Name = L"PB_Quiz_Image";
-			this->PB_Quiz_Image->Size = System::Drawing::Size(316, 231);
+			this->PB_Quiz_Image->Size = System::Drawing::Size(237, 188);
 			this->PB_Quiz_Image->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
 			this->PB_Quiz_Image->TabIndex = 0;
 			this->PB_Quiz_Image->TabStop = false;
@@ -175,10 +175,10 @@ namespace FunBrainz {
 			this->btn_Next->Font = (gcnew System::Drawing::Font(L"Century Gothic", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->btn_Next->ForeColor = System::Drawing::SystemColors::ControlDarkDark;
-			this->btn_Next->Location = System::Drawing::Point(801, 241);
-			this->btn_Next->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->btn_Next->Location = System::Drawing::Point(601, 196);
+			this->btn_Next->Margin = System::Windows::Forms::Padding(2);
 			this->btn_Next->Name = L"btn_Next";
-			this->btn_Next->Size = System::Drawing::Size(121, 89);
+			this->btn_Next->Size = System::Drawing::Size(91, 72);
 			this->btn_Next->TabIndex = 1;
 			this->btn_Next->Text = L"NEXT";
 			this->btn_Next->UseVisualStyleBackColor = false;
@@ -191,9 +191,10 @@ namespace FunBrainz {
 			this->label1->BackColor = System::Drawing::Color::Transparent;
 			this->label1->Font = (gcnew System::Drawing::Font(L"Century Gothic", 21.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->label1->Location = System::Drawing::Point(63, 76);
+			this->label1->Location = System::Drawing::Point(47, 62);
+			this->label1->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(143, 44);
+			this->label1->Size = System::Drawing::Size(115, 36);
 			this->label1->TabIndex = 2;
 			this->label1->Text = L"Animal";
 			// 
@@ -204,10 +205,10 @@ namespace FunBrainz {
 			this->btn_submit->Font = (gcnew System::Drawing::Font(L"Century Gothic", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->btn_submit->ForeColor = System::Drawing::SystemColors::ControlDarkDark;
-			this->btn_submit->Location = System::Drawing::Point(801, 32);
-			this->btn_submit->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->btn_submit->Location = System::Drawing::Point(601, 26);
+			this->btn_submit->Margin = System::Windows::Forms::Padding(2);
 			this->btn_submit->Name = L"btn_submit";
-			this->btn_submit->Size = System::Drawing::Size(121, 89);
+			this->btn_submit->Size = System::Drawing::Size(91, 72);
 			this->btn_submit->TabIndex = 3;
 			this->btn_submit->Text = L"SUBMIT";
 			this->btn_submit->UseVisualStyleBackColor = false;
@@ -230,10 +231,10 @@ namespace FunBrainz {
 			this->panel1->Controls->Add(this->btn_extra);
 			this->panel1->Controls->Add(this->btn_selected);
 			this->panel1->Controls->Add(this->btn_random);
-			this->panel1->Location = System::Drawing::Point(267, 192);
-			this->panel1->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->panel1->Location = System::Drawing::Point(200, 156);
+			this->panel1->Margin = System::Windows::Forms::Padding(2);
 			this->panel1->Name = L"panel1";
-			this->panel1->Size = System::Drawing::Size(443, 296);
+			this->panel1->Size = System::Drawing::Size(333, 241);
 			this->panel1->TabIndex = 4;
 			this->panel1->Visible = false;
 			// 
@@ -242,10 +243,9 @@ namespace FunBrainz {
 			this->btn_solve->BackColor = System::Drawing::Color::DarkCyan;
 			this->btn_solve->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
 			this->btn_solve->Font = (gcnew System::Drawing::Font(L"Century Gothic", 10));
-			this->btn_solve->Location = System::Drawing::Point(29, 217);
-			this->btn_solve->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->btn_solve->Location = System::Drawing::Point(22, 176);
 			this->btn_solve->Name = L"btn_solve";
-			this->btn_solve->Size = System::Drawing::Size(335, 48);
+			this->btn_solve->Size = System::Drawing::Size(251, 39);
 			this->btn_solve->TabIndex = 11;
 			this->btn_solve->Text = L"Solve";
 			this->btn_solve->UseVisualStyleBackColor = false;
@@ -255,10 +255,9 @@ namespace FunBrainz {
 			// 
 			this->pictureBox5->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"pictureBox5.BackgroundImage")));
 			this->pictureBox5->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->pictureBox5->Location = System::Drawing::Point(368, 223);
-			this->pictureBox5->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->pictureBox5->Location = System::Drawing::Point(276, 181);
 			this->pictureBox5->Name = L"pictureBox5";
-			this->pictureBox5->Size = System::Drawing::Size(40, 37);
+			this->pictureBox5->Size = System::Drawing::Size(30, 30);
 			this->pictureBox5->TabIndex = 21;
 			this->pictureBox5->TabStop = false;
 			// 
@@ -266,10 +265,9 @@ namespace FunBrainz {
 			// 
 			this->pictureBox4->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"pictureBox4.BackgroundImage")));
 			this->pictureBox4->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->pictureBox4->Location = System::Drawing::Point(359, 107);
-			this->pictureBox4->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->pictureBox4->Location = System::Drawing::Point(269, 87);
 			this->pictureBox4->Name = L"pictureBox4";
-			this->pictureBox4->Size = System::Drawing::Size(44, 43);
+			this->pictureBox4->Size = System::Drawing::Size(33, 35);
 			this->pictureBox4->TabIndex = 20;
 			this->pictureBox4->TabStop = false;
 			// 
@@ -277,10 +275,9 @@ namespace FunBrainz {
 			// 
 			this->pictureBox3->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"pictureBox3.BackgroundImage")));
 			this->pictureBox3->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->pictureBox3->Location = System::Drawing::Point(359, 162);
-			this->pictureBox3->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->pictureBox3->Location = System::Drawing::Point(269, 132);
 			this->pictureBox3->Name = L"pictureBox3";
-			this->pictureBox3->Size = System::Drawing::Size(44, 43);
+			this->pictureBox3->Size = System::Drawing::Size(33, 35);
 			this->pictureBox3->TabIndex = 19;
 			this->pictureBox3->TabStop = false;
 			// 
@@ -288,10 +285,9 @@ namespace FunBrainz {
 			// 
 			this->pictureBox2->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"pictureBox2.BackgroundImage")));
 			this->pictureBox2->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->pictureBox2->Location = System::Drawing::Point(359, 50);
-			this->pictureBox2->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->pictureBox2->Location = System::Drawing::Point(269, 41);
 			this->pictureBox2->Name = L"pictureBox2";
-			this->pictureBox2->Size = System::Drawing::Size(44, 43);
+			this->pictureBox2->Size = System::Drawing::Size(33, 35);
 			this->pictureBox2->TabIndex = 18;
 			this->pictureBox2->TabStop = false;
 			// 
@@ -299,11 +295,10 @@ namespace FunBrainz {
 			// 
 			this->button2->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
 			this->button2->Font = (gcnew System::Drawing::Font(L"Century Gothic", 10));
-			this->button2->Location = System::Drawing::Point(307, 160);
-			this->button2->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->button2->Location = System::Drawing::Point(230, 130);
 			this->button2->Name = L"button2";
-			this->button2->Padding = System::Windows::Forms::Padding(5, 5, 5, 5);
-			this->button2->Size = System::Drawing::Size(103, 48);
+			this->button2->Padding = System::Windows::Forms::Padding(4);
+			this->button2->Size = System::Drawing::Size(77, 39);
 			this->button2->TabIndex = 15;
 			this->button2->Text = L"15";
 			this->button2->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
@@ -313,11 +308,10 @@ namespace FunBrainz {
 			// 
 			this->button1->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
 			this->button1->Font = (gcnew System::Drawing::Font(L"Century Gothic", 10));
-			this->button1->Location = System::Drawing::Point(307, 105);
-			this->button1->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->button1->Location = System::Drawing::Point(230, 85);
 			this->button1->Name = L"button1";
-			this->button1->Padding = System::Windows::Forms::Padding(5, 5, 5, 5);
-			this->button1->Size = System::Drawing::Size(103, 48);
+			this->button1->Padding = System::Windows::Forms::Padding(4);
+			this->button1->Size = System::Drawing::Size(77, 39);
 			this->button1->TabIndex = 14;
 			this->button1->Text = L"10";
 			this->button1->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
@@ -327,11 +321,10 @@ namespace FunBrainz {
 			// 
 			this->btn_rand_cost->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
 			this->btn_rand_cost->Font = (gcnew System::Drawing::Font(L"Century Gothic", 10));
-			this->btn_rand_cost->Location = System::Drawing::Point(307, 48);
-			this->btn_rand_cost->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->btn_rand_cost->Location = System::Drawing::Point(230, 39);
 			this->btn_rand_cost->Name = L"btn_rand_cost";
-			this->btn_rand_cost->Padding = System::Windows::Forms::Padding(5, 5, 5, 5);
-			this->btn_rand_cost->Size = System::Drawing::Size(103, 48);
+			this->btn_rand_cost->Padding = System::Windows::Forms::Padding(4);
+			this->btn_rand_cost->Size = System::Drawing::Size(77, 39);
 			this->btn_rand_cost->TabIndex = 13;
 			this->btn_rand_cost->Text = L" 5";
 			this->btn_rand_cost->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
@@ -342,10 +335,10 @@ namespace FunBrainz {
 			this->btn_exit_hide->BackColor = System::Drawing::Color::Red;
 			this->btn_exit_hide->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
 			this->btn_exit_hide->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
-			this->btn_exit_hide->Location = System::Drawing::Point(396, 0);
-			this->btn_exit_hide->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->btn_exit_hide->Location = System::Drawing::Point(297, 0);
+			this->btn_exit_hide->Margin = System::Windows::Forms::Padding(2);
 			this->btn_exit_hide->Name = L"btn_exit_hide";
-			this->btn_exit_hide->Size = System::Drawing::Size(37, 32);
+			this->btn_exit_hide->Size = System::Drawing::Size(28, 26);
 			this->btn_exit_hide->TabIndex = 12;
 			this->btn_exit_hide->Text = L"X";
 			this->btn_exit_hide->UseVisualStyleBackColor = false;
@@ -355,9 +348,10 @@ namespace FunBrainz {
 			// 
 			this->lbl_Selected_letter->AutoSize = true;
 			this->lbl_Selected_letter->Font = (gcnew System::Drawing::Font(L"Century Gothic", 10));
-			this->lbl_Selected_letter->Location = System::Drawing::Point(89, 87);
+			this->lbl_Selected_letter->Location = System::Drawing::Point(67, 71);
+			this->lbl_Selected_letter->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->lbl_Selected_letter->Name = L"lbl_Selected_letter";
-			this->lbl_Selected_letter->Size = System::Drawing::Size(160, 21);
+			this->lbl_Selected_letter->Size = System::Drawing::Size(131, 19);
 			this->lbl_Selected_letter->TabIndex = 5;
 			this->lbl_Selected_letter->Text = L"Choose one letter";
 			this->lbl_Selected_letter->Visible = false;
@@ -367,10 +361,9 @@ namespace FunBrainz {
 			this->btn_extra->BackColor = System::Drawing::Color::LightSeaGreen;
 			this->btn_extra->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
 			this->btn_extra->Font = (gcnew System::Drawing::Font(L"Century Gothic", 10));
-			this->btn_extra->Location = System::Drawing::Point(29, 160);
-			this->btn_extra->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->btn_extra->Location = System::Drawing::Point(22, 130);
 			this->btn_extra->Name = L"btn_extra";
-			this->btn_extra->Size = System::Drawing::Size(269, 48);
+			this->btn_extra->Size = System::Drawing::Size(202, 39);
 			this->btn_extra->TabIndex = 10;
 			this->btn_extra->Text = L"Remove Extra Letter";
 			this->btn_extra->UseVisualStyleBackColor = false;
@@ -381,10 +374,9 @@ namespace FunBrainz {
 			this->btn_selected->BackColor = System::Drawing::Color::LightSkyBlue;
 			this->btn_selected->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
 			this->btn_selected->Font = (gcnew System::Drawing::Font(L"Century Gothic", 10));
-			this->btn_selected->Location = System::Drawing::Point(29, 105);
-			this->btn_selected->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->btn_selected->Location = System::Drawing::Point(22, 85);
 			this->btn_selected->Name = L"btn_selected";
-			this->btn_selected->Size = System::Drawing::Size(269, 48);
+			this->btn_selected->Size = System::Drawing::Size(202, 39);
 			this->btn_selected->TabIndex = 9;
 			this->btn_selected->Text = L"Selected Letter";
 			this->btn_selected->UseVisualStyleBackColor = false;
@@ -395,10 +387,9 @@ namespace FunBrainz {
 			this->btn_random->BackColor = System::Drawing::Color::LightCyan;
 			this->btn_random->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
 			this->btn_random->Font = (gcnew System::Drawing::Font(L"Century Gothic", 10));
-			this->btn_random->Location = System::Drawing::Point(29, 48);
-			this->btn_random->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->btn_random->Location = System::Drawing::Point(22, 39);
 			this->btn_random->Name = L"btn_random";
-			this->btn_random->Size = System::Drawing::Size(269, 48);
+			this->btn_random->Size = System::Drawing::Size(202, 39);
 			this->btn_random->TabIndex = 8;
 			this->btn_random->Text = L"Random Letter";
 			this->btn_random->UseVisualStyleBackColor = false;
@@ -410,10 +401,9 @@ namespace FunBrainz {
 			this->lbl_Level->Font = (gcnew System::Drawing::Font(L"Century Gothic", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->lbl_Level->ForeColor = System::Drawing::SystemColors::ControlText;
-			this->lbl_Level->Location = System::Drawing::Point(108, 172);
-			this->lbl_Level->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->lbl_Level->Location = System::Drawing::Point(81, 140);
 			this->lbl_Level->Name = L"lbl_Level";
-			this->lbl_Level->Size = System::Drawing::Size(77, 30);
+			this->lbl_Level->Size = System::Drawing::Size(59, 22);
 			this->lbl_Level->TabIndex = 5;
 			this->lbl_Level->Text = L"Level";
 			// 
@@ -423,10 +413,9 @@ namespace FunBrainz {
 			this->lbl_type->Font = (gcnew System::Drawing::Font(L"Century Gothic", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->lbl_type->ForeColor = System::Drawing::SystemColors::ControlText;
-			this->lbl_type->Location = System::Drawing::Point(119, 217);
-			this->lbl_type->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->lbl_type->Location = System::Drawing::Point(89, 176);
 			this->lbl_type->Name = L"lbl_type";
-			this->lbl_type->Size = System::Drawing::Size(65, 30);
+			this->lbl_type->Size = System::Drawing::Size(51, 22);
 			this->lbl_type->TabIndex = 6;
 			this->lbl_type->Text = L"Easy";
 			// 
@@ -436,10 +425,10 @@ namespace FunBrainz {
 			this->btn_Back_to_Image_Quiz->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
 			this->btn_Back_to_Image_Quiz->Font = (gcnew System::Drawing::Font(L"Century Gothic", 14.25F, System::Drawing::FontStyle::Regular, 
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->btn_Back_to_Image_Quiz->Location = System::Drawing::Point(44, 290);
-			this->btn_Back_to_Image_Quiz->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->btn_Back_to_Image_Quiz->Location = System::Drawing::Point(33, 236);
+			this->btn_Back_to_Image_Quiz->Margin = System::Windows::Forms::Padding(2);
 			this->btn_Back_to_Image_Quiz->Name = L"btn_Back_to_Image_Quiz";
-			this->btn_Back_to_Image_Quiz->Size = System::Drawing::Size(223, 54);
+			this->btn_Back_to_Image_Quiz->Size = System::Drawing::Size(167, 44);
 			this->btn_Back_to_Image_Quiz->TabIndex = 7;
 			this->btn_Back_to_Image_Quiz->Text = L"Exit Game";
 			this->btn_Back_to_Image_Quiz->UseVisualStyleBackColor = false;
@@ -451,9 +440,10 @@ namespace FunBrainz {
 			this->lbl_Score->Font = (gcnew System::Drawing::Font(L"Century Gothic", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->lbl_Score->ForeColor = System::Drawing::SystemColors::ControlText;
-			this->lbl_Score->Location = System::Drawing::Point(109, 395);
+			this->lbl_Score->Location = System::Drawing::Point(82, 321);
+			this->lbl_Score->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->lbl_Score->Name = L"lbl_Score";
-			this->lbl_Score->Size = System::Drawing::Size(73, 22);
+			this->lbl_Score->Size = System::Drawing::Size(58, 20);
 			this->lbl_Score->TabIndex = 8;
 			this->lbl_Score->Text = L"SCORE";
 			// 
@@ -463,9 +453,10 @@ namespace FunBrainz {
 			this->lbl_Score_Value->Font = (gcnew System::Drawing::Font(L"Century Gothic", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->lbl_Score_Value->ForeColor = System::Drawing::SystemColors::ControlText;
-			this->lbl_Score_Value->Location = System::Drawing::Point(219, 395);
+			this->lbl_Score_Value->Location = System::Drawing::Point(164, 321);
+			this->lbl_Score_Value->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->lbl_Score_Value->Name = L"lbl_Score_Value";
-			this->lbl_Score_Value->Size = System::Drawing::Size(21, 22);
+			this->lbl_Score_Value->Size = System::Drawing::Size(17, 20);
 			this->lbl_Score_Value->TabIndex = 9;
 			this->lbl_Score_Value->Text = L"0";
 			// 
@@ -475,9 +466,10 @@ namespace FunBrainz {
 			this->lbl_MaxScore->Font = (gcnew System::Drawing::Font(L"Century Gothic", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->lbl_MaxScore->ForeColor = System::Drawing::SystemColors::ControlText;
-			this->lbl_MaxScore->Location = System::Drawing::Point(57, 449);
+			this->lbl_MaxScore->Location = System::Drawing::Point(43, 365);
+			this->lbl_MaxScore->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->lbl_MaxScore->Name = L"lbl_MaxScore";
-			this->lbl_MaxScore->Size = System::Drawing::Size(122, 22);
+			this->lbl_MaxScore->Size = System::Drawing::Size(97, 20);
 			this->lbl_MaxScore->TabIndex = 10;
 			this->lbl_MaxScore->Text = L"MAX SCORE";
 			// 
@@ -487,9 +479,10 @@ namespace FunBrainz {
 			this->lbl_MaxScore_Value->Font = (gcnew System::Drawing::Font(L"Century Gothic", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->lbl_MaxScore_Value->ForeColor = System::Drawing::SystemColors::ControlText;
-			this->lbl_MaxScore_Value->Location = System::Drawing::Point(219, 449);
+			this->lbl_MaxScore_Value->Location = System::Drawing::Point(164, 365);
+			this->lbl_MaxScore_Value->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->lbl_MaxScore_Value->Name = L"lbl_MaxScore_Value";
-			this->lbl_MaxScore_Value->Size = System::Drawing::Size(21, 22);
+			this->lbl_MaxScore_Value->Size = System::Drawing::Size(17, 20);
 			this->lbl_MaxScore_Value->TabIndex = 11;
 			this->lbl_MaxScore_Value->Text = L"0";
 			// 
@@ -499,9 +492,10 @@ namespace FunBrainz {
 			this->lbl_points_to_be_gained->Font = (gcnew System::Drawing::Font(L"Century Gothic", 11.25F, System::Drawing::FontStyle::Regular, 
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			this->lbl_points_to_be_gained->ForeColor = System::Drawing::SystemColors::ControlText;
-			this->lbl_points_to_be_gained->Location = System::Drawing::Point(79, 501);
+			this->lbl_points_to_be_gained->Location = System::Drawing::Point(59, 407);
+			this->lbl_points_to_be_gained->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->lbl_points_to_be_gained->Name = L"lbl_points_to_be_gained";
-			this->lbl_points_to_be_gained->Size = System::Drawing::Size(104, 22);
+			this->lbl_points_to_be_gained->Size = System::Drawing::Size(81, 20);
 			this->lbl_points_to_be_gained->TabIndex = 12;
 			this->lbl_points_to_be_gained->Text = L"POINTS TO";
 			// 
@@ -511,9 +505,10 @@ namespace FunBrainz {
 			this->lbl_points_to_be_gained_value->Font = (gcnew System::Drawing::Font(L"Century Gothic", 11.25F, System::Drawing::FontStyle::Regular, 
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			this->lbl_points_to_be_gained_value->ForeColor = System::Drawing::SystemColors::ControlText;
-			this->lbl_points_to_be_gained_value->Location = System::Drawing::Point(219, 511);
+			this->lbl_points_to_be_gained_value->Location = System::Drawing::Point(164, 415);
+			this->lbl_points_to_be_gained_value->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->lbl_points_to_be_gained_value->Name = L"lbl_points_to_be_gained_value";
-			this->lbl_points_to_be_gained_value->Size = System::Drawing::Size(21, 22);
+			this->lbl_points_to_be_gained_value->Size = System::Drawing::Size(17, 20);
 			this->lbl_points_to_be_gained_value->TabIndex = 13;
 			this->lbl_points_to_be_gained_value->Text = L"0";
 			// 
@@ -533,10 +528,9 @@ namespace FunBrainz {
 			this->panel2->Controls->Add(this->lbl_Score_Value);
 			this->panel2->Controls->Add(this->lbl_Score);
 			this->panel2->ForeColor = System::Drawing::SystemColors::ControlText;
-			this->panel2->Location = System::Drawing::Point(1001, -1);
-			this->panel2->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->panel2->Location = System::Drawing::Point(751, -1);
 			this->panel2->Name = L"panel2";
-			this->panel2->Size = System::Drawing::Size(317, 642);
+			this->panel2->Size = System::Drawing::Size(238, 522);
 			this->panel2->TabIndex = 14;
 			this->panel2->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &Image_Quiz_Display::panel2_Paint);
 			// 
@@ -544,10 +538,9 @@ namespace FunBrainz {
 			// 
 			this->pictureBox1->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"pictureBox1.BackgroundImage")));
 			this->pictureBox1->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->pictureBox1->Location = System::Drawing::Point(84, 53);
-			this->pictureBox1->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->pictureBox1->Location = System::Drawing::Point(63, 43);
 			this->pictureBox1->Name = L"pictureBox1";
-			this->pictureBox1->Size = System::Drawing::Size(133, 102);
+			this->pictureBox1->Size = System::Drawing::Size(100, 83);
 			this->pictureBox1->TabIndex = 15;
 			this->pictureBox1->TabStop = false;
 			// 
@@ -557,9 +550,10 @@ namespace FunBrainz {
 			this->label2->Font = (gcnew System::Drawing::Font(L"Century Gothic", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->label2->ForeColor = System::Drawing::SystemColors::ControlText;
-			this->label2->Location = System::Drawing::Point(68, 532);
+			this->label2->Location = System::Drawing::Point(51, 432);
+			this->label2->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(111, 22);
+			this->label2->Size = System::Drawing::Size(89, 20);
 			this->label2->TabIndex = 14;
 			this->label2->Text = L"BE GAINED";
 			// 
@@ -570,10 +564,9 @@ namespace FunBrainz {
 			this->btn_displayScore->Font = (gcnew System::Drawing::Font(L"Century Gothic", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->btn_displayScore->ForeColor = System::Drawing::SystemColors::ControlDarkDark;
-			this->btn_displayScore->Location = System::Drawing::Point(801, 139);
-			this->btn_displayScore->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->btn_displayScore->Location = System::Drawing::Point(601, 113);
 			this->btn_displayScore->Name = L"btn_displayScore";
-			this->btn_displayScore->Size = System::Drawing::Size(121, 87);
+			this->btn_displayScore->Size = System::Drawing::Size(91, 71);
 			this->btn_displayScore->TabIndex = 15;
 			this->btn_displayScore->TextAlign = System::Drawing::ContentAlignment::TopCenter;
 			this->btn_displayScore->UseVisualStyleBackColor = false;
@@ -586,10 +579,9 @@ namespace FunBrainz {
 			this->label3->Font = (gcnew System::Drawing::Font(L"Century Gothic", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->label3->ForeColor = System::Drawing::SystemColors::ControlDarkDark;
-			this->label3->Location = System::Drawing::Point(821, 185);
-			this->label3->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label3->Location = System::Drawing::Point(616, 150);
 			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(79, 22);
+			this->label3->Size = System::Drawing::Size(62, 20);
 			this->label3->TabIndex = 16;
 			this->label3->Text = L"BOARD";
 			this->label3->Click += gcnew System::EventHandler(this, &Image_Quiz_Display::label3_Click);
@@ -601,22 +593,21 @@ namespace FunBrainz {
 			this->label4->Font = (gcnew System::Drawing::Font(L"Century Gothic", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->label4->ForeColor = System::Drawing::SystemColors::ControlDarkDark;
-			this->label4->Location = System::Drawing::Point(821, 160);
-			this->label4->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label4->Location = System::Drawing::Point(616, 130);
 			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(73, 22);
+			this->label4->Size = System::Drawing::Size(58, 20);
 			this->label4->TabIndex = 17;
 			this->label4->Text = L"SCORE";
 			this->label4->Click += gcnew System::EventHandler(this, &Image_Quiz_Display::label4_Click);
 			// 
 			// Image_Quiz_Display
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
+			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::Color::MintCream;
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"$this.BackgroundImage")));
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->ClientSize = System::Drawing::Size(970, 636);
+			this->ClientSize = System::Drawing::Size(735, 517);
 			this->Controls->Add(this->label4);
 			this->Controls->Add(this->label3);
 			this->Controls->Add(this->btn_displayScore);
@@ -628,7 +619,7 @@ namespace FunBrainz {
 			this->Controls->Add(this->panel2);
 			this->DoubleBuffered = true;
 			this->KeyPreview = true;
-			this->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->Margin = System::Windows::Forms::Padding(2);
 			this->Name = L"Image_Quiz_Display";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"Image Quiz";
