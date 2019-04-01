@@ -80,9 +80,9 @@ namespace FunBrainz {
 	private: System::Windows::Forms::Label^  label1;
 	private: System::Windows::Forms::Timer^  timer2;
 	private: System::Windows::Forms::Timer^  timer3;
-	private: System::Windows::Forms::Panel^  panel3;
-	private: System::Windows::Forms::Button^  button1;
-	private: System::Windows::Forms::RichTextBox^  richTextBox2;
+
+
+
 	private: System::ComponentModel::IContainer^  components;
 
 	private:
@@ -99,6 +99,7 @@ namespace FunBrainz {
 		void InitializeComponent(void)
 		{
 			this->components = (gcnew System::ComponentModel::Container());
+			System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(game::typeid));
 			this->pause_play = (gcnew System::Windows::Forms::Button());
 			this->richTextBox1 = (gcnew System::Windows::Forms::RichTextBox());
 			this->panel2 = (gcnew System::Windows::Forms::Panel());
@@ -131,12 +132,8 @@ namespace FunBrainz {
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->timer2 = (gcnew System::Windows::Forms::Timer(this->components));
 			this->timer3 = (gcnew System::Windows::Forms::Timer(this->components));
-			this->panel3 = (gcnew System::Windows::Forms::Panel());
-			this->button1 = (gcnew System::Windows::Forms::Button());
-			this->richTextBox2 = (gcnew System::Windows::Forms::RichTextBox());
 			this->panel2->SuspendLayout();
 			this->panel1->SuspendLayout();
-			this->panel3->SuspendLayout();
 			this->SuspendLayout();
 			// 
 			// pause_play
@@ -159,15 +156,15 @@ namespace FunBrainz {
 			this->richTextBox1->Size = System::Drawing::Size(516, 246);
 			this->richTextBox1->TabIndex = 1;
 			this->richTextBox1->Text = L"Click the Triangles,Rectangles and Circles before it pass the Screen.You will get" 
-				L" 10 scores if you can click or lose one life";
+				L" 10 scores if you can click or lose one life if you fail\n";
 			// 
 			// panel2
 			// 
 			this->panel2->Controls->Add(this->richTextBox1);
 			this->panel2->Controls->Add(this->ok);
-			this->panel2->Location = System::Drawing::Point(537, 132);
+			this->panel2->Location = System::Drawing::Point(617, 196);
 			this->panel2->Name = L"panel2";
-			this->panel2->Size = System::Drawing::Size(572, 358);
+			this->panel2->Size = System::Drawing::Size(552, 356);
 			this->panel2->TabIndex = 31;
 			// 
 			// ok
@@ -184,7 +181,8 @@ namespace FunBrainz {
 			// 
 			this->exit_label->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->exit_label->Location = System::Drawing::Point(515, 141);
+			this->exit_label->ForeColor = System::Drawing::Color::Red;
+			this->exit_label->Location = System::Drawing::Point(254, 77);
 			this->exit_label->Name = L"exit_label";
 			this->exit_label->Size = System::Drawing::Size(89, 44);
 			this->exit_label->TabIndex = 2;
@@ -194,9 +192,10 @@ namespace FunBrainz {
 			// 
 			// play_label
 			// 
-			this->play_label->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
-				static_cast<System::Byte>(0)));
-			this->play_label->Location = System::Drawing::Point(452, 73);
+			this->play_label->Font = (gcnew System::Drawing::Font(L"Monotype Corsiva", 16.2F, static_cast<System::Drawing::FontStyle>((System::Drawing::FontStyle::Bold | System::Drawing::FontStyle::Italic)), 
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->play_label->ForeColor = System::Drawing::Color::Lime;
+			this->play_label->Location = System::Drawing::Point(187, 33);
 			this->play_label->Name = L"play_label";
 			this->play_label->Size = System::Drawing::Size(228, 44);
 			this->play_label->TabIndex = 0;
@@ -206,16 +205,16 @@ namespace FunBrainz {
 			// 
 			// timer1
 			// 
-			this->timer1->Interval = 350;
+			this->timer1->Interval = 50;
 			this->timer1->Tick += gcnew System::EventHandler(this, &game::timer1_Tick);
 			// 
 			// panel1
 			// 
 			this->panel1->Controls->Add(this->exit_label);
 			this->panel1->Controls->Add(this->play_label);
-			this->panel1->Location = System::Drawing::Point(638, 120);
+			this->panel1->Location = System::Drawing::Point(154, 328);
 			this->panel1->Name = L"panel1";
-			this->panel1->Size = System::Drawing::Size(908, 450);
+			this->panel1->Size = System::Drawing::Size(602, 296);
 			this->panel1->TabIndex = 51;
 			// 
 			// Exit
@@ -230,6 +229,7 @@ namespace FunBrainz {
 			// 
 			// label21
 			// 
+			this->label21->BackColor = System::Drawing::Color::Transparent;
 			this->label21->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->label21->Location = System::Drawing::Point(420, 59);
@@ -240,6 +240,7 @@ namespace FunBrainz {
 			// 
 			// life_text
 			// 
+			this->life_text->BackColor = System::Drawing::Color::Transparent;
 			this->life_text->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->life_text->Location = System::Drawing::Point(312, 59);
@@ -250,6 +251,7 @@ namespace FunBrainz {
 			// 
 			// score_text
 			// 
+			this->score_text->BackColor = System::Drawing::Color::Transparent;
 			this->score_text->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->score_text->Location = System::Drawing::Point(841, 74);
@@ -368,17 +370,18 @@ namespace FunBrainz {
 			// 
 			// label7
 			// 
+			this->label7->BackColor = System::Drawing::Color::Transparent;
 			this->label7->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->label7->Location = System::Drawing::Point(951, 69);
+			this->label7->Location = System::Drawing::Point(953, 74);
 			this->label7->Name = L"label7";
 			this->label7->Size = System::Drawing::Size(137, 48);
 			this->label7->TabIndex = 34;
-			this->label7->Text = L"label7";
+			this->label7->Text = L"0";
 			// 
 			// label6
 			// 
-			this->label6->Location = System::Drawing::Point(953, 26);
+			this->label6->Location = System::Drawing::Point(868, 9);
 			this->label6->Name = L"label6";
 			this->label6->Size = System::Drawing::Size(137, 48);
 			this->label6->TabIndex = 33;
@@ -387,7 +390,7 @@ namespace FunBrainz {
 			// 
 			// label5
 			// 
-			this->label5->Location = System::Drawing::Point(758, 17);
+			this->label5->Location = System::Drawing::Point(701, 9);
 			this->label5->Name = L"label5";
 			this->label5->Size = System::Drawing::Size(137, 48);
 			this->label5->TabIndex = 32;
@@ -405,14 +408,14 @@ namespace FunBrainz {
 			// 
 			// label2
 			// 
-			this->label2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+			this->label2->BackColor = System::Drawing::Color::Transparent;
+			this->label2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->label2->Location = System::Drawing::Point(289, 235);
+			this->label2->Location = System::Drawing::Point(438, 268);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(280, 48);
+			this->label2->Size = System::Drawing::Size(345, 48);
 			this->label2->TabIndex = 29;
 			this->label2->Text = L"label2";
-			this->label2->Visible = false;
 			// 
 			// label1
 			// 
@@ -433,42 +436,13 @@ namespace FunBrainz {
 			this->timer3->Interval = 1000;
 			this->timer3->Tick += gcnew System::EventHandler(this, &game::timer3_Tick);
 			// 
-			// panel3
-			// 
-			this->panel3->Controls->Add(this->button1);
-			this->panel3->Controls->Add(this->richTextBox2);
-			this->panel3->Location = System::Drawing::Point(365, 276);
-			this->panel3->Name = L"panel3";
-			this->panel3->Size = System::Drawing::Size(400, 233);
-			this->panel3->TabIndex = 53;
-			// 
-			// button1
-			// 
-			this->button1->Location = System::Drawing::Point(137, 182);
-			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(94, 38);
-			this->button1->TabIndex = 1;
-			this->button1->Text = L"ok";
-			this->button1->UseVisualStyleBackColor = true;
-			this->button1->Click += gcnew System::EventHandler(this, &game::button1_Click);
-			// 
-			// richTextBox2
-			// 
-			this->richTextBox2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
-				static_cast<System::Byte>(0)));
-			this->richTextBox2->Location = System::Drawing::Point(28, 19);
-			this->richTextBox2->Name = L"richTextBox2";
-			this->richTextBox2->ReadOnly = true;
-			this->richTextBox2->Size = System::Drawing::Size(334, 157);
-			this->richTextBox2->TabIndex = 0;
-			this->richTextBox2->Text = L"";
-			// 
 			// game
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
+			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"$this.BackgroundImage")));
+			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->ClientSize = System::Drawing::Size(1182, 753);
-			this->Controls->Add(this->panel3);
 			this->Controls->Add(this->pause_play);
 			this->Controls->Add(this->panel2);
 			this->Controls->Add(this->panel1);
@@ -494,6 +468,7 @@ namespace FunBrainz {
 			this->Controls->Add(this->label3);
 			this->Controls->Add(this->label2);
 			this->Controls->Add(this->label1);
+			this->DoubleBuffered = true;
 			this->Name = L"game";
 			this->Text = L"game";
 			this->Load += gcnew System::EventHandler(this, &game::game_Load);
@@ -501,7 +476,6 @@ namespace FunBrainz {
 			this->MouseClick += gcnew System::Windows::Forms::MouseEventHandler(this, &game::game_MouseClick);
 			this->panel2->ResumeLayout(false);
 			this->panel1->ResumeLayout(false);
-			this->panel3->ResumeLayout(false);
 			this->ResumeLayout(false);
 
 		}
@@ -518,7 +492,7 @@ private:
 			double d;
 			double y;
 			int score;
-
+			 int imgvar;
 			int slide;
 			Point pt1;
 			Point pt2;
@@ -548,17 +522,21 @@ private:
 #pragma endregion
 			Form ^ caller;
 	private: System::Void game_Load(System::Object^  sender, System::EventArgs^  e) {
-			 highscore = 0;  //initially highscore 0
+			 	 imgvar=0;
+				 highscore = 0;  //initially highscore 0
 			 field = "Game";
 			 time=0;
-			 panel3->Hide();
+			   label2->Hide();
 			 totalnumberplayed=0;
 			 date = Convert::ToString(DateTime::Now);
 			 timer2->Start();  //to count time for variable time
 			 life=10;
 			 initiate();
-			 panel1->Width = this->Width;
-			panel1->Left = 0;
+			panel1->Top=200;
+			panel2->Top=280;
+			label2->Top=150;
+			panel1->Left = 220;
+			panel2->Left=this->Width;
 			 }
 private: System::Void game_Paint(System::Object^  sender, System::Windows::Forms::PaintEventArgs^  e) {
 			   c = Convert::ToDouble(label3->Text);
@@ -1360,7 +1338,7 @@ private: System::Void timer1_Tick(System::Object^  sender, System::EventArgs^  e
 			 label7->Text = Convert::ToString(score);//showing score
 		 p += slide;
 			 q += slide;
-			 label2->Text = Convert::ToString(p) + "+" + Convert::ToString(q);
+			// label2->Text = Convert::ToString(p) + "+" + Convert::ToString(q);
 			 if (p - 1200 >= 1200)
 			 {		  //initializing label 9 to 13	and p 
 
@@ -1375,8 +1353,36 @@ private: System::Void timer1_Tick(System::Object^  sender, System::EventArgs^  e
 				 x = x % 3;
 				 label3->Text = Convert::ToString(x);
 				 if (score % 100 == 0)	//incraing speed if score%100==0
-				 {
+				 {	  if(timer1->Interval>30)
 					 timer1->Interval -= 20;
+				 }
+				  if (score>0)
+				 if (score % 40 >10)
+				 {
+					 imgvar = (imgvar + 1) % 10;
+					 if (imgvar == 0)
+						 this->BackgroundImage = Image::FromFile("bg/bg1.png");
+					 if (imgvar == 1)
+						 this->BackgroundImage = Image::FromFile("bg/bg2.png");
+					 if (imgvar == 2)
+						 this->BackgroundImage = Image::FromFile("bg/bg3.png");
+					 if (imgvar == 3)
+						 this->BackgroundImage = Image::FromFile("bg/bg4.png");
+					 if (imgvar == 4)
+						 this->BackgroundImage = Image::FromFile("bg/bg5.png");
+					 if (imgvar == 5)
+						 this->BackgroundImage = Image::FromFile("bg/bg3.png");
+					 if (imgvar == 6)
+						 this->BackgroundImage = Image::FromFile("bg/bg2.png");
+					 if (imgvar == 7)
+						 this->BackgroundImage = Image::FromFile("bg/bg1.png");
+					 if (imgvar == 8)
+						 this->BackgroundImage = Image::FromFile("bg/bg6.png");
+					 if (imgvar == 9)
+						 this->BackgroundImage = Image::FromFile("bg/bg7.png");
+
+
+					 
 				 }
 			 }
 			 if (q - 1200 >= 1200)
@@ -1389,7 +1395,36 @@ private: System::Void timer1_Tick(System::Object^  sender, System::EventArgs^  e
 				 z = rand();
 				 z = z % 3;
 				 label4->Text = Convert::ToString(z);
-				
+				   if (score % 100 == 0)	//incraing speed if score%100==0
+				 {	  if(timer1->Interval>30)
+					 timer1->Interval -= 20;
+				 }
+				  if (score>0)
+				 if (score % 40 >10)
+				 {
+					 imgvar = (imgvar + 1) % 10;
+					 if (imgvar == 0)
+						 this->BackgroundImage = Image::FromFile("bg/bg1.png");
+					 if (imgvar == 1)
+						 this->BackgroundImage = Image::FromFile("bg/bg2.png");
+					 if (imgvar == 2)
+						 this->BackgroundImage = Image::FromFile("bg/bg3.png");
+					 if (imgvar == 3)
+						 this->BackgroundImage = Image::FromFile("bg/bg4.png");
+					 if (imgvar == 4)
+						 this->BackgroundImage = Image::FromFile("bg/bg5.png");
+					 if (imgvar == 5)
+						 this->BackgroundImage = Image::FromFile("bg/bg3.png");
+					 if (imgvar == 6)
+						 this->BackgroundImage = Image::FromFile("bg/bg2.png");
+					 if (imgvar == 7)
+						 this->BackgroundImage = Image::FromFile("bg/bg1.png");
+					 if (imgvar == 8)
+						 this->BackgroundImage = Image::FromFile("bg/bg6.png");
+					 if (imgvar == 9)
+						 this->BackgroundImage = Image::FromFile("bg/bg7.png");
+					 
+				 }
 			 }
 			 label18->Text = Convert::ToString(x) + "+" + Convert::ToString(z);
 		
@@ -1473,11 +1508,15 @@ private: System::Void pause_play_Click(System::Object^  sender, System::EventArg
 			 }
 		 }
 private: System::Void play_label_Click(System::Object^  sender, System::EventArgs^  e) {
-			  panel2->Show();	 //click to play//then showing rules
+			  panel2->Show();
+			  panel2->Left=250;
+			  pause_play->Text="Pause";
+			  label2->Hide();//click to play//then showing rules
 		 }
 private: System::Void ok_Click(System::Object^  sender, System::EventArgs^  e) {
 			 //appears along with rules ...game is starting now
 			 panel1->Hide();
+			 panel2->Left=this->Width;
 			 panel2->Hide();
 			 timer1->Start();
 			 label7->Visible = true;
@@ -1490,8 +1529,8 @@ private: System::Void ok_Click(System::Object^  sender, System::EventArgs^  e) {
 		 }
 private:System::Void initiate()
 {				//after one game.......everything set back to initial position.
-	
-			
+			  imgvar=0;
+			this->BackgroundImage = Image::FromFile("bg/bg1.png");
 			panel2->Hide();
 			label7->Visible = false;
 			label21->Visible = false;
@@ -1564,15 +1603,13 @@ private: System::Void timer2_Tick(System::Object^  sender, System::EventArgs^  e
 private: System::Void timer3_Tick(System::Object^  sender, System::EventArgs^  e) {
 			 //after life< 0 timer 3 starts
 			 this->Refresh();
-			 panel3->Show();
-			 richTextBox2->Text="Your Score        "+Convert::ToString(score);	//shoewing score in planel 3
+			
+			 label2->Text="Your Score        "+Convert::ToString(score);
+			 label2->Show();//shoewing score in planel 3
 			 timer3->Stop();
+			 initiate();
 			
 		 }
-private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {	//ok button in panel3 along with score
-			 panel3->Hide(); 
-			 initiate();
 
-		 }
 };
 }
