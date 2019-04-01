@@ -126,9 +126,10 @@ namespace FunBrainz {
 			this->button5->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
 			this->button5->Font = (gcnew System::Drawing::Font(L"Century Gothic", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->button5->Location = System::Drawing::Point(11, 322);
+			this->button5->Location = System::Drawing::Point(15, 396);
+			this->button5->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->button5->Name = L"button5";
-			this->button5->Size = System::Drawing::Size(136, 45);
+			this->button5->Size = System::Drawing::Size(181, 55);
 			this->button5->TabIndex = 6;
 			this->button5->Text = L"Quizzes and Puzzles";
 			this->button5->UseVisualStyleBackColor = false;
@@ -140,9 +141,10 @@ namespace FunBrainz {
 			this->button4->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
 			this->button4->Font = (gcnew System::Drawing::Font(L"Century Gothic", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->button4->Location = System::Drawing::Point(11, 266);
+			this->button4->Location = System::Drawing::Point(15, 327);
+			this->button4->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->button4->Name = L"button4";
-			this->button4->Size = System::Drawing::Size(136, 45);
+			this->button4->Size = System::Drawing::Size(181, 55);
 			this->button4->TabIndex = 5;
 			this->button4->Text = L"Identifying Shapes";
 			this->button4->UseVisualStyleBackColor = false;
@@ -154,9 +156,10 @@ namespace FunBrainz {
 			this->button3->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
 			this->button3->Font = (gcnew System::Drawing::Font(L"Century Gothic", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->button3->Location = System::Drawing::Point(11, 210);
+			this->button3->Location = System::Drawing::Point(15, 258);
+			this->button3->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->button3->Name = L"button3";
-			this->button3->Size = System::Drawing::Size(136, 45);
+			this->button3->Size = System::Drawing::Size(181, 55);
 			this->button3->TabIndex = 2;
 			this->button3->Text = L"Abacus";
 			this->button3->UseVisualStyleBackColor = false;
@@ -168,11 +171,12 @@ namespace FunBrainz {
 			this->Arithmeticbtn->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
 			this->Arithmeticbtn->Font = (gcnew System::Drawing::Font(L"Century Gothic", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->Arithmeticbtn->Location = System::Drawing::Point(11, 100);
+			this->Arithmeticbtn->Location = System::Drawing::Point(15, 123);
+			this->Arithmeticbtn->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->Arithmeticbtn->Name = L"Arithmeticbtn";
-			this->Arithmeticbtn->Size = System::Drawing::Size(136, 45);
+			this->Arithmeticbtn->Size = System::Drawing::Size(181, 55);
 			this->Arithmeticbtn->TabIndex = 3;
-			this->Arithmeticbtn->Text = L"Graph For Cricket";
+			this->Arithmeticbtn->Text = L"Graphs";
 			this->Arithmeticbtn->UseVisualStyleBackColor = false;
 			this->Arithmeticbtn->Click += gcnew System::EventHandler(this, &Homepage::Arithmeticbtn_Click);
 			// 
@@ -182,9 +186,10 @@ namespace FunBrainz {
 			this->Profilebtn->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
 			this->Profilebtn->Font = (gcnew System::Drawing::Font(L"Century Gothic", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->Profilebtn->Location = System::Drawing::Point(11, 44);
+			this->Profilebtn->Location = System::Drawing::Point(15, 54);
+			this->Profilebtn->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->Profilebtn->Name = L"Profilebtn";
-			this->Profilebtn->Size = System::Drawing::Size(136, 45);
+			this->Profilebtn->Size = System::Drawing::Size(181, 55);
 			this->Profilebtn->TabIndex = 4;
 			this->Profilebtn->Text = L"Profile";
 			this->Profilebtn->UseVisualStyleBackColor = false;
@@ -192,10 +197,10 @@ namespace FunBrainz {
 			// 
 			// panel1
 			// 
-			this->panel1->Location = System::Drawing::Point(171, 0);
-			this->panel1->Margin = System::Windows::Forms::Padding(2);
+			this->panel1->Location = System::Drawing::Point(228, 0);
+			this->panel1->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->panel1->Name = L"panel1";
-			this->panel1->Size = System::Drawing::Size(842, 539);
+			this->panel1->Size = System::Drawing::Size(1123, 663);
 			this->panel1->TabIndex = 7;
 			this->panel1->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &Homepage::panel1_Paint);
 			// 
@@ -205,10 +210,10 @@ namespace FunBrainz {
 			this->backbtn->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
 			this->backbtn->Font = (gcnew System::Drawing::Font(L"Century Gothic", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->backbtn->Location = System::Drawing::Point(27, 457);
-			this->backbtn->Margin = System::Windows::Forms::Padding(2);
+			this->backbtn->Location = System::Drawing::Point(36, 562);
+			this->backbtn->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->backbtn->Name = L"backbtn";
-			this->backbtn->Size = System::Drawing::Size(101, 33);
+			this->backbtn->Size = System::Drawing::Size(135, 41);
 			this->backbtn->TabIndex = 8;
 			this->backbtn->Text = L"Back";
 			this->backbtn->UseVisualStyleBackColor = false;
@@ -220,10 +225,10 @@ namespace FunBrainz {
 			this->Deletebtn->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
 			this->Deletebtn->Font = (gcnew System::Drawing::Font(L"Century Gothic", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->Deletebtn->Location = System::Drawing::Point(11, 377);
-			this->Deletebtn->Margin = System::Windows::Forms::Padding(2);
+			this->Deletebtn->Location = System::Drawing::Point(15, 464);
+			this->Deletebtn->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->Deletebtn->Name = L"Deletebtn";
-			this->Deletebtn->Size = System::Drawing::Size(136, 45);
+			this->Deletebtn->Size = System::Drawing::Size(181, 55);
 			this->Deletebtn->TabIndex = 10;
 			this->Deletebtn->Text = L"Delete account";
 			this->Deletebtn->UseVisualStyleBackColor = false;
@@ -235,10 +240,10 @@ namespace FunBrainz {
 			this->button1->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
 			this->button1->Font = (gcnew System::Drawing::Font(L"Century Gothic", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->button1->Location = System::Drawing::Point(11, 155);
-			this->button1->Margin = System::Windows::Forms::Padding(2);
+			this->button1->Location = System::Drawing::Point(15, 191);
+			this->button1->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(136, 45);
+			this->button1->Size = System::Drawing::Size(181, 55);
 			this->button1->TabIndex = 11;
 			this->button1->Text = L"Basic Operations";
 			this->button1->UseVisualStyleBackColor = false;
@@ -256,21 +261,22 @@ namespace FunBrainz {
 			this->panel2->Controls->Add(this->Arithmeticbtn);
 			this->panel2->Controls->Add(this->button3);
 			this->panel2->Location = System::Drawing::Point(0, 0);
+			this->panel2->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->panel2->Name = L"panel2";
-			this->panel2->Size = System::Drawing::Size(166, 539);
+			this->panel2->Size = System::Drawing::Size(221, 663);
 			this->panel2->TabIndex = 12;
 			// 
 			// Homepage
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
+			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::SystemColors::ButtonHighlight;
-			this->ClientSize = System::Drawing::Size(1008, 531);
+			this->ClientSize = System::Drawing::Size(1341, 644);
 			this->Controls->Add(this->panel1);
 			this->Controls->Add(this->panel2);
-			this->Margin = System::Windows::Forms::Padding(2);
-			this->MaximumSize = System::Drawing::Size(1024, 570);
-			this->MinimumSize = System::Drawing::Size(1024, 570);
+			this->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->MaximumSize = System::Drawing::Size(1359, 691);
+			this->MinimumSize = System::Drawing::Size(1359, 691);
 			this->Name = L"Homepage";
 			this->Text = L"Homepage";
 			this->Load += gcnew System::EventHandler(this, &Homepage::Homepage_Load);
