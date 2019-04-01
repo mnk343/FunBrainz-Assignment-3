@@ -32,6 +32,13 @@ namespace FunBrainz {
 			caller =obj1;
 			
 		}
+		Image_Quiz_Display(Form^ obj1,String^ nameoflabel,int num)
+		{
+			label_name = nameoflabel;
+			InitializeComponent();			
+			caller =obj1;
+			stuId=num;
+		}
 		/*Image_Quiz_Display(Form^ obj1,String^ nameoflabel)
 		{
 			label_name = nameoflabel;
@@ -74,6 +81,20 @@ namespace FunBrainz {
 	private: System::Windows::Forms::Button^  button2;
 	private: System::Windows::Forms::Button^  button1;
 	private: System::Windows::Forms::Button^  btn_rand_cost;
+	private: System::Windows::Forms::Panel^  panel2;
+
+	private: System::Windows::Forms::PictureBox^  pictureBox1;
+	private: System::Windows::Forms::Label^  label2;
+	private: System::Windows::Forms::Button^  btn_displayScore;
+	private: System::Windows::Forms::Label^  label3;
+	private: System::Windows::Forms::Label^  label4;
+	private: System::Windows::Forms::PictureBox^  pictureBox5;
+	private: System::Windows::Forms::PictureBox^  pictureBox4;
+	private: System::Windows::Forms::PictureBox^  pictureBox3;
+	private: System::Windows::Forms::PictureBox^  pictureBox2;
+
+
+
 
 
 
@@ -92,17 +113,22 @@ namespace FunBrainz {
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(Image_Quiz_Display::typeid));
 			this->PB_Quiz_Image = (gcnew System::Windows::Forms::PictureBox());
 			this->btn_Next = (gcnew System::Windows::Forms::Button());
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->btn_submit = (gcnew System::Windows::Forms::Button());
 			this->panel1 = (gcnew System::Windows::Forms::Panel());
+			this->btn_solve = (gcnew System::Windows::Forms::Button());
+			this->pictureBox5 = (gcnew System::Windows::Forms::PictureBox());
+			this->pictureBox4 = (gcnew System::Windows::Forms::PictureBox());
+			this->pictureBox3 = (gcnew System::Windows::Forms::PictureBox());
+			this->pictureBox2 = (gcnew System::Windows::Forms::PictureBox());
 			this->button2 = (gcnew System::Windows::Forms::Button());
 			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->btn_rand_cost = (gcnew System::Windows::Forms::Button());
 			this->btn_exit_hide = (gcnew System::Windows::Forms::Button());
 			this->lbl_Selected_letter = (gcnew System::Windows::Forms::Label());
-			this->btn_solve = (gcnew System::Windows::Forms::Button());
 			this->btn_extra = (gcnew System::Windows::Forms::Button());
 			this->btn_selected = (gcnew System::Windows::Forms::Button());
 			this->btn_random = (gcnew System::Windows::Forms::Button());
@@ -115,8 +141,20 @@ namespace FunBrainz {
 			this->lbl_MaxScore_Value = (gcnew System::Windows::Forms::Label());
 			this->lbl_points_to_be_gained = (gcnew System::Windows::Forms::Label());
 			this->lbl_points_to_be_gained_value = (gcnew System::Windows::Forms::Label());
+			this->panel2 = (gcnew System::Windows::Forms::Panel());
+			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
+			this->label2 = (gcnew System::Windows::Forms::Label());
+			this->btn_displayScore = (gcnew System::Windows::Forms::Button());
+			this->label3 = (gcnew System::Windows::Forms::Label());
+			this->label4 = (gcnew System::Windows::Forms::Label());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->PB_Quiz_Image))->BeginInit();
 			this->panel1->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->pictureBox5))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->pictureBox4))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->pictureBox3))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->pictureBox2))->BeginInit();
+			this->panel2->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->pictureBox1))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// PB_Quiz_Image
@@ -131,14 +169,16 @@ namespace FunBrainz {
 			// 
 			// btn_Next
 			// 
-			this->btn_Next->BackColor = System::Drawing::SystemColors::ButtonHighlight;
+			this->btn_Next->BackColor = System::Drawing::Color::PowderBlue;
 			this->btn_Next->Enabled = false;
-			this->btn_Next->Font = (gcnew System::Drawing::Font(L"Century Gothic", 10));
-			this->btn_Next->ForeColor = System::Drawing::SystemColors::ControlDark;
-			this->btn_Next->Location = System::Drawing::Point(801, 32);
+			this->btn_Next->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+			this->btn_Next->Font = (gcnew System::Drawing::Font(L"Century Gothic", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->btn_Next->ForeColor = System::Drawing::SystemColors::ControlDarkDark;
+			this->btn_Next->Location = System::Drawing::Point(801, 241);
 			this->btn_Next->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->btn_Next->Name = L"btn_Next";
-			this->btn_Next->Size = System::Drawing::Size(105, 89);
+			this->btn_Next->Size = System::Drawing::Size(121, 89);
 			this->btn_Next->TabIndex = 1;
 			this->btn_Next->Text = L"NEXT";
 			this->btn_Next->UseVisualStyleBackColor = false;
@@ -151,7 +191,7 @@ namespace FunBrainz {
 			this->label1->BackColor = System::Drawing::Color::Transparent;
 			this->label1->Font = (gcnew System::Drawing::Font(L"Century Gothic", 21.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
-			this->label1->Location = System::Drawing::Point(71, 76);
+			this->label1->Location = System::Drawing::Point(63, 76);
 			this->label1->Name = L"label1";
 			this->label1->Size = System::Drawing::Size(143, 44);
 			this->label1->TabIndex = 2;
@@ -159,251 +199,434 @@ namespace FunBrainz {
 			// 
 			// btn_submit
 			// 
-			this->btn_submit->BackColor = System::Drawing::SystemColors::ButtonHighlight;
-			this->btn_submit->Font = (gcnew System::Drawing::Font(L"Century Gothic", 10));
-			this->btn_submit->ForeColor = System::Drawing::SystemColors::ControlDark;
-			this->btn_submit->Location = System::Drawing::Point(801, 155);
+			this->btn_submit->BackColor = System::Drawing::Color::PowderBlue;
+			this->btn_submit->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+			this->btn_submit->Font = (gcnew System::Drawing::Font(L"Century Gothic", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->btn_submit->ForeColor = System::Drawing::SystemColors::ControlDarkDark;
+			this->btn_submit->Location = System::Drawing::Point(801, 32);
 			this->btn_submit->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->btn_submit->Name = L"btn_submit";
-			this->btn_submit->Size = System::Drawing::Size(105, 89);
+			this->btn_submit->Size = System::Drawing::Size(121, 89);
 			this->btn_submit->TabIndex = 3;
 			this->btn_submit->Text = L"SUBMIT";
-			this->btn_submit->UseVisualStyleBackColor = true;
+			this->btn_submit->UseVisualStyleBackColor = false;
 			this->btn_submit->Click += gcnew System::EventHandler(this, &Image_Quiz_Display::btn_submit_Click);
 			// 
 			// panel1
 			// 
 			this->panel1->BackColor = System::Drawing::Color::White;
+			this->panel1->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->panel1->Controls->Add(this->btn_solve);
+			this->panel1->Controls->Add(this->pictureBox5);
+			this->panel1->Controls->Add(this->pictureBox4);
+			this->panel1->Controls->Add(this->pictureBox3);
+			this->panel1->Controls->Add(this->pictureBox2);
 			this->panel1->Controls->Add(this->button2);
 			this->panel1->Controls->Add(this->button1);
 			this->panel1->Controls->Add(this->btn_rand_cost);
 			this->panel1->Controls->Add(this->btn_exit_hide);
 			this->panel1->Controls->Add(this->lbl_Selected_letter);
-			this->panel1->Controls->Add(this->btn_solve);
 			this->panel1->Controls->Add(this->btn_extra);
 			this->panel1->Controls->Add(this->btn_selected);
 			this->panel1->Controls->Add(this->btn_random);
-			this->panel1->Location = System::Drawing::Point(329, 192);
+			this->panel1->Location = System::Drawing::Point(267, 192);
 			this->panel1->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->panel1->Name = L"panel1";
-			this->panel1->Size = System::Drawing::Size(382, 281);
+			this->panel1->Size = System::Drawing::Size(443, 296);
 			this->panel1->TabIndex = 4;
 			this->panel1->Visible = false;
+			// 
+			// btn_solve
+			// 
+			this->btn_solve->BackColor = System::Drawing::Color::DarkCyan;
+			this->btn_solve->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+			this->btn_solve->Font = (gcnew System::Drawing::Font(L"Century Gothic", 10));
+			this->btn_solve->Location = System::Drawing::Point(29, 217);
+			this->btn_solve->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->btn_solve->Name = L"btn_solve";
+			this->btn_solve->Size = System::Drawing::Size(335, 48);
+			this->btn_solve->TabIndex = 11;
+			this->btn_solve->Text = L"Solve";
+			this->btn_solve->UseVisualStyleBackColor = false;
+			this->btn_solve->Click += gcnew System::EventHandler(this, &Image_Quiz_Display::btn_solve_MouseLeave);
+			// 
+			// pictureBox5
+			// 
+			this->pictureBox5->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"pictureBox5.BackgroundImage")));
+			this->pictureBox5->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->pictureBox5->Location = System::Drawing::Point(368, 223);
+			this->pictureBox5->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->pictureBox5->Name = L"pictureBox5";
+			this->pictureBox5->Size = System::Drawing::Size(40, 37);
+			this->pictureBox5->TabIndex = 21;
+			this->pictureBox5->TabStop = false;
+			// 
+			// pictureBox4
+			// 
+			this->pictureBox4->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"pictureBox4.BackgroundImage")));
+			this->pictureBox4->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->pictureBox4->Location = System::Drawing::Point(359, 107);
+			this->pictureBox4->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->pictureBox4->Name = L"pictureBox4";
+			this->pictureBox4->Size = System::Drawing::Size(44, 43);
+			this->pictureBox4->TabIndex = 20;
+			this->pictureBox4->TabStop = false;
+			// 
+			// pictureBox3
+			// 
+			this->pictureBox3->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"pictureBox3.BackgroundImage")));
+			this->pictureBox3->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->pictureBox3->Location = System::Drawing::Point(359, 162);
+			this->pictureBox3->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->pictureBox3->Name = L"pictureBox3";
+			this->pictureBox3->Size = System::Drawing::Size(44, 43);
+			this->pictureBox3->TabIndex = 19;
+			this->pictureBox3->TabStop = false;
+			// 
+			// pictureBox2
+			// 
+			this->pictureBox2->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"pictureBox2.BackgroundImage")));
+			this->pictureBox2->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->pictureBox2->Location = System::Drawing::Point(359, 50);
+			this->pictureBox2->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->pictureBox2->Name = L"pictureBox2";
+			this->pictureBox2->Size = System::Drawing::Size(44, 43);
+			this->pictureBox2->TabIndex = 18;
+			this->pictureBox2->TabStop = false;
 			// 
 			// button2
 			// 
 			this->button2->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
 			this->button2->Font = (gcnew System::Drawing::Font(L"Century Gothic", 10));
-			this->button2->Location = System::Drawing::Point(298, 159);
-			this->button2->Margin = System::Windows::Forms::Padding(4);
+			this->button2->Location = System::Drawing::Point(307, 160);
+			this->button2->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->button2->Name = L"button2";
-			this->button2->Size = System::Drawing::Size(58, 48);
+			this->button2->Padding = System::Windows::Forms::Padding(5, 5, 5, 5);
+			this->button2->Size = System::Drawing::Size(103, 48);
 			this->button2->TabIndex = 15;
 			this->button2->Text = L"15";
+			this->button2->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->button2->UseVisualStyleBackColor = true;
 			// 
 			// button1
 			// 
 			this->button1->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
 			this->button1->Font = (gcnew System::Drawing::Font(L"Century Gothic", 10));
-			this->button1->Location = System::Drawing::Point(298, 103);
-			this->button1->Margin = System::Windows::Forms::Padding(4);
+			this->button1->Location = System::Drawing::Point(307, 105);
+			this->button1->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(58, 48);
+			this->button1->Padding = System::Windows::Forms::Padding(5, 5, 5, 5);
+			this->button1->Size = System::Drawing::Size(103, 48);
 			this->button1->TabIndex = 14;
 			this->button1->Text = L"10";
+			this->button1->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->button1->UseVisualStyleBackColor = true;
 			// 
 			// btn_rand_cost
 			// 
 			this->btn_rand_cost->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
 			this->btn_rand_cost->Font = (gcnew System::Drawing::Font(L"Century Gothic", 10));
-			this->btn_rand_cost->Location = System::Drawing::Point(298, 47);
-			this->btn_rand_cost->Margin = System::Windows::Forms::Padding(4);
+			this->btn_rand_cost->Location = System::Drawing::Point(307, 48);
+			this->btn_rand_cost->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->btn_rand_cost->Name = L"btn_rand_cost";
-			this->btn_rand_cost->Size = System::Drawing::Size(58, 48);
+			this->btn_rand_cost->Padding = System::Windows::Forms::Padding(5, 5, 5, 5);
+			this->btn_rand_cost->Size = System::Drawing::Size(103, 48);
 			this->btn_rand_cost->TabIndex = 13;
-			this->btn_rand_cost->Text = L"5";
+			this->btn_rand_cost->Text = L" 5";
+			this->btn_rand_cost->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->btn_rand_cost->UseVisualStyleBackColor = true;
 			// 
 			// btn_exit_hide
 			// 
-			this->btn_exit_hide->Location = System::Drawing::Point(350, 3);
+			this->btn_exit_hide->BackColor = System::Drawing::Color::Red;
+			this->btn_exit_hide->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+			this->btn_exit_hide->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
+			this->btn_exit_hide->Location = System::Drawing::Point(396, 0);
+			this->btn_exit_hide->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->btn_exit_hide->Name = L"btn_exit_hide";
-			this->btn_exit_hide->Size = System::Drawing::Size(32, 32);
+			this->btn_exit_hide->Size = System::Drawing::Size(37, 32);
 			this->btn_exit_hide->TabIndex = 12;
 			this->btn_exit_hide->Text = L"X";
-			this->btn_exit_hide->UseVisualStyleBackColor = true;
+			this->btn_exit_hide->UseVisualStyleBackColor = false;
 			this->btn_exit_hide->Click += gcnew System::EventHandler(this, &Image_Quiz_Display::btn_exit_hide_Click);
 			// 
 			// lbl_Selected_letter
 			// 
 			this->lbl_Selected_letter->AutoSize = true;
 			this->lbl_Selected_letter->Font = (gcnew System::Drawing::Font(L"Century Gothic", 10));
-			this->lbl_Selected_letter->Location = System::Drawing::Point(81, 86);
+			this->lbl_Selected_letter->Location = System::Drawing::Point(89, 87);
 			this->lbl_Selected_letter->Name = L"lbl_Selected_letter";
 			this->lbl_Selected_letter->Size = System::Drawing::Size(160, 21);
 			this->lbl_Selected_letter->TabIndex = 5;
 			this->lbl_Selected_letter->Text = L"Choose one letter";
 			this->lbl_Selected_letter->Visible = false;
 			// 
-			// btn_solve
-			// 
-			this->btn_solve->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
-			this->btn_solve->Font = (gcnew System::Drawing::Font(L"Century Gothic", 10));
-			this->btn_solve->Location = System::Drawing::Point(21, 215);
-			this->btn_solve->Margin = System::Windows::Forms::Padding(4);
-			this->btn_solve->Name = L"btn_solve";
-			this->btn_solve->Size = System::Drawing::Size(335, 48);
-			this->btn_solve->TabIndex = 11;
-			this->btn_solve->Text = L"Solve";
-			this->btn_solve->UseVisualStyleBackColor = true;
-			this->btn_solve->Click += gcnew System::EventHandler(this, &Image_Quiz_Display::btn_solve_MouseLeave);
-			// 
 			// btn_extra
 			// 
+			this->btn_extra->BackColor = System::Drawing::Color::LightSeaGreen;
 			this->btn_extra->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
 			this->btn_extra->Font = (gcnew System::Drawing::Font(L"Century Gothic", 10));
-			this->btn_extra->Location = System::Drawing::Point(21, 159);
-			this->btn_extra->Margin = System::Windows::Forms::Padding(4);
+			this->btn_extra->Location = System::Drawing::Point(29, 160);
+			this->btn_extra->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->btn_extra->Name = L"btn_extra";
 			this->btn_extra->Size = System::Drawing::Size(269, 48);
 			this->btn_extra->TabIndex = 10;
 			this->btn_extra->Text = L"Remove Extra Letter";
-			this->btn_extra->UseVisualStyleBackColor = true;
+			this->btn_extra->UseVisualStyleBackColor = false;
 			this->btn_extra->Click += gcnew System::EventHandler(this, &Image_Quiz_Display::btn_extra_MouseLeave);
 			// 
 			// btn_selected
 			// 
+			this->btn_selected->BackColor = System::Drawing::Color::LightSkyBlue;
 			this->btn_selected->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
 			this->btn_selected->Font = (gcnew System::Drawing::Font(L"Century Gothic", 10));
-			this->btn_selected->Location = System::Drawing::Point(21, 103);
-			this->btn_selected->Margin = System::Windows::Forms::Padding(4);
+			this->btn_selected->Location = System::Drawing::Point(29, 105);
+			this->btn_selected->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->btn_selected->Name = L"btn_selected";
 			this->btn_selected->Size = System::Drawing::Size(269, 48);
 			this->btn_selected->TabIndex = 9;
 			this->btn_selected->Text = L"Selected Letter";
-			this->btn_selected->UseVisualStyleBackColor = true;
+			this->btn_selected->UseVisualStyleBackColor = false;
 			this->btn_selected->Click += gcnew System::EventHandler(this, &Image_Quiz_Display::btn_selected_MouseLeave);
 			// 
 			// btn_random
 			// 
+			this->btn_random->BackColor = System::Drawing::Color::LightCyan;
 			this->btn_random->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
 			this->btn_random->Font = (gcnew System::Drawing::Font(L"Century Gothic", 10));
-			this->btn_random->Location = System::Drawing::Point(21, 47);
-			this->btn_random->Margin = System::Windows::Forms::Padding(4);
+			this->btn_random->Location = System::Drawing::Point(29, 48);
+			this->btn_random->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->btn_random->Name = L"btn_random";
 			this->btn_random->Size = System::Drawing::Size(269, 48);
 			this->btn_random->TabIndex = 8;
 			this->btn_random->Text = L"Random Letter";
-			this->btn_random->UseVisualStyleBackColor = true;
+			this->btn_random->UseVisualStyleBackColor = false;
 			this->btn_random->Click += gcnew System::EventHandler(this, &Image_Quiz_Display::btn_random_MouseLeave);
 			// 
 			// lbl_Level
 			// 
 			this->lbl_Level->AutoSize = true;
-			this->lbl_Level->Location = System::Drawing::Point(75, 166);
+			this->lbl_Level->Font = (gcnew System::Drawing::Font(L"Century Gothic", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->lbl_Level->ForeColor = System::Drawing::SystemColors::ControlText;
+			this->lbl_Level->Location = System::Drawing::Point(108, 172);
 			this->lbl_Level->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->lbl_Level->Name = L"lbl_Level";
-			this->lbl_Level->Size = System::Drawing::Size(42, 17);
+			this->lbl_Level->Size = System::Drawing::Size(77, 30);
 			this->lbl_Level->TabIndex = 5;
 			this->lbl_Level->Text = L"Level";
 			// 
 			// lbl_type
 			// 
 			this->lbl_type->AutoSize = true;
-			this->lbl_type->Location = System::Drawing::Point(75, 192);
+			this->lbl_type->Font = (gcnew System::Drawing::Font(L"Century Gothic", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->lbl_type->ForeColor = System::Drawing::SystemColors::ControlText;
+			this->lbl_type->Location = System::Drawing::Point(119, 217);
 			this->lbl_type->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->lbl_type->Name = L"lbl_type";
-			this->lbl_type->Size = System::Drawing::Size(39, 17);
+			this->lbl_type->Size = System::Drawing::Size(65, 30);
 			this->lbl_type->TabIndex = 6;
 			this->lbl_type->Text = L"Easy";
 			// 
 			// btn_Back_to_Image_Quiz
 			// 
-			this->btn_Back_to_Image_Quiz->Location = System::Drawing::Point(25, 236);
+			this->btn_Back_to_Image_Quiz->BackColor = System::Drawing::SystemColors::ButtonHighlight;
+			this->btn_Back_to_Image_Quiz->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+			this->btn_Back_to_Image_Quiz->Font = (gcnew System::Drawing::Font(L"Century Gothic", 14.25F, System::Drawing::FontStyle::Regular, 
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->btn_Back_to_Image_Quiz->Location = System::Drawing::Point(44, 290);
+			this->btn_Back_to_Image_Quiz->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->btn_Back_to_Image_Quiz->Name = L"btn_Back_to_Image_Quiz";
 			this->btn_Back_to_Image_Quiz->Size = System::Drawing::Size(223, 54);
 			this->btn_Back_to_Image_Quiz->TabIndex = 7;
-			this->btn_Back_to_Image_Quiz->Text = L"LEAVE";
-			this->btn_Back_to_Image_Quiz->UseVisualStyleBackColor = true;
+			this->btn_Back_to_Image_Quiz->Text = L"Exit Game";
+			this->btn_Back_to_Image_Quiz->UseVisualStyleBackColor = false;
 			this->btn_Back_to_Image_Quiz->Click += gcnew System::EventHandler(this, &Image_Quiz_Display::btn_Back_to_Image_Quiz_Click);
 			// 
 			// lbl_Score
 			// 
 			this->lbl_Score->AutoSize = true;
-			this->lbl_Score->Location = System::Drawing::Point(68, 334);
+			this->lbl_Score->Font = (gcnew System::Drawing::Font(L"Century Gothic", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->lbl_Score->ForeColor = System::Drawing::SystemColors::ControlText;
+			this->lbl_Score->Location = System::Drawing::Point(109, 395);
 			this->lbl_Score->Name = L"lbl_Score";
-			this->lbl_Score->Size = System::Drawing::Size(56, 17);
+			this->lbl_Score->Size = System::Drawing::Size(73, 22);
 			this->lbl_Score->TabIndex = 8;
 			this->lbl_Score->Text = L"SCORE";
 			// 
 			// lbl_Score_Value
 			// 
 			this->lbl_Score_Value->AutoSize = true;
-			this->lbl_Score_Value->Location = System::Drawing::Point(140, 334);
+			this->lbl_Score_Value->Font = (gcnew System::Drawing::Font(L"Century Gothic", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->lbl_Score_Value->ForeColor = System::Drawing::SystemColors::ControlText;
+			this->lbl_Score_Value->Location = System::Drawing::Point(219, 395);
 			this->lbl_Score_Value->Name = L"lbl_Score_Value";
-			this->lbl_Score_Value->Size = System::Drawing::Size(16, 17);
+			this->lbl_Score_Value->Size = System::Drawing::Size(21, 22);
 			this->lbl_Score_Value->TabIndex = 9;
 			this->lbl_Score_Value->Text = L"0";
 			// 
 			// lbl_MaxScore
 			// 
 			this->lbl_MaxScore->AutoSize = true;
-			this->lbl_MaxScore->Location = System::Drawing::Point(68, 367);
+			this->lbl_MaxScore->Font = (gcnew System::Drawing::Font(L"Century Gothic", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->lbl_MaxScore->ForeColor = System::Drawing::SystemColors::ControlText;
+			this->lbl_MaxScore->Location = System::Drawing::Point(57, 449);
 			this->lbl_MaxScore->Name = L"lbl_MaxScore";
-			this->lbl_MaxScore->Size = System::Drawing::Size(89, 17);
+			this->lbl_MaxScore->Size = System::Drawing::Size(122, 22);
 			this->lbl_MaxScore->TabIndex = 10;
 			this->lbl_MaxScore->Text = L"MAX SCORE";
 			// 
 			// lbl_MaxScore_Value
 			// 
 			this->lbl_MaxScore_Value->AutoSize = true;
-			this->lbl_MaxScore_Value->Location = System::Drawing::Point(163, 367);
+			this->lbl_MaxScore_Value->Font = (gcnew System::Drawing::Font(L"Century Gothic", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->lbl_MaxScore_Value->ForeColor = System::Drawing::SystemColors::ControlText;
+			this->lbl_MaxScore_Value->Location = System::Drawing::Point(219, 449);
 			this->lbl_MaxScore_Value->Name = L"lbl_MaxScore_Value";
-			this->lbl_MaxScore_Value->Size = System::Drawing::Size(16, 17);
+			this->lbl_MaxScore_Value->Size = System::Drawing::Size(21, 22);
 			this->lbl_MaxScore_Value->TabIndex = 11;
 			this->lbl_MaxScore_Value->Text = L"0";
 			// 
 			// lbl_points_to_be_gained
 			// 
 			this->lbl_points_to_be_gained->AutoSize = true;
-			this->lbl_points_to_be_gained->Location = System::Drawing::Point(33, 398);
+			this->lbl_points_to_be_gained->Font = (gcnew System::Drawing::Font(L"Century Gothic", 11.25F, System::Drawing::FontStyle::Regular, 
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->lbl_points_to_be_gained->ForeColor = System::Drawing::SystemColors::ControlText;
+			this->lbl_points_to_be_gained->Location = System::Drawing::Point(79, 501);
 			this->lbl_points_to_be_gained->Name = L"lbl_points_to_be_gained";
-			this->lbl_points_to_be_gained->Size = System::Drawing::Size(161, 17);
+			this->lbl_points_to_be_gained->Size = System::Drawing::Size(104, 22);
 			this->lbl_points_to_be_gained->TabIndex = 12;
-			this->lbl_points_to_be_gained->Text = L"POINTS TO BE GAINED";
+			this->lbl_points_to_be_gained->Text = L"POINTS TO";
 			// 
 			// lbl_points_to_be_gained_value
 			// 
 			this->lbl_points_to_be_gained_value->AutoSize = true;
-			this->lbl_points_to_be_gained_value->Location = System::Drawing::Point(229, 399);
+			this->lbl_points_to_be_gained_value->Font = (gcnew System::Drawing::Font(L"Century Gothic", 11.25F, System::Drawing::FontStyle::Regular, 
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->lbl_points_to_be_gained_value->ForeColor = System::Drawing::SystemColors::ControlText;
+			this->lbl_points_to_be_gained_value->Location = System::Drawing::Point(219, 511);
 			this->lbl_points_to_be_gained_value->Name = L"lbl_points_to_be_gained_value";
-			this->lbl_points_to_be_gained_value->Size = System::Drawing::Size(16, 17);
+			this->lbl_points_to_be_gained_value->Size = System::Drawing::Size(21, 22);
 			this->lbl_points_to_be_gained_value->TabIndex = 13;
 			this->lbl_points_to_be_gained_value->Text = L"0";
+			// 
+			// panel2
+			// 
+			this->panel2->BackColor = System::Drawing::Color::PowderBlue;
+			this->panel2->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Center;
+			this->panel2->Controls->Add(this->pictureBox1);
+			this->panel2->Controls->Add(this->label2);
+			this->panel2->Controls->Add(this->lbl_points_to_be_gained_value);
+			this->panel2->Controls->Add(this->btn_Back_to_Image_Quiz);
+			this->panel2->Controls->Add(this->lbl_points_to_be_gained);
+			this->panel2->Controls->Add(this->lbl_MaxScore_Value);
+			this->panel2->Controls->Add(this->lbl_Level);
+			this->panel2->Controls->Add(this->lbl_MaxScore);
+			this->panel2->Controls->Add(this->lbl_type);
+			this->panel2->Controls->Add(this->lbl_Score_Value);
+			this->panel2->Controls->Add(this->lbl_Score);
+			this->panel2->ForeColor = System::Drawing::SystemColors::ControlText;
+			this->panel2->Location = System::Drawing::Point(1001, -1);
+			this->panel2->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->panel2->Name = L"panel2";
+			this->panel2->Size = System::Drawing::Size(317, 642);
+			this->panel2->TabIndex = 14;
+			this->panel2->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &Image_Quiz_Display::panel2_Paint);
+			// 
+			// pictureBox1
+			// 
+			this->pictureBox1->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"pictureBox1.BackgroundImage")));
+			this->pictureBox1->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->pictureBox1->Location = System::Drawing::Point(84, 53);
+			this->pictureBox1->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->pictureBox1->Name = L"pictureBox1";
+			this->pictureBox1->Size = System::Drawing::Size(133, 102);
+			this->pictureBox1->TabIndex = 15;
+			this->pictureBox1->TabStop = false;
+			// 
+			// label2
+			// 
+			this->label2->AutoSize = true;
+			this->label2->Font = (gcnew System::Drawing::Font(L"Century Gothic", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->label2->ForeColor = System::Drawing::SystemColors::ControlText;
+			this->label2->Location = System::Drawing::Point(68, 532);
+			this->label2->Name = L"label2";
+			this->label2->Size = System::Drawing::Size(111, 22);
+			this->label2->TabIndex = 14;
+			this->label2->Text = L"BE GAINED";
+			// 
+			// btn_displayScore
+			// 
+			this->btn_displayScore->BackColor = System::Drawing::Color::PowderBlue;
+			this->btn_displayScore->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+			this->btn_displayScore->Font = (gcnew System::Drawing::Font(L"Century Gothic", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->btn_displayScore->ForeColor = System::Drawing::SystemColors::ControlDarkDark;
+			this->btn_displayScore->Location = System::Drawing::Point(801, 139);
+			this->btn_displayScore->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->btn_displayScore->Name = L"btn_displayScore";
+			this->btn_displayScore->Size = System::Drawing::Size(121, 87);
+			this->btn_displayScore->TabIndex = 15;
+			this->btn_displayScore->TextAlign = System::Drawing::ContentAlignment::TopCenter;
+			this->btn_displayScore->UseVisualStyleBackColor = false;
+			this->btn_displayScore->Click += gcnew System::EventHandler(this, &Image_Quiz_Display::btn_displayScore_Click);
+			// 
+			// label3
+			// 
+			this->label3->AutoSize = true;
+			this->label3->BackColor = System::Drawing::Color::PowderBlue;
+			this->label3->Font = (gcnew System::Drawing::Font(L"Century Gothic", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->label3->ForeColor = System::Drawing::SystemColors::ControlDarkDark;
+			this->label3->Location = System::Drawing::Point(821, 185);
+			this->label3->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label3->Name = L"label3";
+			this->label3->Size = System::Drawing::Size(79, 22);
+			this->label3->TabIndex = 16;
+			this->label3->Text = L"BOARD";
+			this->label3->Click += gcnew System::EventHandler(this, &Image_Quiz_Display::label3_Click);
+			// 
+			// label4
+			// 
+			this->label4->AutoSize = true;
+			this->label4->BackColor = System::Drawing::Color::PowderBlue;
+			this->label4->Font = (gcnew System::Drawing::Font(L"Century Gothic", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
+			this->label4->ForeColor = System::Drawing::SystemColors::ControlDarkDark;
+			this->label4->Location = System::Drawing::Point(821, 160);
+			this->label4->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label4->Name = L"label4";
+			this->label4->Size = System::Drawing::Size(73, 22);
+			this->label4->TabIndex = 17;
+			this->label4->Text = L"SCORE";
+			this->label4->Click += gcnew System::EventHandler(this, &Image_Quiz_Display::label4_Click);
 			// 
 			// Image_Quiz_Display
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::Color::MintCream;
+			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"$this.BackgroundImage")));
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->ClientSize = System::Drawing::Size(1005, 636);
-			this->Controls->Add(this->lbl_points_to_be_gained_value);
-			this->Controls->Add(this->lbl_points_to_be_gained);
-			this->Controls->Add(this->lbl_MaxScore_Value);
-			this->Controls->Add(this->lbl_MaxScore);
-			this->Controls->Add(this->lbl_Score_Value);
-			this->Controls->Add(this->lbl_Score);
-			this->Controls->Add(this->btn_Back_to_Image_Quiz);
-			this->Controls->Add(this->lbl_type);
-			this->Controls->Add(this->lbl_Level);
+			this->ClientSize = System::Drawing::Size(970, 636);
+			this->Controls->Add(this->label4);
+			this->Controls->Add(this->label3);
+			this->Controls->Add(this->btn_displayScore);
 			this->Controls->Add(this->panel1);
 			this->Controls->Add(this->btn_submit);
-			this->Controls->Add(this->label1);
 			this->Controls->Add(this->btn_Next);
+			this->Controls->Add(this->label1);
 			this->Controls->Add(this->PB_Quiz_Image);
+			this->Controls->Add(this->panel2);
+			this->DoubleBuffered = true;
 			this->KeyPreview = true;
 			this->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->Name = L"Image_Quiz_Display";
@@ -415,17 +638,26 @@ namespace FunBrainz {
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->PB_Quiz_Image))->EndInit();
 			this->panel1->ResumeLayout(false);
 			this->panel1->PerformLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->pictureBox5))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->pictureBox4))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->pictureBox3))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->pictureBox2))->EndInit();
+			this->panel2->ResumeLayout(false);
+			this->panel2->PerformLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->pictureBox1))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
 		}
 #pragma endregion
 		Form^ caller;
+		int stuId;
+
 		static array<String^>^ image_file_name = gcnew array<String^>(1000); //for file name
 		static array<String^>^ image_name = gcnew array<String^>(1000); //for image name
 		static array<bool>^ visited_image = gcnew array<bool>(1000); //boolean array to check if the image is already displayed
 		static array<int>^ index_ans = gcnew array<int>(14); // for storing the index of the pressed char button 
-		
+		static int sidepane=0;
 		static int counter_image = 0;
 		static int length_of_answer = 0;
 		static int index_to_be_filled = 0;
@@ -454,7 +686,7 @@ public:
 			else
 				return b;
 		}
-
+		
 		void button_creator(int x,int y,String^ s){
 			Button^ var = gcnew Button();
 			//var->BackColor = System::Drawing::SystemColors::ControlDarkDar/*k;
@@ -540,25 +772,40 @@ public:
 			this->Controls->Add(hint);
 			hint->Click += gcnew System::EventHandler(this, &Image_Quiz_Display::btnHint_Click);
 			x = x + 75;
+			hint->BackColor = System::Drawing::Color::YellowGreen;
+			hint->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+			hint->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
+			hint->Font = (gcnew System::Drawing::Font(L"Century Gothic", 10, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
 
 			clear->Location = System::Drawing::Point(x, y);
 			clear->Name = L"clear";
 			clear->Size = System::Drawing::Size(70,45);
 			clear->TabIndex = 1;
-			clear->Text = "clear";
+			clear->Text = "CLEAR";
 			clear->UseVisualStyleBackColor = false;
 			this->Controls->Add(clear);
 			clear->Click += gcnew System::EventHandler(this, &Image_Quiz_Display::btnClear_Click);
 			x = x + 75;
+			clear->BackColor = System::Drawing::Color::Red;
+			clear->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+			clear->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
+			clear->Font = (gcnew System::Drawing::Font(L"Century Gothic", 10, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
 
+			back->BackColor = System::Drawing::Color::Red;
+			back->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+			back->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
 			back->Location = System::Drawing::Point(x, y);
 			back->Name = L"back";
 			back->Size = System::Drawing::Size(70,45);
 			back->TabIndex = 1;
-			back->Text = "back";
+			back->Text = "BACK";
 			back->UseVisualStyleBackColor = false;
 			this->Controls->Add(back);
 			back->Click += gcnew System::EventHandler(this, &Image_Quiz_Display::btnBack_Click);
+			back->Font = (gcnew System::Drawing::Font(L"Century Gothic", 10, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+				static_cast<System::Byte>(0)));
 		}
 
 
@@ -591,6 +838,7 @@ public:
 				 ((Button^)ans_btn)->Text = access_char;
 				 Control^ curr_btn = this->Controls[System::Convert::ToString(100+randomindex)];
 				 ((Button^)curr_btn)->Enabled=false;
+				 ((Button^)curr_btn)->Visible=false;
 
 				 int flag2=0;
 				 for(int i=0;i<length_of_answer;i++){
@@ -654,6 +902,7 @@ public:
 					 else
 					 {
 						 ans_btn->Enabled=false;
+						 ans_btn->Visible=false;
 					 }
 				 }
 				 for(int i=0;i<length_of_answer;i++){
@@ -854,8 +1103,8 @@ public:
 						 OleDb::OleDbConnection ^ con = gcnew OleDb::OleDbConnection();
 						 con->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=FunBrainzForKids.accdb;";
 						 
-						 String ^ Sq5 = "UPDATE Image_Quiz SET [Max_Score] = " + max_score + " Where [Domain] = '" + label1->Text + "';";
-						 String ^ Sq6 = "UPDATE Image_Quiz SET [Total_Score] = " + total_score + " Where [Domain] = '" + label1->Text + "';";
+						 String ^ Sq5 = "UPDATE Image_Quiz SET [Max_Score] = " + max_score + " Where [Domain] = '" + label1->Text + "' and [StudentID] = "+stuId+";";
+						 String ^ Sq6 = "UPDATE Image_Quiz SET [Total_Score] = " + total_score + " Where [Domain] = '" + label1->Text + "' and [StudentID] = "+stuId+";";
 						 OleDb::OleDbCommand ^ command4 = gcnew OleDb::OleDbCommand(Sq5, con);
 						 OleDb::OleDbCommand ^ command5 = gcnew OleDb::OleDbCommand(Sq6, con);
 						 con->Open();
@@ -960,13 +1209,14 @@ public:
 				 medium_level=0;
 				 hard_level=0;
 				 srand(time(0));
-				 
+				 //int sidepane=0;
 				 label1->Text = label_name;
 					 try {
 						 OleDb::OleDbConnection ^ con = gcnew OleDb::OleDbConnection();
 						 con->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=FunBrainzForKids.accdb;";
-						 String ^ Sql = "Select Max_Score from Image_Quiz where [Domain] = '" + label1->Text + "';";
-						 String ^ Sq2 = "Select Total_Score from Image_Quiz where [Domain] = '" + label1->Text + "';";
+						 String ^ Sql = "Select Max_Score from Image_Quiz where [Domain] = '" + label1->Text + "' and [StudentID] = "+stuId+";";
+						 String ^ Sq2 = "Select Total_Score from Image_Quiz where [Domain] = '" + label1->Text + "' and [StudentID] = "+stuId+";";
+						
 						 OleDb::OleDbCommand ^ command = gcnew OleDb::OleDbCommand(Sql, con);
 						 OleDb::OleDbCommand ^ command2 = gcnew OleDb::OleDbCommand(Sq2, con);
 						 con->Open();
@@ -990,7 +1240,7 @@ public:
 				 array<int>^ image_easy_level =gcnew array<int>(1000);
 				 array<int>^ image_medium_level = gcnew array<int>(1000);
 				 array<int>^ image_hard_level = gcnew array<int>(1000);
-				 MessageBox::Show("stage1");
+				
 
 
 				 try {
@@ -1031,7 +1281,7 @@ public:
 				 try {
 					 OleDb::OleDbConnection ^ con = gcnew OleDb::OleDbConnection();
 					 con->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=FunBrainzForKids.accdb;";
-					 String ^ Sql = "Select * from Image_Quiz where [Domain] = '" + label1->Text + "';";
+					 String ^ Sql = "Select * from Image_Quiz where [Domain] = '" + label1->Text + "' and [StudentID] = "+stuId+";";
 					 OleDb::OleDbCommand ^ command = gcnew OleDb::OleDbCommand(Sql, con);
 					 con->Open();
 					 //MessageBox::Show(command->ExecuteScalar()->ToString());
@@ -1141,10 +1391,10 @@ public:
 					 try {
 						 OleDb::OleDbConnection ^ con = gcnew OleDb::OleDbConnection();
 						 con->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=FunBrainzForKids.accdb;";
-						 String ^ Sq2 = "UPDATE Image_Quiz SET [Levels_Completed_Easy] = " + easy_levels_completed + " Where [Domain] = '" + label1->Text + "';";
-						 String ^ Sq3 = "UPDATE Image_Quiz SET [Levels_Completed_Medium] = " + medium_levels_completed + " Where [Domain] = '" + label1->Text + "';";
-						 String ^ Sq4 = "UPDATE Image_Quiz SET [Levels_Completed_Hard] = " + hard_levels_completed + " Where [Domain] = '" + label1->Text + "';";
-						 String ^ Sq5 = "UPDATE Image_Quiz SET [Total_Score] = " + total_score + " Where [Domain] = '" + label1->Text + "';";
+						 String ^ Sq2 = "UPDATE Image_Quiz SET [Levels_Completed_Easy] = " + easy_levels_completed + " Where [Domain] = '" + label1->Text + "' and [StudentID] = "+stuId+";";
+						 String ^ Sq3 = "UPDATE Image_Quiz SET [Levels_Completed_Medium] = " + medium_levels_completed + " Where [Domain] = '" + label1->Text + "' and [StudentID] = "+stuId+";";
+						 String ^ Sq4 = "UPDATE Image_Quiz SET [Levels_Completed_Hard] = " + hard_levels_completed + " Where [Domain] = '" + label1->Text + "' and [StudentID] = "+stuId+";";
+						 String ^ Sq5 = "UPDATE Image_Quiz SET [Total_Score] = " + total_score + " Where [Domain] = '" + label1->Text + "' and [StudentID] = "+stuId+";";
 					
 						 OleDb::OleDbCommand ^ command = gcnew OleDb::OleDbCommand(Sq2, con);
 						 OleDb::OleDbCommand ^ command2 = gcnew OleDb::OleDbCommand(Sq3, con);
@@ -1254,7 +1504,7 @@ private: System::Void btn_Next_Click(System::Object^  sender, System::EventArgs^
 						 try {
 							 OleDb::OleDbConnection ^ con = gcnew OleDb::OleDbConnection();
 							 con->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=FunBrainzForKids.accdb;";
-							 String ^ Sq2 = "UPDATE Image_Quiz SET [Levels_Completed_Easy] = " + easy_levels_completed + " Where [Domain] = '" + label1->Text + "';";
+							 String ^ Sq2 = "UPDATE Image_Quiz SET [Levels_Completed_Easy] = " + easy_levels_completed + " Where [Domain] = '" + label1->Text + "' and [StudentID] = "+stuId+";";
 							 OleDb::OleDbCommand ^ command = gcnew OleDb::OleDbCommand(Sq2, con);
 							 con->Open();
 							 command->ExecuteScalar();
@@ -1269,7 +1519,7 @@ private: System::Void btn_Next_Click(System::Object^  sender, System::EventArgs^
 						 try {
 							 OleDb::OleDbConnection ^ con = gcnew OleDb::OleDbConnection();
 							 con->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=FunBrainzForKids.accdb;";
-							 String ^ Sq2 = "UPDATE Image_Quiz SET [Levels_Completed_Medium] = " + medium_levels_completed + " Where [Domain] = '" + label1->Text + "';";
+							 String ^ Sq2 = "UPDATE Image_Quiz SET [Levels_Completed_Medium] = " + medium_levels_completed + " Where [Domain] = '" + label1->Text + "' and [StudentID] = "+stuId+";";
 							 OleDb::OleDbCommand ^ command = gcnew OleDb::OleDbCommand(Sq2, con);
 							 con->Open();
 							 command->ExecuteScalar();
@@ -1285,7 +1535,7 @@ private: System::Void btn_Next_Click(System::Object^  sender, System::EventArgs^
 						 try {
 							 OleDb::OleDbConnection ^ con = gcnew OleDb::OleDbConnection();
 							 con->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=FunBrainzForKids.accdb;";
-							 String ^ Sq2 = "UPDATE Image_Quiz SET [Levels_Completed_Hard] = " + hard_levels_completed + " Where [Domain] = '" + label1->Text + "';";
+							 String ^ Sq2 = "UPDATE Image_Quiz SET [Levels_Completed_Hard] = " + hard_levels_completed + " Where [Domain] = '" + label1->Text + "' and [StudentID] = "+stuId+";";
 							 OleDb::OleDbCommand ^ command = gcnew OleDb::OleDbCommand(Sq2, con);
 							 con->Open();
 							 command->ExecuteScalar();
@@ -1299,7 +1549,7 @@ private: System::Void btn_Next_Click(System::Object^  sender, System::EventArgs^
 					 try {
 						 OleDb::OleDbConnection ^ con = gcnew OleDb::OleDbConnection();
 						 con->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=FunBrainzForKids.accdb;";
-						 String ^ Sq2 = "UPDATE Image_Quiz SET [Total_Score] = " + total_score + " Where [Domain] = '" + label1->Text + "';";
+						 String ^ Sq2 = "UPDATE Image_Quiz SET [Total_Score] = " + total_score + " Where [Domain] = '" + label1->Text + "' and [StudentID] = "+stuId+";";
 						 OleDb::OleDbCommand ^ command = gcnew OleDb::OleDbCommand(Sq2, con);
 						 con->Open();
 						 command->ExecuteScalar();
@@ -1447,6 +1697,35 @@ private: System::Void btn_Back_to_Image_Quiz_Click(System::Object^  sender, Syst
 		 }
 private: System::Void btn_exit_hide_Click(System::Object^  sender, System::EventArgs^  e) {
 			 panel1->Visible=false;
+		 }
+private: System::Void btn_displayScore_Click(System::Object^  sender, System::EventArgs^  e) {
+			 if(sidepane == 0){
+				this->ClientSize = System::Drawing::Size(988, 517);
+				sidepane=1;
+			 }else{
+				this->ClientSize = System::Drawing::Size(751, 517);
+				sidepane=0;
+			 }
+		 }
+private: System::Void panel2_Paint(System::Object^  sender, System::Windows::Forms::PaintEventArgs^  e) {
+		 }
+private: System::Void label4_Click(System::Object^  sender, System::EventArgs^  e) {
+			 if(sidepane == 0){
+				this->ClientSize = System::Drawing::Size(988, 517);
+				sidepane=1;
+			 }else{
+				this->ClientSize = System::Drawing::Size(751, 517);
+				sidepane=0;
+			 }
+		 }
+private: System::Void label3_Click(System::Object^  sender, System::EventArgs^  e) {
+			 if(sidepane == 0){
+				this->ClientSize = System::Drawing::Size(988, 517);
+				sidepane=1;
+			 }else{
+				this->ClientSize = System::Drawing::Size(751, 517);
+				sidepane=0;
+			 }
 		 }
 };
 }

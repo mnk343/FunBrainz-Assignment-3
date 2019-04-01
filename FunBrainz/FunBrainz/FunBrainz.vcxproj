@@ -250,6 +250,9 @@
     <EmbeddedResource Include="ImageQuiz2.resx">
       <DependentUpon>ImageQuiz2.h</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Image_Quiz_Display.resx">
+      <DependentUpon>Image_Quiz_Display.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Level_pipeline.resx">
       <DependentUpon>Level_pipeline.h</DependentUpon>
     </EmbeddedResource>

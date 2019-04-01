@@ -712,9 +712,9 @@ namespace FunBrainz {
 				con->ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=FunBrainzForKids.accdb;";
 
 				//EXTRACT STUDENT_id FROM LOGIN PAGE DATA AND STORE IN STUID
-				int stuID = 1;
+				int stuID = stuId;
 
-				String ^ Sql = "Select [Max_Score] from 2048_Game where [StudentID] = " + stuID + ";";
+				String ^ Sql = "Select [Max_Score] from 2048_Game where [StudentID] = " + stuId + ";";
 				OleDb::OleDbCommand ^ command = gcnew OleDb::OleDbCommand(Sql, con);
 				con->Open();
 				int dummy = (int)command->ExecuteScalar();
@@ -866,7 +866,7 @@ namespace FunBrainz {
 					//EXTRACT STUDENT_id FROM LOGIN PAGE DATA AND STORE IN STUID
 					int dum_max_score = max(convert_string_to_int(lbl_Score_Value->Text),convert_string_to_int(lblMax_Score_Value->Text));
 					//MessageBox::Show(dum_max_score.ToString());
-					String ^ Sql = "UPDATE 2048_Game SET [Max_Score] = " + dum_max_score + ";";
+					String ^ Sql = "UPDATE 2048_Game SET [Max_Score] = " + dum_max_score + " WHERE [StudentID] = " + stuId + ";";
 					OleDb::OleDbCommand ^ command = gcnew OleDb::OleDbCommand(Sql, con);
 					con->Open();
 					command->ExecuteScalar();
@@ -882,8 +882,8 @@ namespace FunBrainz {
 					int rand_no = rand()%(34);
 					int number_of_times_played;
 					String^ scores="";
-					String ^ Sql = "Select [Number_of_Times_Played] from 2048_Game where [StudentID] = " + stu_ID + ";";
-					String ^ Sq2 = "Select [Scores] from 2048_Game where [StudentID] = " + stu_ID + ";";
+					String ^ Sql = "Select [Number_of_Times_Played] from 2048_Game where [StudentID] = " + stuId + ";";
+					String ^ Sq2 = "Select [Scores] from 2048_Game where [StudentID] = " + stuId + ";";
 					OleDb::OleDbCommand ^ command = gcnew OleDb::OleDbCommand(Sql, con);
 					OleDb::OleDbCommand ^ command2 = gcnew OleDb::OleDbCommand(Sq2, con);
 					con->Open();
@@ -893,8 +893,8 @@ namespace FunBrainz {
 					String^ dummy = lbl_Score_Value->Text+",";
 					scores+=dummy;
 					MessageBox::Show(scores);
-					String ^ Sq3 = "UPDATE 2048_Game SET [Number_of_Times_Played] = " + number_of_times_played + " Where [StudentID] = " + stu_ID + ";";
-					String ^ Sq4 = "UPDATE 2048_Game SET [Scores] = '" + scores + "' Where [StudentID] = " + stu_ID + ";";
+					String ^ Sq3 = "UPDATE 2048_Game SET [Number_of_Times_Played] = " + number_of_times_played + " Where [StudentID] = " + stuId + ";";
+					String ^ Sq4 = "UPDATE 2048_Game SET [Scores] = '" + scores + "' Where [StudentID] = " + stuId + ";";
 					OleDb::OleDbCommand ^ command3 = gcnew OleDb::OleDbCommand(Sq3, con);
 					OleDb::OleDbCommand ^ command4 = gcnew OleDb::OleDbCommand(Sq4, con);
 					command3->ExecuteScalar();
@@ -982,7 +982,7 @@ namespace FunBrainz {
 					//EXTRACT STUDENT_id FROM LOGIN PAGE DATA AND STORE IN STUID
 					int dum_max_score = max(convert_string_to_int(lbl_Score_Value->Text), convert_string_to_int(lblMax_Score_Value->Text));
 					//MessageBox::Show(dum_max_score.ToString());
-					String ^ Sql = "UPDATE 2048_Game SET [Max_Score] = " + dum_max_score + ";";
+					String ^ Sql = "UPDATE 2048_Game SET [Max_Score] = " + dum_max_score + " WHERE [StudentID] = " + stuId + ";";
 					OleDb::OleDbCommand ^ command = gcnew OleDb::OleDbCommand(Sql, con);
 					con->Open();
 					command->ExecuteScalar();
@@ -998,8 +998,8 @@ namespace FunBrainz {
 					int rand_no = rand()%(34);
 					int number_of_times_played;
 					String^ scores="";
-					String ^ Sql = "Select [Number_of_Times_Played] from 2048_Game where [StudentID] = " + stu_ID + ";";
-					String ^ Sq2 = "Select [Scores] from 2048_Game where [StudentID] = " + stu_ID + ";";
+					String ^ Sql = "Select [Number_of_Times_Played] from 2048_Game where [StudentID] = " + stuId + ";";
+					String ^ Sq2 = "Select [Scores] from 2048_Game where [StudentID] = " + stuId + ";";
 					OleDb::OleDbCommand ^ command = gcnew OleDb::OleDbCommand(Sql, con);
 					OleDb::OleDbCommand ^ command2 = gcnew OleDb::OleDbCommand(Sq2, con);
 					con->Open();
@@ -1008,8 +1008,8 @@ namespace FunBrainz {
 					number_of_times_played++;
 					String^ dummy = lbl_Score_Value->Text+",";
 					scores+=dummy;
-					String ^ Sq3 = "UPDATE 2048_Game SET [Number_of_Times_Played] = " + number_of_times_played + " Where [StudentID] = " + stu_ID + ";";
-					String ^ Sq4 = "UPDATE 2048_Game SET [Scores] = '" + scores + "' Where [StudentID] = " + stu_ID + ";";
+					String ^ Sq3 = "UPDATE 2048_Game SET [Number_of_Times_Played] = " + number_of_times_played + " Where [StudentID] = " + stuId + ";";
+					String ^ Sq4 = "UPDATE 2048_Game SET [Scores] = '" + scores + "' Where [StudentID] = " + stuId + ";";
 					OleDb::OleDbCommand ^ command3 = gcnew OleDb::OleDbCommand(Sq3, con);
 					OleDb::OleDbCommand ^ command4 = gcnew OleDb::OleDbCommand(Sq4, con);
 					command3->ExecuteScalar();
@@ -1095,7 +1095,7 @@ namespace FunBrainz {
 					//EXTRACT STUDENT_id FROM LOGIN PAGE DATA AND STORE IN STUID
 					int dum_max_score = max(convert_string_to_int(lbl_Score_Value->Text), convert_string_to_int(lblMax_Score_Value->Text));
 					//MessageBox::Show(dum_max_score.ToString());
-					String ^ Sql = "UPDATE 2048_Game SET [Max_Score] = " + dum_max_score + ";";
+					String ^ Sql = "UPDATE 2048_Game SET [Max_Score] = " + dum_max_score + " WHERE [StudentID] = " + stuId + ";";
 					OleDb::OleDbCommand ^ command = gcnew OleDb::OleDbCommand(Sql, con);
 					con->Open();
 					command->ExecuteScalar();
@@ -1111,8 +1111,8 @@ namespace FunBrainz {
 					int rand_no = rand()%(34);
 					int number_of_times_played;
 					String^ scores="";
-					String ^ Sql = "Select [Number_of_Times_Played] from 2048_Game where [StudentID] = " + stu_ID + ";";
-					String ^ Sq2 = "Select [Scores] from 2048_Game where [StudentID] = " + stu_ID + ";";
+					String ^ Sql = "Select [Number_of_Times_Played] from 2048_Game where [StudentID] = " + stuId + ";";
+					String ^ Sq2 = "Select [Scores] from 2048_Game where [StudentID] = " + stuId + ";";
 					OleDb::OleDbCommand ^ command = gcnew OleDb::OleDbCommand(Sql, con);
 					OleDb::OleDbCommand ^ command2 = gcnew OleDb::OleDbCommand(Sq2, con);
 					con->Open();
@@ -1122,8 +1122,8 @@ namespace FunBrainz {
 					String^ dummy = lbl_Score_Value->Text+",";
 					scores+=dummy;
 					MessageBox::Show(scores);
-					String ^ Sq3 = "UPDATE 2048_Game SET [Number_of_Times_Played] = " + number_of_times_played + " Where [StudentID] = " + stu_ID + ";";
-					String ^ Sq4 = "UPDATE 2048_Game SET [Scores] = '" + scores + "' Where [StudentID] = " + stu_ID + ";";
+					String ^ Sq3 = "UPDATE 2048_Game SET [Number_of_Times_Played] = " + number_of_times_played + " Where [StudentID] = " + stuId + ";";
+					String ^ Sq4 = "UPDATE 2048_Game SET [Scores] = '" + scores + "' Where [StudentID] = " + stuId + ";";
 					OleDb::OleDbCommand ^ command3 = gcnew OleDb::OleDbCommand(Sq3, con);
 					OleDb::OleDbCommand ^ command4 = gcnew OleDb::OleDbCommand(Sq4, con);
 					command3->ExecuteScalar();
@@ -1209,7 +1209,7 @@ namespace FunBrainz {
 					//EXTRACT STUDENT_id FROM LOGIN PAGE DATA AND STORE IN STUID
 					int dum_max_score = max(convert_string_to_int(lbl_Score_Value->Text), convert_string_to_int(lblMax_Score_Value->Text));
 					//MessageBox::Show(dum_max_score.ToString());
-					String ^ Sql = "UPDATE 2048_Game SET [Max_Score] = " + dum_max_score + ";";
+					String ^ Sql = "UPDATE 2048_Game SET [Max_Score] = " + dum_max_score + " WHERE [StudentID] = " + stuId + ";";
 					OleDb::OleDbCommand ^ command = gcnew OleDb::OleDbCommand(Sql, con);
 					con->Open();
 					command->ExecuteScalar();
@@ -1225,8 +1225,8 @@ namespace FunBrainz {
 					int rand_no = rand()%(34);
 					int number_of_times_played;
 					String^ scores="";
-					String ^ Sql = "Select [Number_of_Times_Played] from 2048_Game where [StudentID] = " + stu_ID + ";";
-					String ^ Sq2 = "Select [Scores] from 2048_Game where [StudentID] = " + stu_ID + ";";
+					String ^ Sql = "Select [Number_of_Times_Played] from 2048_Game where [StudentID] = " + stuId + ";";
+					String ^ Sq2 = "Select [Scores] from 2048_Game where [StudentID] = " + stuId + ";";
 					OleDb::OleDbCommand ^ command = gcnew OleDb::OleDbCommand(Sql, con);
 					OleDb::OleDbCommand ^ command2 = gcnew OleDb::OleDbCommand(Sq2, con);
 					con->Open();
@@ -1235,8 +1235,8 @@ namespace FunBrainz {
 					number_of_times_played++;
 					String^ dummy = lbl_Score_Value->Text+",";
 					scores+=dummy;
-					String ^ Sq3 = "UPDATE 2048_Game SET [Number_of_Times_Played] = " + number_of_times_played + " Where [StudentID] = " + stu_ID + ";";
-					String ^ Sq4 = "UPDATE 2048_Game SET [Scores] = '" + scores + "' Where [StudentID] = " + stu_ID + ";";
+					String ^ Sq3 = "UPDATE 2048_Game SET [Number_of_Times_Played] = " + number_of_times_played + " Where [StudentID] = " + stuId + ";";
+					String ^ Sq4 = "UPDATE 2048_Game SET [Scores] = '" + scores + "' Where [StudentID] = " + stuId + ";";
 					OleDb::OleDbCommand ^ command3 = gcnew OleDb::OleDbCommand(Sq3, con);
 					OleDb::OleDbCommand ^ command4 = gcnew OleDb::OleDbCommand(Sq4, con);
 					command3->ExecuteScalar();
@@ -1335,7 +1335,7 @@ namespace FunBrainz {
 					//EXTRACT STUDENT_id FROM LOGIN PAGE DATA AND STORE IN STUID
 					int dum_max_score = max(convert_string_to_int(lbl_Score_Value->Text), convert_string_to_int(lblMax_Score_Value->Text));
 					//MessageBox::Show(dum_max_score.ToString());
-					String ^ Sql = "UPDATE 2048_Game SET [Max_Score] = " + dum_max_score + ";";
+					String ^ Sql = "UPDATE 2048_Game SET [Max_Score] = " + dum_max_score + " WHERE [StudentID] = " + stuId + ";";
 					OleDb::OleDbCommand ^ command = gcnew OleDb::OleDbCommand(Sql, con);
 					con->Open();
 					command->ExecuteScalar();
@@ -1351,8 +1351,8 @@ namespace FunBrainz {
 					int rand_no = rand()%(34);
 					int number_of_times_played;
 					String^ scores="";
-					String ^ Sql = "Select [Number_of_Times_Played] from 2048_Game where [StudentID] = " + stu_ID + ";";
-					String ^ Sq2 = "Select [Scores] from 2048_Game where [StudentID] = " + stu_ID + ";";
+					String ^ Sql = "Select [Number_of_Times_Played] from 2048_Game where [StudentID] = " + stuId + ";";
+					String ^ Sq2 = "Select [Scores] from 2048_Game where [StudentID] = " + stuId + ";";
 					OleDb::OleDbCommand ^ command = gcnew OleDb::OleDbCommand(Sql, con);
 					OleDb::OleDbCommand ^ command2 = gcnew OleDb::OleDbCommand(Sq2, con);
 					con->Open();
@@ -1362,8 +1362,8 @@ namespace FunBrainz {
 					String^ dummy = lbl_Score_Value->Text+",";
 					scores+=dummy;
 					MessageBox::Show(scores);
-					String ^ Sq3 = "UPDATE 2048_Game SET [Number_of_Times_Played] = " + number_of_times_played + " Where [StudentID] = " + stu_ID + ";";
-					String ^ Sq4 = "UPDATE 2048_Game SET [Scores] = '" + scores + "' Where [StudentID] = " + stu_ID + ";";
+					String ^ Sq3 = "UPDATE 2048_Game SET [Number_of_Times_Played] = " + number_of_times_played + " Where [StudentID] = " + stuId + ";";
+					String ^ Sq4 = "UPDATE 2048_Game SET [Scores] = '" + scores + "' Where [StudentID] = " + stuId + ";";
 					OleDb::OleDbCommand ^ command3 = gcnew OleDb::OleDbCommand(Sq3, con);
 					OleDb::OleDbCommand ^ command4 = gcnew OleDb::OleDbCommand(Sq4, con);
 					command3->ExecuteScalar();
@@ -1403,8 +1403,8 @@ namespace FunBrainz {
 					 int rand_no = rand()%(34);
 					 int number_of_times_played;
 					 String^ scores="";
-					 String ^ Sql = "Select [Number_of_Times_Played] from 2048_Game where [StudentID] = " + stu_ID + ";";
-					 String ^ Sq2 = "Select [Scores] from 2048_Game where [StudentID] = " + stu_ID + ";";
+					 String ^ Sql = "Select [Number_of_Times_Played] from 2048_Game where [StudentID] = " + stuId + ";";
+					 String ^ Sq2 = "Select [Scores] from 2048_Game where [StudentID] = " + stuId + ";";
 					 OleDb::OleDbCommand ^ command = gcnew OleDb::OleDbCommand(Sql, con);
 					 OleDb::OleDbCommand ^ command2 = gcnew OleDb::OleDbCommand(Sq2, con);
 					 con->Open();
@@ -1413,8 +1413,8 @@ namespace FunBrainz {
 					 number_of_times_played++;
 					 String^ dummy = lbl_Score_Value->Text+",";
 					 scores+=dummy;
-					 String ^ Sq3 = "UPDATE 2048_Game SET [Number_of_Times_Played] = " + number_of_times_played + " Where [StudentID] = " + stu_ID + ";";
-					 String ^ Sq4 = "UPDATE 2048_Game SET [Scores] = '" + scores + "' Where [StudentID] = " + stu_ID + ";";
+					 String ^ Sq3 = "UPDATE 2048_Game SET [Number_of_Times_Played] = " + number_of_times_played + " Where [StudentID] = " + stuId + ";";
+					 String ^ Sq4 = "UPDATE 2048_Game SET [Scores] = '" + scores + "' Where [StudentID] = " + stuId + ";";
 					 OleDb::OleDbCommand ^ command3 = gcnew OleDb::OleDbCommand(Sq3, con);
 					 OleDb::OleDbCommand ^ command4 = gcnew OleDb::OleDbCommand(Sq4, con);
 					 command3->ExecuteScalar();
@@ -1461,8 +1461,8 @@ namespace FunBrainz {
 					 int rand_no = rand()%(34);
 					 int number_of_times_played;
 					 String^ scores="";
-					 String ^ Sql = "Select [Number_of_Times_Played] from 2048_Game where [StudentID] = " + stu_ID + ";";
-					 String ^ Sq2 = "Select [Scores] from 2048_Game where [StudentID] = " + stu_ID + ";";
+					 String ^ Sql = "Select [Number_of_Times_Played] from 2048_Game where [StudentID] = " + stuId + ";";
+					 String ^ Sq2 = "Select [Scores] from 2048_Game where [StudentID] = " + stuId + ";";
 
 					 OleDb::OleDbCommand ^ command = gcnew OleDb::OleDbCommand(Sql, con);
 					 OleDb::OleDbCommand ^ command2 = gcnew OleDb::OleDbCommand(Sq2, con);
@@ -1472,8 +1472,8 @@ namespace FunBrainz {
 					 number_of_times_played++;
 					 String^ dummy = lbl_Score_Value->Text+",";
 					 scores+=dummy;
-					 String ^ Sq3 = "UPDATE 2048_Game SET [Number_of_Times_Played] = " + number_of_times_played + " Where [StudentID] = " + stu_ID + ";";
-					 String ^ Sq4 = "UPDATE 2048_Game SET [Scores] = '" + scores + "' Where [StudentID] = " + stu_ID + ";";
+					 String ^ Sq3 = "UPDATE 2048_Game SET [Number_of_Times_Played] = " + number_of_times_played + " Where [StudentID] = " + stuId + ";";
+					 String ^ Sq4 = "UPDATE 2048_Game SET [Scores] = '" + scores + "' Where [StudentID] = " + stuId + ";";
 					 OleDb::OleDbCommand ^ command3 = gcnew OleDb::OleDbCommand(Sq3, con);
 					 OleDb::OleDbCommand ^ command4 = gcnew OleDb::OleDbCommand(Sq4, con);
 					 command3->ExecuteScalar();
