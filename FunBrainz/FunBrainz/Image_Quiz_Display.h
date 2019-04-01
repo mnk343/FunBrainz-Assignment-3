@@ -829,7 +829,7 @@ public:
 				 ((Button^)ans_btn)->Text = access_char;
 				 Control^ curr_btn = this->Controls[System::Convert::ToString(100+randomindex)];
 				 ((Button^)curr_btn)->Enabled=false;
-				 ((Button^)curr_btn)->Visible=false;
+				 //((Button^)curr_btn)->Visible=false;
 
 				 int flag2=0;
 				 for(int i=0;i<length_of_answer;i++){
@@ -893,7 +893,7 @@ public:
 					 else
 					 {
 						 ans_btn->Enabled=false;
-						 ans_btn->Visible=false;
+						 //ans_btn->Visible=false;
 					 }
 				 }
 				 for(int i=0;i<length_of_answer;i++){
