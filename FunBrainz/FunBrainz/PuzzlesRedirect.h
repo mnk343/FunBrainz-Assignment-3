@@ -190,9 +190,7 @@ namespace FunBrainz {
 				 panel1->BringToFront();
 				 panel1->Show();
 				 panel1->BringToFront();
-				 panel2->BringToFront();
-				 label1->BringToFront();
-
+				 
 
 				 Level_pipeline ^form =gcnew Level_pipeline(stuId);
 				 form->ShowDialog();
